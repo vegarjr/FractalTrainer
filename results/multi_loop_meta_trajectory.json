@@ -1,0 +1,140 @@
+{
+  "sources": [
+    "results/multi_loop_aggregated_repair_log.jsonl"
+  ],
+  "n_points": 9,
+  "n_transitions": 8,
+  "iterations": [
+    1,
+    1,
+    1,
+    2,
+    3,
+    1,
+    3,
+    2,
+    1
+  ],
+  "hparams_sequence": [
+    {
+      "learning_rate": 0.1,
+      "batch_size": 64,
+      "weight_decay": 0.0,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adam"
+    },
+    {
+      "learning_rate": 0.05,
+      "batch_size": 64,
+      "weight_decay": 0.001,
+      "dropout": 0.1,
+      "init_seed": 7,
+      "optimizer": "sgd"
+    },
+    {
+      "learning_rate": 0.01,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adamw"
+    },
+    {
+      "learning_rate": 0.005,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adamw"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 128,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adamw"
+    },
+    {
+      "learning_rate": 0.005,
+      "batch_size": 256,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adam"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "weight_decay": 0.005,
+      "dropout": 0.1,
+      "init_seed": 7,
+      "optimizer": "adam"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adamw"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "dropout": 0.2,
+      "init_seed": 42,
+      "optimizer": "adam"
+    }
+  ],
+  "divergence_scores": [
+    312500.0136789533,
+    1.1729460749442913,
+    14.664610700879269,
+    5.147357062375835,
+    0.5976822440282521,
+    3.569804140010545,
+    0.6202914365660726,
+    0.8706193656027341,
+    0.7077000040143197
+  ],
+  "states_shape": [
+    9,
+    6
+  ],
+  "summary": {
+    "n_points": 9,
+    "n_transitions": 8,
+    "geometry": {
+      "total_path_length": 10.414506595095038,
+      "mean_step_norm": 1.3018133243868797,
+      "step_norm_std": 0.5763964490712029,
+      "dispersion": 1.1351032992981298,
+      "displacement": 2.01,
+      "tortuosity": 5.1813465647239,
+      "mean_curvature": 1.8627292094501129,
+      "recurrence_rate": 0.0
+    },
+    "correlation_dim": {
+      "dim": -1.032056053536306e-15,
+      "r_squared": 1.0,
+      "n_points": 9,
+      "n_radii": 24,
+      "scaling_start": 3,
+      "scaling_end": 11,
+      "used_max_pairs": false,
+      "n_pairs_sampled": 36,
+      "error": null
+    },
+    "convergence": {
+      "start_divergence": 312500.0136789533,
+      "end_divergence": 0.7077000040143197,
+      "total_reduction": 312499.3059789493,
+      "monotonic_decreasing": false,
+      "bounces": 6,
+      "mean_step_reduction": 39062.41324736866
+    }
+  }
+}

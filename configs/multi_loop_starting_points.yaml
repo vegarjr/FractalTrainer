@@ -1,0 +1,61 @@
+# v2 Sprint 6: divergent starting configurations for the multi-run driver.
+#
+# Each entry is a complete hparams dict. The driver writes each one to
+# configs/hparams.yaml, runs the closed loop against the configured
+# target, then saves the resulting repair log to a per-run file. All
+# logs can then be aggregated and analyzed as one meta-trajectory.
+#
+# The point: ~5 distinct starting shapes → several Claude repair
+# decisions → a meta-trajectory with enough points to see whether
+# the repair loop's own behavior has a coherent geometric signature.
+
+starts:
+  - name: "divergent_adam_seed42"
+    # The canonical bad Adam from Sprint 2 / Sprint 4 / Sprint 5.
+    hparams:
+      learning_rate: 0.1
+      batch_size: 64
+      weight_decay: 0.0
+      dropout: 0.0
+      init_seed: 42
+      optimizer: "adam"
+
+  - name: "divergent_adam_seed7"
+    # Same recipe, different seed — test whether Claude's fix is seed-stable.
+    hparams:
+      learning_rate: 0.1
+      batch_size: 64
+      weight_decay: 0.0
+      dropout: 0.0
+      init_seed: 7
+      optimizer: "adam"
+
+  - name: "mild_adam_lr03"
+    # Milder Adam; from Sprint 2 this gave moderate accuracy ~0.84.
+    hparams:
+      learning_rate: 0.03
+      batch_size: 64
+      weight_decay: 0.01
+      dropout: 0.0
+      init_seed: 42
+      optimizer: "adam"
+
+  - name: "too_small_sgd"
+    # Under-trained SGD — trajectory barely moves, very low dim.
+    hparams:
+      learning_rate: 0.001
+      batch_size: 64
+      weight_decay: 0.0
+      dropout: 0.0
+      init_seed: 42
+      optimizer: "sgd"
+
+  - name: "heavily_regularized_adam"
+    # Over-regularized starting point: test if Claude correctly reduces.
+    hparams:
+      learning_rate: 0.1
+      batch_size: 64
+      weight_decay: 0.08
+      dropout: 0.8
+      init_seed: 42
+      optimizer: "adam"

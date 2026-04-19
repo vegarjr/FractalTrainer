@@ -23,6 +23,9 @@ results/data/
 !results/science_correlation_raw.json
 !results/science_correlation_analysis.json
 !results/science_correlation_scatter.png
+!results/multi_loop_summary.json
+!results/multi_loop_meta_trajectory.json
+!results/multi_loop_aggregated_repair_log.jsonl
 
 # Jupyter
 .ipynb_checkpoints/
