@@ -7,6 +7,10 @@ from fractaltrainer.geometry.fractal_summary import (
     motif_analysis,
     self_similarity_score,
 )
+from fractaltrainer.geometry.meta_trajectory import (
+    MetaTrajectorySummary,
+    summarize_meta_trajectory,
+)
 
 __all__ = [
     "trajectory_metrics",
@@ -18,4 +22,6 @@ __all__ = [
     "compression_ratio",
     "motif_analysis",
     "self_similarity_score",
+    "MetaTrajectorySummary",
+    "summarize_meta_trajectory",
 ]
