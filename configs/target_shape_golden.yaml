@@ -1,0 +1,20 @@
+# v2 Sprint 3 target: match the shape of a known-good training run instead
+# of aiming for a scalar correlation-dim value.
+#
+# See Reviews/05_v2_sprint2_science_question.md for why scalar-dim targets
+# were shown to be empirically wrong on MNIST. Golden-run matching sidesteps
+# the "pick a dim value" problem by using a run's actual shape as the target.
+
+dim_target: 1.0          # not used when method == golden_run_match, but still validated
+tolerance: 0.5
+method: "golden_run_match"
+golden_run_path: "golden_runs/sgd_lr0p1_seed101.json"
+min_snapshots: 20
+
+projection:
+  method: "random_proj"
+  n_components: 16
+  seed: 0
+
+hysteresis: 1.2
+max_repair_iters: 5

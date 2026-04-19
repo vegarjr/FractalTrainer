@@ -1,0 +1,18 @@
+{
+  "name": "sgd_lr0p1_seed101",
+  "signature": {
+    "correlation_dim": 0.7444870842302768,
+    "total_path_length": 13.830862045288086,
+    "mean_step_norm": 0.5532344579696655,
+    "step_norm_std": 0.2756226062774658,
+    "dispersion": 1.6334036588668823,
+    "displacement": 6.633739471435547,
+    "tortuosity": 2.0849269261843766,
+    "mean_curvature": 1.4825319051742554,
+    "recurrence_rate": 0.0
+  },
+  "test_accuracy": 0.944,
+  "hparams": null,
+  "source_trajectory": "results/science_trajectories/science_lr0p1_wd0p0_sgd_seed101_trajectory.npy",
+  "notes": "top run in 48-run v2 Sprint 2 science sweep"
+}

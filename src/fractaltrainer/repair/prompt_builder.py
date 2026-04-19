@@ -68,9 +68,17 @@ file: configs/hparams.yaml
         t = context.target
         parts.append("## TARGET SHAPE\n")
         parts.append(f"- method: {t.method}")
-        parts.append(f"- dim_target: {t.dim_target}")
-        parts.append(f"- tolerance: {t.tolerance}  "
-                     f"(accept band: [{t.band_low:.3f}, {t.band_high:.3f}])")
+        if t.method == "golden_run_match":
+            parts.append(f"- golden reference: {t.golden_run_path}")
+            parts.append(
+                "- acceptance: divergence_score <= 1.0 = inside the band. "
+                "The score is a z-normalized L2 distance between the "
+                "current trajectory's 9-d geometric signature and the "
+                "golden reference's signature. Lower = closer shape.")
+        else:
+            parts.append(f"- dim_target: {t.dim_target}")
+            parts.append(f"- tolerance: {t.tolerance}  "
+                         f"(accept band: [{t.band_low:.3f}, {t.band_high:.3f}])")
         parts.append(f"- projection: {t.projection.method} -> "
                      f"{t.projection.n_components} components "
                      f"(seed={t.projection.seed})")
@@ -78,10 +86,21 @@ file: configs/hparams.yaml
         parts.append("\n## CURRENT MEASUREMENT\n")
         parts.append(f"- current_dim: {context.current_dim:.4f}")
         parts.append(f"- divergence_score: {context.divergence_score:.3f} "
-                     "(0=center of band, 1=at band edge, >1=outside)")
+                     "(0 = perfect match, 1 = at the band edge, >1 = outside)")
         parts.append(f"- trajectory shape: {context.trajectory_summary.get('shape')}")
         parts.append(f"- projected shape: "
                      f"{context.trajectory_summary.get('projected_shape')}")
+
+        # Golden-run specific: per-feature z-score deltas from the comparator.
+        golden_block = context.trajectory_summary.get("golden_run") or {}
+        if golden_block:
+            parts.append("\n### GOLDEN-RUN PER-FEATURE DELTAS\n")
+            parts.append(
+                "(z_delta is signed; +ve = current is above golden, "
+                "-ve = below. Magnitude tells you which features are off.)")
+            parts.append("```json")
+            parts.append(json.dumps(golden_block, indent=2, default=str))
+            parts.append("```")
 
         primary = context.trajectory_summary.get("primary", {})
         if primary:

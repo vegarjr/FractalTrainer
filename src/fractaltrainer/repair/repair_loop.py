@@ -44,6 +44,7 @@ from fractaltrainer.repair.llm_client import make_claude_cli_client, make_claude
 from fractaltrainer.repair.patch_parser import CodePatch, PatchParser
 from fractaltrainer.repair.prompt_builder import PromptBuilder
 from fractaltrainer.target.divergence import divergence_score, within_band
+from fractaltrainer.target.golden_run import build_signature_from_report
 from fractaltrainer.target.target_shape import TargetShape
 
 
@@ -138,8 +139,12 @@ class RepairLoop:
             attempts.append(attempt)
             self._append_log(attempt)
 
-            if attempt.status == "accepted" and attempt.dim_after is not None \
-                    and within_band(attempt.dim_after, self.target):
+            if (attempt.status == "accepted"
+                    and attempt.divergence_after is not None
+                    and attempt.divergence_after <= 1.0 + 1e-9):
+                # score <= 1.0 means within the acceptance band for both
+                # scalar-dim methods and golden_run_match (see
+                # target.divergence.within_band).
                 if verbose:
                     print(f"[repair] within target band at iter {i} — halting")
                 break
@@ -185,16 +190,20 @@ class RepairLoop:
 
         dim_before = float(
             report_before.get("primary_result", {}).get("dim", float("nan")))
-        div_before = divergence_score(dim_before, self.target)
 
-        if within_band(dim_before, self.target):
+        # For golden_run_match we need the full signature, not just dim.
+        measurement_before = self._current_measurement(report_before, dim_before)
+        div_before = divergence_score(measurement_before, self.target)
+
+        if within_band(measurement_before, self.target):
             return RepairAttempt(
                 iteration=iteration, status="accepted",
                 divergence_before=div_before, divergence_after=div_before,
                 dim_before=dim_before, dim_after=dim_before,
                 hparams_before=hparams_before, hparams_after=hparams_before,
                 patches=[], elapsed_s=time.time() - t0,
-                summary=f"already within band (dim={dim_before:.3f})",
+                summary=f"already within band (dim={dim_before:.3f}, "
+                        f"score={div_before:.3f})",
             )
 
         context = self.gatherer.gather(
@@ -332,7 +341,8 @@ class RepairLoop:
 
         dim_after = float(
             report_after.get("primary_result", {}).get("dim", float("nan")))
-        div_after = divergence_score(dim_after, self.target)
+        measurement_after = self._current_measurement(report_after, dim_after)
+        div_after = divergence_score(measurement_after, self.target)
 
         # Outcome gate: accept only if divergence strictly decreased
         if div_after is None or div_before is None or div_after >= div_before:
@@ -359,6 +369,14 @@ class RepairLoop:
             summary=(f"dim {dim_before:.3f} -> {dim_after:.3f}, "
                      f"div {div_before:.3f} -> {div_after:.3f}"),
         )
+
+    def _current_measurement(self, report: dict, dim_value: float):
+        """Pack the comparator report into whatever the current target.method
+        wants: a scalar dim for v1 methods, a signature dict for golden_run_match.
+        """
+        if self.target.method == "golden_run_match":
+            return build_signature_from_report(report)
+        return dim_value
 
     # ── File-level helpers ────────────────────────────────────────
 

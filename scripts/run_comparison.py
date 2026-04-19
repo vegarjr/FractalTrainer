@@ -34,6 +34,11 @@ from fractaltrainer.target.divergence import (  # noqa: E402
     should_intervene,
     within_band,
 )
+from fractaltrainer.target.golden_run import (  # noqa: E402
+    GoldenRun,
+    build_signature_from_report,
+    golden_run_per_feature_deltas,
+)
 from fractaltrainer.target.target_shape import TargetShape, load_target  # noqa: E402
 
 
@@ -80,17 +85,20 @@ def main(argv: list[str] | None = None) -> int:
     projected = _project(trajectory, target)
 
     primary_method = target.method
-    if primary_method == "correlation_dim":
+    # For golden_run_match we still need a correlation_dim measurement
+    # (it's one of the 9 signature features); default to that.
+    dim_method_for_primary = (
+        "correlation_dim" if primary_method == "golden_run_match"
+        else primary_method
+    )
+    if dim_method_for_primary == "correlation_dim":
         dim_res = correlation_dim(projected, seed=target.projection.seed)
-    elif primary_method == "box_counting":
+    elif dim_method_for_primary == "box_counting":
         dim_res = box_counting_dim(projected)
     else:
         raise ValueError(f"unknown target method: {primary_method!r}")
 
     current_dim = float(dim_res.dim)
-    score = divergence_score(current_dim, target)
-    intervene = should_intervene(score, target)
-    in_band = within_band(current_dim, target)
 
     # Sanity: always also run box-counting on a 3-D projection for cross-check
     if trajectory.shape[1] > 3:
@@ -105,7 +113,9 @@ def main(argv: list[str] | None = None) -> int:
         "fractal_summary": fractal_metrics(projected),
     }
 
-    report = {
+    # Build the comparison report (without divergence yet — we need the
+    # signature to compute divergence for golden_run_match).
+    partial_report = {
         "trajectory_path": str(traj_path),
         "trajectory_shape": list(trajectory.shape),
         "projection": {
@@ -116,19 +126,49 @@ def main(argv: list[str] | None = None) -> int:
         },
         "target": target.to_dict(),
         "primary_result": {
-            "method": primary_method,
+            "method": dim_method_for_primary,
             "dim": current_dim,
             **{k: v for k, v in dim_res.to_dict().items() if k != "dim"},
         },
         "sanity_box_counting_3d": bc_sanity.to_dict(),
-        "divergence": {
-            "score": score,
-            "within_band": in_band,
-            "should_intervene": intervene,
-            "band": [target.band_low, target.band_high],
-        },
         "baseline_metrics": baseline,
     }
+
+    # Compute divergence against the configured target method.
+    current_signature = build_signature_from_report(partial_report)
+
+    if primary_method == "golden_run_match":
+        score = divergence_score(current_signature, target)
+        in_band = within_band(current_signature, target)
+        intervene = should_intervene(score, target)
+        # Extra diagnostic for the prompt: per-feature z-score deltas.
+        try:
+            golden = GoldenRun.load(target.golden_run_path)
+            deltas = golden_run_per_feature_deltas(current_signature, golden)
+            golden_extras = {
+                "golden_run_name": golden.name,
+                "golden_test_accuracy": golden.test_accuracy,
+                "per_feature_deltas": deltas,
+            }
+        except Exception as e:
+            golden_extras = {"golden_error": f"{type(e).__name__}: {e}"}
+        band_label = "golden-run-match (score <= 1.0 = inside)"
+    else:
+        score = divergence_score(current_dim, target)
+        in_band = within_band(current_dim, target)
+        intervene = should_intervene(score, target)
+        golden_extras = None
+        band_label = f"[{target.band_low:.3f}, {target.band_high:.3f}]"
+
+    report = dict(partial_report)
+    report["divergence"] = {
+        "score": score,
+        "within_band": in_band,
+        "should_intervene": intervene,
+        "band": band_label,
+    }
+    if golden_extras is not None:
+        report["golden_run"] = golden_extras
     report = _as_native(report)
 
     out_path = Path(args.report) if args.report else traj_path.with_suffix(
@@ -141,8 +181,12 @@ def main(argv: list[str] | None = None) -> int:
     print(f"[comparator] primary ({primary_method}): dim={current_dim:.3f} "
           f"r_squared={dim_res.r_squared:.3f}")
     print(f"[comparator] sanity (box-counting 3d): dim={bc_sanity.dim:.3f}")
-    print(f"[comparator] target: {target.dim_target} ± {target.tolerance} "
-          f"=> band [{target.band_low:.2f}, {target.band_high:.2f}]")
+    if primary_method == "golden_run_match":
+        print(f"[comparator] target: golden_run_match against "
+              f"{target.golden_run_path}")
+    else:
+        print(f"[comparator] target: {target.dim_target} ± {target.tolerance} "
+              f"=> band [{target.band_low:.2f}, {target.band_high:.2f}]")
     print(f"[comparator] divergence score: {score:.3f}  within_band={in_band}  "
           f"should_intervene={intervene}")
     print(f"[comparator] report saved: {out_path}")

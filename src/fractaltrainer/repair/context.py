@@ -70,6 +70,8 @@ class GeometricContextGatherer:
             "sanity_box_counting_3d": comparison_report.get(
                 "sanity_box_counting_3d", {}),
             "baseline_metrics": comparison_report.get("baseline_metrics", {}),
+            # Only present when target.method == "golden_run_match":
+            "golden_run": comparison_report.get("golden_run"),
         }
 
         divergence = comparison_report.get("divergence", {})

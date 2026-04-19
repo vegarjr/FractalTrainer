@@ -20,11 +20,17 @@ class ProjectionSpec:
 class TargetShape:
     dim_target: float
     tolerance: float
-    method: str = "correlation_dim"     # correlation_dim | box_counting
+    # method: one of
+    #   correlation_dim     (v1 — scalar dim target)
+    #   box_counting        (v1 sanity — scalar dim target)
+    #   golden_run_match    (v2 Sprint 3 — match a reference trajectory shape)
+    method: str = "correlation_dim"
     min_snapshots: int = 20
     hysteresis: float = 1.2
     max_repair_iters: int = 5
     projection: ProjectionSpec = field(default_factory=ProjectionSpec)
+    # Only used when method == "golden_run_match":
+    golden_run_path: str | None = None
 
     @property
     def band_low(self) -> float:
@@ -57,6 +63,10 @@ def load_target(path: str | Path) -> TargetShape:
         hysteresis=float(data.get("hysteresis", 1.2)),
         max_repair_iters=int(data.get("max_repair_iters", 5)),
         projection=proj,
+        golden_run_path=(
+            str(data["golden_run_path"])
+            if data.get("golden_run_path") else None
+        ),
     )
 
     _validate_target(target)
@@ -68,8 +78,11 @@ def _validate_target(t: TargetShape) -> None:
         raise ValueError(f"tolerance must be > 0, got {t.tolerance}")
     if t.dim_target <= 0:
         raise ValueError(f"dim_target must be > 0, got {t.dim_target}")
-    if t.method not in {"correlation_dim", "box_counting"}:
+    if t.method not in {"correlation_dim", "box_counting", "golden_run_match"}:
         raise ValueError(f"unknown method: {t.method!r}")
+    if t.method == "golden_run_match" and not t.golden_run_path:
+        raise ValueError(
+            "method='golden_run_match' requires golden_run_path to be set")
     if t.projection.method not in {"random_proj", "pca", "none"}:
         raise ValueError(
             f"unknown projection method: {t.projection.method!r}"
