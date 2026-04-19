@@ -1,0 +1,60 @@
+{
+  "n_total": 48,
+  "n_good": 48,
+  "target_band": [
+    1.2,
+    1.8
+  ],
+  "target_dim": 1.5,
+  "tolerance": 0.3,
+  "primary": {
+    "correlation_dim_vs_test_accuracy": {
+      "spearman_rho": 0.12158054711246201,
+      "p_value": 0.4061078994871359
+    },
+    "correlation_dim_vs_test_loss": {
+      "spearman_rho": -0.07273122014763352,
+      "p_value": 0.6208845942071708
+    }
+  },
+  "secondary": {
+    "path_length_vs_test_acc": {
+      "spearman_rho": -0.015631784628745114,
+      "p_value": 0.9155562670783892
+    },
+    "tortuosity_vs_test_acc": {
+      "spearman_rho": 0.20940078158923145,
+      "p_value": 0.14638329652647397
+    },
+    "recurrence_rate_vs_test_acc": {
+      "spearman_rho": -0.10421189752496743,
+      "p_value": 0.4772893822512825
+    },
+    "displacement_vs_test_acc": {
+      "spearman_rho": 0.1722752930959618,
+      "p_value": 0.2355581774886355
+    }
+  },
+  "band_analysis": {
+    "n_in_band": 4,
+    "n_out_of_band": 44,
+    "mean_test_acc_in_band": 0.569,
+    "mean_test_acc_out_of_band": 0.8203636363636364,
+    "band_minus_out": -0.25136363636363646
+  },
+  "verdict": [
+    "NULL RESULT: rho = +0.122, p = 0.406, n = 48.",
+    "No statistically significant correlation between",
+    "correlation dimension and test accuracy.",
+    "The target-dim-1.5 choice remains heuristic.",
+    "Target band has -0.251 LOWER mean test_acc than out-of-band runs. The target range may be miscalibrated."
+  ],
+  "data_summary": {
+    "dim_min": 0.0026896091983177233,
+    "dim_max": 3.6565098731656875,
+    "dim_mean": 0.9135064024165995,
+    "test_acc_min": 0.115,
+    "test_acc_max": 0.949,
+    "test_acc_mean": 0.7994166666666667
+  }
+}
