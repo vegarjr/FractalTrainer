@@ -1,0 +1,33 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+.env
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Runtime artifacts
+results/trajectories/*.npy
+results/trajectories/*.json
+results/repair_backups/
+results/repair_log.jsonl
+results/*.json
+results/data/
+!results/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# Build artifacts
+build/
+dist/
+*.egg
+
+# Local Claude config
+.claude/settings.local.json

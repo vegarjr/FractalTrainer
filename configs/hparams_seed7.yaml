@@ -1,0 +1,7 @@
+# Variant hparams for Sprint 1 acceptance gate — different seed.
+learning_rate: 0.1
+batch_size: 64
+weight_decay: 0.0
+dropout: 0.0
+init_seed: 7
+optimizer: "sgd"

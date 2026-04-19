@@ -1,0 +1,13 @@
+# Hyperparameters — THE file the repair loop is allowed to patch.
+#
+# Every key must stay within the schema in
+# src/fractaltrainer/repair/hparam_config.py (HPARAM_SCHEMA).
+# Patches that introduce unknown keys, out-of-range values, or invalid
+# optimizer strings are rejected at the schema gate before application.
+
+learning_rate: 0.1       # range [1e-6, 1.0]
+batch_size: 64           # range [1, 1024]
+weight_decay: 0.0        # range [0.0, 0.1]
+dropout: 0.0             # range [0.0, 0.9]
+init_seed: 42            # range [0, 2147483647]
+optimizer: "sgd"         # one of: sgd, adam, adamw

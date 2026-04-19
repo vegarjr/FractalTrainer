@@ -1,0 +1,53 @@
+FractalTrainer — Vendored Code Attribution
+===========================================
+
+This repository contains code vendored from sibling research projects. All
+vendored files carry a 5-line header identifying their source. This document
+summarizes the full vendor manifest.
+
+---
+
+Source: vegarjr/Code_Geometry (private)
+Commit: e8a00f05e821f0636d8ac422f49d98c7bb1324ca
+License: (author: Vegar Ratdal; same ownership — vendored for clarity)
+
+- src/fractaltrainer/geometry/trajectory.py
+  Vendored from: representations/state_trajectory.py
+  Modifications: dropped build_trajectory() (TraceRecord-specific input);
+                 kept trajectory_metrics() and removed trace-specific
+                 per-feature stats (depth_mean, function_change_rate).
+
+Planned vendors (Sprints 2-3):
+- src/fractaltrainer/geometry/fractal_summary.py
+  From: Code_Geometry/representations/fractal_summary.py
+  Will retarget from trace-event input to numeric array input.
+
+---
+
+Source: vegarjr/Fractal (private)
+Commit: a910a9202c9d5e8b9f5f3c2c1c9e7d6b5a4b3c2a (Task 9/10: PyTorch wrapper)
+
+Planned vendors (Sprint 3):
+- src/fractaltrainer/repair/patch_parser.py
+  From: evolution/stage11_introspection/patch_parser.py
+  Modifications: none — already supports allowed_files scope and auto-skips
+                 AST validation for non-.py files.
+
+- src/fractaltrainer/repair/llm_client.py
+  From: evolution/stage11_introspection/llm_client.py
+  Modifications: none.
+
+- src/fractaltrainer/repair/prompt_builder.py
+  From: evolution/stage11_introspection/prompt_builder.py
+  Modifications: rewrite SYSTEM_PROMPT and build() body for geometric task.
+
+- src/fractaltrainer/repair/repair_loop.py
+  From: evolution/stage11_introspection/repair_loop.py
+  Modifications: replace _run_tests with _run_training_probe; replace
+                 _measure_metric with _measure_divergence; scope to
+                 allowed_files=["configs/hparams.yaml"].
+
+---
+
+Upstream file versions will be bumped explicitly; run `git log` on the
+destination file to see the vendor-copy commit history in this repo.

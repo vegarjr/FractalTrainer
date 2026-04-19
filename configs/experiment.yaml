@@ -1,0 +1,24 @@
+# Experiment config — model + dataset + training cadence.
+# NOT edited by the repair loop (only configs/hparams.yaml is).
+
+model:
+  name: "mlp"
+  hidden_dims: [64, 32]
+  input_dim: 784            # MNIST flattened
+  output_dim: 10
+  activation: "relu"
+
+dataset:
+  name: "mnist"
+  train_subset_size: 5000
+  test_subset_size: 1000
+  data_dir: "results/data"
+
+training:
+  n_steps: 500
+  snapshot_every: 20
+
+output:
+  out_dir: "results/trajectories"
+
+hparams_path: "configs/hparams.yaml"

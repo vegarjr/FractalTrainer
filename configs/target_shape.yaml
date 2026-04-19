@@ -1,0 +1,15 @@
+# Target geometric shape for the training trajectory.
+# Used by Sprint 2 (comparator) and Sprint 3 (closed loop).
+
+dim_target: 1.5          # target correlation dimension
+tolerance: 0.3           # accept band: [dim_target - tolerance, dim_target + tolerance]
+method: "correlation_dim"  # correlation_dim | box_counting
+min_snapshots: 20        # need at least this many snapshots to compute dim
+
+projection:
+  method: "random_proj"  # random_proj | pca | none
+  n_components: 16
+  seed: 0
+
+hysteresis: 1.2          # only trigger repair if divergence_score > this
+max_repair_iters: 5      # hard cap on repair loop iterations
