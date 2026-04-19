@@ -1,0 +1,22 @@
+# v2 Sprint 5: opaque-name golden — ablation of Sprint 4.
+#
+# Points at golden_runs/golden_alpha.json, which has the same 9-d
+# signature as the Sprint 4 golden but a deliberately uninformative name,
+# and with hparams + source_trajectory fields stripped. If the closed
+# loop still converges from a divergent starting state with this
+# target, then the per-feature z-score deltas (the genuine geometric
+# signal) were doing the work in Sprint 4, not the informative name.
+
+dim_target: 1.0
+tolerance: 0.5
+method: "golden_run_match"
+golden_run_path: "golden_runs/golden_alpha.json"
+min_snapshots: 20
+
+projection:
+  method: "random_proj"
+  n_components: 16
+  seed: 0
+
+hysteresis: 1.2
+max_repair_iters: 5
