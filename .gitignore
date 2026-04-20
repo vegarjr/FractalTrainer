@@ -61,6 +61,8 @@ science_trajectories/
 !results/compose_vs_spawn_budget.json
 !results/coverage_mechanism.json
 !results/routing_rules.json
+!results/curated_registry_experiment.json
 results/growth_spawn_trajectories/
 results/sprint7_v3_trajectories/
 results/sprint8_v3_fashion_trajectories/
+results/sprint10_curated_trajectories/
