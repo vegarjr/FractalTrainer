@@ -1,8 +1,10 @@
-# Utility test starting configuration.
+# Pathological starting config (Sprint 15a: --llm local integration test).
+# Matches Sprint 3's original divergent config — expected dim≈0.36,
+# well outside the [1.2, 1.8] target band, so the repair loop fires.
 
-learning_rate: 0.001
+learning_rate: 0.1
 batch_size: 64
-weight_decay: 0.001
+weight_decay: 0.0
 dropout: 0.0
 init_seed: 42
-optimizer: "adam"
+optimizer: "sgd"
