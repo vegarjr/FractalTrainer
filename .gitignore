@@ -64,6 +64,8 @@ science_trajectories/
 !results/curated_registry_experiment.json
 !results/curated_ood_test.json
 !results/multi_region_experiment.json
+!results/learned_anchors_experiment.json
+!results/learned_anchors_experiment.log
 results/growth_spawn_trajectories/
 results/sprint7_v3_trajectories/
 results/sprint8_v3_fashion_trajectories/

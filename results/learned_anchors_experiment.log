@@ -1,0 +1,113 @@
+Will test two pools:
+  full         : 50 tasks (15 anchor + 15 anchorB + 20 uniform)
+  curated_only : 30 tasks (no uniform; sanity check)
+Loaded 150 pool entries, 45 probe entries.
+
+
+########################################################################
+  POOL: full (50 tasks)
+########################################################################
+========================================================================
+  CLUSTERING k=2 (agglomerative, average-linkage)
+========================================================================
+  Cluster 0  majority-anchor=[5, 7, 8, 9]  [⊆B]  size=28
+    members: ['anchorB3_567', 'anchorB3_568', 'anchorB3_569', 'anchorB3_578', 'anchorB3_579', 'anchorB3_589', 'anchorB3_678', 'anchorB3_679']  +more
+  Cluster 1  majority-anchor=[0, 1, 2, 3, 4]  [⊆A]  size=22
+    members: ['anchor3_012', 'anchor3_013', 'anchor3_014', 'anchor3_023', 'anchor3_024', 'anchor3_034', 'anchor3_123', 'anchor3_124']  +more
+
+  PROBE ROUTING (threshold=0.75)
+    probe2_01         region=in_A  target=[0, 1]  overlaps=[0.00,1.00]  → cluster_1
+    probe2_12         region=in_A  target=[1, 2]  overlaps=[0.00,1.00]  → cluster_1
+    probe2_23         region=in_A  target=[2, 3]  overlaps=[0.00,1.00]  → cluster_1
+    probe2_34         region=in_A  target=[3, 4]  overlaps=[0.00,1.00]  → cluster_1
+    probe2_04         region=in_A  target=[0, 4]  overlaps=[0.00,1.00]  → cluster_1
+    probe_oob_56      region=in_B  target=[5, 6]  overlaps=[0.50,0.00]  → spawn
+    probe_oob_78      region=in_B  target=[7, 8]  overlaps=[1.00,0.00]  → cluster_0
+    probe_oob_59      region=in_B  target=[5, 9]  overlaps=[1.00,0.00]  → cluster_0
+    probe_oob_67      region=in_B  target=[6, 7]  overlaps=[0.50,0.00]  → spawn
+    probe_oob_89      region=in_B  target=[8, 9]  overlaps=[1.00,0.00]  → cluster_0
+    probe_cr_05       region=cross target=[0, 5]  overlaps=[0.50,0.50]  → spawn
+    probe_cr_16       region=cross target=[1, 6]  overlaps=[0.00,0.50]  → spawn
+    probe_cr_27       region=cross target=[2, 7]  overlaps=[0.50,0.50]  → spawn
+    probe_cr_38       region=cross target=[3, 8]  overlaps=[0.50,0.50]  → spawn
+    probe_cr_49       region=cross target=[4, 9]  overlaps=[0.50,0.50]  → spawn
+
+  AGGREGATE BY REGION TYPE at k=2:
+    in_A    N=50:0.977  N=100:0.977  N=300:0.978  N=1000:0.978  N=5000:0.979  
+    in_B    N=50:0.919  N=100:0.937  N=300:0.947  N=1000:0.960  N=5000:0.965  
+    cross   N=50:0.892  N=100:0.915  N=300:0.945  N=1000:0.959  N=5000:0.969  
+
+========================================================================
+  CLUSTERING k=3 (agglomerative, average-linkage)
+========================================================================
+  Cluster 0  majority-anchor=[0, 1, 2, 3, 4]  [⊆A]  size=22
+    members: ['anchor3_012', 'anchor3_013', 'anchor3_014', 'anchor3_023', 'anchor3_024', 'anchor3_034', 'anchor3_123', 'anchor3_124']  +more
+  Cluster 1  majority-anchor=[5, 6, 7, 8, 9]  [⊆B]  size=18
+    members: ['anchorB3_567', 'anchorB3_568', 'anchorB3_569', 'anchorB3_578', 'anchorB3_579', 'anchorB3_589', 'anchorB3_678', 'anchorB3_679']  +more
+  Cluster 2  majority-anchor=[0, 4, 5, 9]  [_]  size=10
+    members: ['subset_014567', 'subset_01458', 'subset_01589', 'subset_01789', 'subset_02459', 'subset_0379', 'subset_0459', 'subset_0489']  +more
+
+  PROBE ROUTING (threshold=0.75)
+    probe2_01         region=in_A  target=[0, 1]  overlaps=[1.00,0.00,0.50]  → cluster_0
+    probe2_12         region=in_A  target=[1, 2]  overlaps=[1.00,0.00,0.00]  → cluster_0
+    probe2_23         region=in_A  target=[2, 3]  overlaps=[1.00,0.00,0.00]  → cluster_0
+    probe2_34         region=in_A  target=[3, 4]  overlaps=[1.00,0.00,0.50]  → cluster_0
+    probe2_04         region=in_A  target=[0, 4]  overlaps=[1.00,0.00,1.00]  → cluster_0
+    probe_oob_56      region=in_B  target=[5, 6]  overlaps=[0.00,1.00,0.50]  → cluster_1
+    probe_oob_78      region=in_B  target=[7, 8]  overlaps=[0.00,1.00,0.00]  → cluster_1
+    probe_oob_59      region=in_B  target=[5, 9]  overlaps=[0.00,1.00,1.00]  → cluster_1
+    probe_oob_67      region=in_B  target=[6, 7]  overlaps=[0.00,1.00,0.00]  → cluster_1
+    probe_oob_89      region=in_B  target=[8, 9]  overlaps=[0.00,1.00,0.50]  → cluster_1
+    probe_cr_05       region=cross target=[0, 5]  overlaps=[0.50,0.50,1.00]  → cluster_2
+    probe_cr_16       region=cross target=[1, 6]  overlaps=[0.50,0.50,0.00]  → spawn
+    probe_cr_27       region=cross target=[2, 7]  overlaps=[0.50,0.50,0.00]  → spawn
+    probe_cr_38       region=cross target=[3, 8]  overlaps=[0.50,0.50,0.00]  → spawn
+    probe_cr_49       region=cross target=[4, 9]  overlaps=[0.50,0.50,1.00]  → cluster_2
+
+  AGGREGATE BY REGION TYPE at k=3:
+    in_A    N=50:0.977  N=100:0.977  N=300:0.978  N=1000:0.978  N=5000:0.979  
+    in_B    N=50:0.948  N=100:0.966  N=300:0.964  N=1000:0.966  N=5000:0.966  
+    cross   N=50:0.869  N=100:0.877  N=300:0.897  N=1000:0.925  N=5000:0.931  
+
+========================================================================
+  CLUSTERING k=4 (agglomerative, average-linkage)
+========================================================================
+  Cluster 0  majority-anchor=[0, 1, 2, 3, 4]  [⊆A]  size=22
+    members: ['anchor3_012', 'anchor3_013', 'anchor3_014', 'anchor3_023', 'anchor3_024', 'anchor3_034', 'anchor3_123', 'anchor3_124']  +more
+  Cluster 1  majority-anchor=[5, 6, 7, 8, 9]  [⊆B]  size=18
+    members: ['anchorB3_567', 'anchorB3_568', 'anchorB3_569', 'anchorB3_578', 'anchorB3_579', 'anchorB3_589', 'anchorB3_678', 'anchorB3_679']  +more
+  Cluster 2  majority-anchor=[0, 1, 4, 5, 8, 9]  [_]  size=8
+    members: ['subset_014567', 'subset_01458', 'subset_01589', 'subset_01789', 'subset_02459', 'subset_0459', 'subset_0489', 'subset_459']
+  Cluster 3  majority-anchor=[0, 3, 4, 5, 7, 9]  [_]  size=2
+    members: ['subset_0379', 'subset_3457']
+
+  PROBE ROUTING (threshold=0.75)
+    probe2_01         region=in_A  target=[0, 1]  overlaps=[1.00,0.00,1.00,0.50]  → cluster_0
+    probe2_12         region=in_A  target=[1, 2]  overlaps=[1.00,0.00,0.50,0.00]  → cluster_0
+    probe2_23         region=in_A  target=[2, 3]  overlaps=[1.00,0.00,0.00,0.50]  → cluster_0
+    probe2_34         region=in_A  target=[3, 4]  overlaps=[1.00,0.00,0.50,1.00]  → cluster_0
+    probe2_04         region=in_A  target=[0, 4]  overlaps=[1.00,0.00,1.00,1.00]  → cluster_0
+    probe_oob_56      region=in_B  target=[5, 6]  overlaps=[0.00,1.00,0.50,0.50]  → cluster_1
+    probe_oob_78      region=in_B  target=[7, 8]  overlaps=[0.00,1.00,0.50,0.50]  → cluster_1
+    probe_oob_59      region=in_B  target=[5, 9]  overlaps=[0.00,1.00,1.00,1.00]  → cluster_1
+    probe_oob_67      region=in_B  target=[6, 7]  overlaps=[0.00,1.00,0.00,0.50]  → cluster_1
+    probe_oob_89      region=in_B  target=[8, 9]  overlaps=[0.00,1.00,1.00,0.50]  → cluster_1
+    probe_cr_05       region=cross target=[0, 5]  overlaps=[0.50,0.50,1.00,1.00]  → cluster_2
+    probe_cr_16       region=cross target=[1, 6]  overlaps=[0.50,0.50,0.50,0.00]  → spawn
+    probe_cr_27       region=cross target=[2, 7]  overlaps=[0.50,0.50,0.00,0.50]  → spawn
+    probe_cr_38       region=cross target=[3, 8]  overlaps=[0.50,0.50,0.50,0.50]  → spawn
+    probe_cr_49       region=cross target=[4, 9]  overlaps=[0.50,0.50,1.00,1.00]  → cluster_2
+
+  AGGREGATE BY REGION TYPE at k=4:
+    in_A    N=50:0.977  N=100:0.977  N=300:0.978  N=1000:0.978  N=5000:0.979  
+    in_B    N=50:0.948  N=100:0.966  N=300:0.964  N=1000:0.966  N=5000:0.966  
+    cross   N=50:0.869  N=100:0.877  N=300:0.897  N=1000:0.908  N=5000:0.915  
+
+========================================================================
+  VERDICT for pool 'full'
+========================================================================
+  k=2 majority-anchors: [[5, 7, 8, 9], [0, 1, 2, 3, 4]]
+  → Learned anchors MATCH hand-picked {0-4}/{5-9}.
+  in_A routes: ['cluster_1', 'cluster_1', 'cluster_1', 'cluster_1', 'cluster_1']
+  in_B routes: ['spawn', 'cluster_0', 'cluster_0', 'spawn', 'cluster_0']
+  cross routes: ['spawn', 'spawn', 'spawn', 'spawn', 'spawn']
