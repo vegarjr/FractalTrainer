@@ -53,4 +53,6 @@ science_trajectories/
 !results/growth_demo.json
 !results/composition_utility.json
 !results/calibration_demo.json
+!results/sprint7_v3_scale_stress.json
 results/growth_spawn_trajectories/
+results/sprint7_v3_trajectories/

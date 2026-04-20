@@ -1,0 +1,1433 @@
+{
+  "n_tasks": 31,
+  "n_entries": 93,
+  "new_tasks": {
+    "subset_01458": [
+      0,
+      1,
+      4,
+      5,
+      8
+    ],
+    "subset_459": [
+      4,
+      5,
+      9
+    ],
+    "subset_0459": [
+      0,
+      4,
+      5,
+      9
+    ],
+    "subset_13678": [
+      1,
+      3,
+      6,
+      7,
+      8
+    ],
+    "subset_1256": [
+      1,
+      2,
+      5,
+      6
+    ],
+    "subset_267": [
+      2,
+      6,
+      7
+    ],
+    "subset_123689": [
+      1,
+      2,
+      3,
+      6,
+      8,
+      9
+    ],
+    "subset_2349": [
+      2,
+      3,
+      4,
+      9
+    ],
+    "subset_01789": [
+      0,
+      1,
+      7,
+      8,
+      9
+    ],
+    "subset_3457": [
+      3,
+      4,
+      5,
+      7
+    ],
+    "subset_014567": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      7
+    ],
+    "subset_0379": [
+      0,
+      3,
+      7,
+      9
+    ],
+    "subset_15789": [
+      1,
+      5,
+      7,
+      8,
+      9
+    ],
+    "subset_123468": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8
+    ],
+    "subset_02459": [
+      0,
+      2,
+      4,
+      5,
+      9
+    ],
+    "subset_01589": [
+      0,
+      1,
+      5,
+      8,
+      9
+    ],
+    "subset_025678": [
+      0,
+      2,
+      5,
+      6,
+      7,
+      8
+    ],
+    "subset_02349": [
+      0,
+      2,
+      3,
+      4,
+      9
+    ],
+    "subset_123679": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      9
+    ],
+    "subset_0489": [
+      0,
+      4,
+      8,
+      9
+    ]
+  },
+  "training_log": [
+    {
+      "task": "subset_01458",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_01458_seed42_trajectory.npy",
+      "elapsed_s": 7.097307443618774,
+      "skipped": false
+    },
+    {
+      "task": "subset_01458",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_01458_seed101_trajectory.npy",
+      "elapsed_s": 6.9226462841033936,
+      "skipped": false
+    },
+    {
+      "task": "subset_01458",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_01458_seed2024_trajectory.npy",
+      "elapsed_s": 6.745509386062622,
+      "skipped": false
+    },
+    {
+      "task": "subset_459",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_459_seed42_trajectory.npy",
+      "elapsed_s": 6.3792500495910645,
+      "skipped": false
+    },
+    {
+      "task": "subset_459",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_459_seed101_trajectory.npy",
+      "elapsed_s": 6.412633419036865,
+      "skipped": false
+    },
+    {
+      "task": "subset_459",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_459_seed2024_trajectory.npy",
+      "elapsed_s": 6.366724014282227,
+      "skipped": false
+    },
+    {
+      "task": "subset_0459",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_0459_seed42_trajectory.npy",
+      "elapsed_s": 6.380943059921265,
+      "skipped": false
+    },
+    {
+      "task": "subset_0459",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_0459_seed101_trajectory.npy",
+      "elapsed_s": 6.433586359024048,
+      "skipped": false
+    },
+    {
+      "task": "subset_0459",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_0459_seed2024_trajectory.npy",
+      "elapsed_s": 6.36855149269104,
+      "skipped": false
+    },
+    {
+      "task": "subset_13678",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_13678_seed42_trajectory.npy",
+      "elapsed_s": 6.410619497299194,
+      "skipped": false
+    },
+    {
+      "task": "subset_13678",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_13678_seed101_trajectory.npy",
+      "elapsed_s": 6.381197452545166,
+      "skipped": false
+    },
+    {
+      "task": "subset_13678",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_13678_seed2024_trajectory.npy",
+      "elapsed_s": 6.437217712402344,
+      "skipped": false
+    },
+    {
+      "task": "subset_1256",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_1256_seed42_trajectory.npy",
+      "elapsed_s": 6.35150146484375,
+      "skipped": false
+    },
+    {
+      "task": "subset_1256",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_1256_seed101_trajectory.npy",
+      "elapsed_s": 6.3801493644714355,
+      "skipped": false
+    },
+    {
+      "task": "subset_1256",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_1256_seed2024_trajectory.npy",
+      "elapsed_s": 6.46210789680481,
+      "skipped": false
+    },
+    {
+      "task": "subset_267",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_267_seed42_trajectory.npy",
+      "elapsed_s": 6.643118858337402,
+      "skipped": false
+    },
+    {
+      "task": "subset_267",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_267_seed101_trajectory.npy",
+      "elapsed_s": 6.445866346359253,
+      "skipped": false
+    },
+    {
+      "task": "subset_267",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_267_seed2024_trajectory.npy",
+      "elapsed_s": 6.337130069732666,
+      "skipped": false
+    },
+    {
+      "task": "subset_123689",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_123689_seed42_trajectory.npy",
+      "elapsed_s": 6.450370788574219,
+      "skipped": false
+    },
+    {
+      "task": "subset_123689",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_123689_seed101_trajectory.npy",
+      "elapsed_s": 6.4483795166015625,
+      "skipped": false
+    },
+    {
+      "task": "subset_123689",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_123689_seed2024_trajectory.npy",
+      "elapsed_s": 6.394277334213257,
+      "skipped": false
+    },
+    {
+      "task": "subset_2349",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_2349_seed42_trajectory.npy",
+      "elapsed_s": 6.475908517837524,
+      "skipped": false
+    },
+    {
+      "task": "subset_2349",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_2349_seed101_trajectory.npy",
+      "elapsed_s": 6.4988508224487305,
+      "skipped": false
+    },
+    {
+      "task": "subset_2349",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_2349_seed2024_trajectory.npy",
+      "elapsed_s": 6.39862322807312,
+      "skipped": false
+    },
+    {
+      "task": "subset_01789",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_01789_seed42_trajectory.npy",
+      "elapsed_s": 6.490380525588989,
+      "skipped": false
+    },
+    {
+      "task": "subset_01789",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_01789_seed101_trajectory.npy",
+      "elapsed_s": 6.477057695388794,
+      "skipped": false
+    },
+    {
+      "task": "subset_01789",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_01789_seed2024_trajectory.npy",
+      "elapsed_s": 6.513612508773804,
+      "skipped": false
+    },
+    {
+      "task": "subset_3457",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_3457_seed42_trajectory.npy",
+      "elapsed_s": 6.435344219207764,
+      "skipped": false
+    },
+    {
+      "task": "subset_3457",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_3457_seed101_trajectory.npy",
+      "elapsed_s": 6.403255224227905,
+      "skipped": false
+    },
+    {
+      "task": "subset_3457",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_3457_seed2024_trajectory.npy",
+      "elapsed_s": 6.436108112335205,
+      "skipped": false
+    },
+    {
+      "task": "subset_014567",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_014567_seed42_trajectory.npy",
+      "elapsed_s": 6.338400363922119,
+      "skipped": false
+    },
+    {
+      "task": "subset_014567",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_014567_seed101_trajectory.npy",
+      "elapsed_s": 6.4279210567474365,
+      "skipped": false
+    },
+    {
+      "task": "subset_014567",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_014567_seed2024_trajectory.npy",
+      "elapsed_s": 6.3843159675598145,
+      "skipped": false
+    },
+    {
+      "task": "subset_0379",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_0379_seed42_trajectory.npy",
+      "elapsed_s": 6.5039002895355225,
+      "skipped": false
+    },
+    {
+      "task": "subset_0379",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_0379_seed101_trajectory.npy",
+      "elapsed_s": 6.564718246459961,
+      "skipped": false
+    },
+    {
+      "task": "subset_0379",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_0379_seed2024_trajectory.npy",
+      "elapsed_s": 6.485575199127197,
+      "skipped": false
+    },
+    {
+      "task": "subset_15789",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_15789_seed42_trajectory.npy",
+      "elapsed_s": 6.524735927581787,
+      "skipped": false
+    },
+    {
+      "task": "subset_15789",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_15789_seed101_trajectory.npy",
+      "elapsed_s": 6.537737846374512,
+      "skipped": false
+    },
+    {
+      "task": "subset_15789",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_15789_seed2024_trajectory.npy",
+      "elapsed_s": 6.502332925796509,
+      "skipped": false
+    },
+    {
+      "task": "subset_123468",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_123468_seed42_trajectory.npy",
+      "elapsed_s": 6.482300281524658,
+      "skipped": false
+    },
+    {
+      "task": "subset_123468",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_123468_seed101_trajectory.npy",
+      "elapsed_s": 6.57845401763916,
+      "skipped": false
+    },
+    {
+      "task": "subset_123468",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_123468_seed2024_trajectory.npy",
+      "elapsed_s": 6.631789922714233,
+      "skipped": false
+    },
+    {
+      "task": "subset_02459",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_02459_seed42_trajectory.npy",
+      "elapsed_s": 6.606333494186401,
+      "skipped": false
+    },
+    {
+      "task": "subset_02459",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_02459_seed101_trajectory.npy",
+      "elapsed_s": 6.541118383407593,
+      "skipped": false
+    },
+    {
+      "task": "subset_02459",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_02459_seed2024_trajectory.npy",
+      "elapsed_s": 6.457128524780273,
+      "skipped": false
+    },
+    {
+      "task": "subset_01589",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_01589_seed42_trajectory.npy",
+      "elapsed_s": 6.447377443313599,
+      "skipped": false
+    },
+    {
+      "task": "subset_01589",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_01589_seed101_trajectory.npy",
+      "elapsed_s": 6.561086416244507,
+      "skipped": false
+    },
+    {
+      "task": "subset_01589",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_01589_seed2024_trajectory.npy",
+      "elapsed_s": 6.480023384094238,
+      "skipped": false
+    },
+    {
+      "task": "subset_025678",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_025678_seed42_trajectory.npy",
+      "elapsed_s": 6.485753536224365,
+      "skipped": false
+    },
+    {
+      "task": "subset_025678",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_025678_seed101_trajectory.npy",
+      "elapsed_s": 6.324466705322266,
+      "skipped": false
+    },
+    {
+      "task": "subset_025678",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_025678_seed2024_trajectory.npy",
+      "elapsed_s": 6.487793207168579,
+      "skipped": false
+    },
+    {
+      "task": "subset_02349",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_02349_seed42_trajectory.npy",
+      "elapsed_s": 6.430538177490234,
+      "skipped": false
+    },
+    {
+      "task": "subset_02349",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_02349_seed101_trajectory.npy",
+      "elapsed_s": 6.598942279815674,
+      "skipped": false
+    },
+    {
+      "task": "subset_02349",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_02349_seed2024_trajectory.npy",
+      "elapsed_s": 6.530081033706665,
+      "skipped": false
+    },
+    {
+      "task": "subset_123679",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_123679_seed42_trajectory.npy",
+      "elapsed_s": 6.47722315788269,
+      "skipped": false
+    },
+    {
+      "task": "subset_123679",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_123679_seed101_trajectory.npy",
+      "elapsed_s": 6.501060247421265,
+      "skipped": false
+    },
+    {
+      "task": "subset_123679",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_123679_seed2024_trajectory.npy",
+      "elapsed_s": 6.46019172668457,
+      "skipped": false
+    },
+    {
+      "task": "subset_0489",
+      "seed": 42,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_0489_seed42_trajectory.npy",
+      "elapsed_s": 6.36254096031189,
+      "skipped": false
+    },
+    {
+      "task": "subset_0489",
+      "seed": 101,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_0489_seed101_trajectory.npy",
+      "elapsed_s": 6.683129787445068,
+      "skipped": false
+    },
+    {
+      "task": "subset_0489",
+      "seed": 2024,
+      "traj_path": "results/sprint7_v3_trajectories/ext_subset_0489_seed2024_trajectory.npy",
+      "elapsed_s": 6.556799650192261,
+      "skipped": false
+    }
+  ],
+  "calibration": {
+    "match_threshold": 3.8334754943847646,
+    "spawn_threshold": 6.843751621246338,
+    "within_percentile": 95.0,
+    "cross_percentile": 5.0,
+    "overlap": false,
+    "n_tasks": 31,
+    "within_distance_stats": {
+      "n": 93,
+      "min": 0.9286555051803589,
+      "mean": 2.739848902148585,
+      "max": 7.89374303817749
+    },
+    "cross_distance_stats": {
+      "n": 4185,
+      "min": 4.421685695648193,
+      "mean": 10.17961556048376,
+      "max": 13.88786506652832
+    }
+  },
+  "leave_one_task_out": {
+    "n_queries": 93,
+    "n_tasks_tested": 31,
+    "n_routing_consistent": 25,
+    "avg_query_latency_ms": 0.36070936469621556,
+    "rows": [
+      {
+        "held_task": "digit_class",
+        "held": "digit_class_seed42",
+        "nearest": "mod5_seed101",
+        "nearest_task": "mod5",
+        "nearest_distance": 8.694931983947754,
+        "second_task": "mod5",
+        "third_task": "mod5"
+      },
+      {
+        "held_task": "digit_class",
+        "held": "digit_class_seed101",
+        "nearest": "mod5_seed101",
+        "nearest_task": "mod5",
+        "nearest_distance": 8.580803871154785,
+        "second_task": "mod5",
+        "third_task": "mod5"
+      },
+      {
+        "held_task": "digit_class",
+        "held": "digit_class_seed2024",
+        "nearest": "mod5_seed2024",
+        "nearest_task": "mod5",
+        "nearest_distance": 8.810203552246094,
+        "second_task": "mod5",
+        "third_task": "mod5"
+      },
+      {
+        "held_task": "parity",
+        "held": "parity_seed42",
+        "nearest": "subset_123679_seed42",
+        "nearest_task": "subset_123679",
+        "nearest_distance": 6.258447170257568,
+        "second_task": "subset_15789",
+        "third_task": "subset_123679"
+      },
+      {
+        "held_task": "parity",
+        "held": "parity_seed101",
+        "nearest": "subset_123679_seed42",
+        "nearest_task": "subset_123679",
+        "nearest_distance": 6.495868682861328,
+        "second_task": "subset_15789",
+        "third_task": "subset_15789"
+      },
+      {
+        "held_task": "parity",
+        "held": "parity_seed2024",
+        "nearest": "subset_123679_seed42",
+        "nearest_task": "subset_123679",
+        "nearest_distance": 6.3530731201171875,
+        "second_task": "subset_15789",
+        "third_task": "subset_0379"
+      },
+      {
+        "held_task": "high_vs_low",
+        "held": "high_vs_low_seed42",
+        "nearest": "subset_15789_seed2024",
+        "nearest_task": "subset_15789",
+        "nearest_distance": 5.890827178955078,
+        "second_task": "subset_15789",
+        "third_task": "subset_15789"
+      },
+      {
+        "held_task": "high_vs_low",
+        "held": "high_vs_low_seed101",
+        "nearest": "subset_15789_seed42",
+        "nearest_task": "subset_15789",
+        "nearest_distance": 5.899492263793945,
+        "second_task": "subset_15789",
+        "third_task": "subset_15789"
+      },
+      {
+        "held_task": "high_vs_low",
+        "held": "high_vs_low_seed2024",
+        "nearest": "subset_15789_seed2024",
+        "nearest_task": "subset_15789",
+        "nearest_distance": 5.9560956954956055,
+        "second_task": "subset_15789",
+        "third_task": "subset_15789"
+      },
+      {
+        "held_task": "mod3",
+        "held": "mod3_seed42",
+        "nearest": "subset_3457_seed2024",
+        "nearest_task": "subset_3457",
+        "nearest_distance": 9.101069450378418,
+        "second_task": "subset_3457",
+        "third_task": "subset_3457"
+      },
+      {
+        "held_task": "mod3",
+        "held": "mod3_seed101",
+        "nearest": "subset_3457_seed42",
+        "nearest_task": "subset_3457",
+        "nearest_distance": 9.371718406677246,
+        "second_task": "subset_3457",
+        "third_task": "subset_3457"
+      },
+      {
+        "held_task": "mod3",
+        "held": "mod3_seed2024",
+        "nearest": "subset_3457_seed2024",
+        "nearest_task": "subset_3457",
+        "nearest_distance": 8.924450874328613,
+        "second_task": "subset_3457",
+        "third_task": "subset_3457"
+      },
+      {
+        "held_task": "mod5",
+        "held": "mod5_seed42",
+        "nearest": "digit_class_seed101",
+        "nearest_task": "digit_class",
+        "nearest_distance": 8.683921813964844,
+        "second_task": "digit_class",
+        "third_task": "digit_class"
+      },
+      {
+        "held_task": "mod5",
+        "held": "mod5_seed101",
+        "nearest": "digit_class_seed101",
+        "nearest_task": "digit_class",
+        "nearest_distance": 8.580803871154785,
+        "second_task": "digit_class",
+        "third_task": "digit_class"
+      },
+      {
+        "held_task": "mod5",
+        "held": "mod5_seed2024",
+        "nearest": "digit_class_seed101",
+        "nearest_task": "digit_class",
+        "nearest_distance": 8.617294311523438,
+        "second_task": "digit_class",
+        "third_task": "digit_class"
+      },
+      {
+        "held_task": "primes_vs_rest",
+        "held": "primes_vs_rest_seed42",
+        "nearest": "subset_267_seed2024",
+        "nearest_task": "subset_267",
+        "nearest_distance": 6.4548845291137695,
+        "second_task": "subset_267",
+        "third_task": "subset_267"
+      },
+      {
+        "held_task": "primes_vs_rest",
+        "held": "primes_vs_rest_seed101",
+        "nearest": "subset_267_seed2024",
+        "nearest_task": "subset_267",
+        "nearest_distance": 6.395915985107422,
+        "second_task": "subset_267",
+        "third_task": "subset_267"
+      },
+      {
+        "held_task": "primes_vs_rest",
+        "held": "primes_vs_rest_seed2024",
+        "nearest": "subset_267_seed2024",
+        "nearest_task": "subset_267",
+        "nearest_distance": 6.39087438583374,
+        "second_task": "subset_267",
+        "third_task": "subset_267"
+      },
+      {
+        "held_task": "ones_vs_teens",
+        "held": "ones_vs_teens_seed42",
+        "nearest": "subset_02349_seed2024",
+        "nearest_task": "subset_02349",
+        "nearest_distance": 5.686957836151123,
+        "second_task": "subset_02349",
+        "third_task": "subset_02349"
+      },
+      {
+        "held_task": "ones_vs_teens",
+        "held": "ones_vs_teens_seed101",
+        "nearest": "subset_02349_seed2024",
+        "nearest_task": "subset_02349",
+        "nearest_distance": 6.005629062652588,
+        "second_task": "subset_02349",
+        "third_task": "subset_02349"
+      },
+      {
+        "held_task": "ones_vs_teens",
+        "held": "ones_vs_teens_seed2024",
+        "nearest": "subset_02349_seed2024",
+        "nearest_task": "subset_02349",
+        "nearest_distance": 5.981316566467285,
+        "second_task": "subset_02349",
+        "third_task": "subset_02349"
+      },
+      {
+        "held_task": "triangular",
+        "held": "triangular_seed42",
+        "nearest": "subset_13678_seed2024",
+        "nearest_task": "subset_13678",
+        "nearest_distance": 6.202550411224365,
+        "second_task": "subset_13678",
+        "third_task": "subset_1256"
+      },
+      {
+        "held_task": "triangular",
+        "held": "triangular_seed101",
+        "nearest": "subset_1256_seed101",
+        "nearest_task": "subset_1256",
+        "nearest_distance": 5.718768119812012,
+        "second_task": "subset_1256",
+        "third_task": "subset_1256"
+      },
+      {
+        "held_task": "triangular",
+        "held": "triangular_seed2024",
+        "nearest": "subset_1256_seed42",
+        "nearest_task": "subset_1256",
+        "nearest_distance": 6.143134117126465,
+        "second_task": "subset_1256",
+        "third_task": "subset_13678"
+      },
+      {
+        "held_task": "fibonacci",
+        "held": "fibonacci_seed42",
+        "nearest": "subset_123689_seed42",
+        "nearest_task": "subset_123689",
+        "nearest_distance": 6.075270175933838,
+        "second_task": "subset_123689",
+        "third_task": "subset_123689"
+      },
+      {
+        "held_task": "fibonacci",
+        "held": "fibonacci_seed101",
+        "nearest": "subset_123689_seed42",
+        "nearest_task": "subset_123689",
+        "nearest_distance": 5.963403224945068,
+        "second_task": "subset_123689",
+        "third_task": "subset_123689"
+      },
+      {
+        "held_task": "fibonacci",
+        "held": "fibonacci_seed2024",
+        "nearest": "subset_123689_seed42",
+        "nearest_task": "subset_123689",
+        "nearest_distance": 5.751247882843018,
+        "second_task": "subset_123689",
+        "third_task": "subset_123689"
+      },
+      {
+        "held_task": "middle_456",
+        "held": "middle_456_seed42",
+        "nearest": "subset_459_seed2024",
+        "nearest_task": "subset_459",
+        "nearest_distance": 5.6131486892700195,
+        "second_task": "subset_459",
+        "third_task": "subset_459"
+      },
+      {
+        "held_task": "middle_456",
+        "held": "middle_456_seed101",
+        "nearest": "subset_459_seed2024",
+        "nearest_task": "subset_459",
+        "nearest_distance": 5.787882328033447,
+        "second_task": "subset_459",
+        "third_task": "subset_459"
+      },
+      {
+        "held_task": "middle_456",
+        "held": "middle_456_seed2024",
+        "nearest": "subset_459_seed2024",
+        "nearest_task": "subset_459",
+        "nearest_distance": 5.967484474182129,
+        "second_task": "subset_459",
+        "third_task": "subset_459"
+      },
+      {
+        "held_task": "fashion_class",
+        "held": "fashion_class_seed42",
+        "nearest": "mod5_seed42",
+        "nearest_task": "mod5",
+        "nearest_distance": 11.43612289428711,
+        "second_task": "mod5",
+        "third_task": "mod5"
+      },
+      {
+        "held_task": "fashion_class",
+        "held": "fashion_class_seed101",
+        "nearest": "digit_class_seed101",
+        "nearest_task": "digit_class",
+        "nearest_distance": 11.659446716308594,
+        "second_task": "digit_class",
+        "third_task": "digit_class"
+      },
+      {
+        "held_task": "fashion_class",
+        "held": "fashion_class_seed2024",
+        "nearest": "mod5_seed42",
+        "nearest_task": "mod5",
+        "nearest_distance": 10.799736022949219,
+        "second_task": "mod5",
+        "third_task": "mod5"
+      },
+      {
+        "held_task": "subset_01458",
+        "held": "subset_01458_seed42",
+        "nearest": "subset_0489_seed101",
+        "nearest_task": "subset_0489",
+        "nearest_distance": 6.197239875793457,
+        "second_task": "subset_0489",
+        "third_task": "subset_0489"
+      },
+      {
+        "held_task": "subset_01458",
+        "held": "subset_01458_seed101",
+        "nearest": "subset_0489_seed101",
+        "nearest_task": "subset_0489",
+        "nearest_distance": 5.7097296714782715,
+        "second_task": "subset_0489",
+        "third_task": "subset_0489"
+      },
+      {
+        "held_task": "subset_01458",
+        "held": "subset_01458_seed2024",
+        "nearest": "subset_0489_seed101",
+        "nearest_task": "subset_0489",
+        "nearest_distance": 6.397351264953613,
+        "second_task": "subset_0489",
+        "third_task": "subset_0489"
+      },
+      {
+        "held_task": "subset_459",
+        "held": "subset_459_seed42",
+        "nearest": "subset_0459_seed42",
+        "nearest_task": "subset_0459",
+        "nearest_distance": 5.380580902099609,
+        "second_task": "subset_0459",
+        "third_task": "subset_0459"
+      },
+      {
+        "held_task": "subset_459",
+        "held": "subset_459_seed101",
+        "nearest": "subset_0459_seed101",
+        "nearest_task": "subset_0459",
+        "nearest_distance": 5.526386260986328,
+        "second_task": "subset_0459",
+        "third_task": "subset_0459"
+      },
+      {
+        "held_task": "subset_459",
+        "held": "subset_459_seed2024",
+        "nearest": "subset_0459_seed2024",
+        "nearest_task": "subset_0459",
+        "nearest_distance": 5.458097457885742,
+        "second_task": "middle_456",
+        "third_task": "subset_0459"
+      },
+      {
+        "held_task": "subset_0459",
+        "held": "subset_0459_seed42",
+        "nearest": "subset_02459_seed42",
+        "nearest_task": "subset_02459",
+        "nearest_distance": 4.634202003479004,
+        "second_task": "subset_02459",
+        "third_task": "subset_02459"
+      },
+      {
+        "held_task": "subset_0459",
+        "held": "subset_0459_seed101",
+        "nearest": "subset_02459_seed101",
+        "nearest_task": "subset_02459",
+        "nearest_distance": 4.421685695648193,
+        "second_task": "subset_0489",
+        "third_task": "subset_02459"
+      },
+      {
+        "held_task": "subset_0459",
+        "held": "subset_0459_seed2024",
+        "nearest": "subset_02459_seed2024",
+        "nearest_task": "subset_02459",
+        "nearest_distance": 4.700644016265869,
+        "second_task": "subset_02459",
+        "third_task": "subset_02459"
+      },
+      {
+        "held_task": "subset_13678",
+        "held": "subset_13678_seed42",
+        "nearest": "triangular_seed42",
+        "nearest_task": "triangular",
+        "nearest_distance": 6.258143424987793,
+        "second_task": "triangular",
+        "third_task": "triangular"
+      },
+      {
+        "held_task": "subset_13678",
+        "held": "subset_13678_seed101",
+        "nearest": "triangular_seed42",
+        "nearest_task": "triangular",
+        "nearest_distance": 6.537703037261963,
+        "second_task": "triangular",
+        "third_task": "triangular"
+      },
+      {
+        "held_task": "subset_13678",
+        "held": "subset_13678_seed2024",
+        "nearest": "triangular_seed42",
+        "nearest_task": "triangular",
+        "nearest_distance": 6.202550411224365,
+        "second_task": "triangular",
+        "third_task": "subset_123689"
+      },
+      {
+        "held_task": "subset_1256",
+        "held": "subset_1256_seed42",
+        "nearest": "triangular_seed101",
+        "nearest_task": "triangular",
+        "nearest_distance": 6.0039238929748535,
+        "second_task": "triangular",
+        "third_task": "triangular"
+      },
+      {
+        "held_task": "subset_1256",
+        "held": "subset_1256_seed101",
+        "nearest": "triangular_seed101",
+        "nearest_task": "triangular",
+        "nearest_distance": 5.718768119812012,
+        "second_task": "subset_267",
+        "third_task": "subset_267"
+      },
+      {
+        "held_task": "subset_1256",
+        "held": "subset_1256_seed2024",
+        "nearest": "subset_267_seed2024",
+        "nearest_task": "subset_267",
+        "nearest_distance": 6.424859046936035,
+        "second_task": "subset_267",
+        "third_task": "triangular"
+      },
+      {
+        "held_task": "subset_267",
+        "held": "subset_267_seed42",
+        "nearest": "subset_1256_seed101",
+        "nearest_task": "subset_1256",
+        "nearest_distance": 6.063953399658203,
+        "second_task": "subset_1256",
+        "third_task": "subset_1256"
+      },
+      {
+        "held_task": "subset_267",
+        "held": "subset_267_seed101",
+        "nearest": "subset_1256_seed101",
+        "nearest_task": "subset_1256",
+        "nearest_distance": 6.548811435699463,
+        "second_task": "subset_025678",
+        "third_task": "subset_1256"
+      },
+      {
+        "held_task": "subset_267",
+        "held": "subset_267_seed2024",
+        "nearest": "subset_1256_seed101",
+        "nearest_task": "subset_1256",
+        "nearest_distance": 6.116525650024414,
+        "second_task": "subset_1256",
+        "third_task": "primes_vs_rest"
+      },
+      {
+        "held_task": "subset_123689",
+        "held": "subset_123689_seed42",
+        "nearest": "fibonacci_seed2024",
+        "nearest_task": "fibonacci",
+        "nearest_distance": 5.751247882843018,
+        "second_task": "fibonacci",
+        "third_task": "fibonacci"
+      },
+      {
+        "held_task": "subset_123689",
+        "held": "subset_123689_seed101",
+        "nearest": "fibonacci_seed2024",
+        "nearest_task": "fibonacci",
+        "nearest_distance": 5.887256145477295,
+        "second_task": "fibonacci",
+        "third_task": "fibonacci"
+      },
+      {
+        "held_task": "subset_123689",
+        "held": "subset_123689_seed2024",
+        "nearest": "fibonacci_seed101",
+        "nearest_task": "fibonacci",
+        "nearest_distance": 6.35296106338501,
+        "second_task": "fibonacci",
+        "third_task": "subset_123679"
+      },
+      {
+        "held_task": "subset_2349",
+        "held": "subset_2349_seed42",
+        "nearest": "subset_02349_seed101",
+        "nearest_task": "subset_02349",
+        "nearest_distance": 5.035546779632568,
+        "second_task": "subset_02349",
+        "third_task": "subset_02349"
+      },
+      {
+        "held_task": "subset_2349",
+        "held": "subset_2349_seed101",
+        "nearest": "subset_02349_seed101",
+        "nearest_task": "subset_02349",
+        "nearest_distance": 5.124945640563965,
+        "second_task": "subset_02349",
+        "third_task": "subset_02349"
+      },
+      {
+        "held_task": "subset_2349",
+        "held": "subset_2349_seed2024",
+        "nearest": "subset_02349_seed2024",
+        "nearest_task": "subset_02349",
+        "nearest_distance": 5.130672454833984,
+        "second_task": "subset_02349",
+        "third_task": "subset_02349"
+      },
+      {
+        "held_task": "subset_01789",
+        "held": "subset_01789_seed42",
+        "nearest": "subset_01589_seed2024",
+        "nearest_task": "subset_01589",
+        "nearest_distance": 4.684018611907959,
+        "second_task": "subset_01589",
+        "third_task": "subset_01589"
+      },
+      {
+        "held_task": "subset_01789",
+        "held": "subset_01789_seed101",
+        "nearest": "subset_01589_seed42",
+        "nearest_task": "subset_01589",
+        "nearest_distance": 4.580009937286377,
+        "second_task": "subset_01589",
+        "third_task": "subset_01589"
+      },
+      {
+        "held_task": "subset_01789",
+        "held": "subset_01789_seed2024",
+        "nearest": "subset_01589_seed2024",
+        "nearest_task": "subset_01589",
+        "nearest_distance": 5.034142017364502,
+        "second_task": "subset_01589",
+        "third_task": "subset_01589"
+      },
+      {
+        "held_task": "subset_3457",
+        "held": "subset_3457_seed42",
+        "nearest": "subset_2349_seed2024",
+        "nearest_task": "subset_2349",
+        "nearest_distance": 7.13801383972168,
+        "second_task": "primes_vs_rest",
+        "third_task": "subset_459"
+      },
+      {
+        "held_task": "subset_3457",
+        "held": "subset_3457_seed101",
+        "nearest": "subset_459_seed101",
+        "nearest_task": "subset_459",
+        "nearest_distance": 7.000008583068848,
+        "second_task": "subset_2349",
+        "third_task": "subset_2349"
+      },
+      {
+        "held_task": "subset_3457",
+        "held": "subset_3457_seed2024",
+        "nearest": "subset_2349_seed2024",
+        "nearest_task": "subset_2349",
+        "nearest_distance": 7.191331386566162,
+        "second_task": "subset_2349",
+        "third_task": "subset_459"
+      },
+      {
+        "held_task": "subset_014567",
+        "held": "subset_014567_seed42",
+        "nearest": "subset_01458_seed2024",
+        "nearest_task": "subset_01458",
+        "nearest_distance": 7.575160503387451,
+        "second_task": "subset_01458",
+        "third_task": "subset_01458"
+      },
+      {
+        "held_task": "subset_014567",
+        "held": "subset_014567_seed101",
+        "nearest": "subset_01458_seed101",
+        "nearest_task": "subset_01458",
+        "nearest_distance": 7.660854339599609,
+        "second_task": "subset_01458",
+        "third_task": "subset_01458"
+      },
+      {
+        "held_task": "subset_014567",
+        "held": "subset_014567_seed2024",
+        "nearest": "subset_01458_seed101",
+        "nearest_task": "subset_01458",
+        "nearest_distance": 7.337585926055908,
+        "second_task": "subset_01458",
+        "third_task": "subset_01458"
+      },
+      {
+        "held_task": "subset_0379",
+        "held": "subset_0379_seed42",
+        "nearest": "parity_seed2024",
+        "nearest_task": "parity",
+        "nearest_distance": 7.086631774902344,
+        "second_task": "parity",
+        "third_task": "parity"
+      },
+      {
+        "held_task": "subset_0379",
+        "held": "subset_0379_seed101",
+        "nearest": "parity_seed101",
+        "nearest_task": "parity",
+        "nearest_distance": 7.144209384918213,
+        "second_task": "parity",
+        "third_task": "parity"
+      },
+      {
+        "held_task": "subset_0379",
+        "held": "subset_0379_seed2024",
+        "nearest": "parity_seed2024",
+        "nearest_task": "parity",
+        "nearest_distance": 6.526054382324219,
+        "second_task": "parity",
+        "third_task": "parity"
+      },
+      {
+        "held_task": "subset_15789",
+        "held": "subset_15789_seed42",
+        "nearest": "subset_01789_seed101",
+        "nearest_task": "subset_01789",
+        "nearest_distance": 5.455380439758301,
+        "second_task": "subset_01789",
+        "third_task": "subset_01789"
+      },
+      {
+        "held_task": "subset_15789",
+        "held": "subset_15789_seed101",
+        "nearest": "subset_01789_seed101",
+        "nearest_task": "subset_01789",
+        "nearest_distance": 5.735358238220215,
+        "second_task": "high_vs_low",
+        "third_task": "high_vs_low"
+      },
+      {
+        "held_task": "subset_15789",
+        "held": "subset_15789_seed2024",
+        "nearest": "subset_01789_seed101",
+        "nearest_task": "subset_01789",
+        "nearest_distance": 5.740987777709961,
+        "second_task": "high_vs_low",
+        "third_task": "subset_01789"
+      },
+      {
+        "held_task": "subset_123468",
+        "held": "subset_123468_seed42",
+        "nearest": "subset_123689_seed42",
+        "nearest_task": "subset_123689",
+        "nearest_distance": 7.0436930656433105,
+        "second_task": "subset_123689",
+        "third_task": "subset_123689"
+      },
+      {
+        "held_task": "subset_123468",
+        "held": "subset_123468_seed101",
+        "nearest": "subset_123689_seed42",
+        "nearest_task": "subset_123689",
+        "nearest_distance": 6.842061519622803,
+        "second_task": "subset_123689",
+        "third_task": "subset_123689"
+      },
+      {
+        "held_task": "subset_123468",
+        "held": "subset_123468_seed2024",
+        "nearest": "subset_123689_seed42",
+        "nearest_task": "subset_123689",
+        "nearest_distance": 7.095936298370361,
+        "second_task": "subset_123689",
+        "third_task": "subset_123689"
+      },
+      {
+        "held_task": "subset_02459",
+        "held": "subset_02459_seed42",
+        "nearest": "subset_0459_seed42",
+        "nearest_task": "subset_0459",
+        "nearest_distance": 4.634202003479004,
+        "second_task": "subset_0459",
+        "third_task": "subset_0459"
+      },
+      {
+        "held_task": "subset_02459",
+        "held": "subset_02459_seed101",
+        "nearest": "subset_0459_seed101",
+        "nearest_task": "subset_0459",
+        "nearest_distance": 4.421685695648193,
+        "second_task": "subset_02349",
+        "third_task": "subset_0459"
+      },
+      {
+        "held_task": "subset_02459",
+        "held": "subset_02459_seed2024",
+        "nearest": "subset_02349_seed42",
+        "nearest_task": "subset_02349",
+        "nearest_distance": 4.474954128265381,
+        "second_task": "subset_02349",
+        "third_task": "subset_0459"
+      },
+      {
+        "held_task": "subset_01589",
+        "held": "subset_01589_seed42",
+        "nearest": "subset_01789_seed101",
+        "nearest_task": "subset_01789",
+        "nearest_distance": 4.580009937286377,
+        "second_task": "subset_01789",
+        "third_task": "subset_01789"
+      },
+      {
+        "held_task": "subset_01589",
+        "held": "subset_01589_seed101",
+        "nearest": "subset_01789_seed101",
+        "nearest_task": "subset_01789",
+        "nearest_distance": 5.274790287017822,
+        "second_task": "subset_01789",
+        "third_task": "subset_01789"
+      },
+      {
+        "held_task": "subset_01589",
+        "held": "subset_01589_seed2024",
+        "nearest": "subset_01789_seed42",
+        "nearest_task": "subset_01789",
+        "nearest_distance": 4.684018611907959,
+        "second_task": "subset_01789",
+        "third_task": "subset_01789"
+      },
+      {
+        "held_task": "subset_025678",
+        "held": "subset_025678_seed42",
+        "nearest": "subset_267_seed42",
+        "nearest_task": "subset_267",
+        "nearest_distance": 7.013988018035889,
+        "second_task": "subset_267",
+        "third_task": "subset_267"
+      },
+      {
+        "held_task": "subset_025678",
+        "held": "subset_025678_seed101",
+        "nearest": "subset_267_seed101",
+        "nearest_task": "subset_267",
+        "nearest_distance": 7.49716854095459,
+        "second_task": "subset_267",
+        "third_task": "high_vs_low"
+      },
+      {
+        "held_task": "subset_025678",
+        "held": "subset_025678_seed2024",
+        "nearest": "subset_267_seed101",
+        "nearest_task": "subset_267",
+        "nearest_distance": 6.799856185913086,
+        "second_task": "subset_267",
+        "third_task": "subset_267"
+      },
+      {
+        "held_task": "subset_02349",
+        "held": "subset_02349_seed42",
+        "nearest": "subset_02459_seed2024",
+        "nearest_task": "subset_02459",
+        "nearest_distance": 4.474954128265381,
+        "second_task": "subset_02459",
+        "third_task": "subset_02459"
+      },
+      {
+        "held_task": "subset_02349",
+        "held": "subset_02349_seed101",
+        "nearest": "subset_02459_seed101",
+        "nearest_task": "subset_02459",
+        "nearest_distance": 5.017867088317871,
+        "second_task": "subset_2349",
+        "third_task": "subset_2349"
+      },
+      {
+        "held_task": "subset_02349",
+        "held": "subset_02349_seed2024",
+        "nearest": "subset_02459_seed2024",
+        "nearest_task": "subset_02459",
+        "nearest_distance": 4.689499855041504,
+        "second_task": "subset_02459",
+        "third_task": "subset_02459"
+      },
+      {
+        "held_task": "subset_123679",
+        "held": "subset_123679_seed42",
+        "nearest": "parity_seed42",
+        "nearest_task": "parity",
+        "nearest_distance": 6.258447170257568,
+        "second_task": "parity",
+        "third_task": "parity"
+      },
+      {
+        "held_task": "subset_123679",
+        "held": "subset_123679_seed101",
+        "nearest": "subset_123689_seed101",
+        "nearest_task": "subset_123689",
+        "nearest_distance": 6.485174655914307,
+        "second_task": "parity",
+        "third_task": "subset_123689"
+      },
+      {
+        "held_task": "subset_123679",
+        "held": "subset_123679_seed2024",
+        "nearest": "subset_123689_seed2024",
+        "nearest_task": "subset_123689",
+        "nearest_distance": 6.540618419647217,
+        "second_task": "parity",
+        "third_task": "subset_123689"
+      },
+      {
+        "held_task": "subset_0489",
+        "held": "subset_0489_seed42",
+        "nearest": "subset_0459_seed42",
+        "nearest_task": "subset_0459",
+        "nearest_distance": 5.160637378692627,
+        "second_task": "subset_0459",
+        "third_task": "subset_0459"
+      },
+      {
+        "held_task": "subset_0489",
+        "held": "subset_0489_seed101",
+        "nearest": "subset_0459_seed101",
+        "nearest_task": "subset_0459",
+        "nearest_distance": 4.884240627288818,
+        "second_task": "subset_0459",
+        "third_task": "subset_01458"
+      },
+      {
+        "held_task": "subset_0489",
+        "held": "subset_0489_seed2024",
+        "nearest": "subset_0459_seed101",
+        "nearest_task": "subset_0459",
+        "nearest_distance": 5.055313587188721,
+        "second_task": "subset_0459",
+        "third_task": "subset_0459"
+      }
+    ]
+  },
+  "same_task_retrieval": {
+    "n_held_out": 31,
+    "n_correct": 31,
+    "accuracy": 1.0
+  }
+}
