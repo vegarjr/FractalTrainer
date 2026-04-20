@@ -1,0 +1,2143 @@
+{
+  "anchor_A": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "anchor_B": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "in_region_threshold": 0.75,
+  "all_rows": [
+    {
+      "probe": "probe2_01",
+      "region_type": "in_A",
+      "target": [
+        0,
+        1
+      ],
+      "route": "A",
+      "budget_N": 50,
+      "oracle_acc": 0.99,
+      "acc_compose_A": 0.984,
+      "acc_compose_B": 0.608,
+      "acc_compose_uniform": 0.802,
+      "acc_multi_region_oracle": 0.984,
+      "acc_routed": 0.984,
+      "acc_spawn": 0.906,
+      "routed_selected": [
+        "anchor3_014_seed2024",
+        "anchor3_013_seed2024",
+        "anchor3_012_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_01",
+      "region_type": "in_A",
+      "target": [
+        0,
+        1
+      ],
+      "route": "A",
+      "budget_N": 100,
+      "oracle_acc": 0.99,
+      "acc_compose_A": 0.984,
+      "acc_compose_B": 0.518,
+      "acc_compose_uniform": 0.802,
+      "acc_multi_region_oracle": 0.984,
+      "acc_routed": 0.984,
+      "acc_spawn": 0.921,
+      "routed_selected": [
+        "anchor3_012_seed2024",
+        "anchor3_014_seed101",
+        "anchor3_013_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_01",
+      "region_type": "in_A",
+      "target": [
+        0,
+        1
+      ],
+      "route": "A",
+      "budget_N": 300,
+      "oracle_acc": 0.99,
+      "acc_compose_A": 0.983,
+      "acc_compose_B": 0.489,
+      "acc_compose_uniform": 0.807,
+      "acc_multi_region_oracle": 0.983,
+      "acc_routed": 0.983,
+      "acc_spawn": 0.968,
+      "routed_selected": [
+        "anchor3_014_seed2024",
+        "anchor3_013_seed2024",
+        "anchor3_012_seed101"
+      ]
+    },
+    {
+      "probe": "probe2_01",
+      "region_type": "in_A",
+      "target": [
+        0,
+        1
+      ],
+      "route": "A",
+      "budget_N": 1000,
+      "oracle_acc": 0.99,
+      "acc_compose_A": 0.986,
+      "acc_compose_B": 0.608,
+      "acc_compose_uniform": 0.834,
+      "acc_multi_region_oracle": 0.986,
+      "acc_routed": 0.986,
+      "acc_spawn": 0.98,
+      "routed_selected": [
+        "anchor3_012_seed2024",
+        "anchor3_013_seed42",
+        "anchor3_014_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_01",
+      "region_type": "in_A",
+      "target": [
+        0,
+        1
+      ],
+      "route": "A",
+      "budget_N": 5000,
+      "oracle_acc": 0.99,
+      "acc_compose_A": 0.984,
+      "acc_compose_B": 0.597,
+      "acc_compose_uniform": 0.834,
+      "acc_multi_region_oracle": 0.984,
+      "acc_routed": 0.984,
+      "acc_spawn": 0.975,
+      "routed_selected": [
+        "anchor3_012_seed2024",
+        "anchor3_013_seed2024",
+        "anchor3_014_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_12",
+      "region_type": "in_A",
+      "target": [
+        1,
+        2
+      ],
+      "route": "A",
+      "budget_N": 50,
+      "oracle_acc": 0.985,
+      "acc_compose_A": 0.984,
+      "acc_compose_B": 0.579,
+      "acc_compose_uniform": 0.815,
+      "acc_multi_region_oracle": 0.984,
+      "acc_routed": 0.984,
+      "acc_spawn": 0.921,
+      "routed_selected": [
+        "anchor3_124_seed2024",
+        "anchor3_012_seed42",
+        "anchor3_123_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_12",
+      "region_type": "in_A",
+      "target": [
+        1,
+        2
+      ],
+      "route": "A",
+      "budget_N": 100,
+      "oracle_acc": 0.985,
+      "acc_compose_A": 0.983,
+      "acc_compose_B": 0.578,
+      "acc_compose_uniform": 0.886,
+      "acc_multi_region_oracle": 0.983,
+      "acc_routed": 0.983,
+      "acc_spawn": 0.936,
+      "routed_selected": [
+        "anchor3_124_seed2024",
+        "anchor3_123_seed2024",
+        "anchor3_012_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_12",
+      "region_type": "in_A",
+      "target": [
+        1,
+        2
+      ],
+      "route": "A",
+      "budget_N": 300,
+      "oracle_acc": 0.985,
+      "acc_compose_A": 0.988,
+      "acc_compose_B": 0.59,
+      "acc_compose_uniform": 0.886,
+      "acc_multi_region_oracle": 0.988,
+      "acc_routed": 0.988,
+      "acc_spawn": 0.966,
+      "routed_selected": [
+        "anchor3_123_seed101",
+        "anchor3_124_seed101",
+        "anchor3_012_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_12",
+      "region_type": "in_A",
+      "target": [
+        1,
+        2
+      ],
+      "route": "A",
+      "budget_N": 1000,
+      "oracle_acc": 0.985,
+      "acc_compose_A": 0.983,
+      "acc_compose_B": 0.531,
+      "acc_compose_uniform": 0.815,
+      "acc_multi_region_oracle": 0.983,
+      "acc_routed": 0.983,
+      "acc_spawn": 0.974,
+      "routed_selected": [
+        "anchor3_124_seed2024",
+        "anchor3_123_seed2024",
+        "anchor3_012_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_12",
+      "region_type": "in_A",
+      "target": [
+        1,
+        2
+      ],
+      "route": "A",
+      "budget_N": 5000,
+      "oracle_acc": 0.985,
+      "acc_compose_A": 0.987,
+      "acc_compose_B": 0.52,
+      "acc_compose_uniform": 0.815,
+      "acc_multi_region_oracle": 0.987,
+      "acc_routed": 0.987,
+      "acc_spawn": 0.983,
+      "routed_selected": [
+        "anchor3_012_seed2024",
+        "anchor3_124_seed42",
+        "anchor3_123_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_23",
+      "region_type": "in_A",
+      "target": [
+        2,
+        3
+      ],
+      "route": "A",
+      "budget_N": 50,
+      "oracle_acc": 0.978,
+      "acc_compose_A": 0.974,
+      "acc_compose_B": 0.612,
+      "acc_compose_uniform": 0.805,
+      "acc_multi_region_oracle": 0.974,
+      "acc_routed": 0.974,
+      "acc_spawn": 0.894,
+      "routed_selected": [
+        "anchor3_234_seed2024",
+        "anchor3_123_seed2024",
+        "anchor3_023_seed101"
+      ]
+    },
+    {
+      "probe": "probe2_23",
+      "region_type": "in_A",
+      "target": [
+        2,
+        3
+      ],
+      "route": "A",
+      "budget_N": 100,
+      "oracle_acc": 0.978,
+      "acc_compose_A": 0.974,
+      "acc_compose_B": 0.569,
+      "acc_compose_uniform": 0.805,
+      "acc_multi_region_oracle": 0.974,
+      "acc_routed": 0.974,
+      "acc_spawn": 0.907,
+      "routed_selected": [
+        "anchor3_234_seed2024",
+        "anchor3_123_seed2024",
+        "anchor3_023_seed101"
+      ]
+    },
+    {
+      "probe": "probe2_23",
+      "region_type": "in_A",
+      "target": [
+        2,
+        3
+      ],
+      "route": "A",
+      "budget_N": 300,
+      "oracle_acc": 0.978,
+      "acc_compose_A": 0.974,
+      "acc_compose_B": 0.618,
+      "acc_compose_uniform": 0.809,
+      "acc_multi_region_oracle": 0.974,
+      "acc_routed": 0.974,
+      "acc_spawn": 0.928,
+      "routed_selected": [
+        "anchor3_234_seed2024",
+        "anchor3_123_seed2024",
+        "anchor3_023_seed101"
+      ]
+    },
+    {
+      "probe": "probe2_23",
+      "region_type": "in_A",
+      "target": [
+        2,
+        3
+      ],
+      "route": "A",
+      "budget_N": 1000,
+      "oracle_acc": 0.978,
+      "acc_compose_A": 0.976,
+      "acc_compose_B": 0.528,
+      "acc_compose_uniform": 0.773,
+      "acc_multi_region_oracle": 0.976,
+      "acc_routed": 0.976,
+      "acc_spawn": 0.958,
+      "routed_selected": [
+        "anchor3_234_seed2024",
+        "anchor3_023_seed2024",
+        "anchor3_123_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_23",
+      "region_type": "in_A",
+      "target": [
+        2,
+        3
+      ],
+      "route": "A",
+      "budget_N": 5000,
+      "oracle_acc": 0.978,
+      "acc_compose_A": 0.976,
+      "acc_compose_B": 0.563,
+      "acc_compose_uniform": 0.776,
+      "acc_multi_region_oracle": 0.976,
+      "acc_routed": 0.976,
+      "acc_spawn": 0.971,
+      "routed_selected": [
+        "anchor3_234_seed2024",
+        "anchor3_023_seed2024",
+        "anchor3_123_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_34",
+      "region_type": "in_A",
+      "target": [
+        3,
+        4
+      ],
+      "route": "A",
+      "budget_N": 50,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.961,
+      "acc_compose_B": 0.604,
+      "acc_compose_uniform": 0.796,
+      "acc_multi_region_oracle": 0.961,
+      "acc_routed": 0.961,
+      "acc_spawn": 0.832,
+      "routed_selected": [
+        "anchor3_234_seed2024",
+        "anchor3_034_seed101",
+        "anchor3_134_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_34",
+      "region_type": "in_A",
+      "target": [
+        3,
+        4
+      ],
+      "route": "A",
+      "budget_N": 100,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.961,
+      "acc_compose_B": 0.553,
+      "acc_compose_uniform": 0.792,
+      "acc_multi_region_oracle": 0.961,
+      "acc_routed": 0.961,
+      "acc_spawn": 0.881,
+      "routed_selected": [
+        "anchor3_234_seed2024",
+        "anchor3_034_seed101",
+        "anchor3_134_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_34",
+      "region_type": "in_A",
+      "target": [
+        3,
+        4
+      ],
+      "route": "A",
+      "budget_N": 300,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.964,
+      "acc_compose_B": 0.612,
+      "acc_compose_uniform": 0.796,
+      "acc_multi_region_oracle": 0.964,
+      "acc_routed": 0.964,
+      "acc_spawn": 0.903,
+      "routed_selected": [
+        "anchor3_234_seed2024",
+        "anchor3_034_seed42",
+        "anchor3_134_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_34",
+      "region_type": "in_A",
+      "target": [
+        3,
+        4
+      ],
+      "route": "A",
+      "budget_N": 1000,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.964,
+      "acc_compose_B": 0.549,
+      "acc_compose_uniform": 0.796,
+      "acc_multi_region_oracle": 0.964,
+      "acc_routed": 0.964,
+      "acc_spawn": 0.943,
+      "routed_selected": [
+        "anchor3_234_seed2024",
+        "anchor3_034_seed42",
+        "anchor3_134_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_34",
+      "region_type": "in_A",
+      "target": [
+        3,
+        4
+      ],
+      "route": "A",
+      "budget_N": 5000,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.966,
+      "acc_compose_B": 0.542,
+      "acc_compose_uniform": 0.796,
+      "acc_multi_region_oracle": 0.966,
+      "acc_routed": 0.966,
+      "acc_spawn": 0.949,
+      "routed_selected": [
+        "anchor3_034_seed2024",
+        "anchor3_234_seed2024",
+        "anchor3_134_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_04",
+      "region_type": "in_A",
+      "target": [
+        0,
+        4
+      ],
+      "route": "A",
+      "budget_N": 50,
+      "oracle_acc": 0.97,
+      "acc_compose_A": 0.983,
+      "acc_compose_B": 0.517,
+      "acc_compose_uniform": 0.795,
+      "acc_multi_region_oracle": 0.983,
+      "acc_routed": 0.983,
+      "acc_spawn": 0.857,
+      "routed_selected": [
+        "anchor3_024_seed2024",
+        "anchor3_034_seed2024",
+        "anchor3_014_seed101"
+      ]
+    },
+    {
+      "probe": "probe2_04",
+      "region_type": "in_A",
+      "target": [
+        0,
+        4
+      ],
+      "route": "A",
+      "budget_N": 100,
+      "oracle_acc": 0.97,
+      "acc_compose_A": 0.983,
+      "acc_compose_B": 0.504,
+      "acc_compose_uniform": 0.797,
+      "acc_multi_region_oracle": 0.983,
+      "acc_routed": 0.983,
+      "acc_spawn": 0.882,
+      "routed_selected": [
+        "anchor3_024_seed2024",
+        "anchor3_034_seed2024",
+        "anchor3_014_seed101"
+      ]
+    },
+    {
+      "probe": "probe2_04",
+      "region_type": "in_A",
+      "target": [
+        0,
+        4
+      ],
+      "route": "A",
+      "budget_N": 300,
+      "oracle_acc": 0.97,
+      "acc_compose_A": 0.983,
+      "acc_compose_B": 0.494,
+      "acc_compose_uniform": 0.793,
+      "acc_multi_region_oracle": 0.983,
+      "acc_routed": 0.983,
+      "acc_spawn": 0.944,
+      "routed_selected": [
+        "anchor3_034_seed2024",
+        "anchor3_024_seed2024",
+        "anchor3_014_seed101"
+      ]
+    },
+    {
+      "probe": "probe2_04",
+      "region_type": "in_A",
+      "target": [
+        0,
+        4
+      ],
+      "route": "A",
+      "budget_N": 1000,
+      "oracle_acc": 0.97,
+      "acc_compose_A": 0.979,
+      "acc_compose_B": 0.511,
+      "acc_compose_uniform": 0.793,
+      "acc_multi_region_oracle": 0.979,
+      "acc_routed": 0.979,
+      "acc_spawn": 0.961,
+      "routed_selected": [
+        "anchor3_024_seed2024",
+        "anchor3_034_seed42",
+        "anchor3_014_seed2024"
+      ]
+    },
+    {
+      "probe": "probe2_04",
+      "region_type": "in_A",
+      "target": [
+        0,
+        4
+      ],
+      "route": "A",
+      "budget_N": 5000,
+      "oracle_acc": 0.97,
+      "acc_compose_A": 0.982,
+      "acc_compose_B": 0.517,
+      "acc_compose_uniform": 0.794,
+      "acc_multi_region_oracle": 0.982,
+      "acc_routed": 0.982,
+      "acc_spawn": 0.97,
+      "routed_selected": [
+        "anchor3_034_seed2024",
+        "anchor3_024_seed2024",
+        "anchor3_014_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_56",
+      "region_type": "in_B",
+      "target": [
+        5,
+        6
+      ],
+      "route": "B",
+      "budget_N": 50,
+      "oracle_acc": 0.984,
+      "acc_compose_A": 0.531,
+      "acc_compose_B": 0.971,
+      "acc_compose_uniform": 0.892,
+      "acc_multi_region_oracle": 0.971,
+      "acc_routed": 0.971,
+      "acc_spawn": 0.898,
+      "routed_selected": [
+        "anchorB3_568_seed2024",
+        "anchorB3_567_seed101",
+        "anchorB3_569_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_56",
+      "region_type": "in_B",
+      "target": [
+        5,
+        6
+      ],
+      "route": "B",
+      "budget_N": 100,
+      "oracle_acc": 0.984,
+      "acc_compose_A": 0.531,
+      "acc_compose_B": 0.971,
+      "acc_compose_uniform": 0.891,
+      "acc_multi_region_oracle": 0.971,
+      "acc_routed": 0.971,
+      "acc_spawn": 0.894,
+      "routed_selected": [
+        "anchorB3_568_seed2024",
+        "anchorB3_567_seed101",
+        "anchorB3_569_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_56",
+      "region_type": "in_B",
+      "target": [
+        5,
+        6
+      ],
+      "route": "B",
+      "budget_N": 300,
+      "oracle_acc": 0.984,
+      "acc_compose_A": 0.531,
+      "acc_compose_B": 0.974,
+      "acc_compose_uniform": 0.891,
+      "acc_multi_region_oracle": 0.974,
+      "acc_routed": 0.974,
+      "acc_spawn": 0.939,
+      "routed_selected": [
+        "anchorB3_568_seed2024",
+        "anchorB3_569_seed2024",
+        "anchorB3_567_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_56",
+      "region_type": "in_B",
+      "target": [
+        5,
+        6
+      ],
+      "route": "B",
+      "budget_N": 1000,
+      "oracle_acc": 0.984,
+      "acc_compose_A": 0.544,
+      "acc_compose_B": 0.974,
+      "acc_compose_uniform": 0.897,
+      "acc_multi_region_oracle": 0.974,
+      "acc_routed": 0.974,
+      "acc_spawn": 0.963,
+      "routed_selected": [
+        "anchorB3_568_seed2024",
+        "anchorB3_569_seed2024",
+        "anchorB3_567_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_56",
+      "region_type": "in_B",
+      "target": [
+        5,
+        6
+      ],
+      "route": "B",
+      "budget_N": 5000,
+      "oracle_acc": 0.984,
+      "acc_compose_A": 0.544,
+      "acc_compose_B": 0.974,
+      "acc_compose_uniform": 0.891,
+      "acc_multi_region_oracle": 0.974,
+      "acc_routed": 0.974,
+      "acc_spawn": 0.975,
+      "routed_selected": [
+        "anchorB3_568_seed2024",
+        "anchorB3_569_seed2024",
+        "anchorB3_567_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_78",
+      "region_type": "in_B",
+      "target": [
+        7,
+        8
+      ],
+      "route": "B",
+      "budget_N": 50,
+      "oracle_acc": 0.963,
+      "acc_compose_A": 0.518,
+      "acc_compose_B": 0.965,
+      "acc_compose_uniform": 0.763,
+      "acc_multi_region_oracle": 0.965,
+      "acc_routed": 0.965,
+      "acc_spawn": 0.867,
+      "routed_selected": [
+        "anchorB3_578_seed2024",
+        "anchorB3_678_seed2024",
+        "anchorB3_789_seed101"
+      ]
+    },
+    {
+      "probe": "probe_oob_78",
+      "region_type": "in_B",
+      "target": [
+        7,
+        8
+      ],
+      "route": "B",
+      "budget_N": 100,
+      "oracle_acc": 0.963,
+      "acc_compose_A": 0.514,
+      "acc_compose_B": 0.956,
+      "acc_compose_uniform": 0.763,
+      "acc_multi_region_oracle": 0.956,
+      "acc_routed": 0.956,
+      "acc_spawn": 0.883,
+      "routed_selected": [
+        "anchorB3_678_seed2024",
+        "anchorB3_578_seed42",
+        "anchorB3_789_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_78",
+      "region_type": "in_B",
+      "target": [
+        7,
+        8
+      ],
+      "route": "B",
+      "budget_N": 300,
+      "oracle_acc": 0.963,
+      "acc_compose_A": 0.511,
+      "acc_compose_B": 0.966,
+      "acc_compose_uniform": 0.752,
+      "acc_multi_region_oracle": 0.966,
+      "acc_routed": 0.966,
+      "acc_spawn": 0.912,
+      "routed_selected": [
+        "anchorB3_678_seed2024",
+        "anchorB3_789_seed2024",
+        "anchorB3_578_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_78",
+      "region_type": "in_B",
+      "target": [
+        7,
+        8
+      ],
+      "route": "B",
+      "budget_N": 1000,
+      "oracle_acc": 0.963,
+      "acc_compose_A": 0.482,
+      "acc_compose_B": 0.965,
+      "acc_compose_uniform": 0.766,
+      "acc_multi_region_oracle": 0.965,
+      "acc_routed": 0.965,
+      "acc_spawn": 0.941,
+      "routed_selected": [
+        "anchorB3_578_seed2024",
+        "anchorB3_789_seed101",
+        "anchorB3_678_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_78",
+      "region_type": "in_B",
+      "target": [
+        7,
+        8
+      ],
+      "route": "B",
+      "budget_N": 5000,
+      "oracle_acc": 0.963,
+      "acc_compose_A": 0.482,
+      "acc_compose_B": 0.965,
+      "acc_compose_uniform": 0.746,
+      "acc_multi_region_oracle": 0.965,
+      "acc_routed": 0.965,
+      "acc_spawn": 0.954,
+      "routed_selected": [
+        "anchorB3_578_seed2024",
+        "anchorB3_789_seed101",
+        "anchorB3_678_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_59",
+      "region_type": "in_B",
+      "target": [
+        5,
+        9
+      ],
+      "route": "B",
+      "budget_N": 50,
+      "oracle_acc": 0.972,
+      "acc_compose_A": 0.6,
+      "acc_compose_B": 0.874,
+      "acc_compose_uniform": 0.882,
+      "acc_multi_region_oracle": 0.874,
+      "acc_routed": 0.874,
+      "acc_spawn": 0.841,
+      "routed_selected": [
+        "anchorB3_579_seed2024",
+        "anchorB3_579_seed101",
+        "anchorB3_569_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_59",
+      "region_type": "in_B",
+      "target": [
+        5,
+        9
+      ],
+      "route": "B",
+      "budget_N": 100,
+      "oracle_acc": 0.972,
+      "acc_compose_A": 0.523,
+      "acc_compose_B": 0.971,
+      "acc_compose_uniform": 0.879,
+      "acc_multi_region_oracle": 0.971,
+      "acc_routed": 0.971,
+      "acc_spawn": 0.839,
+      "routed_selected": [
+        "anchorB3_569_seed2024",
+        "anchorB3_579_seed42",
+        "anchorB3_589_seed42"
+      ]
+    },
+    {
+      "probe": "probe_oob_59",
+      "region_type": "in_B",
+      "target": [
+        5,
+        9
+      ],
+      "route": "B",
+      "budget_N": 300,
+      "oracle_acc": 0.972,
+      "acc_compose_A": 0.523,
+      "acc_compose_B": 0.949,
+      "acc_compose_uniform": 0.881,
+      "acc_multi_region_oracle": 0.949,
+      "acc_routed": 0.949,
+      "acc_spawn": 0.891,
+      "routed_selected": [
+        "anchorB3_569_seed2024",
+        "anchorB3_589_seed2024",
+        "anchorB3_579_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_59",
+      "region_type": "in_B",
+      "target": [
+        5,
+        9
+      ],
+      "route": "B",
+      "budget_N": 1000,
+      "oracle_acc": 0.972,
+      "acc_compose_A": 0.538,
+      "acc_compose_B": 0.96,
+      "acc_compose_uniform": 0.881,
+      "acc_multi_region_oracle": 0.96,
+      "acc_routed": 0.96,
+      "acc_spawn": 0.933,
+      "routed_selected": [
+        "anchorB3_569_seed2024",
+        "anchorB3_579_seed42",
+        "anchorB3_589_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_59",
+      "region_type": "in_B",
+      "target": [
+        5,
+        9
+      ],
+      "route": "B",
+      "budget_N": 5000,
+      "oracle_acc": 0.972,
+      "acc_compose_A": 0.538,
+      "acc_compose_B": 0.96,
+      "acc_compose_uniform": 0.881,
+      "acc_multi_region_oracle": 0.96,
+      "acc_routed": 0.96,
+      "acc_spawn": 0.952,
+      "routed_selected": [
+        "anchorB3_569_seed2024",
+        "anchorB3_579_seed42",
+        "anchorB3_589_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_67",
+      "region_type": "in_B",
+      "target": [
+        6,
+        7
+      ],
+      "route": "B",
+      "budget_N": 50,
+      "oracle_acc": 0.975,
+      "acc_compose_A": 0.517,
+      "acc_compose_B": 0.97,
+      "acc_compose_uniform": 0.888,
+      "acc_multi_region_oracle": 0.97,
+      "acc_routed": 0.97,
+      "acc_spawn": 0.898,
+      "routed_selected": [
+        "anchorB3_678_seed42",
+        "anchorB3_567_seed101",
+        "anchorB3_679_seed42"
+      ]
+    },
+    {
+      "probe": "probe_oob_67",
+      "region_type": "in_B",
+      "target": [
+        6,
+        7
+      ],
+      "route": "B",
+      "budget_N": 100,
+      "oracle_acc": 0.975,
+      "acc_compose_A": 0.518,
+      "acc_compose_B": 0.969,
+      "acc_compose_uniform": 0.888,
+      "acc_multi_region_oracle": 0.969,
+      "acc_routed": 0.969,
+      "acc_spawn": 0.911,
+      "routed_selected": [
+        "anchorB3_678_seed2024",
+        "anchorB3_567_seed101",
+        "anchorB3_679_seed42"
+      ]
+    },
+    {
+      "probe": "probe_oob_67",
+      "region_type": "in_B",
+      "target": [
+        6,
+        7
+      ],
+      "route": "B",
+      "budget_N": 300,
+      "oracle_acc": 0.975,
+      "acc_compose_A": 0.51,
+      "acc_compose_B": 0.971,
+      "acc_compose_uniform": 0.892,
+      "acc_multi_region_oracle": 0.971,
+      "acc_routed": 0.971,
+      "acc_spawn": 0.927,
+      "routed_selected": [
+        "anchorB3_679_seed42",
+        "anchorB3_567_seed2024",
+        "anchorB3_678_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_67",
+      "region_type": "in_B",
+      "target": [
+        6,
+        7
+      ],
+      "route": "B",
+      "budget_N": 1000,
+      "oracle_acc": 0.975,
+      "acc_compose_A": 0.531,
+      "acc_compose_B": 0.967,
+      "acc_compose_uniform": 0.881,
+      "acc_multi_region_oracle": 0.967,
+      "acc_routed": 0.967,
+      "acc_spawn": 0.96,
+      "routed_selected": [
+        "anchorB3_679_seed2024",
+        "anchorB3_678_seed2024",
+        "anchorB3_567_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_67",
+      "region_type": "in_B",
+      "target": [
+        6,
+        7
+      ],
+      "route": "B",
+      "budget_N": 5000,
+      "oracle_acc": 0.975,
+      "acc_compose_A": 0.531,
+      "acc_compose_B": 0.971,
+      "acc_compose_uniform": 0.892,
+      "acc_multi_region_oracle": 0.971,
+      "acc_routed": 0.971,
+      "acc_spawn": 0.969,
+      "routed_selected": [
+        "anchorB3_567_seed2024",
+        "anchorB3_679_seed42",
+        "anchorB3_678_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_89",
+      "region_type": "in_B",
+      "target": [
+        8,
+        9
+      ],
+      "route": "B",
+      "budget_N": 50,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.518,
+      "acc_compose_B": 0.961,
+      "acc_compose_uniform": 0.782,
+      "acc_multi_region_oracle": 0.961,
+      "acc_routed": 0.961,
+      "acc_spawn": 0.821,
+      "routed_selected": [
+        "anchorB3_589_seed42",
+        "anchorB3_789_seed42",
+        "anchorB3_689_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_89",
+      "region_type": "in_B",
+      "target": [
+        8,
+        9
+      ],
+      "route": "B",
+      "budget_N": 100,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.515,
+      "acc_compose_B": 0.961,
+      "acc_compose_uniform": 0.782,
+      "acc_multi_region_oracle": 0.961,
+      "acc_routed": 0.961,
+      "acc_spawn": 0.814,
+      "routed_selected": [
+        "anchorB3_689_seed2024",
+        "anchorB3_789_seed42",
+        "anchorB3_589_seed42"
+      ]
+    },
+    {
+      "probe": "probe_oob_89",
+      "region_type": "in_B",
+      "target": [
+        8,
+        9
+      ],
+      "route": "B",
+      "budget_N": 300,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.52,
+      "acc_compose_B": 0.954,
+      "acc_compose_uniform": 0.782,
+      "acc_multi_region_oracle": 0.954,
+      "acc_routed": 0.954,
+      "acc_spawn": 0.887,
+      "routed_selected": [
+        "anchorB3_689_seed2024",
+        "anchorB3_789_seed42",
+        "anchorB3_589_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_89",
+      "region_type": "in_B",
+      "target": [
+        8,
+        9
+      ],
+      "route": "B",
+      "budget_N": 1000,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.515,
+      "acc_compose_B": 0.954,
+      "acc_compose_uniform": 0.782,
+      "acc_multi_region_oracle": 0.954,
+      "acc_routed": 0.954,
+      "acc_spawn": 0.928,
+      "routed_selected": [
+        "anchorB3_689_seed2024",
+        "anchorB3_789_seed42",
+        "anchorB3_589_seed2024"
+      ]
+    },
+    {
+      "probe": "probe_oob_89",
+      "region_type": "in_B",
+      "target": [
+        8,
+        9
+      ],
+      "route": "B",
+      "budget_N": 5000,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.515,
+      "acc_compose_B": 0.954,
+      "acc_compose_uniform": 0.782,
+      "acc_multi_region_oracle": 0.954,
+      "acc_routed": 0.954,
+      "acc_spawn": 0.952,
+      "routed_selected": [
+        "anchorB3_589_seed2024",
+        "anchorB3_689_seed42",
+        "anchorB3_789_seed42"
+      ]
+    },
+    {
+      "probe": "probe_cr_05",
+      "region_type": "cross",
+      "target": [
+        0,
+        5
+      ],
+      "route": "spawn",
+      "budget_N": 50,
+      "oracle_acc": 0.976,
+      "acc_compose_A": 0.82,
+      "acc_compose_B": 0.765,
+      "acc_compose_uniform": 0.763,
+      "acc_multi_region_oracle": 0.82,
+      "acc_routed": 0.898,
+      "acc_spawn": 0.898,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_05",
+      "region_type": "cross",
+      "target": [
+        0,
+        5
+      ],
+      "route": "spawn",
+      "budget_N": 100,
+      "oracle_acc": 0.976,
+      "acc_compose_A": 0.748,
+      "acc_compose_B": 0.784,
+      "acc_compose_uniform": 0.763,
+      "acc_multi_region_oracle": 0.784,
+      "acc_routed": 0.935,
+      "acc_spawn": 0.935,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_05",
+      "region_type": "cross",
+      "target": [
+        0,
+        5
+      ],
+      "route": "spawn",
+      "budget_N": 300,
+      "oracle_acc": 0.976,
+      "acc_compose_A": 0.736,
+      "acc_compose_B": 0.778,
+      "acc_compose_uniform": 0.796,
+      "acc_multi_region_oracle": 0.778,
+      "acc_routed": 0.954,
+      "acc_spawn": 0.954,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_05",
+      "region_type": "cross",
+      "target": [
+        0,
+        5
+      ],
+      "route": "spawn",
+      "budget_N": 1000,
+      "oracle_acc": 0.976,
+      "acc_compose_A": 0.736,
+      "acc_compose_B": 0.686,
+      "acc_compose_uniform": 0.763,
+      "acc_multi_region_oracle": 0.736,
+      "acc_routed": 0.961,
+      "acc_spawn": 0.961,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_05",
+      "region_type": "cross",
+      "target": [
+        0,
+        5
+      ],
+      "route": "spawn",
+      "budget_N": 5000,
+      "oracle_acc": 0.976,
+      "acc_compose_A": 0.747,
+      "acc_compose_B": 0.717,
+      "acc_compose_uniform": 0.779,
+      "acc_multi_region_oracle": 0.747,
+      "acc_routed": 0.969,
+      "acc_spawn": 0.969,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_16",
+      "region_type": "cross",
+      "target": [
+        1,
+        6
+      ],
+      "route": "spawn",
+      "budget_N": 50,
+      "oracle_acc": 0.987,
+      "acc_compose_A": 0.732,
+      "acc_compose_B": 0.728,
+      "acc_compose_uniform": 0.833,
+      "acc_multi_region_oracle": 0.732,
+      "acc_routed": 0.939,
+      "acc_spawn": 0.939,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_16",
+      "region_type": "cross",
+      "target": [
+        1,
+        6
+      ],
+      "route": "spawn",
+      "budget_N": 100,
+      "oracle_acc": 0.987,
+      "acc_compose_A": 0.73,
+      "acc_compose_B": 0.728,
+      "acc_compose_uniform": 0.833,
+      "acc_multi_region_oracle": 0.73,
+      "acc_routed": 0.921,
+      "acc_spawn": 0.921,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_16",
+      "region_type": "cross",
+      "target": [
+        1,
+        6
+      ],
+      "route": "spawn",
+      "budget_N": 300,
+      "oracle_acc": 0.987,
+      "acc_compose_A": 0.73,
+      "acc_compose_B": 0.698,
+      "acc_compose_uniform": 0.797,
+      "acc_multi_region_oracle": 0.73,
+      "acc_routed": 0.946,
+      "acc_spawn": 0.946,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_16",
+      "region_type": "cross",
+      "target": [
+        1,
+        6
+      ],
+      "route": "spawn",
+      "budget_N": 1000,
+      "oracle_acc": 0.987,
+      "acc_compose_A": 0.732,
+      "acc_compose_B": 0.733,
+      "acc_compose_uniform": 0.833,
+      "acc_multi_region_oracle": 0.733,
+      "acc_routed": 0.97,
+      "acc_spawn": 0.97,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_16",
+      "region_type": "cross",
+      "target": [
+        1,
+        6
+      ],
+      "route": "spawn",
+      "budget_N": 5000,
+      "oracle_acc": 0.987,
+      "acc_compose_A": 0.727,
+      "acc_compose_B": 0.733,
+      "acc_compose_uniform": 0.833,
+      "acc_multi_region_oracle": 0.733,
+      "acc_routed": 0.972,
+      "acc_spawn": 0.972,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_27",
+      "region_type": "cross",
+      "target": [
+        2,
+        7
+      ],
+      "route": "spawn",
+      "budget_N": 50,
+      "oracle_acc": 0.978,
+      "acc_compose_A": 0.767,
+      "acc_compose_B": 0.788,
+      "acc_compose_uniform": 0.882,
+      "acc_multi_region_oracle": 0.788,
+      "acc_routed": 0.884,
+      "acc_spawn": 0.884,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_27",
+      "region_type": "cross",
+      "target": [
+        2,
+        7
+      ],
+      "route": "spawn",
+      "budget_N": 100,
+      "oracle_acc": 0.978,
+      "acc_compose_A": 0.767,
+      "acc_compose_B": 0.719,
+      "acc_compose_uniform": 0.882,
+      "acc_multi_region_oracle": 0.767,
+      "acc_routed": 0.92,
+      "acc_spawn": 0.92,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_27",
+      "region_type": "cross",
+      "target": [
+        2,
+        7
+      ],
+      "route": "spawn",
+      "budget_N": 300,
+      "oracle_acc": 0.978,
+      "acc_compose_A": 0.769,
+      "acc_compose_B": 0.722,
+      "acc_compose_uniform": 0.89,
+      "acc_multi_region_oracle": 0.769,
+      "acc_routed": 0.944,
+      "acc_spawn": 0.944,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_27",
+      "region_type": "cross",
+      "target": [
+        2,
+        7
+      ],
+      "route": "spawn",
+      "budget_N": 1000,
+      "oracle_acc": 0.978,
+      "acc_compose_A": 0.719,
+      "acc_compose_B": 0.744,
+      "acc_compose_uniform": 0.885,
+      "acc_multi_region_oracle": 0.744,
+      "acc_routed": 0.966,
+      "acc_spawn": 0.966,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_27",
+      "region_type": "cross",
+      "target": [
+        2,
+        7
+      ],
+      "route": "spawn",
+      "budget_N": 5000,
+      "oracle_acc": 0.978,
+      "acc_compose_A": 0.721,
+      "acc_compose_B": 0.788,
+      "acc_compose_uniform": 0.89,
+      "acc_multi_region_oracle": 0.788,
+      "acc_routed": 0.97,
+      "acc_spawn": 0.97,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_38",
+      "region_type": "cross",
+      "target": [
+        3,
+        8
+      ],
+      "route": "spawn",
+      "budget_N": 50,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.77,
+      "acc_compose_B": 0.789,
+      "acc_compose_uniform": 0.773,
+      "acc_multi_region_oracle": 0.789,
+      "acc_routed": 0.86,
+      "acc_spawn": 0.86,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_38",
+      "region_type": "cross",
+      "target": [
+        3,
+        8
+      ],
+      "route": "spawn",
+      "budget_N": 100,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.691,
+      "acc_compose_B": 0.727,
+      "acc_compose_uniform": 0.773,
+      "acc_multi_region_oracle": 0.727,
+      "acc_routed": 0.881,
+      "acc_spawn": 0.881,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_38",
+      "region_type": "cross",
+      "target": [
+        3,
+        8
+      ],
+      "route": "spawn",
+      "budget_N": 300,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.7,
+      "acc_compose_B": 0.728,
+      "acc_compose_uniform": 0.666,
+      "acc_multi_region_oracle": 0.728,
+      "acc_routed": 0.928,
+      "acc_spawn": 0.928,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_38",
+      "region_type": "cross",
+      "target": [
+        3,
+        8
+      ],
+      "route": "spawn",
+      "budget_N": 1000,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.705,
+      "acc_compose_B": 0.804,
+      "acc_compose_uniform": 0.67,
+      "acc_multi_region_oracle": 0.804,
+      "acc_routed": 0.942,
+      "acc_spawn": 0.942,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_38",
+      "region_type": "cross",
+      "target": [
+        3,
+        8
+      ],
+      "route": "spawn",
+      "budget_N": 5000,
+      "oracle_acc": 0.961,
+      "acc_compose_A": 0.709,
+      "acc_compose_B": 0.804,
+      "acc_compose_uniform": 0.773,
+      "acc_multi_region_oracle": 0.804,
+      "acc_routed": 0.965,
+      "acc_spawn": 0.965,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_49",
+      "region_type": "cross",
+      "target": [
+        4,
+        9
+      ],
+      "route": "spawn",
+      "budget_N": 50,
+      "oracle_acc": 0.98,
+      "acc_compose_A": 0.696,
+      "acc_compose_B": 0.692,
+      "acc_compose_uniform": 0.886,
+      "acc_multi_region_oracle": 0.696,
+      "acc_routed": 0.879,
+      "acc_spawn": 0.879,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_49",
+      "region_type": "cross",
+      "target": [
+        4,
+        9
+      ],
+      "route": "spawn",
+      "budget_N": 100,
+      "oracle_acc": 0.98,
+      "acc_compose_A": 0.692,
+      "acc_compose_B": 0.684,
+      "acc_compose_uniform": 0.968,
+      "acc_multi_region_oracle": 0.692,
+      "acc_routed": 0.917,
+      "acc_spawn": 0.917,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_49",
+      "region_type": "cross",
+      "target": [
+        4,
+        9
+      ],
+      "route": "spawn",
+      "budget_N": 300,
+      "oracle_acc": 0.98,
+      "acc_compose_A": 0.697,
+      "acc_compose_B": 0.684,
+      "acc_compose_uniform": 0.96,
+      "acc_multi_region_oracle": 0.697,
+      "acc_routed": 0.955,
+      "acc_spawn": 0.955,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_49",
+      "region_type": "cross",
+      "target": [
+        4,
+        9
+      ],
+      "route": "spawn",
+      "budget_N": 1000,
+      "oracle_acc": 0.98,
+      "acc_compose_A": 0.703,
+      "acc_compose_B": 0.783,
+      "acc_compose_uniform": 0.96,
+      "acc_multi_region_oracle": 0.783,
+      "acc_routed": 0.958,
+      "acc_spawn": 0.958,
+      "routed_selected": null
+    },
+    {
+      "probe": "probe_cr_49",
+      "region_type": "cross",
+      "target": [
+        4,
+        9
+      ],
+      "route": "spawn",
+      "budget_N": 5000,
+      "oracle_acc": 0.98,
+      "acc_compose_A": 0.703,
+      "acc_compose_B": 0.719,
+      "acc_compose_uniform": 0.96,
+      "acc_multi_region_oracle": 0.719,
+      "acc_routed": 0.97,
+      "acc_spawn": 0.97,
+      "routed_selected": null
+    }
+  ],
+  "router_decisions": [
+    {
+      "probe": "probe2_01",
+      "target": [
+        0,
+        1
+      ],
+      "region_type": "in_A",
+      "overlaps": {
+        "A": 1.0,
+        "B": 0.0
+      },
+      "route": "A"
+    },
+    {
+      "probe": "probe2_12",
+      "target": [
+        1,
+        2
+      ],
+      "region_type": "in_A",
+      "overlaps": {
+        "A": 1.0,
+        "B": 0.0
+      },
+      "route": "A"
+    },
+    {
+      "probe": "probe2_23",
+      "target": [
+        2,
+        3
+      ],
+      "region_type": "in_A",
+      "overlaps": {
+        "A": 1.0,
+        "B": 0.0
+      },
+      "route": "A"
+    },
+    {
+      "probe": "probe2_34",
+      "target": [
+        3,
+        4
+      ],
+      "region_type": "in_A",
+      "overlaps": {
+        "A": 1.0,
+        "B": 0.0
+      },
+      "route": "A"
+    },
+    {
+      "probe": "probe2_04",
+      "target": [
+        0,
+        4
+      ],
+      "region_type": "in_A",
+      "overlaps": {
+        "A": 1.0,
+        "B": 0.0
+      },
+      "route": "A"
+    },
+    {
+      "probe": "probe_oob_56",
+      "target": [
+        5,
+        6
+      ],
+      "region_type": "in_B",
+      "overlaps": {
+        "A": 0.0,
+        "B": 1.0
+      },
+      "route": "B"
+    },
+    {
+      "probe": "probe_oob_78",
+      "target": [
+        7,
+        8
+      ],
+      "region_type": "in_B",
+      "overlaps": {
+        "A": 0.0,
+        "B": 1.0
+      },
+      "route": "B"
+    },
+    {
+      "probe": "probe_oob_59",
+      "target": [
+        5,
+        9
+      ],
+      "region_type": "in_B",
+      "overlaps": {
+        "A": 0.0,
+        "B": 1.0
+      },
+      "route": "B"
+    },
+    {
+      "probe": "probe_oob_67",
+      "target": [
+        6,
+        7
+      ],
+      "region_type": "in_B",
+      "overlaps": {
+        "A": 0.0,
+        "B": 1.0
+      },
+      "route": "B"
+    },
+    {
+      "probe": "probe_oob_89",
+      "target": [
+        8,
+        9
+      ],
+      "region_type": "in_B",
+      "overlaps": {
+        "A": 0.0,
+        "B": 1.0
+      },
+      "route": "B"
+    },
+    {
+      "probe": "probe_cr_05",
+      "target": [
+        0,
+        5
+      ],
+      "region_type": "cross",
+      "overlaps": {
+        "A": 0.5,
+        "B": 0.5
+      },
+      "route": "spawn"
+    },
+    {
+      "probe": "probe_cr_16",
+      "target": [
+        1,
+        6
+      ],
+      "region_type": "cross",
+      "overlaps": {
+        "A": 0.5,
+        "B": 0.5
+      },
+      "route": "spawn"
+    },
+    {
+      "probe": "probe_cr_27",
+      "target": [
+        2,
+        7
+      ],
+      "region_type": "cross",
+      "overlaps": {
+        "A": 0.5,
+        "B": 0.5
+      },
+      "route": "spawn"
+    },
+    {
+      "probe": "probe_cr_38",
+      "target": [
+        3,
+        8
+      ],
+      "region_type": "cross",
+      "overlaps": {
+        "A": 0.5,
+        "B": 0.5
+      },
+      "route": "spawn"
+    },
+    {
+      "probe": "probe_cr_49",
+      "target": [
+        4,
+        9
+      ],
+      "region_type": "cross",
+      "overlaps": {
+        "A": 0.5,
+        "B": 0.5
+      },
+      "route": "spawn"
+    }
+  ],
+  "spawn_rows": [
+    {
+      "probe": "probe2_01",
+      "budget": 50,
+      "acc_spawn": 0.906
+    },
+    {
+      "probe": "probe2_01",
+      "budget": 100,
+      "acc_spawn": 0.921
+    },
+    {
+      "probe": "probe2_01",
+      "budget": 300,
+      "acc_spawn": 0.968
+    },
+    {
+      "probe": "probe2_01",
+      "budget": 1000,
+      "acc_spawn": 0.98
+    },
+    {
+      "probe": "probe2_01",
+      "budget": 5000,
+      "acc_spawn": 0.975
+    },
+    {
+      "probe": "probe2_12",
+      "budget": 50,
+      "acc_spawn": 0.921
+    },
+    {
+      "probe": "probe2_12",
+      "budget": 100,
+      "acc_spawn": 0.936
+    },
+    {
+      "probe": "probe2_12",
+      "budget": 300,
+      "acc_spawn": 0.966
+    },
+    {
+      "probe": "probe2_12",
+      "budget": 1000,
+      "acc_spawn": 0.974
+    },
+    {
+      "probe": "probe2_12",
+      "budget": 5000,
+      "acc_spawn": 0.983
+    },
+    {
+      "probe": "probe2_23",
+      "budget": 50,
+      "acc_spawn": 0.894
+    },
+    {
+      "probe": "probe2_23",
+      "budget": 100,
+      "acc_spawn": 0.907
+    },
+    {
+      "probe": "probe2_23",
+      "budget": 300,
+      "acc_spawn": 0.928
+    },
+    {
+      "probe": "probe2_23",
+      "budget": 1000,
+      "acc_spawn": 0.958
+    },
+    {
+      "probe": "probe2_23",
+      "budget": 5000,
+      "acc_spawn": 0.971
+    },
+    {
+      "probe": "probe2_34",
+      "budget": 50,
+      "acc_spawn": 0.832
+    },
+    {
+      "probe": "probe2_34",
+      "budget": 100,
+      "acc_spawn": 0.881
+    },
+    {
+      "probe": "probe2_34",
+      "budget": 300,
+      "acc_spawn": 0.903
+    },
+    {
+      "probe": "probe2_34",
+      "budget": 1000,
+      "acc_spawn": 0.943
+    },
+    {
+      "probe": "probe2_34",
+      "budget": 5000,
+      "acc_spawn": 0.949
+    },
+    {
+      "probe": "probe2_04",
+      "budget": 50,
+      "acc_spawn": 0.857
+    },
+    {
+      "probe": "probe2_04",
+      "budget": 100,
+      "acc_spawn": 0.882
+    },
+    {
+      "probe": "probe2_04",
+      "budget": 300,
+      "acc_spawn": 0.944
+    },
+    {
+      "probe": "probe2_04",
+      "budget": 1000,
+      "acc_spawn": 0.961
+    },
+    {
+      "probe": "probe2_04",
+      "budget": 5000,
+      "acc_spawn": 0.97
+    },
+    {
+      "probe": "probe_oob_56",
+      "budget": 50,
+      "acc_spawn": 0.898
+    },
+    {
+      "probe": "probe_oob_56",
+      "budget": 100,
+      "acc_spawn": 0.894
+    },
+    {
+      "probe": "probe_oob_56",
+      "budget": 300,
+      "acc_spawn": 0.939
+    },
+    {
+      "probe": "probe_oob_56",
+      "budget": 1000,
+      "acc_spawn": 0.963
+    },
+    {
+      "probe": "probe_oob_56",
+      "budget": 5000,
+      "acc_spawn": 0.975
+    },
+    {
+      "probe": "probe_oob_78",
+      "budget": 50,
+      "acc_spawn": 0.867
+    },
+    {
+      "probe": "probe_oob_78",
+      "budget": 100,
+      "acc_spawn": 0.883
+    },
+    {
+      "probe": "probe_oob_78",
+      "budget": 300,
+      "acc_spawn": 0.912
+    },
+    {
+      "probe": "probe_oob_78",
+      "budget": 1000,
+      "acc_spawn": 0.941
+    },
+    {
+      "probe": "probe_oob_78",
+      "budget": 5000,
+      "acc_spawn": 0.954
+    },
+    {
+      "probe": "probe_oob_59",
+      "budget": 50,
+      "acc_spawn": 0.841
+    },
+    {
+      "probe": "probe_oob_59",
+      "budget": 100,
+      "acc_spawn": 0.839
+    },
+    {
+      "probe": "probe_oob_59",
+      "budget": 300,
+      "acc_spawn": 0.891
+    },
+    {
+      "probe": "probe_oob_59",
+      "budget": 1000,
+      "acc_spawn": 0.933
+    },
+    {
+      "probe": "probe_oob_59",
+      "budget": 5000,
+      "acc_spawn": 0.952
+    },
+    {
+      "probe": "probe_oob_67",
+      "budget": 50,
+      "acc_spawn": 0.898
+    },
+    {
+      "probe": "probe_oob_67",
+      "budget": 100,
+      "acc_spawn": 0.911
+    },
+    {
+      "probe": "probe_oob_67",
+      "budget": 300,
+      "acc_spawn": 0.927
+    },
+    {
+      "probe": "probe_oob_67",
+      "budget": 1000,
+      "acc_spawn": 0.96
+    },
+    {
+      "probe": "probe_oob_67",
+      "budget": 5000,
+      "acc_spawn": 0.969
+    },
+    {
+      "probe": "probe_oob_89",
+      "budget": 50,
+      "acc_spawn": 0.821
+    },
+    {
+      "probe": "probe_oob_89",
+      "budget": 100,
+      "acc_spawn": 0.814
+    },
+    {
+      "probe": "probe_oob_89",
+      "budget": 300,
+      "acc_spawn": 0.887
+    },
+    {
+      "probe": "probe_oob_89",
+      "budget": 1000,
+      "acc_spawn": 0.928
+    },
+    {
+      "probe": "probe_oob_89",
+      "budget": 5000,
+      "acc_spawn": 0.952
+    },
+    {
+      "probe": "probe_cr_05",
+      "budget": 50,
+      "acc_spawn": 0.898
+    },
+    {
+      "probe": "probe_cr_05",
+      "budget": 100,
+      "acc_spawn": 0.935
+    },
+    {
+      "probe": "probe_cr_05",
+      "budget": 300,
+      "acc_spawn": 0.954
+    },
+    {
+      "probe": "probe_cr_05",
+      "budget": 1000,
+      "acc_spawn": 0.961
+    },
+    {
+      "probe": "probe_cr_05",
+      "budget": 5000,
+      "acc_spawn": 0.969
+    },
+    {
+      "probe": "probe_cr_16",
+      "budget": 50,
+      "acc_spawn": 0.939
+    },
+    {
+      "probe": "probe_cr_16",
+      "budget": 100,
+      "acc_spawn": 0.921
+    },
+    {
+      "probe": "probe_cr_16",
+      "budget": 300,
+      "acc_spawn": 0.946
+    },
+    {
+      "probe": "probe_cr_16",
+      "budget": 1000,
+      "acc_spawn": 0.97
+    },
+    {
+      "probe": "probe_cr_16",
+      "budget": 5000,
+      "acc_spawn": 0.972
+    },
+    {
+      "probe": "probe_cr_27",
+      "budget": 50,
+      "acc_spawn": 0.884
+    },
+    {
+      "probe": "probe_cr_27",
+      "budget": 100,
+      "acc_spawn": 0.92
+    },
+    {
+      "probe": "probe_cr_27",
+      "budget": 300,
+      "acc_spawn": 0.944
+    },
+    {
+      "probe": "probe_cr_27",
+      "budget": 1000,
+      "acc_spawn": 0.966
+    },
+    {
+      "probe": "probe_cr_27",
+      "budget": 5000,
+      "acc_spawn": 0.97
+    },
+    {
+      "probe": "probe_cr_38",
+      "budget": 50,
+      "acc_spawn": 0.86
+    },
+    {
+      "probe": "probe_cr_38",
+      "budget": 100,
+      "acc_spawn": 0.881
+    },
+    {
+      "probe": "probe_cr_38",
+      "budget": 300,
+      "acc_spawn": 0.928
+    },
+    {
+      "probe": "probe_cr_38",
+      "budget": 1000,
+      "acc_spawn": 0.942
+    },
+    {
+      "probe": "probe_cr_38",
+      "budget": 5000,
+      "acc_spawn": 0.965
+    },
+    {
+      "probe": "probe_cr_49",
+      "budget": 50,
+      "acc_spawn": 0.879
+    },
+    {
+      "probe": "probe_cr_49",
+      "budget": 100,
+      "acc_spawn": 0.917
+    },
+    {
+      "probe": "probe_cr_49",
+      "budget": 300,
+      "acc_spawn": 0.955
+    },
+    {
+      "probe": "probe_cr_49",
+      "budget": 1000,
+      "acc_spawn": 0.958
+    },
+    {
+      "probe": "probe_cr_49",
+      "budget": 5000,
+      "acc_spawn": 0.97
+    }
+  ]
+}
