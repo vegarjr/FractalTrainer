@@ -1,0 +1,20 @@
+
+[repair] iteration 1/3
+[repair] probing with current hparams...
+
+[repair] iteration 2/3
+[repair] probing with current hparams...
+
+[repair] iteration 3/3
+[repair] probing with current hparams...
+[repair] within target band at iter 3 — halting
+
+====== CLOSED-LOOP SUMMARY ======
+iter 1: status=no_improvement  dim 0.7530033256498435 → 0.07695124092928728  div 2.489988914500522 → 4.743495863569043  (elapsed 50.1s)
+    dim 0.753 -> 0.077, div 2.490 -> 4.743 (no improvement)
+iter 2: status=accepted  dim 0.5578765420427498 → 0.6730913685219906  div 3.140411526524167 → 2.756362104926698  (elapsed 56.1s)
+    dim 0.558 -> 0.673, div 3.140 -> 2.756
+iter 3: status=accepted  dim 1.778857306620226 → 1.778857306620226  div 0.9295243554007534 → 0.9295243554007534  (elapsed 13.0s)
+    already within band (dim=1.779, score=0.930)
+
+summary saved: /home/vegar/Documents/FractalTrainer/results/closed_loop_summary.json

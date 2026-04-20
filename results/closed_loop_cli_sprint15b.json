@@ -1,0 +1,100 @@
+[
+  {
+    "iteration": 1,
+    "status": "no_improvement",
+    "divergence_before": 2.489988914500522,
+    "divergence_after": 4.743495863569043,
+    "dim_before": 0.7530033256498435,
+    "dim_after": 0.07695124092928728,
+    "hparams_before": {
+      "learning_rate": 0.1,
+      "batch_size": 64,
+      "weight_decay": 0.0,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "sgd"
+    },
+    "hparams_after": {
+      "learning_rate": 0.35,
+      "batch_size": 8,
+      "weight_decay": 0.0,
+      "dropout": 0.35,
+      "init_seed": 42,
+      "optimizer": "adam"
+    },
+    "patches": [
+      {
+        "file_path": "configs/hparams.yaml",
+        "old_text_preview": "learning_rate: 0.1\nbatch_size: 64\nweight_decay: 0.0\ndropout: 0.0\ninit_seed: 42\noptimizer: \"sgd\"",
+        "new_text_preview": "learning_rate: 0.35\nbatch_size: 8\nweight_decay: 0.0\ndropout: 0.35\ninit_seed: 42\noptimizer: \"adam\"",
+        "n_lines_changed": 6
+      }
+    ],
+    "elapsed_s": 50.1,
+    "summary": "dim 0.753 -> 0.077, div 2.490 -> 4.743 (no improvement)",
+    "error": null
+  },
+  {
+    "iteration": 2,
+    "status": "accepted",
+    "divergence_before": 3.140411526524167,
+    "divergence_after": 2.756362104926698,
+    "dim_before": 0.5578765420427498,
+    "dim_after": 0.6730913685219906,
+    "hparams_before": {
+      "learning_rate": 0.1,
+      "batch_size": 64,
+      "weight_decay": 0.0,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "sgd"
+    },
+    "hparams_after": {
+      "learning_rate": 0.001,
+      "batch_size": 32,
+      "weight_decay": 0.01,
+      "dropout": 0.4,
+      "init_seed": 7,
+      "optimizer": "adamw"
+    },
+    "patches": [
+      {
+        "file_path": "configs/hparams.yaml",
+        "old_text_preview": "learning_rate: 0.1\nbatch_size: 64\nweight_decay: 0.0\ndropout: 0.0\ninit_seed: 42\noptimizer: \"sgd\"",
+        "new_text_preview": "learning_rate: 0.001\nbatch_size: 32\nweight_decay: 0.01\ndropout: 0.4\ninit_seed: 7\noptimizer: \"adamw\"",
+        "n_lines_changed": 6
+      }
+    ],
+    "elapsed_s": 56.09,
+    "summary": "dim 0.558 -> 0.673, div 3.140 -> 2.756",
+    "error": null
+  },
+  {
+    "iteration": 3,
+    "status": "accepted",
+    "divergence_before": 0.9295243554007534,
+    "divergence_after": 0.9295243554007534,
+    "dim_before": 1.778857306620226,
+    "dim_after": 1.778857306620226,
+    "hparams_before": {
+      "learning_rate": 0.001,
+      "batch_size": 32,
+      "weight_decay": 0.01,
+      "dropout": 0.4,
+      "init_seed": 7,
+      "optimizer": "adamw"
+    },
+    "hparams_after": {
+      "learning_rate": 0.001,
+      "batch_size": 32,
+      "weight_decay": 0.01,
+      "dropout": 0.4,
+      "init_seed": 7,
+      "optimizer": "adamw"
+    },
+    "patches": [],
+    "elapsed_s": 13.0,
+    "summary": "already within band (dim=1.779, score=0.930)",
+    "error": null
+  }
+]

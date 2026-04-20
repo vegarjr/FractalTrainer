@@ -1,0 +1,10 @@
+
+[repair] iteration 1/3
+[repair] probing with current hparams...
+[repair] LLM reports no fix — halting
+
+====== CLOSED-LOOP SUMMARY ======
+iter 1: status=no_fix  dim 0.9569215992848943 → None  div 1.8102613357170192 → None  (elapsed 39.9s)
+    The current model's trajectory is far from the target fractal dimension and the divergence score is too high. A small change to hparams may not be sufficient to achieve the desired target.
+
+summary saved: /home/vegar/Documents/FractalTrainer/results/closed_loop_summary.json

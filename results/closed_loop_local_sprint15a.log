@@ -1,0 +1,10 @@
+
+[repair] iteration 1/3
+[repair] probing with current hparams...
+[repair] LLM reports no fix — halting
+
+====== CLOSED-LOOP SUMMARY ======
+iter 1: status=no_fix  dim 0.8311907730327859 → None  div 2.229364089890714 → None  (elapsed 44.7s)
+    The current configuration is already far outside the target band, and the divergence score is too high to be corrected with minor hyperparameter changes.
+
+summary saved: /home/vegar/Documents/FractalTrainer/results/closed_loop_summary.json

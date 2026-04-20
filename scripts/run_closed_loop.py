@@ -31,7 +31,9 @@ from fractaltrainer.repair.llm_client import (  # noqa: E402
 from fractaltrainer.target.target_shape import load_target  # noqa: E402
 
 
-def _make_llm_fn(name: str, local_url: str = "http://127.0.0.1:8080"):
+def _make_llm_fn(name: str, local_url: str = "http://127.0.0.1:8080",
+                 local_temperature: float = 0.3,
+                 local_max_tokens: int = 1024):
     if name == "mock":
         return None  # RepairLoop's default _mock_llm
     if name == "cli":
@@ -39,7 +41,11 @@ def _make_llm_fn(name: str, local_url: str = "http://127.0.0.1:8080"):
     if name == "api":
         return make_claude_client()
     if name == "local":
-        return make_local_llm_client(base_url=local_url)
+        return make_local_llm_client(
+            base_url=local_url,
+            temperature=local_temperature,
+            max_tokens=local_max_tokens,
+        )
     raise ValueError(f"unknown --llm: {name!r}")
 
 
@@ -55,6 +61,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--local-llm-url", type=str,
                         default="http://127.0.0.1:8080",
                         help="base URL for --llm local (llama-server)")
+    parser.add_argument("--local-temperature", type=float, default=0.3,
+                        help="sampling temperature for --llm local")
+    parser.add_argument("--local-max-tokens", type=int, default=1024,
+                        help="max response tokens for --llm local")
     parser.add_argument("--python-bin", type=str, default=None,
                         help="python binary to use for training probes "
                         "(default: current sys.executable)")
@@ -62,7 +72,11 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     target = load_target(args.target)
-    llm_fn = _make_llm_fn(args.llm, local_url=args.local_llm_url)
+    llm_fn = _make_llm_fn(
+        args.llm, local_url=args.local_llm_url,
+        local_temperature=args.local_temperature,
+        local_max_tokens=args.local_max_tokens,
+    )
 
     loop = RepairLoop(
         project_root=str(REPO_ROOT),

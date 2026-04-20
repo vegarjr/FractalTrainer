@@ -1,6 +1,4 @@
-# Pathological starting config (Sprint 15a: --llm local integration test).
-# Matches Sprint 3's original divergent config — expected dim≈0.36,
-# well outside the [1.2, 1.8] target band, so the repair loop fires.
+# Pathological starting config for Sprint 15a/15b repair tests.
 
 learning_rate: 0.1
 batch_size: 64
