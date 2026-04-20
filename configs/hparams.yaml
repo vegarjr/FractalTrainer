@@ -1,5 +1,4 @@
-# Pathological starting config for Sprint 15a/15b repair tests.
-
+# Sprint 16b retry
 learning_rate: 0.1
 batch_size: 64
 weight_decay: 0.0

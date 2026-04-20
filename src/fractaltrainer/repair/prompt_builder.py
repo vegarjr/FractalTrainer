@@ -17,6 +17,79 @@ import json
 from fractaltrainer.repair.context import GeometricRepairContext
 
 
+FEWSHOT_EXAMPLES = [
+    # Example 1: classic underfitting — too-high lr + sgd → Adam with lower lr.
+    {
+        "state": "dim=0.36, div=3.8 (target band [1.2, 1.8])",
+        "hparams_before": (
+            'learning_rate: 0.1\n'
+            'batch_size: 64\n'
+            'weight_decay: 0.0\n'
+            'dropout: 0.0\n'
+            'init_seed: 42\n'
+            'optimizer: "sgd"'
+        ),
+        "hparams_after": (
+            'learning_rate: 0.001\n'
+            'batch_size: 32\n'
+            'weight_decay: 0.01\n'
+            'dropout: 0.2\n'
+            'init_seed: 42\n'
+            'optimizer: "adam"'
+        ),
+        "rationale": "lr=0.1 with SGD is way too aggressive; trajectory "
+                     "collapses. Drop to 0.001 on Adam, add weight decay "
+                     "and light dropout for regularization.",
+    },
+    # Example 2: overfitting — trajectory spreads too much → regularize.
+    {
+        "state": "dim=2.9, div=4.7 (target band [1.2, 1.8])",
+        "hparams_before": (
+            'learning_rate: 0.005\n'
+            'batch_size: 64\n'
+            'weight_decay: 0.0\n'
+            'dropout: 0.0\n'
+            'init_seed: 42\n'
+            'optimizer: "adam"'
+        ),
+        "hparams_after": (
+            'learning_rate: 0.005\n'
+            'batch_size: 64\n'
+            'weight_decay: 0.05\n'
+            'dropout: 0.4\n'
+            'init_seed: 42\n'
+            'optimizer: "adamw"'
+        ),
+        "rationale": "Dim well above target means trajectory is over-"
+                     "dispersed. Add strong weight decay (0.05) + dropout "
+                     "(0.4) and switch to AdamW to keep weight decay clean.",
+    },
+    # Example 3: stuck-flat — tiny lr isn't learning → raise lr.
+    {
+        "state": "dim=0.7, div=2.7 (target band [1.2, 1.8])",
+        "hparams_before": (
+            'learning_rate: 0.00005\n'
+            'batch_size: 128\n'
+            'weight_decay: 0.001\n'
+            'dropout: 0.1\n'
+            'init_seed: 42\n'
+            'optimizer: "adam"'
+        ),
+        "hparams_after": (
+            'learning_rate: 0.005\n'
+            'batch_size: 64\n'
+            'weight_decay: 0.001\n'
+            'dropout: 0.1\n'
+            'init_seed: 42\n'
+            'optimizer: "adam"'
+        ),
+        "rationale": "Too-small lr + large batch — barely any trajectory "
+                     "movement. Push lr up by 100x; shrink batch for more "
+                     "update steps per epoch.",
+    },
+]
+
+
 class PromptBuilder:
     """Builds the user prompt for an LLM-driven hyperparameter patch."""
 
@@ -61,8 +134,43 @@ file: configs/hparams.yaml
 <replacement text>
 >>>PATCH"""
 
+    def __init__(self, include_fewshot: bool = False):
+        """Optionally prepend few-shot demonstrations of successful
+        patches to the user prompt. Off by default to preserve the
+        exact prompt Claude validated in Sprint 3 / 15b."""
+        self.include_fewshot = include_fewshot
+
+    def _fewshot_block(self) -> str:
+        if not self.include_fewshot:
+            return ""
+        lines = [
+            "## EXAMPLES OF SUCCESSFUL PATCHES",
+            "Below are worked examples from prior repair runs — study the "
+            "pattern: large divergence tends to require substantial "
+            "hparam changes (switch optimizer, order-of-magnitude lr "
+            "moves, add regularization). Use these as reference; the "
+            "live case may need different specifics.\n",
+        ]
+        for i, ex in enumerate(FEWSHOT_EXAMPLES, 1):
+            lines.append(f"### Example {i}")
+            lines.append(f"State: {ex['state']}")
+            lines.append(f"Reasoning: {ex['rationale']}\n")
+            lines.append("<<<PATCH")
+            lines.append("file: configs/hparams.yaml")
+            lines.append("---old---")
+            lines.append(ex["hparams_before"])
+            lines.append("---new---")
+            lines.append(ex["hparams_after"])
+            lines.append(">>>PATCH\n")
+        lines.append("## NOW YOUR TURN — LIVE CASE\n")
+        return "\n".join(lines)
+
     def build(self, context: GeometricRepairContext) -> str:
         parts: list[str] = []
+
+        fs = self._fewshot_block()
+        if fs:
+            parts.append(fs)
 
         # -- Target + divergence --
         t = context.target

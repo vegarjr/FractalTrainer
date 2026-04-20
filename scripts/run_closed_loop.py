@@ -65,6 +65,9 @@ def main(argv: list[str] | None = None) -> int:
                         help="sampling temperature for --llm local")
     parser.add_argument("--local-max-tokens", type=int, default=1024,
                         help="max response tokens for --llm local")
+    parser.add_argument("--fewshot", action="store_true",
+                        help="prepend 3 worked-example patches to the "
+                             "repair prompt (Sprint 16a)")
     parser.add_argument("--python-bin", type=str, default=None,
                         help="python binary to use for training probes "
                         "(default: current sys.executable)")
@@ -85,6 +88,7 @@ def main(argv: list[str] | None = None) -> int:
         hparams_path=args.hparams,
         llm_fn=llm_fn,
         python_bin=args.python_bin,
+        include_fewshot=args.fewshot,
     )
 
     attempts = loop.repair(max_iters=args.max_iters, verbose=args.verbose)

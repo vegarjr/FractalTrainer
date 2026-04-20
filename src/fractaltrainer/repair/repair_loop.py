@@ -100,6 +100,7 @@ class RepairLoop:
         log_path: str = "results/repair_log.jsonl",
         backup_dir: str = "results/repair_backups",
         probe_run_id: str | None = None,
+        include_fewshot: bool = False,
     ):
         self.root = Path(project_root).resolve()
         self.target = target
@@ -116,7 +117,7 @@ class RepairLoop:
         self.backup_dir.mkdir(parents=True, exist_ok=True)
 
         self.gatherer = GeometricContextGatherer(str(self.root))
-        self.builder = PromptBuilder()
+        self.builder = PromptBuilder(include_fewshot=include_fewshot)
         self.parser = PatchParser()
         self.probe_run_id_prefix = probe_run_id or "probe"
 
