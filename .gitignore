@@ -62,6 +62,7 @@ science_trajectories/
 !results/coverage_mechanism.json
 !results/routing_rules.json
 !results/curated_registry_experiment.json
+!results/curated_ood_test.json
 results/growth_spawn_trajectories/
 results/sprint7_v3_trajectories/
 results/sprint8_v3_fashion_trajectories/
