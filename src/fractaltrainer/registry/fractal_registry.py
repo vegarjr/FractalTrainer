@@ -82,6 +82,41 @@ class RetrievalResult:
         }
 
 
+@dataclass
+class GrowthDecision:
+    """Routing + growth decision produced by FractalRegistry.decide.
+
+    verdict: one of
+        "match"   — min_distance ≤ match_threshold, route to nearest
+        "compose" — match_threshold < min_distance ≤ spawn_threshold,
+                    blend top-K nearest
+        "spawn"   — min_distance > spawn_threshold, no nearby expert,
+                    train+register a new fractal
+        "empty"   — registry is empty; must spawn the first fractal
+    """
+
+    verdict: str
+    min_distance: float | None
+    retrieval: RetrievalResult | None
+    composite_entries: list[FractalEntry] | None = None
+    composite_weights: list[float] | None = None
+
+    def to_dict(self) -> dict:
+        return {
+            "verdict": self.verdict,
+            "min_distance": self.min_distance,
+            "retrieval": (self.retrieval.to_dict() if self.retrieval else None),
+            "composite_entries": (
+                [e.name for e in self.composite_entries]
+                if self.composite_entries else None
+            ),
+            "composite_weights": (
+                [float(w) for w in self.composite_weights]
+                if self.composite_weights is not None else None
+            ),
+        }
+
+
 class FractalRegistry:
     """Routed registry of fractal experts.
 
@@ -201,6 +236,62 @@ class FractalRegistry:
         exp = np.exp(centered)
         weights = exp / exp.sum()
         return res, weights
+
+    # ── Decision ──────────────────────────────────────────────────
+
+    def decide(
+        self,
+        query_signature: np.ndarray,
+        match_threshold: float,
+        spawn_threshold: float,
+        compose_k: int = 3,
+        compose_temperature: float = 1.0,
+        exclude: Iterable[str] = (),
+    ) -> GrowthDecision:
+        """Given a new query signature, return a GrowthDecision.
+
+        match_threshold < spawn_threshold. Typically calibrated from the
+        within-task / cross-task distance distribution — see the MVP
+        Test A/B/C numbers in Reviews/12.
+
+        Semantics:
+            min_distance ≤ match_threshold   →  "match"   (route to nearest)
+            match < min ≤ spawn_threshold    →  "compose" (top-K blend)
+            min_distance > spawn_threshold   →  "spawn"   (new fractal)
+            empty registry                    →  "empty"   (spawn the first)
+        """
+        if match_threshold > spawn_threshold:
+            raise ValueError(
+                f"match_threshold ({match_threshold}) must be <= "
+                f"spawn_threshold ({spawn_threshold})")
+        if len(self._entries) == 0 or len(list(self._entries.keys())) == len(
+                list(exclude)) and set(self._entries) == set(exclude):
+            return GrowthDecision(verdict="empty", min_distance=None,
+                                  retrieval=None)
+
+        res = self.find_nearest(query_signature, k=compose_k, exclude=exclude)
+        if not res.distances:
+            return GrowthDecision(verdict="empty", min_distance=None,
+                                  retrieval=None)
+
+        min_d = res.distances[0]
+        if min_d <= match_threshold:
+            return GrowthDecision(verdict="match", min_distance=min_d,
+                                  retrieval=res)
+        if min_d <= spawn_threshold:
+            # Compose top-K
+            _, weights = self.composite_weights(
+                query_signature, k=compose_k,
+                temperature=compose_temperature, exclude=exclude,
+            )
+            return GrowthDecision(
+                verdict="compose", min_distance=min_d,
+                retrieval=res,
+                composite_entries=list(res.entries),
+                composite_weights=list(weights),
+            )
+        return GrowthDecision(verdict="spawn", min_distance=min_d,
+                              retrieval=res)
 
     # ── Persistence ───────────────────────────────────────────────
 

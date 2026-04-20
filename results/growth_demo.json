@@ -1,0 +1,188 @@
+{
+  "match_threshold": 5.0,
+  "spawn_threshold": 7.0,
+  "scenarios": [
+    {
+      "scenario": "A_match",
+      "registry_size": 22,
+      "query": "parity_seed2024",
+      "decision": {
+        "verdict": "match",
+        "min_distance": 1.7055890560150146,
+        "retrieval": {
+          "query_name": "query",
+          "ranked": [
+            {
+              "name": "parity_seed42",
+              "distance": 1.7055890560150146,
+              "metadata": {
+                "task": "parity",
+                "seed": 42,
+                "trajectory_path": "results/discriminability_extended_trajectories/ext_parity_seed42_trajectory.npy",
+                "spawned": false
+              }
+            },
+            {
+              "name": "parity_seed101",
+              "distance": 1.7219055891036987,
+              "metadata": {
+                "task": "parity",
+                "seed": 101,
+                "trajectory_path": "results/discriminability_extended_trajectories/ext_parity_seed101_trajectory.npy",
+                "spawned": false
+              }
+            },
+            {
+              "name": "triangular_seed101",
+              "distance": 7.342298984527588,
+              "metadata": {
+                "task": "triangular",
+                "seed": 101,
+                "trajectory_path": "results/discriminability_extended_trajectories/ext_triangular_seed101_trajectory.npy",
+                "spawned": false
+              }
+            }
+          ]
+        },
+        "composite_entries": null,
+        "composite_weights": null
+      }
+    },
+    {
+      "scenario": "B_spawn",
+      "registry_size_before": 22,
+      "registry_size_after": 23,
+      "new_task": "perfect_squares",
+      "train_wall_s": 7.827294588088989,
+      "decision_before_spawn": {
+        "verdict": "spawn",
+        "min_distance": 7.4335808753967285,
+        "retrieval": {
+          "query_name": "query",
+          "ranked": [
+            {
+              "name": "middle_456_seed42",
+              "distance": 7.4335808753967285,
+              "metadata": {
+                "task": "middle_456",
+                "seed": 42,
+                "trajectory_path": "results/discriminability_extended_trajectories/ext_middle_456_seed42_trajectory.npy",
+                "spawned": false
+              }
+            },
+            {
+              "name": "middle_456_seed101",
+              "distance": 7.508031845092773,
+              "metadata": {
+                "task": "middle_456",
+                "seed": 101,
+                "trajectory_path": "results/discriminability_extended_trajectories/ext_middle_456_seed101_trajectory.npy",
+                "spawned": false
+              }
+            },
+            {
+              "name": "mod3_seed42",
+              "distance": 8.751825332641602,
+              "metadata": {
+                "task": "mod3",
+                "seed": 42,
+                "trajectory_path": "results/discriminability_extended_trajectories/ext_mod3_seed42_trajectory.npy",
+                "spawned": false
+              }
+            }
+          ]
+        },
+        "composite_entries": null,
+        "composite_weights": null
+      },
+      "decision_after_spawn": {
+        "verdict": "match",
+        "min_distance": 0.0,
+        "retrieval": {
+          "query_name": "query",
+          "ranked": [
+            {
+              "name": "perfect_squares_seed42",
+              "distance": 0.0,
+              "metadata": {
+                "task": "perfect_squares",
+                "seed": 42,
+                "trajectory_path": "results/growth_spawn_trajectories/spawn_perfect_squares_seed42_trajectory.npy",
+                "spawned": true,
+                "train_wall_s": 7.827294588088989
+              }
+            },
+            {
+              "name": "middle_456_seed42",
+              "distance": 7.4335808753967285,
+              "metadata": {
+                "task": "middle_456",
+                "seed": 42,
+                "trajectory_path": "results/discriminability_extended_trajectories/ext_middle_456_seed42_trajectory.npy",
+                "spawned": false
+              }
+            },
+            {
+              "name": "middle_456_seed101",
+              "distance": 7.508031845092773,
+              "metadata": {
+                "task": "middle_456",
+                "seed": 101,
+                "trajectory_path": "results/discriminability_extended_trajectories/ext_middle_456_seed101_trajectory.npy",
+                "spawned": false
+              }
+            }
+          ]
+        },
+        "composite_entries": null,
+        "composite_weights": null
+      }
+    },
+    {
+      "scenario": "C_compose_or_spawn",
+      "registry_size": 30,
+      "query": "fashion_class_seed42",
+      "decision": {
+        "verdict": "spawn",
+        "min_distance": 11.43612289428711,
+        "retrieval": {
+          "query_name": "query",
+          "ranked": [
+            {
+              "name": "mod5_seed42",
+              "distance": 11.43612289428711,
+              "metadata": {
+                "task": "mod5",
+                "seed": 42,
+                "trajectory_path": "results/discriminability_extended_trajectories/ext_mod5_seed42_trajectory.npy",
+                "spawned": false
+              }
+            },
+            {
+              "name": "mod5_seed101",
+              "distance": 11.445666313171387,
+              "metadata": {
+                "task": "mod5",
+                "seed": 101,
+                "trajectory_path": "results/discriminability_extended_trajectories/ext_mod5_seed101_trajectory.npy",
+                "spawned": false
+              }
+            },
+            {
+              "name": "mod5_seed2024",
+              "distance": 11.556471824645996,
+              "metadata": {
+                "task": "mod5",
+                "seed": 2024,
+                "trajectory_path": "results/discriminability_extended_trajectories/ext_mod5_seed2024_trajectory.npy",
+                "spawned": false
+              }
+            }
+          ]
+        },
+        "composite_entries": null,
+        "composite_weights": null
+      }
+    }
+  ]
+}
