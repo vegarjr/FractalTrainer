@@ -1,0 +1,1856 @@
+{
+  "n_tasks": 27,
+  "budgets": [
+    50,
+    100,
+    300,
+    1000,
+    5000
+  ],
+  "candidate_pool_size": 10,
+  "k": 3,
+  "n_eval": 1000,
+  "rows": [
+    {
+      "task": "fibonacci",
+      "budget_N": 50,
+      "acc_top1": 0.724,
+      "acc_compose": 0.795,
+      "acc_spawn": 0.907,
+      "compose_selected": [
+        "subset_123689_seed42",
+        "subset_123468_seed101",
+        "subset_1256_seed2024"
+      ],
+      "spawn_train_s": 5.694543838500977
+    },
+    {
+      "task": "fibonacci",
+      "budget_N": 100,
+      "acc_top1": 0.724,
+      "acc_compose": 0.79,
+      "acc_spawn": 0.924,
+      "compose_selected": [
+        "subset_1256_seed2024",
+        "subset_123689_seed2024",
+        "primes_vs_rest_seed2024"
+      ],
+      "spawn_train_s": 5.7054595947265625
+    },
+    {
+      "task": "fibonacci",
+      "budget_N": 300,
+      "acc_top1": 0.724,
+      "acc_compose": 0.79,
+      "acc_spawn": 0.924,
+      "compose_selected": [
+        "subset_1256_seed2024",
+        "subset_123689_seed2024",
+        "primes_vs_rest_seed2024"
+      ],
+      "spawn_train_s": 6.823312044143677
+    },
+    {
+      "task": "fibonacci",
+      "budget_N": 1000,
+      "acc_top1": 0.724,
+      "acc_compose": 0.79,
+      "acc_spawn": 0.949,
+      "compose_selected": [
+        "subset_123689_seed2024",
+        "subset_1256_seed2024",
+        "primes_vs_rest_seed2024"
+      ],
+      "spawn_train_s": 7.046180486679077
+    },
+    {
+      "task": "fibonacci",
+      "budget_N": 5000,
+      "acc_top1": 0.724,
+      "acc_compose": 0.793,
+      "acc_spawn": 0.967,
+      "compose_selected": [
+        "subset_123689_seed42",
+        "subset_123468_seed42",
+        "primes_vs_rest_seed101"
+      ],
+      "spawn_train_s": 6.5298779010772705
+    },
+    {
+      "task": "high_vs_low",
+      "budget_N": 50,
+      "acc_top1": 0.757,
+      "acc_compose": 0.769,
+      "acc_spawn": 0.782,
+      "compose_selected": [
+        "subset_15789_seed101",
+        "subset_15789_seed2024",
+        "subset_15789_seed42"
+      ],
+      "spawn_train_s": 5.277578353881836
+    },
+    {
+      "task": "high_vs_low",
+      "budget_N": 100,
+      "acc_top1": 0.757,
+      "acc_compose": 0.769,
+      "acc_spawn": 0.799,
+      "compose_selected": [
+        "subset_15789_seed2024",
+        "subset_15789_seed101",
+        "subset_15789_seed42"
+      ],
+      "spawn_train_s": 5.337542295455933
+    },
+    {
+      "task": "high_vs_low",
+      "budget_N": 300,
+      "acc_top1": 0.757,
+      "acc_compose": 0.76,
+      "acc_spawn": 0.848,
+      "compose_selected": [
+        "subset_15789_seed2024",
+        "subset_15789_seed101",
+        "subset_267_seed101"
+      ],
+      "spawn_train_s": 6.359787702560425
+    },
+    {
+      "task": "high_vs_low",
+      "budget_N": 1000,
+      "acc_top1": 0.757,
+      "acc_compose": 0.759,
+      "acc_spawn": 0.925,
+      "compose_selected": [
+        "subset_15789_seed2024",
+        "subset_15789_seed101",
+        "subset_13678_seed101"
+      ],
+      "spawn_train_s": 6.436528444290161
+    },
+    {
+      "task": "high_vs_low",
+      "budget_N": 5000,
+      "acc_top1": 0.757,
+      "acc_compose": 0.759,
+      "acc_spawn": 0.927,
+      "compose_selected": [
+        "subset_15789_seed2024",
+        "subset_15789_seed101",
+        "subset_13678_seed101"
+      ],
+      "spawn_train_s": 6.510668754577637
+    },
+    {
+      "task": "middle_456",
+      "budget_N": 50,
+      "acc_top1": 0.778,
+      "acc_compose": 0.788,
+      "acc_spawn": 0.842,
+      "compose_selected": [
+        "subset_459_seed101",
+        "subset_459_seed2024",
+        "subset_014567_seed2024"
+      ],
+      "spawn_train_s": 5.371824264526367
+    },
+    {
+      "task": "middle_456",
+      "budget_N": 100,
+      "acc_top1": 0.778,
+      "acc_compose": 0.788,
+      "acc_spawn": 0.85,
+      "compose_selected": [
+        "subset_459_seed101",
+        "subset_459_seed2024",
+        "subset_014567_seed2024"
+      ],
+      "spawn_train_s": 5.3983564376831055
+    },
+    {
+      "task": "middle_456",
+      "budget_N": 300,
+      "acc_top1": 0.778,
+      "acc_compose": 0.792,
+      "acc_spawn": 0.907,
+      "compose_selected": [
+        "subset_459_seed101",
+        "subset_459_seed42",
+        "subset_014567_seed2024"
+      ],
+      "spawn_train_s": 6.180100202560425
+    },
+    {
+      "task": "middle_456",
+      "budget_N": 1000,
+      "acc_top1": 0.778,
+      "acc_compose": 0.792,
+      "acc_spawn": 0.944,
+      "compose_selected": [
+        "subset_459_seed2024",
+        "subset_459_seed42",
+        "subset_014567_seed2024"
+      ],
+      "spawn_train_s": 6.350252151489258
+    },
+    {
+      "task": "middle_456",
+      "budget_N": 5000,
+      "acc_top1": 0.778,
+      "acc_compose": 0.794,
+      "acc_spawn": 0.94,
+      "compose_selected": [
+        "subset_459_seed2024",
+        "subset_014567_seed42",
+        "subset_459_seed42"
+      ],
+      "spawn_train_s": 6.468358993530273
+    },
+    {
+      "task": "ones_vs_teens",
+      "budget_N": 50,
+      "acc_top1": 0.753,
+      "acc_compose": 0.746,
+      "acc_spawn": 0.782,
+      "compose_selected": [
+        "subset_02349_seed2024",
+        "subset_02349_seed101",
+        "subset_02349_seed42"
+      ],
+      "spawn_train_s": 5.3710291385650635
+    },
+    {
+      "task": "ones_vs_teens",
+      "budget_N": 100,
+      "acc_top1": 0.753,
+      "acc_compose": 0.749,
+      "acc_spawn": 0.825,
+      "compose_selected": [
+        "subset_02349_seed2024",
+        "subset_02349_seed101",
+        "subset_02459_seed101"
+      ],
+      "spawn_train_s": 5.274073123931885
+    },
+    {
+      "task": "ones_vs_teens",
+      "budget_N": 300,
+      "acc_top1": 0.753,
+      "acc_compose": 0.752,
+      "acc_spawn": 0.846,
+      "compose_selected": [
+        "subset_02349_seed2024",
+        "subset_02349_seed101",
+        "subset_01458_seed101"
+      ],
+      "spawn_train_s": 6.146212100982666
+    },
+    {
+      "task": "ones_vs_teens",
+      "budget_N": 1000,
+      "acc_top1": 0.753,
+      "acc_compose": 0.749,
+      "acc_spawn": 0.922,
+      "compose_selected": [
+        "subset_02349_seed2024",
+        "subset_02349_seed101",
+        "subset_2349_seed2024"
+      ],
+      "spawn_train_s": 6.464641332626343
+    },
+    {
+      "task": "ones_vs_teens",
+      "budget_N": 5000,
+      "acc_top1": 0.753,
+      "acc_compose": 0.749,
+      "acc_spawn": 0.949,
+      "compose_selected": [
+        "subset_02349_seed2024",
+        "subset_02349_seed101",
+        "subset_2349_seed2024"
+      ],
+      "spawn_train_s": 6.481122016906738
+    },
+    {
+      "task": "parity",
+      "budget_N": 50,
+      "acc_top1": 0.705,
+      "acc_compose": 0.811,
+      "acc_spawn": 0.841,
+      "compose_selected": [
+        "subset_15789_seed101",
+        "subset_15789_seed2024",
+        "subset_123679_seed42"
+      ],
+      "spawn_train_s": 5.3509135246276855
+    },
+    {
+      "task": "parity",
+      "budget_N": 100,
+      "acc_top1": 0.705,
+      "acc_compose": 0.88,
+      "acc_spawn": 0.868,
+      "compose_selected": [
+        "subset_15789_seed42",
+        "subset_123679_seed2024",
+        "subset_0379_seed2024"
+      ],
+      "spawn_train_s": 5.265334129333496
+    },
+    {
+      "task": "parity",
+      "budget_N": 300,
+      "acc_top1": 0.705,
+      "acc_compose": 0.81,
+      "acc_spawn": 0.898,
+      "compose_selected": [
+        "subset_15789_seed2024",
+        "subset_15789_seed101",
+        "subset_123679_seed2024"
+      ],
+      "spawn_train_s": 6.190160512924194
+    },
+    {
+      "task": "parity",
+      "budget_N": 1000,
+      "acc_top1": 0.705,
+      "acc_compose": 0.875,
+      "acc_spawn": 0.96,
+      "compose_selected": [
+        "subset_15789_seed2024",
+        "subset_123679_seed42",
+        "subset_0379_seed2024"
+      ],
+      "spawn_train_s": 6.520841121673584
+    },
+    {
+      "task": "parity",
+      "budget_N": 5000,
+      "acc_top1": 0.705,
+      "acc_compose": 0.813,
+      "acc_spawn": 0.961,
+      "compose_selected": [
+        "subset_15789_seed2024",
+        "subset_15789_seed101",
+        "subset_0379_seed2024"
+      ],
+      "spawn_train_s": 6.544294834136963
+    },
+    {
+      "task": "primes_vs_rest",
+      "budget_N": 50,
+      "acc_top1": 0.707,
+      "acc_compose": 0.948,
+      "acc_spawn": 0.777,
+      "compose_selected": [
+        "subset_3457_seed2024",
+        "subset_267_seed2024",
+        "fibonacci_seed101"
+      ],
+      "spawn_train_s": 5.426852703094482
+    },
+    {
+      "task": "primes_vs_rest",
+      "budget_N": 100,
+      "acc_top1": 0.707,
+      "acc_compose": 0.791,
+      "acc_spawn": 0.831,
+      "compose_selected": [
+        "subset_3457_seed2024",
+        "subset_3457_seed42",
+        "subset_267_seed2024"
+      ],
+      "spawn_train_s": 5.421863555908203
+    },
+    {
+      "task": "primes_vs_rest",
+      "budget_N": 300,
+      "acc_top1": 0.707,
+      "acc_compose": 0.948,
+      "acc_spawn": 0.928,
+      "compose_selected": [
+        "subset_3457_seed2024",
+        "fibonacci_seed101",
+        "subset_267_seed2024"
+      ],
+      "spawn_train_s": 6.172577619552612
+    },
+    {
+      "task": "primes_vs_rest",
+      "budget_N": 1000,
+      "acc_top1": 0.707,
+      "acc_compose": 0.791,
+      "acc_spawn": 0.951,
+      "compose_selected": [
+        "subset_3457_seed2024",
+        "subset_3457_seed42",
+        "subset_267_seed2024"
+      ],
+      "spawn_train_s": 6.416487216949463
+    },
+    {
+      "task": "primes_vs_rest",
+      "budget_N": 5000,
+      "acc_top1": 0.707,
+      "acc_compose": 0.791,
+      "acc_spawn": 0.957,
+      "compose_selected": [
+        "subset_3457_seed2024",
+        "subset_3457_seed42",
+        "subset_267_seed2024"
+      ],
+      "spawn_train_s": 6.523706912994385
+    },
+    {
+      "task": "subset_014567",
+      "budget_N": 50,
+      "acc_top1": 0.671,
+      "acc_compose": 0.76,
+      "acc_spawn": 0.775,
+      "compose_selected": [
+        "subset_01458_seed2024",
+        "middle_456_seed101",
+        "ones_vs_teens_seed42"
+      ],
+      "spawn_train_s": 5.387550354003906
+    },
+    {
+      "task": "subset_014567",
+      "budget_N": 100,
+      "acc_top1": 0.671,
+      "acc_compose": 0.76,
+      "acc_spawn": 0.796,
+      "compose_selected": [
+        "subset_01458_seed2024",
+        "middle_456_seed101",
+        "ones_vs_teens_seed42"
+      ],
+      "spawn_train_s": 5.34110689163208
+    },
+    {
+      "task": "subset_014567",
+      "budget_N": 300,
+      "acc_top1": 0.671,
+      "acc_compose": 0.699,
+      "acc_spawn": 0.879,
+      "compose_selected": [
+        "subset_01458_seed2024",
+        "subset_01458_seed42",
+        "middle_456_seed2024"
+      ],
+      "spawn_train_s": 6.243889331817627
+    },
+    {
+      "task": "subset_014567",
+      "budget_N": 1000,
+      "acc_top1": 0.671,
+      "acc_compose": 0.763,
+      "acc_spawn": 0.925,
+      "compose_selected": [
+        "subset_01458_seed2024",
+        "middle_456_seed2024",
+        "ones_vs_teens_seed42"
+      ],
+      "spawn_train_s": 6.561056613922119
+    },
+    {
+      "task": "subset_014567",
+      "budget_N": 5000,
+      "acc_top1": 0.671,
+      "acc_compose": 0.763,
+      "acc_spawn": 0.941,
+      "compose_selected": [
+        "subset_01458_seed2024",
+        "middle_456_seed2024",
+        "ones_vs_teens_seed42"
+      ],
+      "spawn_train_s": 6.7200164794921875
+    },
+    {
+      "task": "subset_01458",
+      "budget_N": 50,
+      "acc_top1": 0.672,
+      "acc_compose": 0.774,
+      "acc_spawn": 0.753,
+      "compose_selected": [
+        "subset_01589_seed2024",
+        "subset_01589_seed101",
+        "subset_0489_seed101"
+      ],
+      "spawn_train_s": 5.38425350189209
+    },
+    {
+      "task": "subset_01458",
+      "budget_N": 100,
+      "acc_top1": 0.672,
+      "acc_compose": 0.774,
+      "acc_spawn": 0.824,
+      "compose_selected": [
+        "subset_01589_seed2024",
+        "subset_01589_seed101",
+        "subset_0489_seed101"
+      ],
+      "spawn_train_s": 5.389516592025757
+    },
+    {
+      "task": "subset_01458",
+      "budget_N": 300,
+      "acc_top1": 0.672,
+      "acc_compose": 0.774,
+      "acc_spawn": 0.886,
+      "compose_selected": [
+        "subset_01589_seed2024",
+        "subset_01589_seed101",
+        "subset_0489_seed101"
+      ],
+      "spawn_train_s": 6.1978843212127686
+    },
+    {
+      "task": "subset_01458",
+      "budget_N": 1000,
+      "acc_top1": 0.672,
+      "acc_compose": 0.764,
+      "acc_spawn": 0.914,
+      "compose_selected": [
+        "subset_01589_seed2024",
+        "subset_01589_seed101",
+        "subset_0489_seed2024"
+      ],
+      "spawn_train_s": 6.585512638092041
+    },
+    {
+      "task": "subset_01458",
+      "budget_N": 5000,
+      "acc_top1": 0.672,
+      "acc_compose": 0.764,
+      "acc_spawn": 0.942,
+      "compose_selected": [
+        "subset_01589_seed2024",
+        "subset_01589_seed101",
+        "subset_0489_seed2024"
+      ],
+      "spawn_train_s": 6.736931562423706
+    },
+    {
+      "task": "subset_01589",
+      "budget_N": 50,
+      "acc_top1": 0.764,
+      "acc_compose": 0.847,
+      "acc_spawn": 0.725,
+      "compose_selected": [
+        "subset_01789_seed42",
+        "subset_15789_seed2024",
+        "subset_01458_seed2024"
+      ],
+      "spawn_train_s": 5.263229608535767
+    },
+    {
+      "task": "subset_01589",
+      "budget_N": 100,
+      "acc_top1": 0.764,
+      "acc_compose": 0.855,
+      "acc_spawn": 0.767,
+      "compose_selected": [
+        "subset_01789_seed101",
+        "subset_15789_seed2024",
+        "subset_01458_seed2024"
+      ],
+      "spawn_train_s": 5.318222761154175
+    },
+    {
+      "task": "subset_01589",
+      "budget_N": 300,
+      "acc_top1": 0.764,
+      "acc_compose": 0.858,
+      "acc_spawn": 0.847,
+      "compose_selected": [
+        "subset_01458_seed2024",
+        "subset_15789_seed2024",
+        "subset_01789_seed2024"
+      ],
+      "spawn_train_s": 6.2246503829956055
+    },
+    {
+      "task": "subset_01589",
+      "budget_N": 1000,
+      "acc_top1": 0.764,
+      "acc_compose": 0.872,
+      "acc_spawn": 0.909,
+      "compose_selected": [
+        "subset_01458_seed2024",
+        "subset_15789_seed2024",
+        "subset_0489_seed101"
+      ],
+      "spawn_train_s": 6.585298776626587
+    },
+    {
+      "task": "subset_01589",
+      "budget_N": 5000,
+      "acc_top1": 0.764,
+      "acc_compose": 0.872,
+      "acc_spawn": 0.934,
+      "compose_selected": [
+        "subset_01458_seed2024",
+        "subset_15789_seed2024",
+        "subset_0489_seed101"
+      ],
+      "spawn_train_s": 6.643053770065308
+    },
+    {
+      "task": "subset_01789",
+      "budget_N": 50,
+      "acc_top1": 0.779,
+      "acc_compose": 0.877,
+      "acc_spawn": 0.767,
+      "compose_selected": [
+        "subset_01589_seed2024",
+        "subset_15789_seed2024",
+        "subset_0379_seed101"
+      ],
+      "spawn_train_s": 5.641314268112183
+    },
+    {
+      "task": "subset_01789",
+      "budget_N": 100,
+      "acc_top1": 0.779,
+      "acc_compose": 0.877,
+      "acc_spawn": 0.8,
+      "compose_selected": [
+        "subset_01589_seed2024",
+        "subset_15789_seed2024",
+        "subset_0379_seed101"
+      ],
+      "spawn_train_s": 5.465538024902344
+    },
+    {
+      "task": "subset_01789",
+      "budget_N": 300,
+      "acc_top1": 0.779,
+      "acc_compose": 0.877,
+      "acc_spawn": 0.908,
+      "compose_selected": [
+        "subset_01589_seed2024",
+        "subset_15789_seed2024",
+        "subset_0379_seed101"
+      ],
+      "spawn_train_s": 6.398838520050049
+    },
+    {
+      "task": "subset_01789",
+      "budget_N": 1000,
+      "acc_top1": 0.779,
+      "acc_compose": 0.877,
+      "acc_spawn": 0.93,
+      "compose_selected": [
+        "subset_01589_seed2024",
+        "subset_15789_seed2024",
+        "subset_0379_seed101"
+      ],
+      "spawn_train_s": 6.417732238769531
+    },
+    {
+      "task": "subset_01789",
+      "budget_N": 5000,
+      "acc_top1": 0.779,
+      "acc_compose": 0.873,
+      "acc_spawn": 0.957,
+      "compose_selected": [
+        "subset_01589_seed2024",
+        "subset_15789_seed2024",
+        "subset_0379_seed2024"
+      ],
+      "spawn_train_s": 6.465321063995361
+    },
+    {
+      "task": "subset_02349",
+      "budget_N": 50,
+      "acc_top1": 0.8,
+      "acc_compose": 0.807,
+      "acc_spawn": 0.752,
+      "compose_selected": [
+        "subset_02459_seed2024",
+        "subset_02459_seed101",
+        "subset_2349_seed2024"
+      ],
+      "spawn_train_s": 5.237436294555664
+    },
+    {
+      "task": "subset_02349",
+      "budget_N": 100,
+      "acc_top1": 0.8,
+      "acc_compose": 0.852,
+      "acc_spawn": 0.805,
+      "compose_selected": [
+        "subset_2349_seed2024",
+        "subset_2349_seed101",
+        "subset_02459_seed2024"
+      ],
+      "spawn_train_s": 5.31327748298645
+    },
+    {
+      "task": "subset_02349",
+      "budget_N": 300,
+      "acc_top1": 0.8,
+      "acc_compose": 0.855,
+      "acc_spawn": 0.876,
+      "compose_selected": [
+        "subset_2349_seed2024",
+        "subset_2349_seed101",
+        "ones_vs_teens_seed2024"
+      ],
+      "spawn_train_s": 6.282852411270142
+    },
+    {
+      "task": "subset_02349",
+      "budget_N": 1000,
+      "acc_top1": 0.8,
+      "acc_compose": 0.855,
+      "acc_spawn": 0.922,
+      "compose_selected": [
+        "subset_2349_seed2024",
+        "subset_2349_seed101",
+        "ones_vs_teens_seed2024"
+      ],
+      "spawn_train_s": 6.4398603439331055
+    },
+    {
+      "task": "subset_02349",
+      "budget_N": 5000,
+      "acc_top1": 0.8,
+      "acc_compose": 0.855,
+      "acc_spawn": 0.961,
+      "compose_selected": [
+        "subset_2349_seed2024",
+        "subset_2349_seed101",
+        "ones_vs_teens_seed2024"
+      ],
+      "spawn_train_s": 6.852521896362305
+    },
+    {
+      "task": "subset_02459",
+      "budget_N": 50,
+      "acc_top1": 0.778,
+      "acc_compose": 0.863,
+      "acc_spawn": 0.714,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "subset_0459_seed42",
+        "subset_02349_seed42"
+      ],
+      "spawn_train_s": 5.398074388504028
+    },
+    {
+      "task": "subset_02459",
+      "budget_N": 100,
+      "acc_top1": 0.778,
+      "acc_compose": 0.863,
+      "acc_spawn": 0.78,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "subset_0459_seed42",
+        "subset_02349_seed2024"
+      ],
+      "spawn_train_s": 5.448828935623169
+    },
+    {
+      "task": "subset_02459",
+      "budget_N": 300,
+      "acc_top1": 0.778,
+      "acc_compose": 0.863,
+      "acc_spawn": 0.844,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "subset_0459_seed42",
+        "subset_02349_seed2024"
+      ],
+      "spawn_train_s": 6.410129070281982
+    },
+    {
+      "task": "subset_02459",
+      "budget_N": 1000,
+      "acc_top1": 0.778,
+      "acc_compose": 0.863,
+      "acc_spawn": 0.906,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "subset_0459_seed42",
+        "subset_02349_seed2024"
+      ],
+      "spawn_train_s": 6.74381422996521
+    },
+    {
+      "task": "subset_02459",
+      "budget_N": 5000,
+      "acc_top1": 0.778,
+      "acc_compose": 0.868,
+      "acc_spawn": 0.92,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "subset_0459_seed101",
+        "subset_459_seed2024"
+      ],
+      "spawn_train_s": 6.6581690311431885
+    },
+    {
+      "task": "subset_025678",
+      "budget_N": 50,
+      "acc_top1": 0.708,
+      "acc_compose": 0.695,
+      "acc_spawn": 0.779,
+      "compose_selected": [
+        "subset_267_seed2024",
+        "subset_267_seed101",
+        "primes_vs_rest_seed42"
+      ],
+      "spawn_train_s": 5.410241603851318
+    },
+    {
+      "task": "subset_025678",
+      "budget_N": 100,
+      "acc_top1": 0.708,
+      "acc_compose": 0.693,
+      "acc_spawn": 0.869,
+      "compose_selected": [
+        "subset_267_seed2024",
+        "subset_13678_seed101",
+        "high_vs_low_seed101"
+      ],
+      "spawn_train_s": 5.493067264556885
+    },
+    {
+      "task": "subset_025678",
+      "budget_N": 300,
+      "acc_top1": 0.708,
+      "acc_compose": 0.676,
+      "acc_spawn": 0.911,
+      "compose_selected": [
+        "high_vs_low_seed2024",
+        "high_vs_low_seed101",
+        "subset_267_seed2024"
+      ],
+      "spawn_train_s": 6.323169946670532
+    },
+    {
+      "task": "subset_025678",
+      "budget_N": 1000,
+      "acc_top1": 0.708,
+      "acc_compose": 0.709,
+      "acc_spawn": 0.946,
+      "compose_selected": [
+        "subset_267_seed2024",
+        "subset_267_seed101",
+        "high_vs_low_seed101"
+      ],
+      "spawn_train_s": 6.389559268951416
+    },
+    {
+      "task": "subset_025678",
+      "budget_N": 5000,
+      "acc_top1": 0.708,
+      "acc_compose": 0.706,
+      "acc_spawn": 0.959,
+      "compose_selected": [
+        "subset_267_seed2024",
+        "subset_267_seed101",
+        "high_vs_low_seed2024"
+      ],
+      "spawn_train_s": 6.424928188323975
+    },
+    {
+      "task": "subset_0379",
+      "budget_N": 50,
+      "acc_top1": 0.679,
+      "acc_compose": 0.712,
+      "acc_spawn": 0.833,
+      "compose_selected": [
+        "subset_01789_seed42",
+        "parity_seed2024",
+        "subset_01789_seed101"
+      ],
+      "spawn_train_s": 5.293833494186401
+    },
+    {
+      "task": "subset_0379",
+      "budget_N": 100,
+      "acc_top1": 0.679,
+      "acc_compose": 0.754,
+      "acc_spawn": 0.866,
+      "compose_selected": [
+        "subset_01789_seed42",
+        "parity_seed2024",
+        "subset_123679_seed42"
+      ],
+      "spawn_train_s": 5.355160474777222
+    },
+    {
+      "task": "subset_0379",
+      "budget_N": 300,
+      "acc_top1": 0.679,
+      "acc_compose": 0.754,
+      "acc_spawn": 0.902,
+      "compose_selected": [
+        "subset_01789_seed42",
+        "parity_seed2024",
+        "subset_123679_seed42"
+      ],
+      "spawn_train_s": 6.187949180603027
+    },
+    {
+      "task": "subset_0379",
+      "budget_N": 1000,
+      "acc_top1": 0.679,
+      "acc_compose": 0.755,
+      "acc_spawn": 0.929,
+      "compose_selected": [
+        "parity_seed2024",
+        "subset_01789_seed101",
+        "subset_123679_seed42"
+      ],
+      "spawn_train_s": 6.491209268569946
+    },
+    {
+      "task": "subset_0379",
+      "budget_N": 5000,
+      "acc_top1": 0.679,
+      "acc_compose": 0.755,
+      "acc_spawn": 0.943,
+      "compose_selected": [
+        "parity_seed2024",
+        "subset_01789_seed101",
+        "subset_123679_seed42"
+      ],
+      "spawn_train_s": 6.607083559036255
+    },
+    {
+      "task": "subset_0459",
+      "budget_N": 50,
+      "acc_top1": 0.86,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.796,
+      "compose_selected": [
+        "subset_02459_seed2024",
+        "subset_459_seed42",
+        "subset_0489_seed2024"
+      ],
+      "spawn_train_s": 5.317968130111694
+    },
+    {
+      "task": "subset_0459",
+      "budget_N": 100,
+      "acc_top1": 0.86,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.863,
+      "compose_selected": [
+        "subset_02459_seed2024",
+        "subset_459_seed42",
+        "subset_0489_seed2024"
+      ],
+      "spawn_train_s": 5.307636499404907
+    },
+    {
+      "task": "subset_0459",
+      "budget_N": 300,
+      "acc_top1": 0.86,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.902,
+      "compose_selected": [
+        "subset_02459_seed2024",
+        "subset_459_seed42",
+        "subset_0489_seed2024"
+      ],
+      "spawn_train_s": 6.1640472412109375
+    },
+    {
+      "task": "subset_0459",
+      "budget_N": 1000,
+      "acc_top1": 0.86,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.925,
+      "compose_selected": [
+        "subset_02459_seed2024",
+        "subset_459_seed42",
+        "subset_0489_seed2024"
+      ],
+      "spawn_train_s": 6.481080532073975
+    },
+    {
+      "task": "subset_0459",
+      "budget_N": 5000,
+      "acc_top1": 0.86,
+      "acc_compose": 0.869,
+      "acc_spawn": 0.933,
+      "compose_selected": [
+        "subset_459_seed2024",
+        "subset_459_seed42",
+        "subset_02459_seed2024"
+      ],
+      "spawn_train_s": 6.716648817062378
+    },
+    {
+      "task": "subset_0489",
+      "budget_N": 50,
+      "acc_top1": 0.802,
+      "acc_compose": 0.798,
+      "acc_spawn": 0.753,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "subset_0459_seed101",
+        "subset_459_seed101"
+      ],
+      "spawn_train_s": 5.394873380661011
+    },
+    {
+      "task": "subset_0489",
+      "budget_N": 100,
+      "acc_top1": 0.802,
+      "acc_compose": 0.798,
+      "acc_spawn": 0.79,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "subset_0459_seed101",
+        "subset_02459_seed42"
+      ],
+      "spawn_train_s": 5.424237012863159
+    },
+    {
+      "task": "subset_0489",
+      "budget_N": 300,
+      "acc_top1": 0.802,
+      "acc_compose": 0.802,
+      "acc_spawn": 0.897,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "subset_0459_seed101",
+        "subset_02459_seed2024"
+      ],
+      "spawn_train_s": 6.28637433052063
+    },
+    {
+      "task": "subset_0489",
+      "budget_N": 1000,
+      "acc_top1": 0.802,
+      "acc_compose": 0.809,
+      "acc_spawn": 0.933,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "subset_0459_seed42",
+        "subset_01458_seed2024"
+      ],
+      "spawn_train_s": 6.556090354919434
+    },
+    {
+      "task": "subset_0489",
+      "budget_N": 5000,
+      "acc_top1": 0.802,
+      "acc_compose": 0.802,
+      "acc_spawn": 0.926,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "subset_0459_seed101",
+        "subset_02459_seed2024"
+      ],
+      "spawn_train_s": 6.785339117050171
+    },
+    {
+      "task": "subset_123468",
+      "budget_N": 50,
+      "acc_top1": 0.777,
+      "acc_compose": 0.853,
+      "acc_spawn": 0.813,
+      "compose_selected": [
+        "subset_123689_seed42",
+        "subset_13678_seed2024",
+        "fibonacci_seed2024"
+      ],
+      "spawn_train_s": 5.390547275543213
+    },
+    {
+      "task": "subset_123468",
+      "budget_N": 100,
+      "acc_top1": 0.777,
+      "acc_compose": 0.853,
+      "acc_spawn": 0.85,
+      "compose_selected": [
+        "subset_123689_seed42",
+        "subset_13678_seed2024",
+        "fibonacci_seed2024"
+      ],
+      "spawn_train_s": 5.345506429672241
+    },
+    {
+      "task": "subset_123468",
+      "budget_N": 300,
+      "acc_top1": 0.777,
+      "acc_compose": 0.785,
+      "acc_spawn": 0.912,
+      "compose_selected": [
+        "subset_123689_seed2024",
+        "subset_123689_seed42",
+        "subset_13678_seed2024"
+      ],
+      "spawn_train_s": 6.517685174942017
+    },
+    {
+      "task": "subset_123468",
+      "budget_N": 1000,
+      "acc_top1": 0.777,
+      "acc_compose": 0.846,
+      "acc_spawn": 0.941,
+      "compose_selected": [
+        "subset_123689_seed2024",
+        "ones_vs_teens_seed42",
+        "subset_13678_seed2024"
+      ],
+      "spawn_train_s": 6.480564832687378
+    },
+    {
+      "task": "subset_123468",
+      "budget_N": 5000,
+      "acc_top1": 0.777,
+      "acc_compose": 0.846,
+      "acc_spawn": 0.951,
+      "compose_selected": [
+        "subset_123689_seed2024",
+        "ones_vs_teens_seed42",
+        "subset_13678_seed2024"
+      ],
+      "spawn_train_s": 6.473708868026733
+    },
+    {
+      "task": "subset_123679",
+      "budget_N": 50,
+      "acc_top1": 0.77,
+      "acc_compose": 0.782,
+      "acc_spawn": 0.76,
+      "compose_selected": [
+        "subset_123689_seed2024",
+        "subset_123689_seed101",
+        "parity_seed2024"
+      ],
+      "spawn_train_s": 5.485448360443115
+    },
+    {
+      "task": "subset_123679",
+      "budget_N": 100,
+      "acc_top1": 0.77,
+      "acc_compose": 0.782,
+      "acc_spawn": 0.836,
+      "compose_selected": [
+        "subset_123689_seed2024",
+        "subset_123689_seed101",
+        "parity_seed2024"
+      ],
+      "spawn_train_s": 5.48354434967041
+    },
+    {
+      "task": "subset_123679",
+      "budget_N": 300,
+      "acc_top1": 0.77,
+      "acc_compose": 0.782,
+      "acc_spawn": 0.879,
+      "compose_selected": [
+        "subset_123689_seed2024",
+        "subset_123689_seed101",
+        "parity_seed2024"
+      ],
+      "spawn_train_s": 6.365174055099487
+    },
+    {
+      "task": "subset_123679",
+      "budget_N": 1000,
+      "acc_top1": 0.77,
+      "acc_compose": 0.938,
+      "acc_spawn": 0.929,
+      "compose_selected": [
+        "subset_123689_seed2024",
+        "parity_seed2024",
+        "subset_267_seed2024"
+      ],
+      "spawn_train_s": 6.484145402908325
+    },
+    {
+      "task": "subset_123679",
+      "budget_N": 5000,
+      "acc_top1": 0.77,
+      "acc_compose": 0.782,
+      "acc_spawn": 0.938,
+      "compose_selected": [
+        "subset_123689_seed2024",
+        "subset_123689_seed101",
+        "parity_seed2024"
+      ],
+      "spawn_train_s": 7.183606863021851
+    },
+    {
+      "task": "subset_123689",
+      "budget_N": 50,
+      "acc_top1": 0.693,
+      "acc_compose": 0.857,
+      "acc_spawn": 0.759,
+      "compose_selected": [
+        "subset_123468_seed2024",
+        "subset_123679_seed42",
+        "fibonacci_seed2024"
+      ],
+      "spawn_train_s": 5.684914588928223
+    },
+    {
+      "task": "subset_123689",
+      "budget_N": 100,
+      "acc_top1": 0.693,
+      "acc_compose": 0.769,
+      "acc_spawn": 0.819,
+      "compose_selected": [
+        "subset_123679_seed2024",
+        "subset_13678_seed2024",
+        "subset_123679_seed101"
+      ],
+      "spawn_train_s": 5.8214099407196045
+    },
+    {
+      "task": "subset_123689",
+      "budget_N": 300,
+      "acc_top1": 0.693,
+      "acc_compose": 0.857,
+      "acc_spawn": 0.874,
+      "compose_selected": [
+        "subset_123468_seed2024",
+        "subset_123679_seed42",
+        "fibonacci_seed2024"
+      ],
+      "spawn_train_s": 6.413080453872681
+    },
+    {
+      "task": "subset_123689",
+      "budget_N": 1000,
+      "acc_top1": 0.693,
+      "acc_compose": 0.852,
+      "acc_spawn": 0.901,
+      "compose_selected": [
+        "subset_123468_seed2024",
+        "fibonacci_seed101",
+        "subset_13678_seed2024"
+      ],
+      "spawn_train_s": 6.4610981941223145
+    },
+    {
+      "task": "subset_123689",
+      "budget_N": 5000,
+      "acc_top1": 0.693,
+      "acc_compose": 0.857,
+      "acc_spawn": 0.928,
+      "compose_selected": [
+        "subset_123468_seed2024",
+        "subset_123679_seed42",
+        "fibonacci_seed2024"
+      ],
+      "spawn_train_s": 6.510847091674805
+    },
+    {
+      "task": "subset_1256",
+      "budget_N": 50,
+      "acc_top1": 0.673,
+      "acc_compose": 0.811,
+      "acc_spawn": 0.831,
+      "compose_selected": [
+        "triangular_seed2024",
+        "subset_267_seed101",
+        "fibonacci_seed101"
+      ],
+      "spawn_train_s": 5.234331130981445
+    },
+    {
+      "task": "subset_1256",
+      "budget_N": 100,
+      "acc_top1": 0.673,
+      "acc_compose": 0.805,
+      "acc_spawn": 0.847,
+      "compose_selected": [
+        "triangular_seed101",
+        "subset_267_seed101",
+        "fibonacci_seed101"
+      ],
+      "spawn_train_s": 5.253943920135498
+    },
+    {
+      "task": "subset_1256",
+      "budget_N": 300,
+      "acc_top1": 0.673,
+      "acc_compose": 0.816,
+      "acc_spawn": 0.901,
+      "compose_selected": [
+        "fibonacci_seed101",
+        "triangular_seed2024",
+        "subset_267_seed2024"
+      ],
+      "spawn_train_s": 6.181351661682129
+    },
+    {
+      "task": "subset_1256",
+      "budget_N": 1000,
+      "acc_top1": 0.673,
+      "acc_compose": 0.797,
+      "acc_spawn": 0.939,
+      "compose_selected": [
+        "triangular_seed101",
+        "subset_267_seed101",
+        "fibonacci_seed2024"
+      ],
+      "spawn_train_s": 6.406210422515869
+    },
+    {
+      "task": "subset_1256",
+      "budget_N": 5000,
+      "acc_top1": 0.673,
+      "acc_compose": 0.797,
+      "acc_spawn": 0.937,
+      "compose_selected": [
+        "triangular_seed101",
+        "subset_267_seed101",
+        "fibonacci_seed2024"
+      ],
+      "spawn_train_s": 6.558812618255615
+    },
+    {
+      "task": "subset_13678",
+      "budget_N": 50,
+      "acc_top1": 0.769,
+      "acc_compose": 0.773,
+      "acc_spawn": 0.711,
+      "compose_selected": [
+        "triangular_seed42",
+        "triangular_seed2024",
+        "triangular_seed101"
+      ],
+      "spawn_train_s": 5.397871255874634
+    },
+    {
+      "task": "subset_13678",
+      "budget_N": 100,
+      "acc_top1": 0.769,
+      "acc_compose": 0.766,
+      "acc_spawn": 0.797,
+      "compose_selected": [
+        "triangular_seed42",
+        "subset_123689_seed2024",
+        "fibonacci_seed101"
+      ],
+      "spawn_train_s": 5.498528718948364
+    },
+    {
+      "task": "subset_13678",
+      "budget_N": 300,
+      "acc_top1": 0.769,
+      "acc_compose": 0.768,
+      "acc_spawn": 0.87,
+      "compose_selected": [
+        "triangular_seed42",
+        "subset_123689_seed2024",
+        "triangular_seed2024"
+      ],
+      "spawn_train_s": 6.346373558044434
+    },
+    {
+      "task": "subset_13678",
+      "budget_N": 1000,
+      "acc_top1": 0.769,
+      "acc_compose": 0.768,
+      "acc_spawn": 0.901,
+      "compose_selected": [
+        "triangular_seed2024",
+        "subset_123689_seed2024",
+        "triangular_seed42"
+      ],
+      "spawn_train_s": 6.668779134750366
+    },
+    {
+      "task": "subset_13678",
+      "budget_N": 5000,
+      "acc_top1": 0.769,
+      "acc_compose": 0.768,
+      "acc_spawn": 0.935,
+      "compose_selected": [
+        "triangular_seed2024",
+        "triangular_seed42",
+        "subset_123689_seed2024"
+      ],
+      "spawn_train_s": 6.801668405532837
+    },
+    {
+      "task": "subset_15789",
+      "budget_N": 50,
+      "acc_top1": 0.778,
+      "acc_compose": 0.956,
+      "acc_spawn": 0.821,
+      "compose_selected": [
+        "parity_seed42",
+        "subset_01789_seed2024",
+        "high_vs_low_seed42"
+      ],
+      "spawn_train_s": 5.31172251701355
+    },
+    {
+      "task": "subset_15789",
+      "budget_N": 100,
+      "acc_top1": 0.778,
+      "acc_compose": 0.952,
+      "acc_spawn": 0.847,
+      "compose_selected": [
+        "high_vs_low_seed2024",
+        "subset_01589_seed42",
+        "parity_seed42"
+      ],
+      "spawn_train_s": 5.472858190536499
+    },
+    {
+      "task": "subset_15789",
+      "budget_N": 300,
+      "acc_top1": 0.778,
+      "acc_compose": 0.949,
+      "acc_spawn": 0.876,
+      "compose_selected": [
+        "high_vs_low_seed2024",
+        "subset_01589_seed42",
+        "parity_seed2024"
+      ],
+      "spawn_train_s": 6.475106716156006
+    },
+    {
+      "task": "subset_15789",
+      "budget_N": 1000,
+      "acc_top1": 0.778,
+      "acc_compose": 0.81,
+      "acc_spawn": 0.931,
+      "compose_selected": [
+        "parity_seed2024",
+        "parity_seed42",
+        "high_vs_low_seed2024"
+      ],
+      "spawn_train_s": 6.844208002090454
+    },
+    {
+      "task": "subset_15789",
+      "budget_N": 5000,
+      "acc_top1": 0.778,
+      "acc_compose": 0.855,
+      "acc_spawn": 0.941,
+      "compose_selected": [
+        "subset_01789_seed2024",
+        "subset_01589_seed2024",
+        "high_vs_low_seed2024"
+      ],
+      "spawn_train_s": 6.838902473449707
+    },
+    {
+      "task": "subset_2349",
+      "budget_N": 50,
+      "acc_top1": 0.854,
+      "acc_compose": 0.789,
+      "acc_spawn": 0.743,
+      "compose_selected": [
+        "subset_02349_seed2024",
+        "subset_3457_seed42",
+        "subset_459_seed101"
+      ],
+      "spawn_train_s": 5.364075183868408
+    },
+    {
+      "task": "subset_2349",
+      "budget_N": 100,
+      "acc_top1": 0.854,
+      "acc_compose": 0.847,
+      "acc_spawn": 0.792,
+      "compose_selected": [
+        "subset_02349_seed2024",
+        "subset_3457_seed42",
+        "subset_02349_seed101"
+      ],
+      "spawn_train_s": 5.555341005325317
+    },
+    {
+      "task": "subset_2349",
+      "budget_N": 300,
+      "acc_top1": 0.854,
+      "acc_compose": 0.848,
+      "acc_spawn": 0.89,
+      "compose_selected": [
+        "subset_02349_seed2024",
+        "subset_02349_seed101",
+        "subset_459_seed2024"
+      ],
+      "spawn_train_s": 6.369189977645874
+    },
+    {
+      "task": "subset_2349",
+      "budget_N": 1000,
+      "acc_top1": 0.854,
+      "acc_compose": 0.852,
+      "acc_spawn": 0.922,
+      "compose_selected": [
+        "subset_02349_seed2024",
+        "subset_02349_seed101",
+        "subset_459_seed42"
+      ],
+      "spawn_train_s": 6.722652435302734
+    },
+    {
+      "task": "subset_2349",
+      "budget_N": 5000,
+      "acc_top1": 0.854,
+      "acc_compose": 0.851,
+      "acc_spawn": 0.942,
+      "compose_selected": [
+        "subset_02349_seed2024",
+        "subset_02349_seed101",
+        "subset_02459_seed2024"
+      ],
+      "spawn_train_s": 6.695108413696289
+    },
+    {
+      "task": "subset_267",
+      "budget_N": 50,
+      "acc_top1": 0.667,
+      "acc_compose": 0.807,
+      "acc_spawn": 0.833,
+      "compose_selected": [
+        "primes_vs_rest_seed42",
+        "subset_123679_seed2024",
+        "subset_025678_seed42"
+      ],
+      "spawn_train_s": 5.326741933822632
+    },
+    {
+      "task": "subset_267",
+      "budget_N": 100,
+      "acc_top1": 0.667,
+      "acc_compose": 0.866,
+      "acc_spawn": 0.877,
+      "compose_selected": [
+        "primes_vs_rest_seed42",
+        "subset_025678_seed42",
+        "subset_1256_seed101"
+      ],
+      "spawn_train_s": 5.410269498825073
+    },
+    {
+      "task": "subset_267",
+      "budget_N": 300,
+      "acc_top1": 0.667,
+      "acc_compose": 0.8,
+      "acc_spawn": 0.913,
+      "compose_selected": [
+        "primes_vs_rest_seed42",
+        "subset_123679_seed2024",
+        "subset_025678_seed2024"
+      ],
+      "spawn_train_s": 6.322696924209595
+    },
+    {
+      "task": "subset_267",
+      "budget_N": 1000,
+      "acc_top1": 0.667,
+      "acc_compose": 0.865,
+      "acc_spawn": 0.945,
+      "compose_selected": [
+        "primes_vs_rest_seed2024",
+        "subset_025678_seed42",
+        "subset_1256_seed101"
+      ],
+      "spawn_train_s": 6.636420011520386
+    },
+    {
+      "task": "subset_267",
+      "budget_N": 5000,
+      "acc_top1": 0.667,
+      "acc_compose": 0.876,
+      "acc_spawn": 0.96,
+      "compose_selected": [
+        "subset_025678_seed2024",
+        "subset_1256_seed42",
+        "primes_vs_rest_seed2024"
+      ],
+      "spawn_train_s": 6.7668092250823975
+    },
+    {
+      "task": "subset_3457",
+      "budget_N": 50,
+      "acc_top1": 0.599,
+      "acc_compose": 0.787,
+      "acc_spawn": 0.776,
+      "compose_selected": [
+        "primes_vs_rest_seed2024",
+        "subset_459_seed2024",
+        "primes_vs_rest_seed42"
+      ],
+      "spawn_train_s": 5.4177165031433105
+    },
+    {
+      "task": "subset_3457",
+      "budget_N": 100,
+      "acc_top1": 0.599,
+      "acc_compose": 0.777,
+      "acc_spawn": 0.783,
+      "compose_selected": [
+        "primes_vs_rest_seed2024",
+        "primes_vs_rest_seed101",
+        "subset_2349_seed101"
+      ],
+      "spawn_train_s": 5.311626434326172
+    },
+    {
+      "task": "subset_3457",
+      "budget_N": 300,
+      "acc_top1": 0.599,
+      "acc_compose": 0.801,
+      "acc_spawn": 0.85,
+      "compose_selected": [
+        "primes_vs_rest_seed2024",
+        "primes_vs_rest_seed101",
+        "subset_459_seed101"
+      ],
+      "spawn_train_s": 6.451498031616211
+    },
+    {
+      "task": "subset_3457",
+      "budget_N": 1000,
+      "acc_top1": 0.599,
+      "acc_compose": 0.801,
+      "acc_spawn": 0.917,
+      "compose_selected": [
+        "primes_vs_rest_seed2024",
+        "primes_vs_rest_seed101",
+        "subset_459_seed101"
+      ],
+      "spawn_train_s": 6.630172491073608
+    },
+    {
+      "task": "subset_3457",
+      "budget_N": 5000,
+      "acc_top1": 0.599,
+      "acc_compose": 0.801,
+      "acc_spawn": 0.924,
+      "compose_selected": [
+        "primes_vs_rest_seed2024",
+        "primes_vs_rest_seed101",
+        "subset_459_seed101"
+      ],
+      "spawn_train_s": 6.6441590785980225
+    },
+    {
+      "task": "subset_459",
+      "budget_N": 50,
+      "acc_top1": 0.852,
+      "acc_compose": 0.967,
+      "acc_spawn": 0.829,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "subset_2349_seed101",
+        "middle_456_seed42"
+      ],
+      "spawn_train_s": 5.5120439529418945
+    },
+    {
+      "task": "subset_459",
+      "budget_N": 100,
+      "acc_top1": 0.852,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.864,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "middle_456_seed42",
+        "subset_2349_seed2024"
+      ],
+      "spawn_train_s": 5.366704702377319
+    },
+    {
+      "task": "subset_459",
+      "budget_N": 300,
+      "acc_top1": 0.852,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.909,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "middle_456_seed42",
+        "subset_2349_seed2024"
+      ],
+      "spawn_train_s": 6.302766561508179
+    },
+    {
+      "task": "subset_459",
+      "budget_N": 1000,
+      "acc_top1": 0.852,
+      "acc_compose": 0.948,
+      "acc_spawn": 0.935,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "middle_456_seed101",
+        "subset_2349_seed2024"
+      ],
+      "spawn_train_s": 6.644879579544067
+    },
+    {
+      "task": "subset_459",
+      "budget_N": 5000,
+      "acc_top1": 0.852,
+      "acc_compose": 0.958,
+      "acc_spawn": 0.956,
+      "compose_selected": [
+        "subset_0459_seed2024",
+        "middle_456_seed101",
+        "subset_2349_seed101"
+      ],
+      "spawn_train_s": 6.4465649127960205
+    },
+    {
+      "task": "triangular",
+      "budget_N": 50,
+      "acc_top1": 0.752,
+      "acc_compose": 0.781,
+      "acc_spawn": 0.83,
+      "compose_selected": [
+        "subset_13678_seed2024",
+        "subset_1256_seed42",
+        "subset_13678_seed42"
+      ],
+      "spawn_train_s": 5.465221643447876
+    },
+    {
+      "task": "triangular",
+      "budget_N": 100,
+      "acc_top1": 0.752,
+      "acc_compose": 0.784,
+      "acc_spawn": 0.845,
+      "compose_selected": [
+        "subset_13678_seed2024",
+        "subset_123689_seed42",
+        "subset_1256_seed101"
+      ],
+      "spawn_train_s": 5.393592357635498
+    },
+    {
+      "task": "triangular",
+      "budget_N": 300,
+      "acc_top1": 0.752,
+      "acc_compose": 0.798,
+      "acc_spawn": 0.895,
+      "compose_selected": [
+        "subset_13678_seed2024",
+        "subset_123689_seed42",
+        "subset_1256_seed42"
+      ],
+      "spawn_train_s": 6.232852935791016
+    },
+    {
+      "task": "triangular",
+      "budget_N": 1000,
+      "acc_top1": 0.752,
+      "acc_compose": 0.798,
+      "acc_spawn": 0.937,
+      "compose_selected": [
+        "subset_13678_seed2024",
+        "subset_1256_seed42",
+        "subset_123689_seed42"
+      ],
+      "spawn_train_s": 6.415205001831055
+    },
+    {
+      "task": "triangular",
+      "budget_N": 5000,
+      "acc_top1": 0.752,
+      "acc_compose": 0.791,
+      "acc_spawn": 0.966,
+      "compose_selected": [
+        "subset_13678_seed2024",
+        "subset_1256_seed42",
+        "parity_seed42"
+      ],
+      "spawn_train_s": 6.4499053955078125
+    }
+  ],
+  "per_budget": {
+    "50": {
+      "mean_top1": 0.7452222222222221,
+      "mean_compose": 0.8189999999999998,
+      "mean_spawn": 0.7882962962962964,
+      "mean_delta_spawn_minus_compose": -0.03070370370370372,
+      "std_delta": 0.0840379103165373,
+      "n_compose_wins": 16,
+      "n_tied": 0,
+      "n_spawn_wins": 11
+    },
+    "100": {
+      "mean_top1": 0.7452222222222221,
+      "mean_compose": 0.8190370370370372,
+      "mean_spawn": 0.8301481481481482,
+      "mean_delta_spawn_minus_compose": 0.011111111111111108,
+      "std_delta": 0.07383470798048909,
+      "n_compose_wins": 11,
+      "n_tied": 0,
+      "n_spawn_wins": 16
+    },
+    "300": {
+      "mean_top1": 0.7452222222222221,
+      "mean_compose": 0.8197777777777778,
+      "mean_spawn": 0.8878518518518518,
+      "mean_delta_spawn_minus_compose": 0.06807407407407408,
+      "std_delta": 0.07464270067148403,
+      "n_compose_wins": 6,
+      "n_tied": 0,
+      "n_spawn_wins": 21
+    },
+    "1000": {
+      "mean_top1": 0.7452222222222221,
+      "mean_compose": 0.8243703703703702,
+      "mean_spawn": 0.9291851851851852,
+      "mean_delta_spawn_minus_compose": 0.10481481481481482,
+      "std_delta": 0.06581503045367547,
+      "n_compose_wins": 3,
+      "n_tied": 0,
+      "n_spawn_wins": 24
+    },
+    "5000": {
+      "mean_top1": 0.7452222222222221,
+      "mean_compose": 0.8151111111111109,
+      "mean_spawn": 0.9442592592592592,
+      "mean_delta_spawn_minus_compose": 0.12914814814814815,
+      "std_delta": 0.05627931967749628,
+      "n_compose_wins": 1,
+      "n_tied": 0,
+      "n_spawn_wins": 26
+    }
+  },
+  "crossovers": {
+    "fibonacci": 50,
+    "high_vs_low": 50,
+    "middle_456": 50,
+    "ones_vs_teens": 50,
+    "parity": 50,
+    "primes_vs_rest": 100,
+    "subset_014567": 50,
+    "subset_01458": 100,
+    "subset_01589": 1000,
+    "subset_01789": 300,
+    "subset_02349": 300,
+    "subset_02459": 1000,
+    "subset_025678": 50,
+    "subset_0379": 50,
+    "subset_0459": 5000,
+    "subset_0489": 300,
+    "subset_123468": 300,
+    "subset_123679": 100,
+    "subset_123689": 100,
+    "subset_1256": 50,
+    "subset_13678": 100,
+    "subset_15789": 1000,
+    "subset_2349": 300,
+    "subset_267": 50,
+    "subset_3457": 100,
+    "subset_459": null,
+    "triangular": 50
+  },
+  "tasks_never_crossover": [
+    "subset_459"
+  ],
+  "median_crossover": 100,
+  "total_wall_clock_s": 1242.6439440250397
+}
