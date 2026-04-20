@@ -1,0 +1,202 @@
+{
+  "config": {
+    "llm": "local",
+    "local_llm_url": "http://127.0.0.1:8080",
+    "height": 10,
+    "width": 10,
+    "n_train_games": 30,
+    "n_eval_games": 50,
+    "n_probes": 50,
+    "probe_seed": 12345,
+    "n_epochs": 200,
+    "results_out": "results/snake_sprint.json",
+    "demos_cache": "results/snake_demos.npz",
+    "skip_llm": false
+  },
+  "strategies": [
+    "greedy_food",
+    "bfs_safe",
+    "wall_hugger",
+    "center_stayer",
+    "survival_first"
+  ],
+  "demo_stats": {
+    "greedy_food": {
+      "n_demos": 4776,
+      "games_played": 30,
+      "errors": 0,
+      "avg_survival": 159.2,
+      "avg_score": 19.133333333333333
+    },
+    "bfs_safe": {
+      "n_demos": 144,
+      "games_played": 30,
+      "errors": 0,
+      "avg_survival": 4.8,
+      "avg_score": 0.8
+    },
+    "wall_hugger": {
+      "n_demos": 9000,
+      "games_played": 30,
+      "errors": 0,
+      "avg_survival": 300.0,
+      "avg_score": 0.4
+    },
+    "center_stayer": {
+      "n_demos": 300,
+      "games_played": 30,
+      "errors": 0,
+      "avg_survival": 10.0,
+      "avg_score": 0.13333333333333333
+    },
+    "survival_first": {
+      "n_demos": 181,
+      "games_played": 30,
+      "errors": 0,
+      "avg_survival": 6.033333333333333,
+      "avg_score": 0.06666666666666667
+    }
+  },
+  "train_losses": {
+    "greedy_food": {
+      "final": 0.00023143542430307436,
+      "curve_downsampled": [
+        1.367841649095417,
+        0.2946933841635434,
+        0.08201923993863852,
+        0.020670146779648624,
+        0.004682813893529389,
+        0.0021075755938843917,
+        0.02597753236684917,
+        0.0015634172597987393,
+        0.0008255804904894139,
+        0.00043448840943243123
+      ]
+    },
+    "bfs_safe": {
+      "final": 0.0032190037632568013,
+      "curve_downsampled": [
+        1.3737905952665541,
+        0.8640091551674737,
+        0.3043004307481978,
+        0.09432884885205163,
+        0.04004524855150117,
+        0.020255583234959178,
+        0.012086238194670942,
+        0.007898899623089366,
+        0.0055547198798093535,
+        0.004123396498875486
+      ]
+    },
+    "wall_hugger": {
+      "final": 2.119276132361847e-10,
+      "curve_downsampled": [
+        0.9143719189431933,
+        0.0007013832670507125,
+        7.564606142275604e-05,
+        1.3313668734351975e-05,
+        2.4819285444866383e-06,
+        4.830132522278695e-07,
+        9.755252904852796e-08,
+        1.9020486764671004e-08,
+        3.8941690910910945e-09,
+        6.887647145958909e-10
+      ]
+    },
+    "center_stayer": {
+      "final": 0.0001799762600179141,
+      "curve_downsampled": [
+        1.3917119407653809,
+        0.17403966625531514,
+        0.012266854780415695,
+        0.002839572848752141,
+        0.0013325993266577521,
+        0.0007911155233159661,
+        0.0005284357986723383,
+        0.00037795761367306115,
+        0.0002852395351510495,
+        0.000222368110747387
+      ]
+    },
+    "survival_first": {
+      "final": 0.0025037016873299374,
+      "curve_downsampled": [
+        1.3359495098419611,
+        0.042660724803887676,
+        0.023823001190443723,
+        0.0167852698192412,
+        0.013461335217425836,
+        0.011552234027195124,
+        0.010274010083962294,
+        0.009132301079839962,
+        0.007746208049755708,
+        0.006081782795941632
+      ]
+    }
+  },
+  "pairwise_signature_distances": {
+    "greedy_food|bfs_safe": 7.362608238646394,
+    "greedy_food|wall_hugger": 8.428692997562049,
+    "greedy_food|center_stayer": 8.783117617836183,
+    "greedy_food|survival_first": 7.863335361846537,
+    "bfs_safe|wall_hugger": 8.14164213592259,
+    "bfs_safe|center_stayer": 7.3939679711660435,
+    "bfs_safe|survival_first": 7.843172041628073,
+    "wall_hugger|center_stayer": 9.536755778332777,
+    "wall_hugger|survival_first": 5.269284699173812,
+    "center_stayer|survival_first": 9.635863127496775
+  },
+  "eval_results": {
+    "single:greedy_food": {
+      "n_games": 50,
+      "mean_survival": 7.18,
+      "mean_score": 0.42,
+      "median_survival": 6.0,
+      "max_score": 2
+    },
+    "single:bfs_safe": {
+      "n_games": 50,
+      "mean_survival": 6.38,
+      "mean_score": 0.12,
+      "median_survival": 7.0,
+      "max_score": 1
+    },
+    "single:wall_hugger": {
+      "n_games": 50,
+      "mean_survival": 122.46,
+      "mean_score": 0.26,
+      "median_survival": 21.5,
+      "max_score": 2
+    },
+    "single:center_stayer": {
+      "n_games": 50,
+      "mean_survival": 9.36,
+      "mean_score": 0.08,
+      "median_survival": 10.0,
+      "max_score": 1
+    },
+    "single:survival_first": {
+      "n_games": 50,
+      "mean_survival": 6.0,
+      "mean_score": 0.04,
+      "median_survival": 6.0,
+      "max_score": 1
+    },
+    "ensemble_all": {
+      "n_games": 50,
+      "mean_survival": 7.96,
+      "mean_score": 0.04,
+      "median_survival": 7.0,
+      "max_score": 1
+    },
+    "ensemble_random3": {
+      "n_games": 50,
+      "mean_survival": 8.74,
+      "mean_score": 0.08,
+      "median_survival": 9.0,
+      "max_score": 1
+    }
+  },
+  "verdict": "BEST SINGLE WINS",
+  "delta_ensemble_minus_best_single": -114.5
+}
