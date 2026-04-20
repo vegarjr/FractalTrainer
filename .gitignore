@@ -43,3 +43,4 @@ dist/
 # Local Claude config
 .claude/settings.local.json
 science_trajectories/
+!results/utility_test.json

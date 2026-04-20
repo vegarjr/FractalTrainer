@@ -1,9 +1,8 @@
-# Hyperparameters — written by scripts/run_multi_loop.py.
-# This file is overwritten on each run.
+# Utility test starting configuration.
 
 learning_rate: 0.001
-batch_size: 128
-weight_decay: 0.01
-dropout: 0.3
+batch_size: 64
+weight_decay: 0.001
+dropout: 0.0
 init_seed: 42
 optimizer: "adam"
