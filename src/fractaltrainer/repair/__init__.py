@@ -15,6 +15,7 @@ from fractaltrainer.repair.prompt_builder import PromptBuilder
 from fractaltrainer.repair.llm_client import (
     make_claude_cli_client,
     make_claude_client,
+    make_local_llm_client,
 )
 
 __all__ = [
@@ -33,4 +34,5 @@ __all__ = [
     "PromptBuilder",
     "make_claude_cli_client",
     "make_claude_client",
+    "make_local_llm_client",
 ]

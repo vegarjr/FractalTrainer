@@ -4,9 +4,11 @@ Usage:
     python scripts/run_closed_loop.py --experiment configs/experiment.yaml \
         --target configs/target_shape.yaml --max-iters 5 --llm mock
 
-    --llm mock : always returns NO_FIX_FOUND (safe, used in CI)
-    --llm cli  : calls `claude --print` (Max subscription, no API cost)
-    --llm api  : calls Anthropic API (requires ANTHROPIC_API_KEY)
+    --llm mock  : always returns NO_FIX_FOUND (safe, used in CI)
+    --llm cli   : calls `claude --print` (Max subscription, no API cost)
+    --llm api   : calls Anthropic API (requires ANTHROPIC_API_KEY)
+    --llm local : calls local llama-server (default http://127.0.0.1:8080)
+                  — offline; see docs/local_llm_setup.md
 """
 
 from __future__ import annotations
@@ -24,17 +26,20 @@ from fractaltrainer.repair.repair_loop import RepairLoop  # noqa: E402
 from fractaltrainer.repair.llm_client import (  # noqa: E402
     make_claude_cli_client,
     make_claude_client,
+    make_local_llm_client,
 )
 from fractaltrainer.target.target_shape import load_target  # noqa: E402
 
 
-def _make_llm_fn(name: str):
+def _make_llm_fn(name: str, local_url: str = "http://127.0.0.1:8080"):
     if name == "mock":
         return None  # RepairLoop's default _mock_llm
     if name == "cli":
         return make_claude_cli_client()
     if name == "api":
         return make_claude_client()
+    if name == "local":
+        return make_local_llm_client(base_url=local_url)
     raise ValueError(f"unknown --llm: {name!r}")
 
 
@@ -46,7 +51,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--max-iters", type=int, default=None,
                         help="override target.max_repair_iters")
     parser.add_argument("--llm", type=str, default="mock",
-                        choices=("mock", "cli", "api"))
+                        choices=("mock", "cli", "api", "local"))
+    parser.add_argument("--local-llm-url", type=str,
+                        default="http://127.0.0.1:8080",
+                        help="base URL for --llm local (llama-server)")
     parser.add_argument("--python-bin", type=str, default=None,
                         help="python binary to use for training probes "
                         "(default: current sys.executable)")
@@ -54,7 +62,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     target = load_target(args.target)
-    llm_fn = _make_llm_fn(args.llm)
+    llm_fn = _make_llm_fn(args.llm, local_url=args.local_llm_url)
 
     loop = RepairLoop(
         project_root=str(REPO_ROOT),
