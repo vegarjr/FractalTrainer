@@ -52,4 +52,5 @@ science_trajectories/
 !results/mvp_registry_test.json
 !results/growth_demo.json
 !results/composition_utility.json
+!results/calibration_demo.json
 results/growth_spawn_trajectories/

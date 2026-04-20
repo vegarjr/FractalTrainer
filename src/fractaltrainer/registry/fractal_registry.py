@@ -83,6 +83,60 @@ class RetrievalResult:
 
 
 @dataclass
+class CalibrationResult:
+    """Output of FractalRegistry.calibrate_thresholds.
+
+    Attributes:
+        match_threshold: upper-percentile of within-task distances.
+        spawn_threshold: lower-percentile of cross-task distances
+            (clamped to ≥ match_threshold when the raw percentiles
+            cross — see `overlap`).
+        within_task_distances: flat array of all within-task pairwise
+            L2 distances.
+        cross_task_distances: flat array of all cross-task pairwise
+            L2 distances.
+        within_percentile: upper percentile used on within-task.
+        cross_percentile: lower percentile used on cross-task.
+        overlap: True when the within and cross distributions overlap
+            at the chosen percentiles (raw within_p > raw cross_p);
+            the returned thresholds are still valid but the registry
+            doesn't have a clean gap between same-task and cross-task.
+        n_tasks: number of distinct tasks grouped.
+    """
+
+    match_threshold: float
+    spawn_threshold: float
+    within_task_distances: np.ndarray
+    cross_task_distances: np.ndarray
+    within_percentile: float
+    cross_percentile: float
+    overlap: bool
+    n_tasks: int
+
+    def to_dict(self) -> dict:
+        return {
+            "match_threshold": float(self.match_threshold),
+            "spawn_threshold": float(self.spawn_threshold),
+            "within_percentile": float(self.within_percentile),
+            "cross_percentile": float(self.cross_percentile),
+            "overlap": bool(self.overlap),
+            "n_tasks": int(self.n_tasks),
+            "within_distance_stats": {
+                "n": int(self.within_task_distances.size),
+                "min": float(self.within_task_distances.min()),
+                "mean": float(self.within_task_distances.mean()),
+                "max": float(self.within_task_distances.max()),
+            },
+            "cross_distance_stats": {
+                "n": int(self.cross_task_distances.size),
+                "min": float(self.cross_task_distances.min()),
+                "mean": float(self.cross_task_distances.mean()),
+                "max": float(self.cross_task_distances.max()),
+            },
+        }
+
+
+@dataclass
 class GrowthDecision:
     """Routing + growth decision produced by FractalRegistry.decide.
 
@@ -292,6 +346,109 @@ class FractalRegistry:
             )
         return GrowthDecision(verdict="spawn", min_distance=min_d,
                               retrieval=res)
+
+    # ── Calibration ───────────────────────────────────────────────
+
+    def calibrate_thresholds(
+        self,
+        task_key: str = "task",
+        within_percentile: float = 95.0,
+        cross_percentile: float = 5.0,
+    ) -> CalibrationResult:
+        """Compute match/spawn thresholds from the registry's own
+        pairwise distance distribution, grouped by metadata[task_key].
+
+        The match_threshold is set at `within_percentile` of the
+        within-task distance distribution (so ≥within_percentile of
+        same-task queries will land in the match verdict). The
+        spawn_threshold is set at `cross_percentile` of the cross-task
+        distance distribution (so ≥(100 − cross_percentile)% of
+        cross-task queries will land in the spawn verdict).
+
+        Defaults (95, 5) follow the Sprint 3 MVP observation: MNIST
+        same-task distances max 3.43, cross-task min 7.32 — 95th of
+        within and 5th of cross both land in the (3.43, 7.32) gap,
+        reproducing the hand-tuned (5.0, 7.0) without tuning.
+
+        Args:
+            task_key: metadata key identifying an entry's task.
+            within_percentile: upper percentile of within-task
+                distances used for match_threshold. Default 95.
+            cross_percentile: lower percentile of cross-task distances
+                used for spawn_threshold. Default 5.
+
+        Returns:
+            CalibrationResult. When the raw percentiles cross
+            (match > spawn), `overlap=True` and spawn_threshold is
+            clamped to match_threshold so the caller can still use
+            the thresholds (compose band collapses to zero width).
+
+        Raises:
+            ValueError: <2 entries, <2 distinct tasks, missing
+                task_key on any entry, or no within-task pairs (every
+                task has only 1 entry).
+        """
+        entries = list(self._entries.values())
+        if len(entries) < 2:
+            raise ValueError(
+                "Need at least 2 registered entries to calibrate "
+                f"thresholds; have {len(entries)}")
+
+        by_task: dict[str, list[FractalEntry]] = {}
+        for e in entries:
+            task = e.metadata.get(task_key)
+            if task is None:
+                raise ValueError(
+                    f"Entry {e.name!r} missing metadata[{task_key!r}]; "
+                    "cannot separate within/cross-task distances")
+            by_task.setdefault(task, []).append(e)
+
+        if len(by_task) < 2:
+            raise ValueError(
+                f"Need at least 2 distinct tasks; found {len(by_task)} "
+                f"under metadata key {task_key!r}")
+
+        within: list[float] = []
+        for task_entries in by_task.values():
+            for i in range(len(task_entries)):
+                for j in range(i + 1, len(task_entries)):
+                    d = float(np.linalg.norm(
+                        task_entries[i].signature
+                        - task_entries[j].signature))
+                    within.append(d)
+        if not within:
+            raise ValueError(
+                "No within-task pairs — every task has only 1 entry. "
+                "Need ≥2 entries per task for at least one task.")
+
+        cross: list[float] = []
+        task_names = list(by_task.keys())
+        for i in range(len(task_names)):
+            for j in range(i + 1, len(task_names)):
+                for a in by_task[task_names[i]]:
+                    for b in by_task[task_names[j]]:
+                        d = float(np.linalg.norm(a.signature - b.signature))
+                        cross.append(d)
+
+        within_arr = np.asarray(within, dtype=np.float64)
+        cross_arr = np.asarray(cross, dtype=np.float64)
+        match_t = float(np.percentile(within_arr, within_percentile))
+        spawn_t = float(np.percentile(cross_arr, cross_percentile))
+
+        overlap = match_t > spawn_t
+        if overlap:
+            spawn_t = match_t
+
+        return CalibrationResult(
+            match_threshold=match_t,
+            spawn_threshold=spawn_t,
+            within_task_distances=within_arr,
+            cross_task_distances=cross_arr,
+            within_percentile=within_percentile,
+            cross_percentile=cross_percentile,
+            overlap=overlap,
+            n_tasks=len(by_task),
+        )
 
     # ── Persistence ───────────────────────────────────────────────
 

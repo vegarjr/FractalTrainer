@@ -1,0 +1,158 @@
+{
+  "mvp_calibration": {
+    "label": "Sprint 3 MVP (22 entries)",
+    "registry_size": 22,
+    "match_threshold": 5.723404884338379,
+    "spawn_threshold": 7.557449460029602,
+    "within_percentile": 95.0,
+    "cross_percentile": 5.0,
+    "overlap": false,
+    "n_tasks": 11,
+    "within_distance_stats": {
+      "n": 11,
+      "min": 1.2151470184326172,
+      "mean": 3.2008077664808794,
+      "max": 7.832839488983154
+    },
+    "cross_distance_stats": {
+      "n": 220,
+      "min": 7.210943222045898,
+      "mean": 10.907781960747458,
+      "max": 13.609421730041504
+    }
+  },
+  "mvp_retrieval_check": {
+    "rows": [
+      {
+        "held": "digit_class_seed2024",
+        "verdict": "match",
+        "min_distance": 3.427201509475708,
+        "nearest": "digit_class_seed42",
+        "same_task": true
+      },
+      {
+        "held": "parity_seed2024",
+        "verdict": "match",
+        "min_distance": 1.7055890560150146,
+        "nearest": "parity_seed42",
+        "same_task": true
+      },
+      {
+        "held": "high_vs_low_seed2024",
+        "verdict": "match",
+        "min_distance": 2.174635171890259,
+        "nearest": "high_vs_low_seed42",
+        "same_task": true
+      },
+      {
+        "held": "mod3_seed2024",
+        "verdict": "match",
+        "min_distance": 3.3216023445129395,
+        "nearest": "mod3_seed101",
+        "same_task": true
+      },
+      {
+        "held": "mod5_seed2024",
+        "verdict": "match",
+        "min_distance": 2.7106099128723145,
+        "nearest": "mod5_seed101",
+        "same_task": true
+      },
+      {
+        "held": "primes_vs_rest_seed2024",
+        "verdict": "match",
+        "min_distance": 0.9286555051803589,
+        "nearest": "primes_vs_rest_seed42",
+        "same_task": true
+      },
+      {
+        "held": "ones_vs_teens_seed2024",
+        "verdict": "match",
+        "min_distance": 2.882746458053589,
+        "nearest": "ones_vs_teens_seed42",
+        "same_task": true
+      },
+      {
+        "held": "triangular_seed2024",
+        "verdict": "match",
+        "min_distance": 1.6003479957580566,
+        "nearest": "triangular_seed42",
+        "same_task": true
+      },
+      {
+        "held": "fibonacci_seed2024",
+        "verdict": "match",
+        "min_distance": 2.176685333251953,
+        "nearest": "fibonacci_seed42",
+        "same_task": true
+      },
+      {
+        "held": "middle_456_seed2024",
+        "verdict": "match",
+        "min_distance": 2.3719420433044434,
+        "nearest": "middle_456_seed42",
+        "same_task": true
+      },
+      {
+        "held": "fashion_class_seed2024",
+        "verdict": "compose",
+        "min_distance": 6.680370807647705,
+        "nearest": "fashion_class_seed42",
+        "same_task": true
+      }
+    ],
+    "n_total": 11,
+    "n_match_verdict": 10,
+    "n_compose_verdict": 1,
+    "n_spawn_verdict": 0,
+    "n_correct_nearest_task": 11
+  },
+  "full_calibration": {
+    "label": "Full (33 entries)",
+    "registry_size": 33,
+    "match_threshold": 7.141358280181883,
+    "spawn_threshold": 7.593158149719239,
+    "within_percentile": 95.0,
+    "cross_percentile": 5.0,
+    "overlap": false,
+    "n_tasks": 11,
+    "within_distance_stats": {
+      "n": 33,
+      "min": 0.9286555051803589,
+      "mean": 3.054856126958674,
+      "max": 7.89374303817749
+    },
+    "cross_distance_stats": {
+      "n": 495,
+      "min": 7.210943222045898,
+      "mean": 10.873496696202443,
+      "max": 13.609421730041504
+    }
+  },
+  "binary_calibration": {
+    "label": "Binary tasks only (21 entries)",
+    "registry_size": 21,
+    "match_threshold": 3.23531436920166,
+    "spawn_threshold": 7.38482141494751,
+    "within_percentile": 95.0,
+    "cross_percentile": 5.0,
+    "overlap": false,
+    "n_tasks": 7,
+    "within_distance_stats": {
+      "n": 21,
+      "min": 0.9286555051803589,
+      "mean": 2.32987041700454,
+      "max": 3.237380266189575
+    },
+    "cross_distance_stats": {
+      "n": 189,
+      "min": 7.210943222045898,
+      "mean": 9.440880086686876,
+      "max": 13.609421730041504
+    }
+  },
+  "hand_tuned_defaults": {
+    "match": 5.0,
+    "spawn": 7.0
+  }
+}

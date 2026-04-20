@@ -3,6 +3,7 @@ from fractaltrainer.registry.fractal_registry import (
     FractalEntry,
     RetrievalResult,
     GrowthDecision,
+    CalibrationResult,
 )
 
 __all__ = [
@@ -10,4 +11,5 @@ __all__ = [
     "FractalEntry",
     "RetrievalResult",
     "GrowthDecision",
+    "CalibrationResult",
 ]
