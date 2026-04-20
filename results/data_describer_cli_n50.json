@@ -1,0 +1,209 @@
+{
+  "llm": "cli",
+  "n_pairs": 50,
+  "rows": [
+    {
+      "task": "subset_267",
+      "truth": [
+        2,
+        6,
+        7
+      ],
+      "n_positive_seen": 3,
+      "n_negative_seen": 7,
+      "positive_digits_in_sample": [
+        2,
+        6,
+        7
+      ],
+      "negative_digits_in_sample": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "llm_guess": [
+        2,
+        6,
+        7
+      ],
+      "identification_exact": true,
+      "identification_jaccard": 1.0,
+      "oracle_route_nearest": "subset_123679",
+      "oracle_route_jaccard": 0.5,
+      "llm_route_nearest": "subset_123679",
+      "llm_route_jaccard": 0.5,
+      "route_matches_oracle": true,
+      "llm_response_preview": "[2, 6, 7]\n"
+    },
+    {
+      "task": "subset_01458",
+      "truth": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "n_positive_seen": 5,
+      "n_negative_seen": 5,
+      "positive_digits_in_sample": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "negative_digits_in_sample": [
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "llm_guess": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "identification_exact": true,
+      "identification_jaccard": 1.0,
+      "oracle_route_nearest": "subset_01589",
+      "oracle_route_jaccard": 0.6666666666666666,
+      "llm_route_nearest": "subset_01589",
+      "llm_route_jaccard": 0.6666666666666666,
+      "route_matches_oracle": true,
+      "llm_response_preview": "[0, 1, 4, 5, 8]\n"
+    },
+    {
+      "task": "subset_123689",
+      "truth": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "n_positive_seen": 6,
+      "n_negative_seen": 4,
+      "positive_digits_in_sample": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "negative_digits_in_sample": [
+        0,
+        4,
+        5,
+        7
+      ],
+      "llm_guess": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "identification_exact": true,
+      "identification_jaccard": 1.0,
+      "oracle_route_nearest": "subset_123679",
+      "oracle_route_jaccard": 0.7142857142857143,
+      "llm_route_nearest": "subset_123679",
+      "llm_route_jaccard": 0.7142857142857143,
+      "route_matches_oracle": true,
+      "llm_response_preview": "[1, 2, 3, 6, 8, 9]\n"
+    },
+    {
+      "task": "subset_459",
+      "truth": [
+        4,
+        5,
+        9
+      ],
+      "n_positive_seen": 3,
+      "n_negative_seen": 7,
+      "positive_digits_in_sample": [
+        4,
+        5,
+        9
+      ],
+      "negative_digits_in_sample": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "llm_guess": [
+        4,
+        5,
+        9
+      ],
+      "identification_exact": true,
+      "identification_jaccard": 1.0,
+      "oracle_route_nearest": "subset_0459",
+      "oracle_route_jaccard": 0.75,
+      "llm_route_nearest": "subset_0459",
+      "llm_route_jaccard": 0.75,
+      "route_matches_oracle": true,
+      "llm_response_preview": "[4, 5, 9]\n"
+    },
+    {
+      "task": "subset_0379",
+      "truth": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "n_positive_seen": 4,
+      "n_negative_seen": 6,
+      "positive_digits_in_sample": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "negative_digits_in_sample": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8
+      ],
+      "llm_guess": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "identification_exact": true,
+      "identification_jaccard": 1.0,
+      "oracle_route_nearest": "subset_02349",
+      "oracle_route_jaccard": 0.5,
+      "llm_route_nearest": "subset_02349",
+      "llm_route_jaccard": 0.5,
+      "route_matches_oracle": true,
+      "llm_response_preview": "[0, 3, 7, 9]\n"
+    }
+  ],
+  "summary": {
+    "n_tasks": 5,
+    "exact_id": 5,
+    "mean_jaccard_guess_vs_truth": 1.0,
+    "routing_matches_oracle": 5
+  }
+}

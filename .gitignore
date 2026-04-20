@@ -74,6 +74,9 @@ results/snake_demos.npz
 !results/closed_loop_local_sprint15a.log
 !results/closed_loop_local_t09_sprint15b.log
 !results/closed_loop_local_strictprompt_sprint15b.log
+!results/data_describer.json
+!results/data_describer_n50.json
+!results/data_describer_cli_n50.json
 results/growth_spawn_trajectories/
 results/sprint7_v3_trajectories/
 results/sprint8_v3_fashion_trajectories/
