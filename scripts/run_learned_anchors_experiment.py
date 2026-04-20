@@ -402,6 +402,24 @@ def main(argv=None):
     print(f"Loaded {sum(len(v) for v in all_entries_by_task.values())} "
           f"pool entries, {len(probe_entries)} probe entries.\n")
 
+    # ── Precompute spawn accuracies per (probe, budget) ──
+    # Spawn is independent of clustering and pool, so we compute it
+    # once per (probe, budget) and reuse across all pool × k
+    # combinations. Previously this loop ran ~150 redundant times.
+    print("Precomputing spawn accuracies for 15 probes × "
+          f"{len(args.budgets)} budgets = {15 * len(args.budgets)} runs...")
+    t_spawn = time.time()
+    spawn_cache: dict[tuple[str, int], float] = {}
+    for probe_name, probe_subset in ALL_PROBES.items():
+        eval_loader = _eval_loader(
+            probe_subset, args.n_eval, args.data_dir, args.eval_seed)
+        for budget in args.budgets:
+            acc = _spawn(probe_subset, budget, args.spawn_seed,
+                          args.data_dir, eval_loader)
+            spawn_cache[(probe_name, budget)] = acc
+    print(f"Spawn precompute done in {time.time() - t_spawn:.1f}s "
+          f"({len(spawn_cache)} cached values).\n")
+
     # ── Loop over pools ──
     all_pool_outputs: dict[str, dict] = {}
     for pool_name, pool_tasks in pools.items():
@@ -514,9 +532,8 @@ def main(argv=None):
                             }
                 else:
                     for budget in args.budgets:
-                        acc = _spawn(probe_subset, budget,
-                                      args.spawn_seed, args.data_dir,
-                                      eval_loader)
+                        # Cached from precompute above — no retraining.
+                        acc = spawn_cache[(probe_name, budget)]
                         per_budget[budget] = {"acc": acc, "selected": None}
 
                 per_probe_rows.append({
