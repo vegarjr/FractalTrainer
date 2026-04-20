@@ -1,0 +1,235 @@
+{
+  "n_tasks": 3,
+  "n_seeds_per_task": 2,
+  "n_steps": 500,
+  "train_size": 5000,
+  "signatures": {
+    "digit_class_seed42": {
+      "correlation_dim": 1.3517428975992092,
+      "total_path_length": 140.98973083496094,
+      "mean_step_norm": 2.8197946548461914,
+      "step_norm_std": 1.2454235553741455,
+      "dispersion": 10.658156394958496,
+      "displacement": 37.47621154785156,
+      "tortuosity": 3.7621126846009494,
+      "mean_curvature": 1.3068640232086182,
+      "recurrence_rate": 0.0
+    },
+    "digit_class_seed101": {
+      "correlation_dim": 1.5524436930838514,
+      "total_path_length": 116.76522064208984,
+      "mean_step_norm": 2.3353044986724854,
+      "step_norm_std": 0.8384177088737488,
+      "dispersion": 7.426552772521973,
+      "displacement": 22.318532943725586,
+      "tortuosity": 5.231760570307381,
+      "mean_curvature": 1.3503345251083374,
+      "recurrence_rate": 0.0
+    },
+    "parity_seed42": {
+      "correlation_dim": 0.7646192688492457,
+      "total_path_length": 93.7747802734375,
+      "mean_step_norm": 1.8754955530166626,
+      "step_norm_std": 0.7644662261009216,
+      "dispersion": 7.763194561004639,
+      "displacement": 29.534162521362305,
+      "tortuosity": 3.175129147664486,
+      "mean_curvature": 1.2609261274337769,
+      "recurrence_rate": 0.0
+    },
+    "parity_seed101": {
+      "correlation_dim": 1.8355634999653931,
+      "total_path_length": 95.96142578125,
+      "mean_step_norm": 1.9192285537719727,
+      "step_norm_std": 1.059889554977417,
+      "dispersion": 7.6302809715271,
+      "displacement": 27.34697914123535,
+      "tortuosity": 3.5090320318617505,
+      "mean_curvature": 1.1654165983200073,
+      "recurrence_rate": 0.0
+    },
+    "high_vs_low_seed42": {
+      "correlation_dim": 1.7884901646106435,
+      "total_path_length": 101.35142517089844,
+      "mean_step_norm": 2.0270285606384277,
+      "step_norm_std": 0.82441246509552,
+      "dispersion": 9.831876754760742,
+      "displacement": 31.521608352661133,
+      "tortuosity": 3.2152999313038575,
+      "mean_curvature": 1.1942918300628662,
+      "recurrence_rate": 0.0
+    },
+    "high_vs_low_seed101": {
+      "correlation_dim": 0.8622292095335681,
+      "total_path_length": 101.03811645507812,
+      "mean_step_norm": 2.0207624435424805,
+      "step_norm_std": 1.1140468120574951,
+      "dispersion": 9.217277526855469,
+      "displacement": 24.046703338623047,
+      "tortuosity": 4.201745038904935,
+      "mean_curvature": 1.265932559967041,
+      "recurrence_rate": 0.0
+    }
+  },
+  "pairwise": [
+    {
+      "a_task": "digit_class",
+      "a_seed": 42,
+      "b_task": "digit_class",
+      "b_seed": 101,
+      "same_task": true,
+      "distance": 0.8573192196914294
+    },
+    {
+      "a_task": "digit_class",
+      "a_seed": 42,
+      "b_task": "parity",
+      "b_seed": 42,
+      "same_task": false,
+      "distance": 1.0224348471901719
+    },
+    {
+      "a_task": "digit_class",
+      "a_seed": 42,
+      "b_task": "parity",
+      "b_seed": 101,
+      "same_task": false,
+      "distance": 0.7951256351033327
+    },
+    {
+      "a_task": "digit_class",
+      "a_seed": 42,
+      "b_task": "high_vs_low",
+      "b_seed": 42,
+      "same_task": false,
+      "distance": 0.7251598233638027
+    },
+    {
+      "a_task": "digit_class",
+      "a_seed": 42,
+      "b_task": "high_vs_low",
+      "b_seed": 101,
+      "same_task": false,
+      "distance": 0.8066896098459032
+    },
+    {
+      "a_task": "digit_class",
+      "a_seed": 101,
+      "b_task": "parity",
+      "b_seed": 42,
+      "same_task": false,
+      "distance": 0.9433096083892383
+    },
+    {
+      "a_task": "digit_class",
+      "a_seed": 101,
+      "b_task": "parity",
+      "b_seed": 101,
+      "same_task": false,
+      "distance": 0.6145048550977287
+    },
+    {
+      "a_task": "digit_class",
+      "a_seed": 101,
+      "b_task": "high_vs_low",
+      "b_seed": 42,
+      "same_task": false,
+      "distance": 0.70551962043937
+    },
+    {
+      "a_task": "digit_class",
+      "a_seed": 101,
+      "b_task": "high_vs_low",
+      "b_seed": 101,
+      "same_task": false,
+      "distance": 0.7429396030795299
+    },
+    {
+      "a_task": "parity",
+      "a_seed": 42,
+      "b_task": "parity",
+      "b_seed": 101,
+      "same_task": true,
+      "distance": 0.8982755023449084
+    },
+    {
+      "a_task": "parity",
+      "a_seed": 42,
+      "b_task": "high_vs_low",
+      "b_seed": 42,
+      "same_task": false,
+      "distance": 0.8506977659093803
+    },
+    {
+      "a_task": "parity",
+      "a_seed": 42,
+      "b_task": "high_vs_low",
+      "b_seed": 101,
+      "same_task": false,
+      "distance": 0.5592998358478705
+    },
+    {
+      "a_task": "parity",
+      "a_seed": 101,
+      "b_task": "high_vs_low",
+      "b_seed": 42,
+      "same_task": false,
+      "distance": 0.4013001966581684
+    },
+    {
+      "a_task": "parity",
+      "a_seed": 101,
+      "b_task": "high_vs_low",
+      "b_seed": 101,
+      "same_task": false,
+      "distance": 0.7871315283327428
+    },
+    {
+      "a_task": "high_vs_low",
+      "a_seed": 42,
+      "b_task": "high_vs_low",
+      "b_seed": 101,
+      "same_task": true,
+      "distance": 0.8534822387148508
+    }
+  ],
+  "mean_same_task_distance": 0.8696923202503962,
+  "mean_diff_task_distance": 0.7461760774381033,
+  "ratio_diff_over_same": 0.8579770800129282,
+  "verdict": [
+    "NOT DISCRIMINATIVE: ratio 0.86\u00d7 \u2014 within-task variance \u2248 between-task variance.",
+    "\u2192 The 9-d signature does NOT carry usable task information at this scale. Registry routing would need a richer descriptor first."
+  ],
+  "timings": [
+    {
+      "task": "digit_class",
+      "seed": 42,
+      "elapsed_s": 7.8150999546051025
+    },
+    {
+      "task": "digit_class",
+      "seed": 101,
+      "elapsed_s": 8.030121326446533
+    },
+    {
+      "task": "parity",
+      "seed": 42,
+      "elapsed_s": 8.205900430679321
+    },
+    {
+      "task": "parity",
+      "seed": 101,
+      "elapsed_s": 8.398642539978027
+    },
+    {
+      "task": "high_vs_low",
+      "seed": 42,
+      "elapsed_s": 8.44178295135498
+    },
+    {
+      "task": "high_vs_low",
+      "seed": 101,
+      "elapsed_s": 8.529643297195435
+    }
+  ]
+}

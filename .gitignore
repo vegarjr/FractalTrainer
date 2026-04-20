@@ -44,3 +44,5 @@ dist/
 .claude/settings.local.json
 science_trajectories/
 !results/utility_test.json
+!results/discriminability_experiment.json
+!results/discriminability_option1_last_layer.json
