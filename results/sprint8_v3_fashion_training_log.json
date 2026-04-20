@@ -1,0 +1,286 @@
+{
+  "tasks": {
+    "fashion_upperbody": [
+      0,
+      2,
+      3,
+      4,
+      6
+    ],
+    "fashion_footwear": [
+      5,
+      7,
+      9
+    ],
+    "fashion_even_idx": [
+      0,
+      2,
+      4,
+      6,
+      8
+    ],
+    "fashion_first_half": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "fashion_corners": [
+      0,
+      1,
+      8,
+      9
+    ],
+    "fashion_middle": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "fashion_no_bag": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      9
+    ],
+    "fashion_warm": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "fashion_athletic": [
+      1,
+      5,
+      7
+    ],
+    "fashion_casual": [
+      0,
+      5,
+      7
+    ]
+  },
+  "seeds": [
+    42,
+    101,
+    2024
+  ],
+  "total_elapsed_s": 210.01671290397644,
+  "log": [
+    {
+      "task": "fashion_upperbody",
+      "seed": 42,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_upperbody_seed42_trajectory.npy",
+      "elapsed_s": 7.058836460113525,
+      "skipped": false
+    },
+    {
+      "task": "fashion_upperbody",
+      "seed": 101,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_upperbody_seed101_trajectory.npy",
+      "elapsed_s": 7.128235816955566,
+      "skipped": false
+    },
+    {
+      "task": "fashion_upperbody",
+      "seed": 2024,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_upperbody_seed2024_trajectory.npy",
+      "elapsed_s": 7.046494007110596,
+      "skipped": false
+    },
+    {
+      "task": "fashion_footwear",
+      "seed": 42,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_footwear_seed42_trajectory.npy",
+      "elapsed_s": 6.88551664352417,
+      "skipped": false
+    },
+    {
+      "task": "fashion_footwear",
+      "seed": 101,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_footwear_seed101_trajectory.npy",
+      "elapsed_s": 6.867729902267456,
+      "skipped": false
+    },
+    {
+      "task": "fashion_footwear",
+      "seed": 2024,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_footwear_seed2024_trajectory.npy",
+      "elapsed_s": 7.062005996704102,
+      "skipped": false
+    },
+    {
+      "task": "fashion_even_idx",
+      "seed": 42,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_even_idx_seed42_trajectory.npy",
+      "elapsed_s": 6.858611583709717,
+      "skipped": false
+    },
+    {
+      "task": "fashion_even_idx",
+      "seed": 101,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_even_idx_seed101_trajectory.npy",
+      "elapsed_s": 6.961508274078369,
+      "skipped": false
+    },
+    {
+      "task": "fashion_even_idx",
+      "seed": 2024,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_even_idx_seed2024_trajectory.npy",
+      "elapsed_s": 7.100766658782959,
+      "skipped": false
+    },
+    {
+      "task": "fashion_first_half",
+      "seed": 42,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_first_half_seed42_trajectory.npy",
+      "elapsed_s": 6.866062879562378,
+      "skipped": false
+    },
+    {
+      "task": "fashion_first_half",
+      "seed": 101,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_first_half_seed101_trajectory.npy",
+      "elapsed_s": 6.91648530960083,
+      "skipped": false
+    },
+    {
+      "task": "fashion_first_half",
+      "seed": 2024,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_first_half_seed2024_trajectory.npy",
+      "elapsed_s": 7.070190191268921,
+      "skipped": false
+    },
+    {
+      "task": "fashion_corners",
+      "seed": 42,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_corners_seed42_trajectory.npy",
+      "elapsed_s": 6.948741912841797,
+      "skipped": false
+    },
+    {
+      "task": "fashion_corners",
+      "seed": 101,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_corners_seed101_trajectory.npy",
+      "elapsed_s": 7.121882200241089,
+      "skipped": false
+    },
+    {
+      "task": "fashion_corners",
+      "seed": 2024,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_corners_seed2024_trajectory.npy",
+      "elapsed_s": 7.010442733764648,
+      "skipped": false
+    },
+    {
+      "task": "fashion_middle",
+      "seed": 42,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_middle_seed42_trajectory.npy",
+      "elapsed_s": 6.451746463775635,
+      "skipped": false
+    },
+    {
+      "task": "fashion_middle",
+      "seed": 101,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_middle_seed101_trajectory.npy",
+      "elapsed_s": 6.639549016952515,
+      "skipped": false
+    },
+    {
+      "task": "fashion_middle",
+      "seed": 2024,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_middle_seed2024_trajectory.npy",
+      "elapsed_s": 6.468858242034912,
+      "skipped": false
+    },
+    {
+      "task": "fashion_no_bag",
+      "seed": 42,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_no_bag_seed42_trajectory.npy",
+      "elapsed_s": 6.594408988952637,
+      "skipped": false
+    },
+    {
+      "task": "fashion_no_bag",
+      "seed": 101,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_no_bag_seed101_trajectory.npy",
+      "elapsed_s": 6.715613603591919,
+      "skipped": false
+    },
+    {
+      "task": "fashion_no_bag",
+      "seed": 2024,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_no_bag_seed2024_trajectory.npy",
+      "elapsed_s": 6.592326879501343,
+      "skipped": false
+    },
+    {
+      "task": "fashion_warm",
+      "seed": 42,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_warm_seed42_trajectory.npy",
+      "elapsed_s": 6.648921012878418,
+      "skipped": false
+    },
+    {
+      "task": "fashion_warm",
+      "seed": 101,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_warm_seed101_trajectory.npy",
+      "elapsed_s": 6.922712802886963,
+      "skipped": false
+    },
+    {
+      "task": "fashion_warm",
+      "seed": 2024,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_warm_seed2024_trajectory.npy",
+      "elapsed_s": 6.954204559326172,
+      "skipped": false
+    },
+    {
+      "task": "fashion_athletic",
+      "seed": 42,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_athletic_seed42_trajectory.npy",
+      "elapsed_s": 6.9166271686553955,
+      "skipped": false
+    },
+    {
+      "task": "fashion_athletic",
+      "seed": 101,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_athletic_seed101_trajectory.npy",
+      "elapsed_s": 7.021442413330078,
+      "skipped": false
+    },
+    {
+      "task": "fashion_athletic",
+      "seed": 2024,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_athletic_seed2024_trajectory.npy",
+      "elapsed_s": 7.048133373260498,
+      "skipped": false
+    },
+    {
+      "task": "fashion_casual",
+      "seed": 42,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_casual_seed42_trajectory.npy",
+      "elapsed_s": 7.026596784591675,
+      "skipped": false
+    },
+    {
+      "task": "fashion_casual",
+      "seed": 101,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_casual_seed101_trajectory.npy",
+      "elapsed_s": 7.15563178062439,
+      "skipped": false
+    },
+    {
+      "task": "fashion_casual",
+      "seed": 2024,
+      "traj_path": "results/sprint8_v3_fashion_trajectories/ext_fashion_casual_seed2024_trajectory.npy",
+      "elapsed_s": 6.929913282394409,
+      "skipped": false
+    }
+  ]
+}

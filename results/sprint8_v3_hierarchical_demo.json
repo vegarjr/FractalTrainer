@@ -1,0 +1,696 @@
+{
+  "n_entries": 123,
+  "datasets": [
+    "mnist",
+    "fashion"
+  ],
+  "test_a": {
+    "n_queries": 41,
+    "flat_same_task_top1": 40,
+    "hier_same_task_top1": 28,
+    "hier_dataset_correct": 29,
+    "verdict": "COARSE GATE LEAKS",
+    "reason": "coarse gate routes to wrong dataset 12/41 times \u2014 contamination possible.",
+    "disagreements": [
+      {
+        "held": "subset_01458_seed2024",
+        "held_dataset": "mnist",
+        "flat_nearest": "subset_01458_seed42",
+        "flat_same_task": true,
+        "hier_dataset": "fashion",
+        "hier_dataset_correct": false,
+        "hier_nearest": "fashion_middle_seed42",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 7.02896785736084,
+          "fashion": 6.7792558670043945
+        }
+      },
+      {
+        "held": "subset_0459_seed2024",
+        "held_dataset": "mnist",
+        "flat_nearest": "subset_0459_seed42",
+        "flat_same_task": true,
+        "hier_dataset": "fashion",
+        "hier_dataset_correct": false,
+        "hier_nearest": "fashion_even_idx_seed42",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 7.022612571716309,
+          "fashion": 7.008147716522217
+        }
+      },
+      {
+        "held": "subset_01789_seed2024",
+        "held_dataset": "mnist",
+        "flat_nearest": "subset_01789_seed42",
+        "flat_same_task": true,
+        "hier_dataset": "fashion",
+        "hier_dataset_correct": false,
+        "hier_nearest": "fashion_first_half_seed101",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 7.007471561431885,
+          "fashion": 6.795643329620361
+        }
+      },
+      {
+        "held": "subset_014567_seed2024",
+        "held_dataset": "mnist",
+        "flat_nearest": "subset_014567_seed101",
+        "flat_same_task": true,
+        "hier_dataset": "fashion",
+        "hier_dataset_correct": false,
+        "hier_nearest": "fashion_middle_seed101",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 6.899527549743652,
+          "fashion": 6.878744125366211
+        }
+      },
+      {
+        "held": "subset_0379_seed2024",
+        "held_dataset": "mnist",
+        "flat_nearest": "subset_0379_seed42",
+        "flat_same_task": true,
+        "hier_dataset": "fashion",
+        "hier_dataset_correct": false,
+        "hier_nearest": "fashion_first_half_seed42",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 6.607950210571289,
+          "fashion": 6.5545268058776855
+        }
+      },
+      {
+        "held": "subset_01589_seed2024",
+        "held_dataset": "mnist",
+        "flat_nearest": "subset_01589_seed42",
+        "flat_same_task": true,
+        "hier_dataset": "fashion",
+        "hier_dataset_correct": false,
+        "hier_nearest": "fashion_middle_seed42",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 6.928479194641113,
+          "fashion": 6.632775783538818
+        }
+      },
+      {
+        "held": "subset_025678_seed2024",
+        "held_dataset": "mnist",
+        "flat_nearest": "subset_025678_seed42",
+        "flat_same_task": true,
+        "hier_dataset": "fashion",
+        "hier_dataset_correct": false,
+        "hier_nearest": "fashion_first_half_seed101",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 7.174622535705566,
+          "fashion": 6.895891189575195
+        }
+      },
+      {
+        "held": "fashion_even_idx_seed2024",
+        "held_dataset": "fashion",
+        "flat_nearest": "fashion_even_idx_seed101",
+        "flat_same_task": true,
+        "hier_dataset": "mnist",
+        "hier_dataset_correct": false,
+        "hier_nearest": "subset_0489_seed42",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 6.051453590393066,
+          "fashion": 6.164186477661133
+        }
+      },
+      {
+        "held": "fashion_corners_seed2024",
+        "held_dataset": "fashion",
+        "flat_nearest": "fashion_corners_seed101",
+        "flat_same_task": true,
+        "hier_dataset": "mnist",
+        "hier_dataset_correct": false,
+        "hier_nearest": "primes_vs_rest_seed101",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 4.750239372253418,
+          "fashion": 5.017518043518066
+        }
+      },
+      {
+        "held": "fashion_no_bag_seed2024",
+        "held_dataset": "fashion",
+        "flat_nearest": "fashion_no_bag_seed101",
+        "flat_same_task": true,
+        "hier_dataset": "mnist",
+        "hier_dataset_correct": false,
+        "hier_nearest": "fibonacci_seed42",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 5.871951103210449,
+          "fashion": 5.952190399169922
+        }
+      },
+      {
+        "held": "fashion_warm_seed2024",
+        "held_dataset": "fashion",
+        "flat_nearest": "fashion_warm_seed42",
+        "flat_same_task": true,
+        "hier_dataset": "mnist",
+        "hier_dataset_correct": false,
+        "hier_nearest": "subset_123468_seed101",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 5.76314115524292,
+          "fashion": 5.799614429473877
+        }
+      },
+      {
+        "held": "fashion_athletic_seed2024",
+        "held_dataset": "fashion",
+        "flat_nearest": "fashion_athletic_seed101",
+        "flat_same_task": true,
+        "hier_dataset": "mnist",
+        "hier_dataset_correct": false,
+        "hier_nearest": "subset_459_seed42",
+        "hier_same_task": false,
+        "all_centroid_distances": {
+          "mnist": 5.4845290184021,
+          "fashion": 5.551707744598389
+        }
+      }
+    ]
+  },
+  "test_b": {
+    "n_queries": 41,
+    "flat_top1_same_dataset": 41,
+    "flat_top3_any_cross_dataset": 4,
+    "contamination_rate": 0.0,
+    "verdict": "NO CONTAMINATION",
+    "reason": "even flat routing lands same-dataset 100% \u2014 at this scale, hierarchical adds no contamination protection that flat wasn't already providing.",
+    "rows": [
+      {
+        "held": "digit_class_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "parity_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "high_vs_low_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "mod3_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 1
+      },
+      {
+        "held": "mod5_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "primes_vs_rest_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "ones_vs_teens_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "triangular_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 1
+      },
+      {
+        "held": "fibonacci_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "middle_456_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_01458_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_459_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_0459_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_13678_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_1256_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 1
+      },
+      {
+        "held": "subset_267_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_123689_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_2349_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_01789_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_3457_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_014567_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_0379_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_15789_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_123468_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_02459_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_01589_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_025678_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 1
+      },
+      {
+        "held": "subset_02349_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_123679_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "subset_0489_seed2024",
+        "held_dataset": "mnist",
+        "flat_top1_dataset": "mnist",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "mnist",
+          "mnist",
+          "mnist"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "fashion_class_seed2024",
+        "held_dataset": "fashion",
+        "flat_top1_dataset": "fashion",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "fashion",
+          "fashion",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "fashion_upperbody_seed2024",
+        "held_dataset": "fashion",
+        "flat_top1_dataset": "fashion",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "fashion",
+          "fashion",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "fashion_footwear_seed2024",
+        "held_dataset": "fashion",
+        "flat_top1_dataset": "fashion",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "fashion",
+          "fashion",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "fashion_even_idx_seed2024",
+        "held_dataset": "fashion",
+        "flat_top1_dataset": "fashion",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "fashion",
+          "fashion",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "fashion_first_half_seed2024",
+        "held_dataset": "fashion",
+        "flat_top1_dataset": "fashion",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "fashion",
+          "fashion",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "fashion_corners_seed2024",
+        "held_dataset": "fashion",
+        "flat_top1_dataset": "fashion",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "fashion",
+          "fashion",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "fashion_middle_seed2024",
+        "held_dataset": "fashion",
+        "flat_top1_dataset": "fashion",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "fashion",
+          "fashion",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "fashion_no_bag_seed2024",
+        "held_dataset": "fashion",
+        "flat_top1_dataset": "fashion",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "fashion",
+          "fashion",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "fashion_warm_seed2024",
+        "held_dataset": "fashion",
+        "flat_top1_dataset": "fashion",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "fashion",
+          "fashion",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "fashion_athletic_seed2024",
+        "held_dataset": "fashion",
+        "flat_top1_dataset": "fashion",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "fashion",
+          "fashion",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 0
+      },
+      {
+        "held": "fashion_casual_seed2024",
+        "held_dataset": "fashion",
+        "flat_top1_dataset": "fashion",
+        "flat_top1_same_dataset": true,
+        "flat_top3_datasets": [
+          "fashion",
+          "fashion",
+          "fashion"
+        ],
+        "n_cross_dataset_in_top3": 0
+      }
+    ]
+  },
+  "test_c": {
+    "n_trials": 100,
+    "flat_ms_per_query": 0.363302172684088,
+    "hier_ms_per_query": 0.22274180156428638,
+    "verdict": "FASTER (1.63\u00d7)"
+  },
+  "inter_centroid_distances": {
+    "mnist|fashion": 1.3201957941055298
+  }
+}

@@ -5,6 +5,10 @@ from fractaltrainer.registry.fractal_registry import (
     GrowthDecision,
     CalibrationResult,
 )
+from fractaltrainer.registry.hierarchical_registry import (
+    HierarchicalRegistry,
+    HierarchicalDecision,
+)
 
 __all__ = [
     "FractalRegistry",
@@ -12,4 +16,6 @@ __all__ = [
     "RetrievalResult",
     "GrowthDecision",
     "CalibrationResult",
+    "HierarchicalRegistry",
+    "HierarchicalDecision",
 ]
