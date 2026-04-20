@@ -1,0 +1,200 @@
+2025-03-02 20:58:01,629 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-02 20:58:02,894 - INFO - Iteration 1 started for task: what is 2+2?
+2025-03-02 20:58:03,450 - ERROR - Self-improvement attempt 1 failed: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2025-03-02 20:58:05,451 - ERROR - Self-improvement attempt 2 failed: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2025-03-02 20:58:07,452 - ERROR - Self-improvement attempt 3 failed: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2025-03-02 21:03:46,014 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-02 21:03:47,269 - INFO - Iteration 2 started for task: what is 2+2?
+2025-03-02 21:03:48,719 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-03-02 21:03:48,720 - ERROR - Self-improvement attempt 1 failed: Error code: 404 - {'error': {'message': 'The model `gpt-4` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-03-02 21:03:51,000 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-03-02 21:03:51,001 - ERROR - Self-improvement attempt 2 failed: Error code: 404 - {'error': {'message': 'The model `gpt-4` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-03-02 21:03:53,254 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-03-02 21:03:53,254 - ERROR - Self-improvement attempt 3 failed: Error code: 404 - {'error': {'message': 'The model `gpt-4` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-03-02 21:09:28,045 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-02 21:09:29,304 - INFO - Iteration 3 started for task: what is 2+2?
+2025-03-02 21:09:30,259 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:30,260 - INFO - Retrying request to /chat/completions in 0.421138 seconds
+2025-03-02 21:09:30,974 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:30,974 - INFO - Retrying request to /chat/completions in 0.890578 seconds
+2025-03-02 21:09:32,203 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:32,205 - ERROR - Self-improvement attempt 1 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:09:34,446 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:34,447 - INFO - Retrying request to /chat/completions in 0.485960 seconds
+2025-03-02 21:09:35,275 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:35,276 - INFO - Retrying request to /chat/completions in 0.837103 seconds
+2025-03-02 21:09:36,401 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:36,402 - ERROR - Self-improvement attempt 2 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:09:38,756 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:38,757 - INFO - Retrying request to /chat/completions in 0.411698 seconds
+2025-03-02 21:09:39,473 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:39,474 - INFO - Retrying request to /chat/completions in 0.922664 seconds
+2025-03-02 21:09:40,702 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:40,703 - ERROR - Self-improvement attempt 3 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:09:41,654 - INFO - Iteration 4 started for task: what is 2+2?
+2025-03-02 21:09:41,931 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:41,931 - INFO - Retrying request to /chat/completions in 0.408910 seconds
+2025-03-02 21:09:42,577 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:42,577 - INFO - Retrying request to /chat/completions in 0.852798 seconds
+2025-03-02 21:09:43,775 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:43,775 - ERROR - Self-improvement attempt 1 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:09:46,540 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:46,540 - INFO - Retrying request to /chat/completions in 0.393101 seconds
+2025-03-02 21:09:47,256 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:47,257 - INFO - Retrying request to /chat/completions in 0.901681 seconds
+2025-03-02 21:09:48,485 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:48,485 - ERROR - Self-improvement attempt 2 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:09:50,739 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:50,739 - INFO - Retrying request to /chat/completions in 0.462929 seconds
+2025-03-02 21:09:51,557 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:51,558 - INFO - Retrying request to /chat/completions in 0.820491 seconds
+2025-03-02 21:09:52,888 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:52,889 - ERROR - Self-improvement attempt 3 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:09:53,484 - INFO - Iteration 5 started for task: what is 2+2?
+2025-03-02 21:09:53,810 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:53,810 - INFO - Retrying request to /chat/completions in 0.488294 seconds
+2025-03-02 21:09:54,630 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:54,630 - INFO - Retrying request to /chat/completions in 0.956742 seconds
+2025-03-02 21:09:55,857 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:55,858 - ERROR - Self-improvement attempt 1 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:09:58,213 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:58,213 - INFO - Retrying request to /chat/completions in 0.455884 seconds
+2025-03-02 21:09:59,032 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:09:59,033 - INFO - Retrying request to /chat/completions in 0.966938 seconds
+2025-03-02 21:10:00,262 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:00,262 - ERROR - Self-improvement attempt 2 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:10:02,514 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:02,514 - INFO - Retrying request to /chat/completions in 0.389438 seconds
+2025-03-02 21:10:03,230 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:03,230 - INFO - Retrying request to /chat/completions in 0.896357 seconds
+2025-03-02 21:10:04,459 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:04,460 - ERROR - Self-improvement attempt 3 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:10:05,067 - INFO - Iteration 6 started for task: what is 2+2?
+2025-03-02 21:10:05,381 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:05,381 - INFO - Retrying request to /chat/completions in 0.461640 seconds
+2025-03-02 21:10:06,097 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:06,098 - INFO - Retrying request to /chat/completions in 0.889695 seconds
+2025-03-02 21:10:07,736 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:07,737 - ERROR - Self-improvement attempt 1 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:10:09,989 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:09,989 - INFO - Retrying request to /chat/completions in 0.468280 seconds
+2025-03-02 21:10:10,808 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:10,809 - INFO - Retrying request to /chat/completions in 0.820092 seconds
+2025-03-02 21:10:11,936 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:11,936 - ERROR - Self-improvement attempt 2 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:10:14,291 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:14,291 - INFO - Retrying request to /chat/completions in 0.426417 seconds
+2025-03-02 21:10:15,007 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:15,007 - INFO - Retrying request to /chat/completions in 0.950963 seconds
+2025-03-02 21:10:16,236 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:10:16,236 - ERROR - Self-improvement attempt 3 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:14:17,625 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-02 21:14:18,881 - INFO - Iteration 7 started for task: what is 2+2?
+2025-03-02 21:14:20,874 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:20,874 - INFO - Retrying request to /chat/completions in 0.381792 seconds
+2025-03-02 21:14:21,590 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:21,590 - INFO - Retrying request to /chat/completions in 0.991929 seconds
+2025-03-02 21:14:22,921 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:22,922 - ERROR - Self-improvement attempt 1 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:14:25,276 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:25,277 - INFO - Retrying request to /chat/completions in 0.463678 seconds
+2025-03-02 21:14:25,992 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:25,993 - INFO - Retrying request to /chat/completions in 0.791419 seconds
+2025-03-02 21:14:27,119 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:27,120 - ERROR - Self-improvement attempt 2 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:14:29,373 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:29,373 - INFO - Retrying request to /chat/completions in 0.462560 seconds
+2025-03-02 21:14:30,089 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:30,089 - INFO - Retrying request to /chat/completions in 0.851756 seconds
+2025-03-02 21:14:31,215 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:31,216 - ERROR - Self-improvement attempt 3 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:14:32,156 - INFO - Iteration 8 started for task: what is 2+2?
+2025-03-02 21:14:32,444 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:32,444 - INFO - Retrying request to /chat/completions in 0.486069 seconds
+2025-03-02 21:14:33,263 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:33,264 - INFO - Retrying request to /chat/completions in 0.894505 seconds
+2025-03-02 21:14:34,493 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-02 21:14:34,493 - ERROR - Self-improvement attempt 1 failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-03-02 21:18:40,512 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-02 21:18:41,768 - INFO - Iteration 8 started for task: what is 2+2?
+2025-03-02 21:18:43,017 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:36:38,482 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-02 21:36:39,749 - INFO - Iteration 9 started for task: what is 2+2?
+2025-03-02 21:36:45,861 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:37:15,622 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-02 21:37:17,014 - INFO - Iteration 1 started for task: Add a max try in the gui
+2025-03-02 21:37:28,664 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:37:29,171 - INFO - Iteration 2 started for task: Add a max try in the gui
+2025-03-02 21:37:46,332 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:37:46,835 - INFO - Iteration 3 started for task: Add a max try in the gui
+2025-03-02 21:37:59,589 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:38:00,092 - INFO - Iteration 4 started for task: Add a max try in the gui
+2025-03-02 21:38:11,878 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:43:22,404 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-02 21:43:23,658 - INFO - Iteration 1 started for task: everytime you rewrite your code, create a backup first
+2025-03-02 21:43:39,357 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:43:39,863 - INFO - Iteration 2 started for task: everytime you rewrite your code, create a backup first
+2025-03-02 21:43:53,488 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:43:53,991 - INFO - Iteration 3 started for task: everytime you rewrite your code, create a backup first
+2025-03-02 21:44:08,541 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:44:09,045 - INFO - Iteration 4 started for task: everytime you rewrite your code, create a backup first
+2025-03-02 21:44:21,547 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:44:22,051 - INFO - Iteration 5 started for task: everytime you rewrite your code, create a backup first
+2025-03-02 21:44:31,888 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:47:50,373 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-02 21:47:51,632 - INFO - Iteration 1 started for task: Everytime you modify your code, create a backup first.
+2025-03-02 21:48:02,324 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-02 21:48:02,328 - INFO - Generated code: import tkinter as tk
+from tkinter import messagebox
+import shutil
+import os
+
+class MaxTryApp:
+    def __init__(self, root, max_tries):
+        self.root = root
+        self.max_tries = max_tries
+        self.attempts = 0
+        
+        self.root.title("Max Try GUI")
+        
+        self.label = tk.Label(root, text="Attempt a task!")
+        self.label.pack(pady=10)
+        
+        self.try_button = tk.Button(root, text="Try", command=self.try_task)
+        self.try_button.pack(pady=5)
+        
+        self.attempts_label = tk.Label(root, text=f"Attempts: {self.attempts}/{self.max_tries}")
+        self.attempts_label.pack(pady=10)
+        
+    def try_task(self):
+        if self.attempts < self.max_tries:
+            self.attempts += 1
+            self.attempts_label.config(text=f"Attempts: {self.attempts}/{self.max_tries}")
+            if self.attempts == self.max_tries:

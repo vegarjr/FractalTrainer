@@ -1,0 +1,9 @@
+# Original config.yaml (~six lines) held four live API keys in plaintext.
+# This sanitized template shows the schema only — set these via environment
+# variables in any reproduction. Live keys from March 2025 should be rotated.
+claude_api_key: ""
+google_api_key: ""
+grok_api_key: ""
+openai_api_key: ""
+search_engine_id: ""
+max_iterations: 1000
