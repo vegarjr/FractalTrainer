@@ -1,0 +1,6967 @@
+{
+  "n_tasks": 27,
+  "task_labels": {
+    "parity": [
+      1,
+      3,
+      5,
+      7,
+      9
+    ],
+    "high_vs_low": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "primes_vs_rest": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "ones_vs_teens": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "triangular": [
+      1,
+      3,
+      6
+    ],
+    "fibonacci": [
+      1,
+      2,
+      3,
+      5,
+      8
+    ],
+    "middle_456": [
+      4,
+      5,
+      6
+    ],
+    "subset_01458": [
+      0,
+      1,
+      4,
+      5,
+      8
+    ],
+    "subset_459": [
+      4,
+      5,
+      9
+    ],
+    "subset_0459": [
+      0,
+      4,
+      5,
+      9
+    ],
+    "subset_13678": [
+      1,
+      3,
+      6,
+      7,
+      8
+    ],
+    "subset_1256": [
+      1,
+      2,
+      5,
+      6
+    ],
+    "subset_267": [
+      2,
+      6,
+      7
+    ],
+    "subset_123689": [
+      1,
+      2,
+      3,
+      6,
+      8,
+      9
+    ],
+    "subset_2349": [
+      2,
+      3,
+      4,
+      9
+    ],
+    "subset_01789": [
+      0,
+      1,
+      7,
+      8,
+      9
+    ],
+    "subset_3457": [
+      3,
+      4,
+      5,
+      7
+    ],
+    "subset_014567": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      7
+    ],
+    "subset_0379": [
+      0,
+      3,
+      7,
+      9
+    ],
+    "subset_15789": [
+      1,
+      5,
+      7,
+      8,
+      9
+    ],
+    "subset_123468": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8
+    ],
+    "subset_02459": [
+      0,
+      2,
+      4,
+      5,
+      9
+    ],
+    "subset_01589": [
+      0,
+      1,
+      5,
+      8,
+      9
+    ],
+    "subset_025678": [
+      0,
+      2,
+      5,
+      6,
+      7,
+      8
+    ],
+    "subset_02349": [
+      0,
+      2,
+      3,
+      4,
+      9
+    ],
+    "subset_123679": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      9
+    ],
+    "subset_0489": [
+      0,
+      4,
+      8,
+      9
+    ]
+  },
+  "signature_seed": 42,
+  "n_pairs": 351,
+  "pairs": [
+    {
+      "task_a": "fibonacci",
+      "task_b": "high_vs_low",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 10.250605583190918
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "middle_456",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        4,
+        5,
+        6
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 11.47686767578125
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "ones_vs_teens",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 9.099328994750977
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "parity",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.540070533752441
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "primes_vs_rest",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "jaccard": 0.5,
+      "distance": 7.622715950012207
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_014567",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 12.113076210021973
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_01458",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 10.137351989746094
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_01589",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.831297874450684
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_01789",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 10.031396865844727
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_02349",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 10.566632270812988
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_02459",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 11.720924377441406
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_025678",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.375,
+      "distance": 9.64687442779541
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_0379",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 10.463021278381348
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_0459",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 12.2081880569458
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_0489",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.615662574768066
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_123468",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.5714285714285714,
+      "distance": 7.621809959411621
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_123679",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 8.52133560180664
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_123689",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.5714285714285714,
+      "distance": 6.075270175933838
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_1256",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.5,
+      "distance": 7.9923553466796875
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_13678",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 7.496757984161377
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_15789",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.562602996826172
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_2349",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.934698104858398
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_267",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 9.821085929870605
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_3457",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.187990188598633
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "subset_459",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 11.26823616027832
+    },
+    {
+      "task_a": "fibonacci",
+      "task_b": "triangular",
+      "labels_a": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 7.7875657081604
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "middle_456",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        6
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.212508201599121
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "ones_vs_teens",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "jaccard": 0.0,
+      "distance": 13.609421730041504
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "parity",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.634705543518066
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "primes_vs_rest",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.89262866973877
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_014567",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "jaccard": 0.375,
+      "distance": 10.753235816955566
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_01458",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "jaccard": 0.25,
+      "distance": 11.024285316467285
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_01589",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.370931625366211
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_01789",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 7.984668731689453
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_02349",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 11.99183464050293
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_02459",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 11.328192710876465
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_025678",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.5714285714285714,
+      "distance": 7.940758228302002
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_0379",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.344841957092285
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_0459",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.514368057250977
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_0489",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.700376510620117
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_123468",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 11.050710678100586
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_123679",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 8.850101470947266
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_123689",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 8.635622024536133
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_1256",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.130614280700684
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_13678",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 7.370055675506592
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_15789",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.6666666666666666,
+      "distance": 5.9248881340026855
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_2349",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.236774444580078
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_267",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 7.99617338180542
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_3457",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.424539566040039
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "subset_459",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.333564758300781
+    },
+    {
+      "task_a": "high_vs_low",
+      "task_b": "triangular",
+      "labels_a": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 9.507821083068848
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "ones_vs_teens",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.114062309265137
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "parity",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.68875503540039
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "primes_vs_rest",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 10.297121047973633
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_014567",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "jaccard": 0.5,
+      "distance": 8.037864685058594
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_01458",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.043864250183105
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_01589",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 11.264616966247559
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_01789",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.0,
+      "distance": 11.9818754196167
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_02349",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 9.986919403076172
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_02459",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 8.863970756530762
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_025678",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.694673538208008
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_0379",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.0,
+      "distance": 11.514352798461914
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_0459",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.4,
+      "distance": 7.8956475257873535
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_0489",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 9.31943130493164
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_123468",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 8.936929702758789
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_123679",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 10.987837791442871
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_123689",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.240564346313477
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_1256",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.4,
+      "distance": 8.138562202453613
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_13678",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.194424629211426
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_15789",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.851822853088379
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_2349",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 8.827901840209961
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_267",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.2,
+      "distance": 8.718737602233887
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_3457",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.4,
+      "distance": 7.6103339195251465
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "subset_459",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 5.9426589012146
+    },
+    {
+      "task_a": "middle_456",
+      "task_b": "triangular",
+      "labels_a": [
+        4,
+        5,
+        6
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.2,
+      "distance": 8.81948471069336
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "parity",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 10.690413475036621
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "primes_vs_rest",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.573209762573242
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_014567",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "jaccard": 0.375,
+      "distance": 8.387079238891602
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_01458",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.341800689697266
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_01589",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 10.893453598022461
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_01789",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 11.262455940246582
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_02349",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.6666666666666666,
+      "distance": 6.287789344787598
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_02459",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 7.624512195587158
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_025678",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 11.112906455993652
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_0379",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.93907642364502
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_0459",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 8.669571876525879
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_0489",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.84771728515625
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_123468",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.5714285714285714,
+      "distance": 7.900449752807617
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_123679",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 10.273523330688477
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_123689",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 10.767602920532227
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_1256",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.168286323547363
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_13678",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.25,
+      "distance": 11.460087776184082
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_15789",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 12.286689758300781
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_2349",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 7.819216728210449
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_267",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 11.19796085357666
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_3457",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 8.851137161254883
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "subset_459",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 9.819197654724121
+    },
+    {
+      "task_a": "ones_vs_teens",
+      "task_b": "triangular",
+      "labels_a": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 10.000937461853027
+    },
+    {
+      "task_a": "parity",
+      "task_b": "primes_vs_rest",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "jaccard": 0.5,
+      "distance": 7.537361145019531
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_014567",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "jaccard": 0.375,
+      "distance": 10.561366081237793
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_01458",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "jaccard": 0.25,
+      "distance": 11.65994930267334
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_01589",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.936005592346191
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_01789",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.721906661987305
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_02349",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 10.723655700683594
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_02459",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 11.553064346313477
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_025678",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 11.372239112854004
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_0379",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 7.265435218811035
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_0459",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.72431468963623
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_0489",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.83458137512207
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_123468",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 11.073531150817871
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_123679",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.5714285714285714,
+      "distance": 6.258447170257568
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_123689",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 8.875736236572266
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_1256",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.092901229858398
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_13678",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 7.847235202789307
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_15789",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.6666666666666666,
+      "distance": 6.822041034698486
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_2349",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.547454833984375
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_267",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 9.57949447631836
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_3457",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.5,
+      "distance": 8.299525260925293
+    },
+    {
+      "task_a": "parity",
+      "task_b": "subset_459",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.343624114990234
+    },
+    {
+      "task_a": "parity",
+      "task_b": "triangular",
+      "labels_a": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 7.476825714111328
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_014567",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "jaccard": 0.25,
+      "distance": 11.35596752166748
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_01458",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "jaccard": 0.125,
+      "distance": 12.572298049926758
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_01589",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.709371566772461
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_01789",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.184041023254395
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_02349",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.72147274017334
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_02459",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.62363052368164
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_025678",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 9.094610214233398
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_0379",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 8.114289283752441
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_0459",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 11.530550003051758
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_0489",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.0,
+      "distance": 12.700390815734863
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_123468",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.25,
+      "distance": 10.222871780395508
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_123679",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 7.219000816345215
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_123689",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 9.601075172424316
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_1256",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 8.597599983215332
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_13678",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.018318176269531
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_15789",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.850581169128418
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_2349",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 8.778417587280273
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_267",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.4,
+      "distance": 6.537774085998535
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_3457",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.6,
+      "distance": 7.23199987411499
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "subset_459",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 10.153260231018066
+    },
+    {
+      "task_a": "primes_vs_rest",
+      "task_b": "triangular",
+      "labels_a": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 8.890266418457031
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_01458",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "jaccard": 0.5714285714285714,
+      "distance": 7.797165393829346
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_01589",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 10.35690975189209
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_01789",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 9.42660903930664
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_02349",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 10.226984977722168
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_02459",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 9.316751480102539
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_025678",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.5,
+      "distance": 9.494803428649902
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_0379",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 10.257378578186035
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_0459",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.500699043273926
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_0489",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 9.513045310974121
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_123468",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.9371976852417
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_123679",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 10.549822807312012
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_123689",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.2,
+      "distance": 12.205880165100098
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_1256",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 9.674345970153809
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_13678",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.375,
+      "distance": 9.639793395996094
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_15789",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 10.652166366577148
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_2349",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 11.380875587463379
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_267",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.876753807067871
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_3457",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 9.223124504089355
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "subset_459",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.70661735534668
+    },
+    {
+      "task_a": "subset_014567",
+      "task_b": "triangular",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.900835990905762
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_01589",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "jaccard": 0.6666666666666666,
+      "distance": 7.390178680419922
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_01789",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.492670059204102
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_02349",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 9.569092750549316
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_02459",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.5260591506958
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_025678",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.375,
+      "distance": 10.032135963439941
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_0379",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.5372896194458
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_0459",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 7.468310356140137
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_0489",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 6.400929927825928
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_123468",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.375,
+      "distance": 9.220104217529297
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_123679",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.1,
+      "distance": 12.97609806060791
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_123689",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 11.36760425567627
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_1256",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.704078674316406
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_13678",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.25,
+      "distance": 10.641607284545898
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_15789",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 9.566544532775879
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_2349",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.009794235229492
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_267",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.0,
+      "distance": 12.418567657470703
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_3457",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.285099983215332
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "subset_459",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 8.990274429321289
+    },
+    {
+      "task_a": "subset_01458",
+      "task_b": "triangular",
+      "labels_a": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.993325233459473
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_01789",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.6666666666666666,
+      "distance": 4.854958534240723
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_02349",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 10.47478199005127
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_02459",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 9.712723731994629
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_025678",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.375,
+      "distance": 9.335789680480957
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_0379",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 8.905712127685547
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_0459",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 8.588011741638184
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_0489",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 7.598864555358887
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_123468",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 11.452444076538086
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_123679",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 10.746349334716797
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_123689",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 9.06539249420166
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_1256",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.653040885925293
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_13678",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.25,
+      "distance": 9.518613815307617
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_15789",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.6666666666666666,
+      "distance": 6.254982948303223
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_2349",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.515608787536621
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_267",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.0,
+      "distance": 11.658209800720215
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_3457",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.125,
+      "distance": 12.019339561462402
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "subset_459",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.869451522827148
+    },
+    {
+      "task_a": "subset_01589",
+      "task_b": "triangular",
+      "labels_a": [
+        0,
+        1,
+        5,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 9.824812889099121
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_02349",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 11.128645896911621
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_02459",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 10.366242408752441
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_025678",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.375,
+      "distance": 8.557320594787598
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_0379",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 7.864577770233154
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_0459",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.573224067687988
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_0489",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 8.28222370147705
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_123468",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 11.972864151000977
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_123679",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 9.9686279296875
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_123689",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 9.842320442199707
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_1256",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.125,
+      "distance": 10.470780372619629
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_13678",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.711669921875
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_15789",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.6666666666666666,
+      "distance": 5.580835819244385
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_2349",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 12.05797290802002
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_267",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.573290824890137
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_3457",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.125,
+      "distance": 11.658503532409668
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "subset_459",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.846630096435547
+    },
+    {
+      "task_a": "subset_01789",
+      "task_b": "triangular",
+      "labels_a": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.37775993347168
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_02459",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.6666666666666666,
+      "distance": 5.009457588195801
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_025678",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 10.767192840576172
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_0379",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 8.351469993591309
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_0459",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 6.438865661621094
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_0489",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 8.0263671875
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_123468",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.375,
+      "distance": 9.490076065063477
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_123679",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 10.43952751159668
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_123689",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 10.65722942352295
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_1256",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.125,
+      "distance": 11.693746566772461
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_13678",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 12.76710319519043
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_15789",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 11.836054801940918
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_2349",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.8,
+      "distance": 5.569309711456299
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_267",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 11.510969161987305
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_3457",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 8.600786209106445
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "subset_459",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 8.210144996643066
+    },
+    {
+      "task_a": "subset_02349",
+      "task_b": "triangular",
+      "labels_a": [
+        0,
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 11.544864654541016
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_025678",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.375,
+      "distance": 10.140854835510254
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_0379",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.462297439575195
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_0459",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.8,
+      "distance": 4.634202003479004
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_0489",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 6.89762020111084
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_123468",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 10.849425315856934
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_123679",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 11.288714408874512
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_123689",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 11.961008071899414
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_1256",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.723705291748047
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_13678",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.0,
+      "distance": 13.380586624145508
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_15789",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 11.06159496307373
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_2349",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 7.211007118225098
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_267",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.696385383605957
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_3457",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.835611343383789
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "subset_459",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.6,
+      "distance": 6.784658908843994
+    },
+    {
+      "task_a": "subset_02459",
+      "task_b": "triangular",
+      "labels_a": [
+        0,
+        2,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.0,
+      "distance": 12.509058952331543
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_0379",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 9.454302787780762
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_0459",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 11.01585578918457
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_0489",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 10.37377643585205
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_123468",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 10.730321884155273
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_123679",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.890815734863281
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_123689",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.791936874389648
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_1256",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 9.125240325927734
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_13678",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.375,
+      "distance": 8.74901294708252
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_15789",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 9.516046524047852
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_2349",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 12.216933250427246
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_267",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.5,
+      "distance": 7.013988018035889
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_3457",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.25,
+      "distance": 11.375459671020508
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "subset_459",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.984136581420898
+    },
+    {
+      "task_a": "subset_025678",
+      "task_b": "triangular",
+      "labels_a": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.125,
+      "distance": 10.824014663696289
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_0459",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 8.66910457611084
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_0489",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.600911140441895
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_123468",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 12.409527778625488
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_123679",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.630685806274414
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_123689",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 10.633228302001953
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_1256",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.0,
+      "distance": 11.35599422454834
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_13678",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.132802963256836
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_15789",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.20222282409668
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_2349",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.489392280578613
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_267",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 9.687576293945312
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_3457",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 8.803863525390625
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "subset_459",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 10.029361724853516
+    },
+    {
+      "task_a": "subset_0379",
+      "task_b": "triangular",
+      "labels_a": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 9.90231704711914
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "subset_0489",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "jaccard": 0.6,
+      "distance": 5.160637378692627
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "subset_123468",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 11.506644248962402
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "subset_123679",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 12.15020751953125
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "subset_123689",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 12.374666213989258
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "subset_1256",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 11.401786804199219
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "subset_13678",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.0,
+      "distance": 12.71178913116455
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "subset_15789",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.44268798828125
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "subset_2349",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 8.084683418273926
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "subset_267",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.0,
+      "distance": 11.688455581665039
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "subset_3457",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 8.878369331359863
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "subset_459",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.75,
+      "distance": 5.380580902099609
+    },
+    {
+      "task_a": "subset_0459",
+      "task_b": "triangular",
+      "labels_a": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.0,
+      "distance": 11.711424827575684
+    },
+    {
+      "task_a": "subset_0489",
+      "task_b": "subset_123468",
+      "labels_a": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "jaccard": 0.25,
+      "distance": 10.615670204162598
+    },
+    {
+      "task_a": "subset_0489",
+      "task_b": "subset_123679",
+      "labels_a": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 12.885313034057617
+    },
+    {
+      "task_a": "subset_0489",
+      "task_b": "subset_123689",
+      "labels_a": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.25,
+      "distance": 11.577716827392578
+    },
+    {
+      "task_a": "subset_0489",
+      "task_b": "subset_1256",
+      "labels_a": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.0,
+      "distance": 12.134031295776367
+    },
+    {
+      "task_a": "subset_0489",
+      "task_b": "subset_13678",
+      "labels_a": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.125,
+      "distance": 11.779699325561523
+    },
+    {
+      "task_a": "subset_0489",
+      "task_b": "subset_15789",
+      "labels_a": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.691882133483887
+    },
+    {
+      "task_a": "subset_0489",
+      "task_b": "subset_2349",
+      "labels_a": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.20079517364502
+    },
+    {
+      "task_a": "subset_0489",
+      "task_b": "subset_267",
+      "labels_a": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.0,
+      "distance": 12.181218147277832
+    },
+    {
+      "task_a": "subset_0489",
+      "task_b": "subset_3457",
+      "labels_a": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.280027389526367
+    },
+    {
+      "task_a": "subset_0489",
+      "task_b": "subset_459",
+      "labels_a": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.4,
+      "distance": 7.3686041831970215
+    },
+    {
+      "task_a": "subset_0489",
+      "task_b": "triangular",
+      "labels_a": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.0,
+      "distance": 12.03488826751709
+    },
+    {
+      "task_a": "subset_123468",
+      "task_b": "subset_123679",
+      "labels_a": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "jaccard": 0.5,
+      "distance": 9.297284126281738
+    },
+    {
+      "task_a": "subset_123468",
+      "task_b": "subset_123689",
+      "labels_a": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.7142857142857143,
+      "distance": 7.0436930656433105
+    },
+    {
+      "task_a": "subset_123468",
+      "task_b": "subset_1256",
+      "labels_a": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.74317741394043
+    },
+    {
+      "task_a": "subset_123468",
+      "task_b": "subset_13678",
+      "labels_a": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.5714285714285714,
+      "distance": 8.48401927947998
+    },
+    {
+      "task_a": "subset_123468",
+      "task_b": "subset_15789",
+      "labels_a": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.2222222222222222,
+      "distance": 11.044888496398926
+    },
+    {
+      "task_a": "subset_123468",
+      "task_b": "subset_2349",
+      "labels_a": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 8.441372871398926
+    },
+    {
+      "task_a": "subset_123468",
+      "task_b": "subset_267",
+      "labels_a": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.213150978088379
+    },
+    {
+      "task_a": "subset_123468",
+      "task_b": "subset_3457",
+      "labels_a": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.25,
+      "distance": 9.285216331481934
+    },
+    {
+      "task_a": "subset_123468",
+      "task_b": "subset_459",
+      "labels_a": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 10.289216041564941
+    },
+    {
+      "task_a": "subset_123468",
+      "task_b": "triangular",
+      "labels_a": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.5,
+      "distance": 8.259737014770508
+    },
+    {
+      "task_a": "subset_123679",
+      "task_b": "subset_123689",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "jaccard": 0.7142857142857143,
+      "distance": 6.705924987792969
+    },
+    {
+      "task_a": "subset_123679",
+      "task_b": "subset_1256",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 7.490499019622803
+    },
+    {
+      "task_a": "subset_123679",
+      "task_b": "subset_13678",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.5714285714285714,
+      "distance": 7.641522407531738
+    },
+    {
+      "task_a": "subset_123679",
+      "task_b": "subset_15789",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 8.628307342529297
+    },
+    {
+      "task_a": "subset_123679",
+      "task_b": "subset_2349",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 9.20003604888916
+    },
+    {
+      "task_a": "subset_123679",
+      "task_b": "subset_267",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.5,
+      "distance": 7.148162364959717
+    },
+    {
+      "task_a": "subset_123679",
+      "task_b": "subset_3457",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.25,
+      "distance": 10.070138931274414
+    },
+    {
+      "task_a": "subset_123679",
+      "task_b": "subset_459",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 10.96389102935791
+    },
+    {
+      "task_a": "subset_123679",
+      "task_b": "triangular",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.5,
+      "distance": 7.520500183105469
+    },
+    {
+      "task_a": "subset_123689",
+      "task_b": "subset_1256",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 7.929409980773926
+    },
+    {
+      "task_a": "subset_123689",
+      "task_b": "subset_13678",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.5714285714285714,
+      "distance": 7.241614818572998
+    },
+    {
+      "task_a": "subset_123689",
+      "task_b": "subset_15789",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.375,
+      "distance": 8.627809524536133
+    },
+    {
+      "task_a": "subset_123689",
+      "task_b": "subset_2349",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 9.719069480895996
+    },
+    {
+      "task_a": "subset_123689",
+      "task_b": "subset_267",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.56799602508545
+    },
+    {
+      "task_a": "subset_123689",
+      "task_b": "subset_3457",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.1111111111111111,
+      "distance": 11.51255989074707
+    },
+    {
+      "task_a": "subset_123689",
+      "task_b": "subset_459",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.454253196716309
+    },
+    {
+      "task_a": "subset_123689",
+      "task_b": "triangular",
+      "labels_a": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.5,
+      "distance": 7.220539569854736
+    },
+    {
+      "task_a": "subset_1256",
+      "task_b": "subset_13678",
+      "labels_a": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "labels_b": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 8.107016563415527
+    },
+    {
+      "task_a": "subset_1256",
+      "task_b": "subset_15789",
+      "labels_a": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.180913925170898
+    },
+    {
+      "task_a": "subset_1256",
+      "task_b": "subset_2349",
+      "labels_a": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.676508903503418
+    },
+    {
+      "task_a": "subset_1256",
+      "task_b": "subset_267",
+      "labels_a": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.4,
+      "distance": 6.324954032897949
+    },
+    {
+      "task_a": "subset_1256",
+      "task_b": "subset_3457",
+      "labels_a": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 10.890357971191406
+    },
+    {
+      "task_a": "subset_1256",
+      "task_b": "subset_459",
+      "labels_a": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 9.93614673614502
+    },
+    {
+      "task_a": "subset_1256",
+      "task_b": "triangular",
+      "labels_a": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.4,
+      "distance": 6.311266899108887
+    },
+    {
+      "task_a": "subset_13678",
+      "task_b": "subset_15789",
+      "labels_a": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "jaccard": 0.42857142857142855,
+      "distance": 7.599501132965088
+    },
+    {
+      "task_a": "subset_13678",
+      "task_b": "subset_2349",
+      "labels_a": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.844239234924316
+    },
+    {
+      "task_a": "subset_13678",
+      "task_b": "subset_267",
+      "labels_a": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 8.21549129486084
+    },
+    {
+      "task_a": "subset_13678",
+      "task_b": "subset_3457",
+      "labels_a": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 9.84597396850586
+    },
+    {
+      "task_a": "subset_13678",
+      "task_b": "subset_459",
+      "labels_a": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.0,
+      "distance": 11.710848808288574
+    },
+    {
+      "task_a": "subset_13678",
+      "task_b": "triangular",
+      "labels_a": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.6,
+      "distance": 6.258143424987793
+    },
+    {
+      "task_a": "subset_15789",
+      "task_b": "subset_2349",
+      "labels_a": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "jaccard": 0.125,
+      "distance": 11.247426986694336
+    },
+    {
+      "task_a": "subset_15789",
+      "task_b": "subset_267",
+      "labels_a": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 9.707024574279785
+    },
+    {
+      "task_a": "subset_15789",
+      "task_b": "subset_3457",
+      "labels_a": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.2857142857142857,
+      "distance": 10.348339080810547
+    },
+    {
+      "task_a": "subset_15789",
+      "task_b": "subset_459",
+      "labels_a": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 9.430350303649902
+    },
+    {
+      "task_a": "subset_15789",
+      "task_b": "triangular",
+      "labels_a": [
+        1,
+        5,
+        7,
+        8,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.14285714285714285,
+      "distance": 9.714017868041992
+    },
+    {
+      "task_a": "subset_2349",
+      "task_b": "subset_267",
+      "labels_a": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        2,
+        6,
+        7
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 10.38916015625
+    },
+    {
+      "task_a": "subset_2349",
+      "task_b": "subset_3457",
+      "labels_a": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.3333333333333333,
+      "distance": 7.451841831207275
+    },
+    {
+      "task_a": "subset_2349",
+      "task_b": "subset_459",
+      "labels_a": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.4,
+      "distance": 6.645013809204102
+    },
+    {
+      "task_a": "subset_2349",
+      "task_b": "triangular",
+      "labels_a": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 10.37149715423584
+    },
+    {
+      "task_a": "subset_267",
+      "task_b": "subset_3457",
+      "labels_a": [
+        2,
+        6,
+        7
+      ],
+      "labels_b": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 9.707528114318848
+    },
+    {
+      "task_a": "subset_267",
+      "task_b": "subset_459",
+      "labels_a": [
+        2,
+        6,
+        7
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.0,
+      "distance": 10.404914855957031
+    },
+    {
+      "task_a": "subset_267",
+      "task_b": "triangular",
+      "labels_a": [
+        2,
+        6,
+        7
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.2,
+      "distance": 8.56610107421875
+    },
+    {
+      "task_a": "subset_3457",
+      "task_b": "subset_459",
+      "labels_a": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "labels_b": [
+        4,
+        5,
+        9
+      ],
+      "jaccard": 0.4,
+      "distance": 7.283896446228027
+    },
+    {
+      "task_a": "subset_3457",
+      "task_b": "triangular",
+      "labels_a": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.16666666666666666,
+      "distance": 9.534369468688965
+    },
+    {
+      "task_a": "subset_459",
+      "task_b": "triangular",
+      "labels_a": [
+        4,
+        5,
+        9
+      ],
+      "labels_b": [
+        1,
+        3,
+        6
+      ],
+      "jaccard": 0.0,
+      "distance": 10.397774696350098
+    }
+  ],
+  "stats": {
+    "jaccard_mean": 0.30033238366571696,
+    "jaccard_range": [
+      0.0,
+      0.8
+    ],
+    "distance_mean": 9.642377602069127,
+    "distance_range": [
+      4.634202003479004,
+      13.609421730041504
+    ],
+    "spearman_rho": -0.8476262626262626,
+    "pearson_r": -0.8522906204484711,
+    "quartile_distance_lift": 3.665717119458078,
+    "bottom_quartile_jaccard_mean_distance": 11.353525216552033,
+    "top_quartile_jaccard_mean_distance": 7.687808097093955
+  },
+  "verdict": "CLAIM SUPPORTED",
+  "reason": "Spearman \u03c1=-0.848 \u2014 strong negative correlation. Signature space encodes task-function kinship."
+}
