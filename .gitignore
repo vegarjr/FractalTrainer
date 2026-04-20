@@ -46,3 +46,7 @@ science_trajectories/
 !results/utility_test.json
 !results/discriminability_experiment.json
 !results/discriminability_option1_last_layer.json
+!results/discriminability_extended.json
+!results/discriminability_option2_activations.json
+!results/fractal_registry_mvp.json
+!results/mvp_registry_test.json

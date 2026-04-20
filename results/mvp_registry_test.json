@@ -1,0 +1,467 @@
+{
+  "n_probe": 100,
+  "probe_seed": 12345,
+  "n_entries": 33,
+  "test_a_retrieval": {
+    "top1_accuracy": 1.0,
+    "correct": 11,
+    "total": 11,
+    "details": [
+      {
+        "held_out_task": "digit_class",
+        "held_out_seed": 2024,
+        "nearest_name": "digit_class_seed42",
+        "nearest_task": "digit_class",
+        "nearest_seed": 42,
+        "distance": 3.427201509475708,
+        "correct": true
+      },
+      {
+        "held_out_task": "parity",
+        "held_out_seed": 2024,
+        "nearest_name": "parity_seed42",
+        "nearest_task": "parity",
+        "nearest_seed": 42,
+        "distance": 1.7055890560150146,
+        "correct": true
+      },
+      {
+        "held_out_task": "high_vs_low",
+        "held_out_seed": 2024,
+        "nearest_name": "high_vs_low_seed42",
+        "nearest_task": "high_vs_low",
+        "nearest_seed": 42,
+        "distance": 2.174635171890259,
+        "correct": true
+      },
+      {
+        "held_out_task": "mod3",
+        "held_out_seed": 2024,
+        "nearest_name": "mod3_seed101",
+        "nearest_task": "mod3",
+        "nearest_seed": 101,
+        "distance": 3.3216023445129395,
+        "correct": true
+      },
+      {
+        "held_out_task": "mod5",
+        "held_out_seed": 2024,
+        "nearest_name": "mod5_seed101",
+        "nearest_task": "mod5",
+        "nearest_seed": 101,
+        "distance": 2.7106099128723145,
+        "correct": true
+      },
+      {
+        "held_out_task": "primes_vs_rest",
+        "held_out_seed": 2024,
+        "nearest_name": "primes_vs_rest_seed42",
+        "nearest_task": "primes_vs_rest",
+        "nearest_seed": 42,
+        "distance": 0.9286555051803589,
+        "correct": true
+      },
+      {
+        "held_out_task": "ones_vs_teens",
+        "held_out_seed": 2024,
+        "nearest_name": "ones_vs_teens_seed42",
+        "nearest_task": "ones_vs_teens",
+        "nearest_seed": 42,
+        "distance": 2.882746458053589,
+        "correct": true
+      },
+      {
+        "held_out_task": "triangular",
+        "held_out_seed": 2024,
+        "nearest_name": "triangular_seed42",
+        "nearest_task": "triangular",
+        "nearest_seed": 42,
+        "distance": 1.6003479957580566,
+        "correct": true
+      },
+      {
+        "held_out_task": "fibonacci",
+        "held_out_seed": 2024,
+        "nearest_name": "fibonacci_seed42",
+        "nearest_task": "fibonacci",
+        "nearest_seed": 42,
+        "distance": 2.176685333251953,
+        "correct": true
+      },
+      {
+        "held_out_task": "middle_456",
+        "held_out_seed": 2024,
+        "nearest_name": "middle_456_seed42",
+        "nearest_task": "middle_456",
+        "nearest_seed": 42,
+        "distance": 2.3719420433044434,
+        "correct": true
+      },
+      {
+        "held_out_task": "fashion_class",
+        "held_out_seed": 2024,
+        "nearest_name": "fashion_class_seed42",
+        "nearest_task": "fashion_class",
+        "nearest_seed": 42,
+        "distance": 6.680370807647705,
+        "correct": true
+      }
+    ]
+  },
+  "test_b_leave_one_task": {
+    "outcomes": [
+      {
+        "held_task": "digit_class",
+        "top3": [
+          {
+            "task": "mod5",
+            "seed": 2024,
+            "distance": 8.810203552246094
+          },
+          {
+            "task": "mod5",
+            "seed": 101,
+            "distance": 8.817400932312012
+          },
+          {
+            "task": "mod5",
+            "seed": 42,
+            "distance": 8.828147888183594
+          }
+        ]
+      },
+      {
+        "held_task": "parity",
+        "top3": [
+          {
+            "task": "triangular",
+            "seed": 101,
+            "distance": 7.342298984527588
+          },
+          {
+            "task": "primes_vs_rest",
+            "seed": 2024,
+            "distance": 7.439170837402344
+          },
+          {
+            "task": "primes_vs_rest",
+            "seed": 101,
+            "distance": 7.457358360290527
+          }
+        ]
+      },
+      {
+        "held_task": "high_vs_low",
+        "top3": [
+          {
+            "task": "parity",
+            "seed": 42,
+            "distance": 8.266387939453125
+          },
+          {
+            "task": "parity",
+            "seed": 2024,
+            "distance": 8.354098320007324
+          },
+          {
+            "task": "parity",
+            "seed": 101,
+            "distance": 8.479876518249512
+          }
+        ]
+      },
+      {
+        "held_task": "mod3",
+        "top3": [
+          {
+            "task": "middle_456",
+            "seed": 42,
+            "distance": 9.701873779296875
+          },
+          {
+            "task": "middle_456",
+            "seed": 101,
+            "distance": 9.740825653076172
+          },
+          {
+            "task": "middle_456",
+            "seed": 2024,
+            "distance": 9.762651443481445
+          }
+        ]
+      },
+      {
+        "held_task": "mod5",
+        "top3": [
+          {
+            "task": "digit_class",
+            "seed": 101,
+            "distance": 8.617294311523438
+          },
+          {
+            "task": "digit_class",
+            "seed": 42,
+            "distance": 8.80089282989502
+          },
+          {
+            "task": "digit_class",
+            "seed": 2024,
+            "distance": 8.810203552246094
+          }
+        ]
+      },
+      {
+        "held_task": "primes_vs_rest",
+        "top3": [
+          {
+            "task": "parity",
+            "seed": 42,
+            "distance": 7.375417232513428
+          },
+          {
+            "task": "parity",
+            "seed": 101,
+            "distance": 7.379669666290283
+          },
+          {
+            "task": "fibonacci",
+            "seed": 101,
+            "distance": 7.39254903793335
+          }
+        ]
+      },
+      {
+        "held_task": "ones_vs_teens",
+        "top3": [
+          {
+            "task": "fibonacci",
+            "seed": 42,
+            "distance": 9.304096221923828
+          },
+          {
+            "task": "fibonacci",
+            "seed": 101,
+            "distance": 9.395195007324219
+          },
+          {
+            "task": "fibonacci",
+            "seed": 2024,
+            "distance": 9.513364791870117
+          }
+        ]
+      },
+      {
+        "held_task": "triangular",
+        "top3": [
+          {
+            "task": "fibonacci",
+            "seed": 101,
+            "distance": 7.3213791847229
+          },
+          {
+            "task": "parity",
+            "seed": 42,
+            "distance": 7.449525833129883
+          },
+          {
+            "task": "parity",
+            "seed": 2024,
+            "distance": 7.541704177856445
+          }
+        ]
+      },
+      {
+        "held_task": "fibonacci",
+        "top3": [
+          {
+            "task": "primes_vs_rest",
+            "seed": 101,
+            "distance": 7.4181718826293945
+          },
+          {
+            "task": "primes_vs_rest",
+            "seed": 2024,
+            "distance": 7.478169918060303
+          },
+          {
+            "task": "primes_vs_rest",
+            "seed": 42,
+            "distance": 7.638992786407471
+          }
+        ]
+      },
+      {
+        "held_task": "middle_456",
+        "top3": [
+          {
+            "task": "triangular",
+            "seed": 101,
+            "distance": 8.238543510437012
+          },
+          {
+            "task": "triangular",
+            "seed": 2024,
+            "distance": 8.805850982666016
+          },
+          {
+            "task": "triangular",
+            "seed": 42,
+            "distance": 8.885973930358887
+          }
+        ]
+      },
+      {
+        "held_task": "fashion_class",
+        "top3": [
+          {
+            "task": "mod5",
+            "seed": 42,
+            "distance": 10.799736022949219
+          },
+          {
+            "task": "mod5",
+            "seed": 101,
+            "distance": 10.81544017791748
+          },
+          {
+            "task": "mod5",
+            "seed": 2024,
+            "distance": 10.860013008117676
+          }
+        ]
+      }
+    ]
+  },
+  "test_c_inference_routing": {
+    "rows": [
+      {
+        "task": "digit_class",
+        "held_seed": 2024,
+        "nearest_name": "digit_class_seed42",
+        "nearest_task": "digit_class",
+        "random_name": "ones_vs_teens_seed101",
+        "random_task": "ones_vs_teens",
+        "acc_routed": 0.918,
+        "acc_oracle": 0.906,
+        "acc_random": 0.12
+      },
+      {
+        "task": "parity",
+        "held_seed": 2024,
+        "nearest_name": "parity_seed42",
+        "nearest_task": "parity",
+        "random_name": "fibonacci_seed42",
+        "random_task": "fibonacci",
+        "acc_routed": 0.962,
+        "acc_oracle": 0.966,
+        "acc_random": 0.604
+      },
+      {
+        "task": "high_vs_low",
+        "held_seed": 2024,
+        "nearest_name": "high_vs_low_seed42",
+        "nearest_task": "high_vs_low",
+        "random_name": "digit_class_seed42",
+        "random_task": "digit_class",
+        "acc_routed": 0.94,
+        "acc_oracle": 0.954,
+        "acc_random": 0.11
+      },
+      {
+        "task": "mod3",
+        "held_seed": 2024,
+        "nearest_name": "mod3_seed101",
+        "nearest_task": "mod3",
+        "random_name": "parity_seed101",
+        "random_task": "parity",
+        "acc_routed": 0.934,
+        "acc_oracle": 0.928,
+        "acc_random": 0.406
+      },
+      {
+        "task": "mod5",
+        "held_seed": 2024,
+        "nearest_name": "mod5_seed101",
+        "nearest_task": "mod5",
+        "random_name": "parity_seed101",
+        "random_task": "parity",
+        "acc_routed": 0.922,
+        "acc_oracle": 0.932,
+        "acc_random": 0.224
+      },
+      {
+        "task": "primes_vs_rest",
+        "held_seed": 2024,
+        "nearest_name": "primes_vs_rest_seed42",
+        "nearest_task": "primes_vs_rest",
+        "random_name": "mod3_seed101",
+        "random_task": "mod3",
+        "acc_routed": 0.96,
+        "acc_oracle": 0.956,
+        "acc_random": 0.402
+      },
+      {
+        "task": "ones_vs_teens",
+        "held_seed": 2024,
+        "nearest_name": "ones_vs_teens_seed42",
+        "nearest_task": "ones_vs_teens",
+        "random_name": "mod5_seed101",
+        "random_task": "mod5",
+        "acc_routed": 0.954,
+        "acc_oracle": 0.942,
+        "acc_random": 0.208
+      },
+      {
+        "task": "triangular",
+        "held_seed": 2024,
+        "nearest_name": "triangular_seed42",
+        "nearest_task": "triangular",
+        "random_name": "fashion_class_seed42",
+        "random_task": "fashion_class",
+        "acc_routed": 0.972,
+        "acc_oracle": 0.968,
+        "acc_random": 0.074
+      },
+      {
+        "task": "fibonacci",
+        "held_seed": 2024,
+        "nearest_name": "fibonacci_seed42",
+        "nearest_task": "fibonacci",
+        "random_name": "middle_456_seed101",
+        "random_task": "middle_456",
+        "acc_routed": 0.974,
+        "acc_oracle": 0.964,
+        "acc_random": 0.388
+      },
+      {
+        "task": "middle_456",
+        "held_seed": 2024,
+        "nearest_name": "middle_456_seed42",
+        "nearest_task": "middle_456",
+        "random_name": "high_vs_low_seed42",
+        "random_task": "high_vs_low",
+        "acc_routed": 0.964,
+        "acc_oracle": 0.972,
+        "acc_random": 0.588
+      },
+      {
+        "task": "fashion_class",
+        "held_seed": 2024,
+        "nearest_name": "fashion_class_seed42",
+        "nearest_task": "fashion_class",
+        "random_name": "mod3_seed42",
+        "random_task": "mod3",
+        "acc_routed": 0.812,
+        "acc_oracle": 0.808,
+        "acc_random": 0.104
+      }
+    ],
+    "summary": {
+      "mean_routed": 0.9374545454545454,
+      "mean_oracle": 0.9359999999999999,
+      "mean_random": 0.2934545454545454,
+      "lift_over_random": 0.644,
+      "gap_below_oracle": -0.0014545454545454861
+    }
+  }
+}
