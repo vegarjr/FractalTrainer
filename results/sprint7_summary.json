@@ -1,0 +1,98 @@
+{
+  "n_starts": 12,
+  "n_successful_runs": 12,
+  "n_errors": 0,
+  "n_aggregated_log_entries": 27,
+  "total_elapsed_s": 1584.624793767929,
+  "aggregated_log": "/home/vegar/Documents/FractalTrainer/results/sprint7_aggregated_repair_log.jsonl",
+  "per_run_log_dir": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7",
+  "target": "configs/target_shape_golden_opaque.yaml",
+  "llm": "cli",
+  "max_iters": 3,
+  "runs": [
+    {
+      "name": "divergent_sgd_lr1",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/divergent_sgd_lr1.jsonl",
+      "n_log_entries": 1,
+      "elapsed_s": 63.157057762145996
+    },
+    {
+      "name": "frozen_adam_tiny_lr",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/frozen_adam_tiny_lr.jsonl",
+      "n_log_entries": 3,
+      "elapsed_s": 93.32973194122314
+    },
+    {
+      "name": "plain_adamw_baseline",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/plain_adamw_baseline.jsonl",
+      "n_log_entries": 3,
+      "elapsed_s": 209.53851509094238
+    },
+    {
+      "name": "heavy_reg_small_lr_sgd",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/heavy_reg_small_lr_sgd.jsonl",
+      "n_log_entries": 3,
+      "elapsed_s": 184.19539499282837
+    },
+    {
+      "name": "adam_lr_0p5",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/adam_lr_0p5.jsonl",
+      "n_log_entries": 3,
+      "elapsed_s": 122.07562851905823
+    },
+    {
+      "name": "sgd_lr05_seed314",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/sgd_lr05_seed314.jsonl",
+      "n_log_entries": 3,
+      "elapsed_s": 171.61132788658142
+    },
+    {
+      "name": "small_batch_adam",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/small_batch_adam.jsonl",
+      "n_log_entries": 1,
+      "elapsed_s": 19.347020626068115
+    },
+    {
+      "name": "large_batch_adam",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/large_batch_adam.jsonl",
+      "n_log_entries": 3,
+      "elapsed_s": 347.50591826438904
+    },
+    {
+      "name": "medium_adamw",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/medium_adamw.jsonl",
+      "n_log_entries": 3,
+      "elapsed_s": 216.58990097045898
+    },
+    {
+      "name": "sgd_with_dropout",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/sgd_with_dropout.jsonl",
+      "n_log_entries": 1,
+      "elapsed_s": 14.738317966461182
+    },
+    {
+      "name": "divergent_adamw_lr02",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/divergent_adamw_lr02.jsonl",
+      "n_log_entries": 1,
+      "elapsed_s": 43.564316511154175
+    },
+    {
+      "name": "very_conservative_adam",
+      "status": "ok",
+      "per_run_log": "/home/vegar/Documents/FractalTrainer/results/multi_loop_logs_sprint7/very_conservative_adam.jsonl",
+      "n_log_entries": 2,
+      "elapsed_s": 98.96164274215698
+    }
+  ]
+}

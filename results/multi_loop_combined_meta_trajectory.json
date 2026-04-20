@@ -1,0 +1,270 @@
+{
+  "sources": [
+    "results/multi_loop_aggregated_repair_log_combined.jsonl"
+  ],
+  "n_points": 22,
+  "n_transitions": 21,
+  "iterations": [
+    1,
+    1,
+    1,
+    2,
+    3,
+    1,
+    3,
+    2,
+    1,
+    1,
+    2,
+    1,
+    3,
+    3,
+    1,
+    3,
+    2,
+    1,
+    2,
+    1,
+    1,
+    1
+  ],
+  "hparams_sequence": [
+    {
+      "learning_rate": 0.1,
+      "batch_size": 64,
+      "weight_decay": 0.0,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adam"
+    },
+    {
+      "learning_rate": 0.05,
+      "batch_size": 64,
+      "weight_decay": 0.001,
+      "dropout": 0.1,
+      "init_seed": 7,
+      "optimizer": "sgd"
+    },
+    {
+      "learning_rate": 0.01,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adamw"
+    },
+    {
+      "learning_rate": 0.005,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adamw"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 128,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adamw"
+    },
+    {
+      "learning_rate": 0.005,
+      "batch_size": 256,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adam"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "weight_decay": 0.005,
+      "dropout": 0.1,
+      "init_seed": 7,
+      "optimizer": "adam"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adamw"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "dropout": 0.2,
+      "init_seed": 42,
+      "optimizer": "adam"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "dropout": 0.1,
+      "init_seed": 42,
+      "optimizer": "adam"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 32,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 7,
+      "optimizer": "adam"
+    },
+    {
+      "learning_rate": 0.003,
+      "batch_size": 128,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adamw"
+    },
+    {
+      "learning_rate": 0.0015,
+      "batch_size": 128,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adamw"
+    },
+    {
+      "learning_rate": 0.01,
+      "batch_size": 32,
+      "weight_decay": 0.05,
+      "dropout": 0.3,
+      "init_seed": 42,
+      "optimizer": "sgd"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "weight_decay": 0.0,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adam"
+    },
+    {
+      "learning_rate": 0.05,
+      "batch_size": 64,
+      "weight_decay": 0.0,
+      "dropout": 0.0,
+      "init_seed": 314,
+      "optimizer": "sgd"
+    },
+    {
+      "learning_rate": 0.05,
+      "batch_size": 256,
+      "weight_decay": 0.0,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "sgd"
+    },
+    {
+      "learning_rate": 0.008,
+      "batch_size": 256,
+      "weight_decay": 0.005,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "sgd"
+    },
+    {
+      "learning_rate": 0.015,
+      "batch_size": 64,
+      "weight_decay": 0.005,
+      "dropout": 0.1,
+      "init_seed": 42,
+      "optimizer": "sgd"
+    },
+    {
+      "learning_rate": 0.05,
+      "batch_size": 64,
+      "weight_decay": 0.0,
+      "dropout": 0.3,
+      "init_seed": 42,
+      "optimizer": "sgd"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "init_seed": 42,
+      "optimizer": "adamw"
+    },
+    {
+      "learning_rate": 0.001,
+      "batch_size": 128,
+      "weight_decay": 0.01,
+      "dropout": 0.3,
+      "init_seed": 42,
+      "optimizer": "adam"
+    }
+  ],
+  "divergence_scores": [
+    312500.0136789533,
+    1.1729460749442913,
+    14.664610700879269,
+    5.147357062375835,
+    0.5976822440282521,
+    3.569804140010545,
+    0.6202914365660726,
+    0.8706193656027341,
+    0.7077000040143197,
+    0.5722645275078111,
+    1.4355120041995,
+    2.6756221657911277,
+    1.556350748667457,
+    1.7700784700094039,
+    1.6956324424632119,
+    0.937712759452782,
+    1.1110560118164252,
+    1.9810529374055568,
+    1.6448818895278234,
+    0.9277539338597475,
+    0.741918812530814,
+    1.0950963327734538
+  ],
+  "states_shape": [
+    22,
+    6
+  ],
+  "summary": {
+    "n_points": 22,
+    "n_transitions": 21,
+    "geometry": {
+      "total_path_length": 30.262161840956402,
+      "mean_step_norm": 1.4410553257598286,
+      "step_norm_std": 0.7804715085247551,
+      "dispersion": 1.3008112392982623,
+      "displacement": 2.256124996537204,
+      "tortuosity": 13.413335647361757,
+      "mean_curvature": 1.9249278148701439,
+      "recurrence_rate": 0.5833333333333334
+    },
+    "correlation_dim": {
+      "dim": 1.4907578161656507,
+      "r_squared": 0.9890459841996633,
+      "n_points": 22,
+      "n_radii": 24,
+      "scaling_start": 16,
+      "scaling_end": 24,
+      "used_max_pairs": false,
+      "n_pairs_sampled": 231,
+      "error": null
+    },
+    "convergence": {
+      "start_divergence": 312500.0136789533,
+      "end_divergence": 1.0950963327734538,
+      "total_reduction": 312498.9185826205,
+      "monotonic_decreasing": false,
+      "bounces": 13,
+      "mean_step_reduction": 14880.900884886694
+    }
+  }
+}

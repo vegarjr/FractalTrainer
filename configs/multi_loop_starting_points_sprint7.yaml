@@ -1,0 +1,42 @@
+# v2 Sprint 7: 12 additional divergent starting configurations.
+#
+# Together with the 5 Sprint 6 configs, this pushes the aggregated
+# meta-trajectory past N=20, enough for honest correlation-dim
+# measurement via Grassberger-Procaccia.
+
+starts:
+  - name: "divergent_sgd_lr1"
+    hparams: {learning_rate: 1.0, batch_size: 64, weight_decay: 0.0, dropout: 0.0, init_seed: 42, optimizer: "sgd"}
+
+  - name: "frozen_adam_tiny_lr"
+    hparams: {learning_rate: 0.00001, batch_size: 64, weight_decay: 0.0, dropout: 0.0, init_seed: 42, optimizer: "adam"}
+
+  - name: "plain_adamw_baseline"
+    hparams: {learning_rate: 0.01, batch_size: 64, weight_decay: 0.0, dropout: 0.0, init_seed: 42, optimizer: "adamw"}
+
+  - name: "heavy_reg_small_lr_sgd"
+    hparams: {learning_rate: 0.01, batch_size: 64, weight_decay: 0.05, dropout: 0.3, init_seed: 42, optimizer: "sgd"}
+
+  - name: "adam_lr_0p5"
+    hparams: {learning_rate: 0.5, batch_size: 64, weight_decay: 0.0, dropout: 0.0, init_seed: 42, optimizer: "adam"}
+
+  - name: "sgd_lr05_seed314"
+    hparams: {learning_rate: 0.05, batch_size: 64, weight_decay: 0.0, dropout: 0.0, init_seed: 314, optimizer: "sgd"}
+
+  - name: "small_batch_adam"
+    hparams: {learning_rate: 0.01, batch_size: 8, weight_decay: 0.0, dropout: 0.0, init_seed: 42, optimizer: "adam"}
+
+  - name: "large_batch_adam"
+    hparams: {learning_rate: 0.01, batch_size: 512, weight_decay: 0.0, dropout: 0.0, init_seed: 42, optimizer: "adam"}
+
+  - name: "medium_adamw"
+    hparams: {learning_rate: 0.05, batch_size: 64, weight_decay: 0.001, dropout: 0.0, init_seed: 42, optimizer: "adamw"}
+
+  - name: "sgd_with_dropout"
+    hparams: {learning_rate: 0.05, batch_size: 64, weight_decay: 0.0, dropout: 0.3, init_seed: 42, optimizer: "sgd"}
+
+  - name: "divergent_adamw_lr02"
+    hparams: {learning_rate: 0.2, batch_size: 64, weight_decay: 0.01, dropout: 0.0, init_seed: 42, optimizer: "adamw"}
+
+  - name: "very_conservative_adam"
+    hparams: {learning_rate: 0.0001, batch_size: 256, weight_decay: 0.01, dropout: 0.5, init_seed: 42, optimizer: "adam"}

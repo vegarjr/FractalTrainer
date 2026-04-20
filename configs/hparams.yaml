@@ -2,8 +2,8 @@
 # This file is overwritten on each run.
 
 learning_rate: 0.001
-batch_size: 64
+batch_size: 128
 weight_decay: 0.01
-dropout: 0.2
+dropout: 0.3
 init_seed: 42
 optimizer: "adam"

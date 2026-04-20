@@ -26,6 +26,10 @@ results/data/
 !results/multi_loop_summary.json
 !results/multi_loop_meta_trajectory.json
 !results/multi_loop_aggregated_repair_log.jsonl
+!results/sprint7_summary.json
+!results/sprint7_aggregated_repair_log.jsonl
+!results/multi_loop_aggregated_repair_log_combined.jsonl
+!results/multi_loop_combined_meta_trajectory.json
 
 # Jupyter
 .ipynb_checkpoints/
