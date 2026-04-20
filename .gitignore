@@ -67,6 +67,7 @@ science_trajectories/
 !results/learned_anchors_experiment.json
 !results/learned_anchors_experiment.log
 !results/snake_sprint.json
+!results/snake_sprint14.json
 results/snake_demos.npz
 results/growth_spawn_trajectories/
 results/sprint7_v3_trajectories/

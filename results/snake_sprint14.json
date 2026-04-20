@@ -1,0 +1,113 @@
+{
+  "config": {
+    "demos_cache": "results/snake_demos.npz",
+    "height": 10,
+    "width": 10,
+    "n_eval_games": 50,
+    "n_probes": 50,
+    "probe_seed": 12345,
+    "results_out": "results/snake_sprint14.json"
+  },
+  "strategies": [
+    "greedy_food",
+    "bfs_safe",
+    "wall_hugger",
+    "center_stayer",
+    "survival_first"
+  ],
+  "signatures_norms": {
+    "greedy_food": 7.0710678118654755,
+    "bfs_safe": 7.0710678118654755,
+    "wall_hugger": 7.0710678118654755,
+    "center_stayer": 7.0710678118654755,
+    "survival_first": 7.0710678118654755
+  },
+  "pairwise_signature_distances": {
+    "greedy_food|bfs_safe": 9.38083151964686,
+    "greedy_food|wall_hugger": 6.928203230275509,
+    "greedy_food|center_stayer": 8.831760866327848,
+    "greedy_food|survival_first": 7.745966692414834,
+    "bfs_safe|wall_hugger": 9.38083151964686,
+    "bfs_safe|center_stayer": 8.366600265340756,
+    "bfs_safe|survival_first": 9.38083151964686,
+    "wall_hugger|center_stayer": 9.486832980505138,
+    "wall_hugger|survival_first": 5.291502622129181,
+    "center_stayer|survival_first": 10.0
+  },
+  "single_results": {
+    "greedy_food": {
+      "n_games": 50,
+      "mean_survival": 131.82,
+      "mean_score": 16.74,
+      "max_score": 33
+    },
+    "bfs_safe": {
+      "n_games": 50,
+      "mean_survival": 4.24,
+      "mean_score": 0.66,
+      "max_score": 3
+    },
+    "wall_hugger": {
+      "n_games": 50,
+      "mean_survival": 294.26,
+      "mean_score": 0.48,
+      "max_score": 2
+    },
+    "center_stayer": {
+      "n_games": 50,
+      "mean_survival": 10.0,
+      "mean_score": 0.2,
+      "max_score": 2
+    },
+    "survival_first": {
+      "n_games": 50,
+      "mean_survival": 6.06,
+      "mean_score": 0.04,
+      "max_score": 1
+    }
+  },
+  "all_K_ensemble": {
+    "n_games": 50,
+    "mean_survival": 166.52,
+    "mean_score": 2.84,
+    "max_score": 11
+  },
+  "nearest3_ensemble": {
+    "picks": [
+      "wall_hugger",
+      "greedy_food",
+      "survival_first"
+    ],
+    "n_games": 50,
+    "mean_survival": 13.4,
+    "mean_score": 0.52,
+    "max_score": 2
+  },
+  "coverage3_ensemble": {
+    "picks": [
+      "greedy_food",
+      "wall_hugger",
+      "center_stayer"
+    ],
+    "selection_survival": 244.4,
+    "n_games": 50,
+    "mean_survival": 240.12,
+    "mean_score": 8.4,
+    "max_score": 27
+  },
+  "random3_ensemble": {
+    "picks": [
+      "bfs_safe",
+      "center_stayer",
+      "survival_first"
+    ],
+    "n_games": 50,
+    "mean_survival": 7.6,
+    "mean_score": 0.3,
+    "max_score": 2
+  },
+  "best_single_name": "wall_hugger",
+  "delta_all_minus_best": -127.73999999999998,
+  "delta_coverage_minus_best": -54.139999999999986,
+  "verdict": "BEST SINGLE WINS"
+}
