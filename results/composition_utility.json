@@ -1,0 +1,227 @@
+{
+  "binary_tasks": [
+    "parity",
+    "high_vs_low",
+    "primes_vs_rest",
+    "ones_vs_teens",
+    "triangular",
+    "fibonacci",
+    "middle_456"
+  ],
+  "seeds": [
+    42,
+    101,
+    2024
+  ],
+  "compose_k": 3,
+  "compose_temperature": 1.0,
+  "test_size": 1000,
+  "rows": [
+    {
+      "held_task": "parity",
+      "query": "parity_seed2024",
+      "nearest": "triangular_seed101",
+      "top_k_names": [
+        "triangular_seed101",
+        "primes_vs_rest_seed2024",
+        "primes_vs_rest_seed101"
+      ],
+      "top_k_distances": [
+        7.342298984527588,
+        7.439170837402344,
+        7.457358360290527
+      ],
+      "top_k_weights": [
+        0.35727230018772244,
+        0.3242861755390197,
+        0.3184415242732578
+      ],
+      "acc_top1": 0.587,
+      "acc_blend": 0.667,
+      "acc_oracle": 0.964,
+      "delta_blend_minus_top1": 0.08000000000000007,
+      "gap_to_oracle": 0.29699999999999993
+    },
+    {
+      "held_task": "high_vs_low",
+      "query": "high_vs_low_seed2024",
+      "nearest": "parity_seed42",
+      "top_k_names": [
+        "parity_seed42",
+        "parity_seed2024",
+        "parity_seed101"
+      ],
+      "top_k_distances": [
+        8.266387939453125,
+        8.354098320007324,
+        8.479876518249512
+      ],
+      "top_k_weights": [
+        0.36713583257032845,
+        0.33630601857065406,
+        0.29655814885901743
+      ],
+      "acc_top1": 0.608,
+      "acc_blend": 0.612,
+      "acc_oracle": 0.955,
+      "delta_blend_minus_top1": 0.0040000000000000036,
+      "gap_to_oracle": 0.34299999999999997
+    },
+    {
+      "held_task": "primes_vs_rest",
+      "query": "primes_vs_rest_seed2024",
+      "nearest": "parity_seed42",
+      "top_k_names": [
+        "parity_seed42",
+        "parity_seed101",
+        "fibonacci_seed101"
+      ],
+      "top_k_distances": [
+        7.375417232513428,
+        7.379669666290283,
+        7.39254903793335
+      ],
+      "top_k_weights": [
+        0.3357089548654516,
+        0.33428440581354046,
+        0.330006639321008
+      ],
+      "acc_top1": 0.667,
+      "acc_blend": 0.674,
+      "acc_oracle": 0.961,
+      "delta_blend_minus_top1": 0.007000000000000006,
+      "gap_to_oracle": 0.2869999999999999
+    },
+    {
+      "held_task": "ones_vs_teens",
+      "query": "ones_vs_teens_seed2024",
+      "nearest": "fibonacci_seed42",
+      "top_k_names": [
+        "fibonacci_seed42",
+        "fibonacci_seed101",
+        "fibonacci_seed2024"
+      ],
+      "top_k_distances": [
+        9.304096221923828,
+        9.395195007324219,
+        9.513364791870117
+      ],
+      "top_k_weights": [
+        0.36709306261395763,
+        0.33512936019152423,
+        0.29777757719451814
+      ],
+      "acc_top1": 0.611,
+      "acc_blend": 0.609,
+      "acc_oracle": 0.956,
+      "delta_blend_minus_top1": -0.0020000000000000018,
+      "gap_to_oracle": 0.347
+    },
+    {
+      "held_task": "triangular",
+      "query": "triangular_seed2024",
+      "nearest": "fibonacci_seed101",
+      "top_k_names": [
+        "fibonacci_seed101",
+        "parity_seed42",
+        "parity_seed2024"
+      ],
+      "top_k_distances": [
+        7.3213791847229,
+        7.449525833129883,
+        7.541704177856445
+      ],
+      "top_k_weights": [
+        0.37285852619344817,
+        0.32801272814289184,
+        0.29912874566365993
+      ],
+      "acc_top1": 0.647,
+      "acc_blend": 0.609,
+      "acc_oracle": 0.969,
+      "delta_blend_minus_top1": -0.038000000000000034,
+      "gap_to_oracle": 0.36
+    },
+    {
+      "held_task": "fibonacci",
+      "query": "fibonacci_seed2024",
+      "nearest": "primes_vs_rest_seed101",
+      "top_k_names": [
+        "primes_vs_rest_seed101",
+        "primes_vs_rest_seed2024",
+        "primes_vs_rest_seed42"
+      ],
+      "top_k_distances": [
+        7.4181718826293945,
+        7.478169918060303,
+        7.638992786407471
+      ],
+      "top_k_weights": [
+        0.3644810768521839,
+        0.34325602569149793,
+        0.2922628974563182
+      ],
+      "acc_top1": 0.666,
+      "acc_blend": 0.674,
+      "acc_oracle": 0.975,
+      "delta_blend_minus_top1": 0.008000000000000007,
+      "gap_to_oracle": 0.30099999999999993
+    },
+    {
+      "held_task": "middle_456",
+      "query": "middle_456_seed2024",
+      "nearest": "triangular_seed101",
+      "top_k_names": [
+        "triangular_seed101",
+        "triangular_seed2024",
+        "triangular_seed42"
+      ],
+      "top_k_distances": [
+        8.238543510437012,
+        8.805850982666016,
+        8.885973930358887
+      ],
+      "top_k_weights": [
+        0.478368390988019,
+        0.2712588838597649,
+        0.2503727251522161
+      ],
+      "acc_top1": 0.613,
+      "acc_blend": 0.613,
+      "acc_oracle": 0.971,
+      "delta_blend_minus_top1": 0.0,
+      "gap_to_oracle": 0.358
+    }
+  ],
+  "summary": {
+    "mean_top1": 0.6284285714285714,
+    "mean_blend": 0.6368571428571429,
+    "mean_oracle": 0.9644285714285713,
+    "mean_delta_blend_minus_top1": 0.008428571428571436,
+    "std_delta": 0.03530749279712523,
+    "n_wins_for_blend": 4,
+    "n_ties": 1,
+    "n_losses": 2,
+    "verdict": "NULL",
+    "reason": "\u0394=+0.008 within \u00b12\u00b7se (se=0.013, t=0.63) \u2014 no measurable lift or harm from compose over top-1 at n=7",
+    "paired_t_stat": 0.6315912612565938,
+    "paired_se": 0.013344977908342524
+  },
+  "compose_verdict_check": {
+    "query": "primes_vs_rest_seed2024",
+    "match_threshold": 5.0,
+    "spawn_threshold": 15.0,
+    "verdict": "compose",
+    "min_distance": 7.375417232513428,
+    "composite_entries": [
+      "parity_seed42",
+      "parity_seed101",
+      "fibonacci_seed101"
+    ],
+    "composite_weights": [
+      0.3357089548654516,
+      0.33428440581354046,
+      0.330006639321008
+    ]
+  }
+}
