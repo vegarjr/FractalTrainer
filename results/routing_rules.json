@@ -1,0 +1,3060 @@
+{
+  "summary": {
+    "oracle": {
+      "mean_accuracy": 0.8933629629629628,
+      "n_compose": 37,
+      "n_spawn": 98,
+      "total_decisions": 135
+    },
+    "always_compose": {
+      "mean_accuracy": 0.8194592592592592,
+      "n_compose": 135,
+      "n_spawn": 0,
+      "total_decisions": 135
+    },
+    "always_spawn": {
+      "mean_accuracy": 0.8759481481481481,
+      "n_compose": 0,
+      "n_spawn": 135,
+      "total_decisions": 135
+    },
+    "simple_N": {
+      "mean_accuracy": 0.8820888888888889,
+      "n_compose": 27,
+      "n_spawn": 108,
+      "total_decisions": 135
+    },
+    "metadata": {
+      "mean_accuracy": 0.8440296296296296,
+      "n_compose": 111,
+      "n_spawn": 24,
+      "total_decisions": 135
+    },
+    "post_hoc": {
+      "mean_accuracy": 0.8781925925925926,
+      "n_compose": 59,
+      "n_spawn": 76,
+      "total_decisions": 135
+    }
+  },
+  "per_budget": {
+    "50": {
+      "oracle": 0.8397407407407407,
+      "always_compose": 0.8189999999999998,
+      "always_spawn": 0.7882962962962964,
+      "simple_N": 0.8189999999999998,
+      "metadata": 0.8189999999999998,
+      "post_hoc": 0.8189999999999998
+    },
+    "100": {
+      "oracle": 0.855,
+      "always_compose": 0.8190370370370372,
+      "always_spawn": 0.8301481481481482,
+      "simple_N": 0.8301481481481482,
+      "metadata": 0.8347037037037036,
+      "post_hoc": 0.8466666666666667
+    },
+    "300": {
+      "oracle": 0.8964444444444445,
+      "always_compose": 0.8197777777777778,
+      "always_spawn": 0.8878518518518518,
+      "simple_N": 0.8878518518518518,
+      "metadata": 0.8498148148148148,
+      "post_hoc": 0.8852592592592593
+    },
+    "1000": {
+      "oracle": 0.9312962962962965,
+      "always_compose": 0.8243703703703702,
+      "always_spawn": 0.9291851851851852,
+      "simple_N": 0.9291851851851852,
+      "metadata": 0.8613703703703703,
+      "post_hoc": 0.9172592592592594
+    },
+    "5000": {
+      "oracle": 0.9443333333333334,
+      "always_compose": 0.8151111111111109,
+      "always_spawn": 0.9442592592592592,
+      "simple_N": 0.9442592592592592,
+      "metadata": 0.8552592592592592,
+      "post_hoc": 0.9227777777777776
+    }
+  },
+  "per_row": [
+    {
+      "task": "fibonacci",
+      "budget_N": 50,
+      "acc_compose": 0.795,
+      "acc_spawn": 0.907,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.907,
+        "always_compose": 0.795,
+        "always_spawn": 0.907,
+        "simple_N": 0.795,
+        "metadata": 0.795,
+        "post_hoc": 0.795
+      }
+    },
+    {
+      "task": "fibonacci",
+      "budget_N": 100,
+      "acc_compose": 0.79,
+      "acc_spawn": 0.924,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.924,
+        "always_compose": 0.79,
+        "always_spawn": 0.924,
+        "simple_N": 0.924,
+        "metadata": 0.79,
+        "post_hoc": 0.924
+      }
+    },
+    {
+      "task": "fibonacci",
+      "budget_N": 300,
+      "acc_compose": 0.79,
+      "acc_spawn": 0.924,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.924,
+        "always_compose": 0.79,
+        "always_spawn": 0.924,
+        "simple_N": 0.924,
+        "metadata": 0.79,
+        "post_hoc": 0.924
+      }
+    },
+    {
+      "task": "fibonacci",
+      "budget_N": 1000,
+      "acc_compose": 0.79,
+      "acc_spawn": 0.949,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.949,
+        "always_compose": 0.79,
+        "always_spawn": 0.949,
+        "simple_N": 0.949,
+        "metadata": 0.79,
+        "post_hoc": 0.949
+      }
+    },
+    {
+      "task": "fibonacci",
+      "budget_N": 5000,
+      "acc_compose": 0.793,
+      "acc_spawn": 0.967,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.967,
+        "always_compose": 0.793,
+        "always_spawn": 0.967,
+        "simple_N": 0.967,
+        "metadata": 0.793,
+        "post_hoc": 0.967
+      }
+    },
+    {
+      "task": "high_vs_low",
+      "budget_N": 50,
+      "acc_compose": 0.769,
+      "acc_spawn": 0.782,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.782,
+        "always_compose": 0.769,
+        "always_spawn": 0.782,
+        "simple_N": 0.769,
+        "metadata": 0.769,
+        "post_hoc": 0.769
+      }
+    },
+    {
+      "task": "high_vs_low",
+      "budget_N": 100,
+      "acc_compose": 0.769,
+      "acc_spawn": 0.799,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.799,
+        "always_compose": 0.769,
+        "always_spawn": 0.799,
+        "simple_N": 0.799,
+        "metadata": 0.769,
+        "post_hoc": 0.799
+      }
+    },
+    {
+      "task": "high_vs_low",
+      "budget_N": 300,
+      "acc_compose": 0.76,
+      "acc_spawn": 0.848,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.848,
+        "always_compose": 0.76,
+        "always_spawn": 0.848,
+        "simple_N": 0.848,
+        "metadata": 0.76,
+        "post_hoc": 0.848
+      }
+    },
+    {
+      "task": "high_vs_low",
+      "budget_N": 1000,
+      "acc_compose": 0.759,
+      "acc_spawn": 0.925,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.925,
+        "always_compose": 0.759,
+        "always_spawn": 0.925,
+        "simple_N": 0.925,
+        "metadata": 0.759,
+        "post_hoc": 0.925
+      }
+    },
+    {
+      "task": "high_vs_low",
+      "budget_N": 5000,
+      "acc_compose": 0.759,
+      "acc_spawn": 0.927,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.927,
+        "always_compose": 0.759,
+        "always_spawn": 0.927,
+        "simple_N": 0.927,
+        "metadata": 0.759,
+        "post_hoc": 0.927
+      }
+    },
+    {
+      "task": "middle_456",
+      "budget_N": 50,
+      "acc_compose": 0.788,
+      "acc_spawn": 0.842,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.842,
+        "always_compose": 0.788,
+        "always_spawn": 0.842,
+        "simple_N": 0.788,
+        "metadata": 0.788,
+        "post_hoc": 0.788
+      }
+    },
+    {
+      "task": "middle_456",
+      "budget_N": 100,
+      "acc_compose": 0.788,
+      "acc_spawn": 0.85,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.85,
+        "always_compose": 0.788,
+        "always_spawn": 0.85,
+        "simple_N": 0.85,
+        "metadata": 0.85,
+        "post_hoc": 0.85
+      }
+    },
+    {
+      "task": "middle_456",
+      "budget_N": 300,
+      "acc_compose": 0.792,
+      "acc_spawn": 0.907,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.907,
+        "always_compose": 0.792,
+        "always_spawn": 0.907,
+        "simple_N": 0.907,
+        "metadata": 0.907,
+        "post_hoc": 0.907
+      }
+    },
+    {
+      "task": "middle_456",
+      "budget_N": 1000,
+      "acc_compose": 0.792,
+      "acc_spawn": 0.944,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.944,
+        "always_compose": 0.792,
+        "always_spawn": 0.944,
+        "simple_N": 0.944,
+        "metadata": 0.944,
+        "post_hoc": 0.944
+      }
+    },
+    {
+      "task": "middle_456",
+      "budget_N": 5000,
+      "acc_compose": 0.794,
+      "acc_spawn": 0.94,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.94,
+        "always_compose": 0.794,
+        "always_spawn": 0.94,
+        "simple_N": 0.94,
+        "metadata": 0.94,
+        "post_hoc": 0.94
+      }
+    },
+    {
+      "task": "ones_vs_teens",
+      "budget_N": 50,
+      "acc_compose": 0.746,
+      "acc_spawn": 0.782,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.782,
+        "always_compose": 0.746,
+        "always_spawn": 0.782,
+        "simple_N": 0.746,
+        "metadata": 0.746,
+        "post_hoc": 0.746
+      }
+    },
+    {
+      "task": "ones_vs_teens",
+      "budget_N": 100,
+      "acc_compose": 0.749,
+      "acc_spawn": 0.825,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.825,
+        "always_compose": 0.749,
+        "always_spawn": 0.825,
+        "simple_N": 0.825,
+        "metadata": 0.825,
+        "post_hoc": 0.825
+      }
+    },
+    {
+      "task": "ones_vs_teens",
+      "budget_N": 300,
+      "acc_compose": 0.752,
+      "acc_spawn": 0.846,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.846,
+        "always_compose": 0.752,
+        "always_spawn": 0.846,
+        "simple_N": 0.846,
+        "metadata": 0.846,
+        "post_hoc": 0.846
+      }
+    },
+    {
+      "task": "ones_vs_teens",
+      "budget_N": 1000,
+      "acc_compose": 0.749,
+      "acc_spawn": 0.922,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.922,
+        "always_compose": 0.749,
+        "always_spawn": 0.922,
+        "simple_N": 0.922,
+        "metadata": 0.922,
+        "post_hoc": 0.922
+      }
+    },
+    {
+      "task": "ones_vs_teens",
+      "budget_N": 5000,
+      "acc_compose": 0.749,
+      "acc_spawn": 0.949,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.949,
+        "always_compose": 0.749,
+        "always_spawn": 0.949,
+        "simple_N": 0.949,
+        "metadata": 0.949,
+        "post_hoc": 0.949
+      }
+    },
+    {
+      "task": "parity",
+      "budget_N": 50,
+      "acc_compose": 0.811,
+      "acc_spawn": 0.841,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.841,
+        "always_compose": 0.811,
+        "always_spawn": 0.841,
+        "simple_N": 0.811,
+        "metadata": 0.811,
+        "post_hoc": 0.811
+      }
+    },
+    {
+      "task": "parity",
+      "budget_N": 100,
+      "acc_compose": 0.88,
+      "acc_spawn": 0.868,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.88,
+        "always_compose": 0.88,
+        "always_spawn": 0.868,
+        "simple_N": 0.868,
+        "metadata": 0.88,
+        "post_hoc": 0.868
+      }
+    },
+    {
+      "task": "parity",
+      "budget_N": 300,
+      "acc_compose": 0.81,
+      "acc_spawn": 0.898,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.898,
+        "always_compose": 0.81,
+        "always_spawn": 0.898,
+        "simple_N": 0.898,
+        "metadata": 0.81,
+        "post_hoc": 0.898
+      }
+    },
+    {
+      "task": "parity",
+      "budget_N": 1000,
+      "acc_compose": 0.875,
+      "acc_spawn": 0.96,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.96,
+        "always_compose": 0.875,
+        "always_spawn": 0.96,
+        "simple_N": 0.96,
+        "metadata": 0.875,
+        "post_hoc": 0.96
+      }
+    },
+    {
+      "task": "parity",
+      "budget_N": 5000,
+      "acc_compose": 0.813,
+      "acc_spawn": 0.961,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.961,
+        "always_compose": 0.813,
+        "always_spawn": 0.961,
+        "simple_N": 0.961,
+        "metadata": 0.813,
+        "post_hoc": 0.961
+      }
+    },
+    {
+      "task": "primes_vs_rest",
+      "budget_N": 50,
+      "acc_compose": 0.948,
+      "acc_spawn": 0.777,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.948,
+        "always_compose": 0.948,
+        "always_spawn": 0.777,
+        "simple_N": 0.948,
+        "metadata": 0.948,
+        "post_hoc": 0.948
+      }
+    },
+    {
+      "task": "primes_vs_rest",
+      "budget_N": 100,
+      "acc_compose": 0.791,
+      "acc_spawn": 0.831,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.831,
+        "always_compose": 0.791,
+        "always_spawn": 0.831,
+        "simple_N": 0.831,
+        "metadata": 0.791,
+        "post_hoc": 0.831
+      }
+    },
+    {
+      "task": "primes_vs_rest",
+      "budget_N": 300,
+      "acc_compose": 0.948,
+      "acc_spawn": 0.928,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.948,
+        "always_compose": 0.948,
+        "always_spawn": 0.928,
+        "simple_N": 0.928,
+        "metadata": 0.948,
+        "post_hoc": 0.948
+      }
+    },
+    {
+      "task": "primes_vs_rest",
+      "budget_N": 1000,
+      "acc_compose": 0.791,
+      "acc_spawn": 0.951,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.951,
+        "always_compose": 0.791,
+        "always_spawn": 0.951,
+        "simple_N": 0.951,
+        "metadata": 0.791,
+        "post_hoc": 0.951
+      }
+    },
+    {
+      "task": "primes_vs_rest",
+      "budget_N": 5000,
+      "acc_compose": 0.791,
+      "acc_spawn": 0.957,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.957,
+        "always_compose": 0.791,
+        "always_spawn": 0.957,
+        "simple_N": 0.957,
+        "metadata": 0.791,
+        "post_hoc": 0.957
+      }
+    },
+    {
+      "task": "subset_014567",
+      "budget_N": 50,
+      "acc_compose": 0.76,
+      "acc_spawn": 0.775,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.775,
+        "always_compose": 0.76,
+        "always_spawn": 0.775,
+        "simple_N": 0.76,
+        "metadata": 0.76,
+        "post_hoc": 0.76
+      }
+    },
+    {
+      "task": "subset_014567",
+      "budget_N": 100,
+      "acc_compose": 0.76,
+      "acc_spawn": 0.796,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.796,
+        "always_compose": 0.76,
+        "always_spawn": 0.796,
+        "simple_N": 0.796,
+        "metadata": 0.796,
+        "post_hoc": 0.796
+      }
+    },
+    {
+      "task": "subset_014567",
+      "budget_N": 300,
+      "acc_compose": 0.699,
+      "acc_spawn": 0.879,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.879,
+        "always_compose": 0.699,
+        "always_spawn": 0.879,
+        "simple_N": 0.879,
+        "metadata": 0.879,
+        "post_hoc": 0.879
+      }
+    },
+    {
+      "task": "subset_014567",
+      "budget_N": 1000,
+      "acc_compose": 0.763,
+      "acc_spawn": 0.925,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.925,
+        "always_compose": 0.763,
+        "always_spawn": 0.925,
+        "simple_N": 0.925,
+        "metadata": 0.925,
+        "post_hoc": 0.925
+      }
+    },
+    {
+      "task": "subset_014567",
+      "budget_N": 5000,
+      "acc_compose": 0.763,
+      "acc_spawn": 0.941,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.941,
+        "always_compose": 0.763,
+        "always_spawn": 0.941,
+        "simple_N": 0.941,
+        "metadata": 0.941,
+        "post_hoc": 0.941
+      }
+    },
+    {
+      "task": "subset_01458",
+      "budget_N": 50,
+      "acc_compose": 0.774,
+      "acc_spawn": 0.753,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.774,
+        "always_compose": 0.774,
+        "always_spawn": 0.753,
+        "simple_N": 0.774,
+        "metadata": 0.774,
+        "post_hoc": 0.774
+      }
+    },
+    {
+      "task": "subset_01458",
+      "budget_N": 100,
+      "acc_compose": 0.774,
+      "acc_spawn": 0.824,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.824,
+        "always_compose": 0.774,
+        "always_spawn": 0.824,
+        "simple_N": 0.824,
+        "metadata": 0.774,
+        "post_hoc": 0.824
+      }
+    },
+    {
+      "task": "subset_01458",
+      "budget_N": 300,
+      "acc_compose": 0.774,
+      "acc_spawn": 0.886,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.886,
+        "always_compose": 0.774,
+        "always_spawn": 0.886,
+        "simple_N": 0.886,
+        "metadata": 0.774,
+        "post_hoc": 0.886
+      }
+    },
+    {
+      "task": "subset_01458",
+      "budget_N": 1000,
+      "acc_compose": 0.764,
+      "acc_spawn": 0.914,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.914,
+        "always_compose": 0.764,
+        "always_spawn": 0.914,
+        "simple_N": 0.914,
+        "metadata": 0.764,
+        "post_hoc": 0.914
+      }
+    },
+    {
+      "task": "subset_01458",
+      "budget_N": 5000,
+      "acc_compose": 0.764,
+      "acc_spawn": 0.942,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.942,
+        "always_compose": 0.764,
+        "always_spawn": 0.942,
+        "simple_N": 0.942,
+        "metadata": 0.764,
+        "post_hoc": 0.942
+      }
+    },
+    {
+      "task": "subset_01589",
+      "budget_N": 50,
+      "acc_compose": 0.847,
+      "acc_spawn": 0.725,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.847,
+        "always_compose": 0.847,
+        "always_spawn": 0.725,
+        "simple_N": 0.847,
+        "metadata": 0.847,
+        "post_hoc": 0.847
+      }
+    },
+    {
+      "task": "subset_01589",
+      "budget_N": 100,
+      "acc_compose": 0.855,
+      "acc_spawn": 0.767,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.855,
+        "always_compose": 0.855,
+        "always_spawn": 0.767,
+        "simple_N": 0.767,
+        "metadata": 0.855,
+        "post_hoc": 0.855
+      }
+    },
+    {
+      "task": "subset_01589",
+      "budget_N": 300,
+      "acc_compose": 0.858,
+      "acc_spawn": 0.847,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.858,
+        "always_compose": 0.858,
+        "always_spawn": 0.847,
+        "simple_N": 0.847,
+        "metadata": 0.858,
+        "post_hoc": 0.858
+      }
+    },
+    {
+      "task": "subset_01589",
+      "budget_N": 1000,
+      "acc_compose": 0.872,
+      "acc_spawn": 0.909,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.909,
+        "always_compose": 0.872,
+        "always_spawn": 0.909,
+        "simple_N": 0.909,
+        "metadata": 0.872,
+        "post_hoc": 0.872
+      }
+    },
+    {
+      "task": "subset_01589",
+      "budget_N": 5000,
+      "acc_compose": 0.872,
+      "acc_spawn": 0.934,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.934,
+        "always_compose": 0.872,
+        "always_spawn": 0.934,
+        "simple_N": 0.934,
+        "metadata": 0.872,
+        "post_hoc": 0.872
+      }
+    },
+    {
+      "task": "subset_01789",
+      "budget_N": 50,
+      "acc_compose": 0.877,
+      "acc_spawn": 0.767,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.877,
+        "always_compose": 0.877,
+        "always_spawn": 0.767,
+        "simple_N": 0.877,
+        "metadata": 0.877,
+        "post_hoc": 0.877
+      }
+    },
+    {
+      "task": "subset_01789",
+      "budget_N": 100,
+      "acc_compose": 0.877,
+      "acc_spawn": 0.8,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.877,
+        "always_compose": 0.877,
+        "always_spawn": 0.8,
+        "simple_N": 0.8,
+        "metadata": 0.877,
+        "post_hoc": 0.877
+      }
+    },
+    {
+      "task": "subset_01789",
+      "budget_N": 300,
+      "acc_compose": 0.877,
+      "acc_spawn": 0.908,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.908,
+        "always_compose": 0.877,
+        "always_spawn": 0.908,
+        "simple_N": 0.908,
+        "metadata": 0.877,
+        "post_hoc": 0.877
+      }
+    },
+    {
+      "task": "subset_01789",
+      "budget_N": 1000,
+      "acc_compose": 0.877,
+      "acc_spawn": 0.93,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.93,
+        "always_compose": 0.877,
+        "always_spawn": 0.93,
+        "simple_N": 0.93,
+        "metadata": 0.877,
+        "post_hoc": 0.877
+      }
+    },
+    {
+      "task": "subset_01789",
+      "budget_N": 5000,
+      "acc_compose": 0.873,
+      "acc_spawn": 0.957,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.957,
+        "always_compose": 0.873,
+        "always_spawn": 0.957,
+        "simple_N": 0.957,
+        "metadata": 0.873,
+        "post_hoc": 0.873
+      }
+    },
+    {
+      "task": "subset_02349",
+      "budget_N": 50,
+      "acc_compose": 0.807,
+      "acc_spawn": 0.752,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.807,
+        "always_compose": 0.807,
+        "always_spawn": 0.752,
+        "simple_N": 0.807,
+        "metadata": 0.807,
+        "post_hoc": 0.807
+      }
+    },
+    {
+      "task": "subset_02349",
+      "budget_N": 100,
+      "acc_compose": 0.852,
+      "acc_spawn": 0.805,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.852,
+        "always_compose": 0.852,
+        "always_spawn": 0.805,
+        "simple_N": 0.805,
+        "metadata": 0.852,
+        "post_hoc": 0.805
+      }
+    },
+    {
+      "task": "subset_02349",
+      "budget_N": 300,
+      "acc_compose": 0.855,
+      "acc_spawn": 0.876,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.876,
+        "always_compose": 0.855,
+        "always_spawn": 0.876,
+        "simple_N": 0.876,
+        "metadata": 0.855,
+        "post_hoc": 0.876
+      }
+    },
+    {
+      "task": "subset_02349",
+      "budget_N": 1000,
+      "acc_compose": 0.855,
+      "acc_spawn": 0.922,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.922,
+        "always_compose": 0.855,
+        "always_spawn": 0.922,
+        "simple_N": 0.922,
+        "metadata": 0.855,
+        "post_hoc": 0.922
+      }
+    },
+    {
+      "task": "subset_02349",
+      "budget_N": 5000,
+      "acc_compose": 0.855,
+      "acc_spawn": 0.961,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.961,
+        "always_compose": 0.855,
+        "always_spawn": 0.961,
+        "simple_N": 0.961,
+        "metadata": 0.855,
+        "post_hoc": 0.961
+      }
+    },
+    {
+      "task": "subset_02459",
+      "budget_N": 50,
+      "acc_compose": 0.863,
+      "acc_spawn": 0.714,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.863,
+        "always_compose": 0.863,
+        "always_spawn": 0.714,
+        "simple_N": 0.863,
+        "metadata": 0.863,
+        "post_hoc": 0.863
+      }
+    },
+    {
+      "task": "subset_02459",
+      "budget_N": 100,
+      "acc_compose": 0.863,
+      "acc_spawn": 0.78,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.863,
+        "always_compose": 0.863,
+        "always_spawn": 0.78,
+        "simple_N": 0.78,
+        "metadata": 0.863,
+        "post_hoc": 0.78
+      }
+    },
+    {
+      "task": "subset_02459",
+      "budget_N": 300,
+      "acc_compose": 0.863,
+      "acc_spawn": 0.844,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.863,
+        "always_compose": 0.863,
+        "always_spawn": 0.844,
+        "simple_N": 0.844,
+        "metadata": 0.863,
+        "post_hoc": 0.844
+      }
+    },
+    {
+      "task": "subset_02459",
+      "budget_N": 1000,
+      "acc_compose": 0.863,
+      "acc_spawn": 0.906,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.906,
+        "always_compose": 0.863,
+        "always_spawn": 0.906,
+        "simple_N": 0.906,
+        "metadata": 0.863,
+        "post_hoc": 0.906
+      }
+    },
+    {
+      "task": "subset_02459",
+      "budget_N": 5000,
+      "acc_compose": 0.868,
+      "acc_spawn": 0.92,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.92,
+        "always_compose": 0.868,
+        "always_spawn": 0.92,
+        "simple_N": 0.92,
+        "metadata": 0.868,
+        "post_hoc": 0.92
+      }
+    },
+    {
+      "task": "subset_025678",
+      "budget_N": 50,
+      "acc_compose": 0.695,
+      "acc_spawn": 0.779,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.779,
+        "always_compose": 0.695,
+        "always_spawn": 0.779,
+        "simple_N": 0.695,
+        "metadata": 0.695,
+        "post_hoc": 0.695
+      }
+    },
+    {
+      "task": "subset_025678",
+      "budget_N": 100,
+      "acc_compose": 0.693,
+      "acc_spawn": 0.869,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.869,
+        "always_compose": 0.693,
+        "always_spawn": 0.869,
+        "simple_N": 0.869,
+        "metadata": 0.869,
+        "post_hoc": 0.869
+      }
+    },
+    {
+      "task": "subset_025678",
+      "budget_N": 300,
+      "acc_compose": 0.676,
+      "acc_spawn": 0.911,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.911,
+        "always_compose": 0.676,
+        "always_spawn": 0.911,
+        "simple_N": 0.911,
+        "metadata": 0.911,
+        "post_hoc": 0.911
+      }
+    },
+    {
+      "task": "subset_025678",
+      "budget_N": 1000,
+      "acc_compose": 0.709,
+      "acc_spawn": 0.946,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.946,
+        "always_compose": 0.709,
+        "always_spawn": 0.946,
+        "simple_N": 0.946,
+        "metadata": 0.946,
+        "post_hoc": 0.946
+      }
+    },
+    {
+      "task": "subset_025678",
+      "budget_N": 5000,
+      "acc_compose": 0.706,
+      "acc_spawn": 0.959,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.959,
+        "always_compose": 0.706,
+        "always_spawn": 0.959,
+        "simple_N": 0.959,
+        "metadata": 0.959,
+        "post_hoc": 0.959
+      }
+    },
+    {
+      "task": "subset_0379",
+      "budget_N": 50,
+      "acc_compose": 0.712,
+      "acc_spawn": 0.833,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.833,
+        "always_compose": 0.712,
+        "always_spawn": 0.833,
+        "simple_N": 0.712,
+        "metadata": 0.712,
+        "post_hoc": 0.712
+      }
+    },
+    {
+      "task": "subset_0379",
+      "budget_N": 100,
+      "acc_compose": 0.754,
+      "acc_spawn": 0.866,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.866,
+        "always_compose": 0.754,
+        "always_spawn": 0.866,
+        "simple_N": 0.866,
+        "metadata": 0.754,
+        "post_hoc": 0.866
+      }
+    },
+    {
+      "task": "subset_0379",
+      "budget_N": 300,
+      "acc_compose": 0.754,
+      "acc_spawn": 0.902,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.902,
+        "always_compose": 0.754,
+        "always_spawn": 0.902,
+        "simple_N": 0.902,
+        "metadata": 0.754,
+        "post_hoc": 0.902
+      }
+    },
+    {
+      "task": "subset_0379",
+      "budget_N": 1000,
+      "acc_compose": 0.755,
+      "acc_spawn": 0.929,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.929,
+        "always_compose": 0.755,
+        "always_spawn": 0.929,
+        "simple_N": 0.929,
+        "metadata": 0.755,
+        "post_hoc": 0.929
+      }
+    },
+    {
+      "task": "subset_0379",
+      "budget_N": 5000,
+      "acc_compose": 0.755,
+      "acc_spawn": 0.943,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.943,
+        "always_compose": 0.755,
+        "always_spawn": 0.943,
+        "simple_N": 0.943,
+        "metadata": 0.755,
+        "post_hoc": 0.943
+      }
+    },
+    {
+      "task": "subset_0459",
+      "budget_N": 50,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.796,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.96,
+        "always_compose": 0.96,
+        "always_spawn": 0.796,
+        "simple_N": 0.96,
+        "metadata": 0.96,
+        "post_hoc": 0.96
+      }
+    },
+    {
+      "task": "subset_0459",
+      "budget_N": 100,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.863,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.96,
+        "always_compose": 0.96,
+        "always_spawn": 0.863,
+        "simple_N": 0.863,
+        "metadata": 0.96,
+        "post_hoc": 0.96
+      }
+    },
+    {
+      "task": "subset_0459",
+      "budget_N": 300,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.902,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.96,
+        "always_compose": 0.96,
+        "always_spawn": 0.902,
+        "simple_N": 0.902,
+        "metadata": 0.96,
+        "post_hoc": 0.96
+      }
+    },
+    {
+      "task": "subset_0459",
+      "budget_N": 1000,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.925,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.96,
+        "always_compose": 0.96,
+        "always_spawn": 0.925,
+        "simple_N": 0.925,
+        "metadata": 0.96,
+        "post_hoc": 0.96
+      }
+    },
+    {
+      "task": "subset_0459",
+      "budget_N": 5000,
+      "acc_compose": 0.869,
+      "acc_spawn": 0.933,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.933,
+        "always_compose": 0.869,
+        "always_spawn": 0.933,
+        "simple_N": 0.933,
+        "metadata": 0.869,
+        "post_hoc": 0.933
+      }
+    },
+    {
+      "task": "subset_0489",
+      "budget_N": 50,
+      "acc_compose": 0.798,
+      "acc_spawn": 0.753,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.798,
+        "always_compose": 0.798,
+        "always_spawn": 0.753,
+        "simple_N": 0.798,
+        "metadata": 0.798,
+        "post_hoc": 0.798
+      }
+    },
+    {
+      "task": "subset_0489",
+      "budget_N": 100,
+      "acc_compose": 0.798,
+      "acc_spawn": 0.79,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.798,
+        "always_compose": 0.798,
+        "always_spawn": 0.79,
+        "simple_N": 0.79,
+        "metadata": 0.798,
+        "post_hoc": 0.79
+      }
+    },
+    {
+      "task": "subset_0489",
+      "budget_N": 300,
+      "acc_compose": 0.802,
+      "acc_spawn": 0.897,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.897,
+        "always_compose": 0.802,
+        "always_spawn": 0.897,
+        "simple_N": 0.897,
+        "metadata": 0.802,
+        "post_hoc": 0.897
+      }
+    },
+    {
+      "task": "subset_0489",
+      "budget_N": 1000,
+      "acc_compose": 0.809,
+      "acc_spawn": 0.933,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.933,
+        "always_compose": 0.809,
+        "always_spawn": 0.933,
+        "simple_N": 0.933,
+        "metadata": 0.809,
+        "post_hoc": 0.933
+      }
+    },
+    {
+      "task": "subset_0489",
+      "budget_N": 5000,
+      "acc_compose": 0.802,
+      "acc_spawn": 0.926,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.926,
+        "always_compose": 0.802,
+        "always_spawn": 0.926,
+        "simple_N": 0.926,
+        "metadata": 0.802,
+        "post_hoc": 0.926
+      }
+    },
+    {
+      "task": "subset_123468",
+      "budget_N": 50,
+      "acc_compose": 0.853,
+      "acc_spawn": 0.813,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.853,
+        "always_compose": 0.853,
+        "always_spawn": 0.813,
+        "simple_N": 0.853,
+        "metadata": 0.853,
+        "post_hoc": 0.853
+      }
+    },
+    {
+      "task": "subset_123468",
+      "budget_N": 100,
+      "acc_compose": 0.853,
+      "acc_spawn": 0.85,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.853,
+        "always_compose": 0.853,
+        "always_spawn": 0.85,
+        "simple_N": 0.85,
+        "metadata": 0.853,
+        "post_hoc": 0.85
+      }
+    },
+    {
+      "task": "subset_123468",
+      "budget_N": 300,
+      "acc_compose": 0.785,
+      "acc_spawn": 0.912,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.912,
+        "always_compose": 0.785,
+        "always_spawn": 0.912,
+        "simple_N": 0.912,
+        "metadata": 0.785,
+        "post_hoc": 0.912
+      }
+    },
+    {
+      "task": "subset_123468",
+      "budget_N": 1000,
+      "acc_compose": 0.846,
+      "acc_spawn": 0.941,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.941,
+        "always_compose": 0.846,
+        "always_spawn": 0.941,
+        "simple_N": 0.941,
+        "metadata": 0.846,
+        "post_hoc": 0.941
+      }
+    },
+    {
+      "task": "subset_123468",
+      "budget_N": 5000,
+      "acc_compose": 0.846,
+      "acc_spawn": 0.951,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.951,
+        "always_compose": 0.846,
+        "always_spawn": 0.951,
+        "simple_N": 0.951,
+        "metadata": 0.846,
+        "post_hoc": 0.951
+      }
+    },
+    {
+      "task": "subset_123679",
+      "budget_N": 50,
+      "acc_compose": 0.782,
+      "acc_spawn": 0.76,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.782,
+        "always_compose": 0.782,
+        "always_spawn": 0.76,
+        "simple_N": 0.782,
+        "metadata": 0.782,
+        "post_hoc": 0.782
+      }
+    },
+    {
+      "task": "subset_123679",
+      "budget_N": 100,
+      "acc_compose": 0.782,
+      "acc_spawn": 0.836,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.836,
+        "always_compose": 0.782,
+        "always_spawn": 0.836,
+        "simple_N": 0.836,
+        "metadata": 0.782,
+        "post_hoc": 0.836
+      }
+    },
+    {
+      "task": "subset_123679",
+      "budget_N": 300,
+      "acc_compose": 0.782,
+      "acc_spawn": 0.879,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.879,
+        "always_compose": 0.782,
+        "always_spawn": 0.879,
+        "simple_N": 0.879,
+        "metadata": 0.782,
+        "post_hoc": 0.879
+      }
+    },
+    {
+      "task": "subset_123679",
+      "budget_N": 1000,
+      "acc_compose": 0.938,
+      "acc_spawn": 0.929,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.938,
+        "always_compose": 0.938,
+        "always_spawn": 0.929,
+        "simple_N": 0.929,
+        "metadata": 0.938,
+        "post_hoc": 0.938
+      }
+    },
+    {
+      "task": "subset_123679",
+      "budget_N": 5000,
+      "acc_compose": 0.782,
+      "acc_spawn": 0.938,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.938,
+        "always_compose": 0.782,
+        "always_spawn": 0.938,
+        "simple_N": 0.938,
+        "metadata": 0.782,
+        "post_hoc": 0.938
+      }
+    },
+    {
+      "task": "subset_123689",
+      "budget_N": 50,
+      "acc_compose": 0.857,
+      "acc_spawn": 0.759,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.857,
+        "always_compose": 0.857,
+        "always_spawn": 0.759,
+        "simple_N": 0.857,
+        "metadata": 0.857,
+        "post_hoc": 0.857
+      }
+    },
+    {
+      "task": "subset_123689",
+      "budget_N": 100,
+      "acc_compose": 0.769,
+      "acc_spawn": 0.819,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.819,
+        "always_compose": 0.769,
+        "always_spawn": 0.819,
+        "simple_N": 0.819,
+        "metadata": 0.769,
+        "post_hoc": 0.819
+      }
+    },
+    {
+      "task": "subset_123689",
+      "budget_N": 300,
+      "acc_compose": 0.857,
+      "acc_spawn": 0.874,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.874,
+        "always_compose": 0.857,
+        "always_spawn": 0.874,
+        "simple_N": 0.874,
+        "metadata": 0.857,
+        "post_hoc": 0.874
+      }
+    },
+    {
+      "task": "subset_123689",
+      "budget_N": 1000,
+      "acc_compose": 0.852,
+      "acc_spawn": 0.901,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.901,
+        "always_compose": 0.852,
+        "always_spawn": 0.901,
+        "simple_N": 0.901,
+        "metadata": 0.852,
+        "post_hoc": 0.901
+      }
+    },
+    {
+      "task": "subset_123689",
+      "budget_N": 5000,
+      "acc_compose": 0.857,
+      "acc_spawn": 0.928,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.928,
+        "always_compose": 0.857,
+        "always_spawn": 0.928,
+        "simple_N": 0.928,
+        "metadata": 0.857,
+        "post_hoc": 0.928
+      }
+    },
+    {
+      "task": "subset_1256",
+      "budget_N": 50,
+      "acc_compose": 0.811,
+      "acc_spawn": 0.831,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.831,
+        "always_compose": 0.811,
+        "always_spawn": 0.831,
+        "simple_N": 0.811,
+        "metadata": 0.811,
+        "post_hoc": 0.811
+      }
+    },
+    {
+      "task": "subset_1256",
+      "budget_N": 100,
+      "acc_compose": 0.805,
+      "acc_spawn": 0.847,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.847,
+        "always_compose": 0.805,
+        "always_spawn": 0.847,
+        "simple_N": 0.847,
+        "metadata": 0.847,
+        "post_hoc": 0.847
+      }
+    },
+    {
+      "task": "subset_1256",
+      "budget_N": 300,
+      "acc_compose": 0.816,
+      "acc_spawn": 0.901,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.901,
+        "always_compose": 0.816,
+        "always_spawn": 0.901,
+        "simple_N": 0.901,
+        "metadata": 0.901,
+        "post_hoc": 0.901
+      }
+    },
+    {
+      "task": "subset_1256",
+      "budget_N": 1000,
+      "acc_compose": 0.797,
+      "acc_spawn": 0.939,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.939,
+        "always_compose": 0.797,
+        "always_spawn": 0.939,
+        "simple_N": 0.939,
+        "metadata": 0.939,
+        "post_hoc": 0.939
+      }
+    },
+    {
+      "task": "subset_1256",
+      "budget_N": 5000,
+      "acc_compose": 0.797,
+      "acc_spawn": 0.937,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.937,
+        "always_compose": 0.797,
+        "always_spawn": 0.937,
+        "simple_N": 0.937,
+        "metadata": 0.937,
+        "post_hoc": 0.937
+      }
+    },
+    {
+      "task": "subset_13678",
+      "budget_N": 50,
+      "acc_compose": 0.773,
+      "acc_spawn": 0.711,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.773,
+        "always_compose": 0.773,
+        "always_spawn": 0.711,
+        "simple_N": 0.773,
+        "metadata": 0.773,
+        "post_hoc": 0.773
+      }
+    },
+    {
+      "task": "subset_13678",
+      "budget_N": 100,
+      "acc_compose": 0.766,
+      "acc_spawn": 0.797,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.797,
+        "always_compose": 0.766,
+        "always_spawn": 0.797,
+        "simple_N": 0.797,
+        "metadata": 0.797,
+        "post_hoc": 0.797
+      }
+    },
+    {
+      "task": "subset_13678",
+      "budget_N": 300,
+      "acc_compose": 0.768,
+      "acc_spawn": 0.87,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.87,
+        "always_compose": 0.768,
+        "always_spawn": 0.87,
+        "simple_N": 0.87,
+        "metadata": 0.87,
+        "post_hoc": 0.87
+      }
+    },
+    {
+      "task": "subset_13678",
+      "budget_N": 1000,
+      "acc_compose": 0.768,
+      "acc_spawn": 0.901,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.901,
+        "always_compose": 0.768,
+        "always_spawn": 0.901,
+        "simple_N": 0.901,
+        "metadata": 0.901,
+        "post_hoc": 0.901
+      }
+    },
+    {
+      "task": "subset_13678",
+      "budget_N": 5000,
+      "acc_compose": 0.768,
+      "acc_spawn": 0.935,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "spawn",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.935,
+        "always_compose": 0.768,
+        "always_spawn": 0.935,
+        "simple_N": 0.935,
+        "metadata": 0.935,
+        "post_hoc": 0.935
+      }
+    },
+    {
+      "task": "subset_15789",
+      "budget_N": 50,
+      "acc_compose": 0.956,
+      "acc_spawn": 0.821,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.956,
+        "always_compose": 0.956,
+        "always_spawn": 0.821,
+        "simple_N": 0.956,
+        "metadata": 0.956,
+        "post_hoc": 0.956
+      }
+    },
+    {
+      "task": "subset_15789",
+      "budget_N": 100,
+      "acc_compose": 0.952,
+      "acc_spawn": 0.847,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.952,
+        "always_compose": 0.952,
+        "always_spawn": 0.847,
+        "simple_N": 0.847,
+        "metadata": 0.952,
+        "post_hoc": 0.952
+      }
+    },
+    {
+      "task": "subset_15789",
+      "budget_N": 300,
+      "acc_compose": 0.949,
+      "acc_spawn": 0.876,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.949,
+        "always_compose": 0.949,
+        "always_spawn": 0.876,
+        "simple_N": 0.876,
+        "metadata": 0.949,
+        "post_hoc": 0.949
+      }
+    },
+    {
+      "task": "subset_15789",
+      "budget_N": 1000,
+      "acc_compose": 0.81,
+      "acc_spawn": 0.931,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.931,
+        "always_compose": 0.81,
+        "always_spawn": 0.931,
+        "simple_N": 0.931,
+        "metadata": 0.81,
+        "post_hoc": 0.931
+      }
+    },
+    {
+      "task": "subset_15789",
+      "budget_N": 5000,
+      "acc_compose": 0.855,
+      "acc_spawn": 0.941,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.941,
+        "always_compose": 0.855,
+        "always_spawn": 0.941,
+        "simple_N": 0.941,
+        "metadata": 0.855,
+        "post_hoc": 0.855
+      }
+    },
+    {
+      "task": "subset_2349",
+      "budget_N": 50,
+      "acc_compose": 0.789,
+      "acc_spawn": 0.743,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.789,
+        "always_compose": 0.789,
+        "always_spawn": 0.743,
+        "simple_N": 0.789,
+        "metadata": 0.789,
+        "post_hoc": 0.789
+      }
+    },
+    {
+      "task": "subset_2349",
+      "budget_N": 100,
+      "acc_compose": 0.847,
+      "acc_spawn": 0.792,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.847,
+        "always_compose": 0.847,
+        "always_spawn": 0.792,
+        "simple_N": 0.792,
+        "metadata": 0.847,
+        "post_hoc": 0.847
+      }
+    },
+    {
+      "task": "subset_2349",
+      "budget_N": 300,
+      "acc_compose": 0.848,
+      "acc_spawn": 0.89,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.89,
+        "always_compose": 0.848,
+        "always_spawn": 0.89,
+        "simple_N": 0.89,
+        "metadata": 0.848,
+        "post_hoc": 0.848
+      }
+    },
+    {
+      "task": "subset_2349",
+      "budget_N": 1000,
+      "acc_compose": 0.852,
+      "acc_spawn": 0.922,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.922,
+        "always_compose": 0.852,
+        "always_spawn": 0.922,
+        "simple_N": 0.922,
+        "metadata": 0.852,
+        "post_hoc": 0.852
+      }
+    },
+    {
+      "task": "subset_2349",
+      "budget_N": 5000,
+      "acc_compose": 0.851,
+      "acc_spawn": 0.942,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.942,
+        "always_compose": 0.851,
+        "always_spawn": 0.942,
+        "simple_N": 0.942,
+        "metadata": 0.851,
+        "post_hoc": 0.851
+      }
+    },
+    {
+      "task": "subset_267",
+      "budget_N": 50,
+      "acc_compose": 0.807,
+      "acc_spawn": 0.833,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.833,
+        "always_compose": 0.807,
+        "always_spawn": 0.833,
+        "simple_N": 0.807,
+        "metadata": 0.807,
+        "post_hoc": 0.807
+      }
+    },
+    {
+      "task": "subset_267",
+      "budget_N": 100,
+      "acc_compose": 0.866,
+      "acc_spawn": 0.877,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.877,
+        "always_compose": 0.866,
+        "always_spawn": 0.877,
+        "simple_N": 0.877,
+        "metadata": 0.866,
+        "post_hoc": 0.866
+      }
+    },
+    {
+      "task": "subset_267",
+      "budget_N": 300,
+      "acc_compose": 0.8,
+      "acc_spawn": 0.913,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.913,
+        "always_compose": 0.8,
+        "always_spawn": 0.913,
+        "simple_N": 0.913,
+        "metadata": 0.8,
+        "post_hoc": 0.8
+      }
+    },
+    {
+      "task": "subset_267",
+      "budget_N": 1000,
+      "acc_compose": 0.865,
+      "acc_spawn": 0.945,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.945,
+        "always_compose": 0.865,
+        "always_spawn": 0.945,
+        "simple_N": 0.945,
+        "metadata": 0.865,
+        "post_hoc": 0.865
+      }
+    },
+    {
+      "task": "subset_267",
+      "budget_N": 5000,
+      "acc_compose": 0.876,
+      "acc_spawn": 0.96,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.96,
+        "always_compose": 0.876,
+        "always_spawn": 0.96,
+        "simple_N": 0.96,
+        "metadata": 0.876,
+        "post_hoc": 0.876
+      }
+    },
+    {
+      "task": "subset_3457",
+      "budget_N": 50,
+      "acc_compose": 0.787,
+      "acc_spawn": 0.776,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.787,
+        "always_compose": 0.787,
+        "always_spawn": 0.776,
+        "simple_N": 0.787,
+        "metadata": 0.787,
+        "post_hoc": 0.787
+      }
+    },
+    {
+      "task": "subset_3457",
+      "budget_N": 100,
+      "acc_compose": 0.777,
+      "acc_spawn": 0.783,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.783,
+        "always_compose": 0.777,
+        "always_spawn": 0.783,
+        "simple_N": 0.783,
+        "metadata": 0.777,
+        "post_hoc": 0.783
+      }
+    },
+    {
+      "task": "subset_3457",
+      "budget_N": 300,
+      "acc_compose": 0.801,
+      "acc_spawn": 0.85,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.85,
+        "always_compose": 0.801,
+        "always_spawn": 0.85,
+        "simple_N": 0.85,
+        "metadata": 0.801,
+        "post_hoc": 0.85
+      }
+    },
+    {
+      "task": "subset_3457",
+      "budget_N": 1000,
+      "acc_compose": 0.801,
+      "acc_spawn": 0.917,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.917,
+        "always_compose": 0.801,
+        "always_spawn": 0.917,
+        "simple_N": 0.917,
+        "metadata": 0.801,
+        "post_hoc": 0.917
+      }
+    },
+    {
+      "task": "subset_3457",
+      "budget_N": 5000,
+      "acc_compose": 0.801,
+      "acc_spawn": 0.924,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "spawn"
+      },
+      "scores": {
+        "oracle": 0.924,
+        "always_compose": 0.801,
+        "always_spawn": 0.924,
+        "simple_N": 0.924,
+        "metadata": 0.801,
+        "post_hoc": 0.924
+      }
+    },
+    {
+      "task": "subset_459",
+      "budget_N": 50,
+      "acc_compose": 0.967,
+      "acc_spawn": 0.829,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.967,
+        "always_compose": 0.967,
+        "always_spawn": 0.829,
+        "simple_N": 0.967,
+        "metadata": 0.967,
+        "post_hoc": 0.967
+      }
+    },
+    {
+      "task": "subset_459",
+      "budget_N": 100,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.864,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.96,
+        "always_compose": 0.96,
+        "always_spawn": 0.864,
+        "simple_N": 0.864,
+        "metadata": 0.96,
+        "post_hoc": 0.96
+      }
+    },
+    {
+      "task": "subset_459",
+      "budget_N": 300,
+      "acc_compose": 0.96,
+      "acc_spawn": 0.909,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.96,
+        "always_compose": 0.96,
+        "always_spawn": 0.909,
+        "simple_N": 0.909,
+        "metadata": 0.96,
+        "post_hoc": 0.96
+      }
+    },
+    {
+      "task": "subset_459",
+      "budget_N": 1000,
+      "acc_compose": 0.948,
+      "acc_spawn": 0.935,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.948,
+        "always_compose": 0.948,
+        "always_spawn": 0.935,
+        "simple_N": 0.935,
+        "metadata": 0.948,
+        "post_hoc": 0.948
+      }
+    },
+    {
+      "task": "subset_459",
+      "budget_N": 5000,
+      "acc_compose": 0.958,
+      "acc_spawn": 0.956,
+      "choices": {
+        "oracle": "compose",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.958,
+        "always_compose": 0.958,
+        "always_spawn": 0.956,
+        "simple_N": 0.956,
+        "metadata": 0.958,
+        "post_hoc": 0.958
+      }
+    },
+    {
+      "task": "triangular",
+      "budget_N": 50,
+      "acc_compose": 0.781,
+      "acc_spawn": 0.83,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "compose",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.83,
+        "always_compose": 0.781,
+        "always_spawn": 0.83,
+        "simple_N": 0.781,
+        "metadata": 0.781,
+        "post_hoc": 0.781
+      }
+    },
+    {
+      "task": "triangular",
+      "budget_N": 100,
+      "acc_compose": 0.784,
+      "acc_spawn": 0.845,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.845,
+        "always_compose": 0.784,
+        "always_spawn": 0.845,
+        "simple_N": 0.845,
+        "metadata": 0.784,
+        "post_hoc": 0.784
+      }
+    },
+    {
+      "task": "triangular",
+      "budget_N": 300,
+      "acc_compose": 0.798,
+      "acc_spawn": 0.895,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.895,
+        "always_compose": 0.798,
+        "always_spawn": 0.895,
+        "simple_N": 0.895,
+        "metadata": 0.798,
+        "post_hoc": 0.798
+      }
+    },
+    {
+      "task": "triangular",
+      "budget_N": 1000,
+      "acc_compose": 0.798,
+      "acc_spawn": 0.937,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.937,
+        "always_compose": 0.798,
+        "always_spawn": 0.937,
+        "simple_N": 0.937,
+        "metadata": 0.798,
+        "post_hoc": 0.798
+      }
+    },
+    {
+      "task": "triangular",
+      "budget_N": 5000,
+      "acc_compose": 0.791,
+      "acc_spawn": 0.966,
+      "choices": {
+        "oracle": "spawn",
+        "always_compose": "compose",
+        "always_spawn": "spawn",
+        "simple_N": "spawn",
+        "metadata": "compose",
+        "post_hoc": "compose"
+      },
+      "scores": {
+        "oracle": 0.966,
+        "always_compose": 0.791,
+        "always_spawn": 0.966,
+        "simple_N": 0.966,
+        "metadata": 0.791,
+        "post_hoc": 0.791
+      }
+    }
+  ],
+  "oracle": 0.8933629629629628,
+  "always_spawn": 0.8759481481481481,
+  "always_compose": 0.8194592592592592,
+  "simple_N": 0.8820888888888889,
+  "metadata": 0.8440296296296296,
+  "post_hoc": 0.8781925925925926
+}
