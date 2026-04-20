@@ -57,6 +57,7 @@ science_trajectories/
 !results/jaccard_vs_distance.json
 !results/sprint8_v3_hierarchical_demo.json
 !results/sprint8_v3_fashion_training_log.json
+!results/coverage_compose.json
 results/growth_spawn_trajectories/
 results/sprint7_v3_trajectories/
 results/sprint8_v3_fashion_trajectories/
