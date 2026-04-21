@@ -22,13 +22,19 @@ def evaluate_expert(
     eval_loader: Iterable,
     *,
     context: torch.Tensor | None = None,
+    context_fn: Callable[[torch.Tensor], torch.Tensor] | None = None,
     device: str = "cpu",
 ) -> float:
     """Return accuracy (scalar in [0, 1]) on an eval dataloader.
 
-    For ContextAwareMLP: context is always None at evaluation time
-    (the probe-signature invariant — see Sprint 17 plan). Legacy models
-    that ignore the `context` kwarg still work.
+    Context handling:
+    - If `context_fn` is supplied, it's called with each batch's input
+      to produce a per-batch `(B, 32)` context tensor — match this to
+      what the model was trained with, to avoid train/eval mismatch.
+    - Else if `context` is supplied, use that fixed tensor.
+    - Else, pass `context=None` (signature-computation convention).
+
+    Legacy models that ignore the `context` kwarg still work.
     """
     model.eval()
     correct = 0
@@ -37,8 +43,12 @@ def evaluate_expert(
         for x, y in eval_loader:
             x = x.to(device)
             y = y.to(device)
+            if context_fn is not None:
+                ctx = context_fn(x)
+            else:
+                ctx = context
             try:
-                logits = model(x, context=context)
+                logits = model(x, context=ctx)
             except TypeError:
                 logits = model(x)
             pred = logits.argmax(dim=1)
@@ -88,6 +98,7 @@ def sample_efficiency_curve(
     budgets: Sequence[int],
     seeds: Sequence[int],
     eval_loader: Iterable,
+    context_fn: Callable[[torch.Tensor], torch.Tensor] | None = None,
 ) -> SampleEfficiencyResult:
     """Run one ablation arm across (budget × seed) grid; return aggregated stats.
 
@@ -101,6 +112,10 @@ def sample_efficiency_curve(
         seeds: list of seeds to average over.
         eval_loader: shared evaluation dataloader (same across arms for
             fair comparison).
+        context_fn: per-batch context callable passed to evaluate_expert;
+            needed for arms where training injected context — supplying
+            matching context at eval time avoids the train/eval mismatch
+            that breaks arm B when `context_fn` is None.
 
     Returns:
         SampleEfficiencyResult with per-seed accuracies + mean/stdev.
@@ -112,7 +127,7 @@ def sample_efficiency_curve(
             t0 = time.time()
             model, final_loss = run_arm(b, s)
             elapsed = time.time() - t0
-            acc = evaluate_expert(model, eval_loader)
+            acc = evaluate_expert(model, eval_loader, context_fn=context_fn)
             per_seed[s][b] = acc
             raw.append(BudgetResult(
                 budget=b, seed=s, arm=arm_name, accuracy=acc,

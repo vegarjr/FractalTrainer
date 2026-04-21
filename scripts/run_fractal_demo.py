@@ -45,7 +45,8 @@ from fractaltrainer.integration import (  # noqa: E402
     ContextAwareMLP, ContextSpec,
     Describer, FractalPipeline, MockDescriber, OracleDescriber,
     QueryInput, ReclusterPolicy, SampleEfficiencyResult,
-    evaluate_expert, render_efficiency_table_md, sample_efficiency_curve,
+    evaluate_expert, gather_context, random_context,
+    render_efficiency_table_md, sample_efficiency_curve,
     spawn_baseline, spawn_random_context, spawn_with_context,
 )
 from fractaltrainer.registry import FractalEntry, FractalRegistry  # noqa: E402
@@ -292,17 +293,39 @@ def _ablation_for_spawn_query(
         )
         return m, stats.final_loss
 
+    # Eval-time context fns (Sprint 17 follow-up — fix for the C=negative
+    # result). At training time arms B and C inject non-zero context; if we
+    # then evaluate with context=None, the model is off-distribution. Match
+    # the eval-time context to what each arm trained with.
+    def _ctx_fn_neighbors(x: torch.Tensor) -> torch.Tensor:
+        return gather_context(
+            nearest_models, x, spec, distances=nearest_distances,
+        )
+
+    _eval_rng_counter = {"C": 0}
+
+    def _ctx_fn_random(x: torch.Tensor) -> torch.Tensor:
+        # Deterministic across runs of the same arm — re-seed per batch
+        # so successive batches see different tensors but two calls with
+        # the same batch index produce identical context.
+        idx = _eval_rng_counter["C"]
+        _eval_rng_counter["C"] += 1
+        return random_context(batch_size=x.size(0),
+                               seed=987654 + idx, scale=1.0)
+
     results: dict[str, SampleEfficiencyResult] = {}
-    for arm_name, runner in [
-        ("A_no_context", run_arm_baseline),
-        ("B_nearest_context", run_arm_neighbors),
-        ("C_random_context", run_arm_random),
+    for arm_name, runner, ctx_fn in [
+        ("A_no_context",      run_arm_baseline,  None),
+        ("B_nearest_context", run_arm_neighbors, _ctx_fn_neighbors),
+        ("C_random_context",  run_arm_random,    _ctx_fn_random),
     ]:
         if verbose:
             print(f"    [ablation] arm {arm_name} × budgets {budgets} × seeds {seeds}")
+        _eval_rng_counter["C"] = 0  # reset per arm
         r = sample_efficiency_curve(
             runner, arm_name=arm_name,
             budgets=budgets, seeds=seeds, eval_loader=eval_batches,
+            context_fn=ctx_fn,
         )
         results[arm_name] = r
     return results
@@ -530,9 +553,27 @@ def main(argv: list[str] | None = None) -> int:
             action_str = (f"compose top-{len(step.neighbors_used)}: "
                           f"{', '.join(step.neighbors_used)}")
         elif step.verdict == "spawn":
-            # Accuracy of the spawn-with-context arm (run inside pipeline.step)
+            # Accuracy of the spawn-with-context arm (run inside pipeline.step).
+            # Use eval-time context matching what the model trained with — the
+            # probe-signature invariant (context=None) is for routing only.
             spawned_model = pipeline.model_by_entry[step.new_entry.name]
-            accuracy = evaluate_expert(spawned_model, eval_ldr, context=None)
+            _neighbor_models_for_eval = [
+                pipeline.model_by_entry[name]
+                for name in step.neighbors_used
+                if name in pipeline.model_by_entry
+            ]
+            _neighbor_dists_for_eval = (
+                list(step.decision.retrieval.distances[:context_spec.k])
+                if step.decision.retrieval else None
+            )
+            def _spawn_eval_ctx_fn(x):
+                return gather_context(
+                    _neighbor_models_for_eval, x, context_spec,
+                    distances=_neighbor_dists_for_eval,
+                )
+            accuracy = evaluate_expert(
+                spawned_model, eval_ldr, context_fn=_spawn_eval_ctx_fn,
+            )
             action_str = (f"spawn w/ context K={args.K} from: "
                           f"{', '.join(step.neighbors_used)}")
             print(f"    accuracy (spawn w/ context, N={max(args.budgets)}): {accuracy:.3f}")
