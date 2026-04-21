@@ -1,6 +1,7 @@
 """v3 Sprint 17 — closed perception→growth loop + context injection."""
 
 from fractaltrainer.integration.context_mlp import (
+    ContextAwareCNN,
     ContextAwareMLP,
     baseline_mlp_forward,
 )
@@ -47,7 +48,7 @@ from fractaltrainer.integration.evaluation import (
 )
 
 __all__ = [
-    "ContextAwareMLP", "baseline_mlp_forward",
+    "ContextAwareCNN", "ContextAwareMLP", "baseline_mlp_forward",
     "ContextSpec", "gather_context", "random_context",
     "DescribeResult", "Describer", "MockDescriber", "OracleDescriber",
     "ClusteringResult", "recluster", "agglomerative_cluster_average_linkage",

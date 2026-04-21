@@ -35,9 +35,24 @@ from fractaltrainer.integration.context_injection import (
     random_context,
 )
 from fractaltrainer.integration.context_mlp import (
+    ContextAwareCNN,
     ContextAwareMLP,
     PENULTIMATE_DIM,
 )
+
+
+# Any nn.Module factory that returns a model with .penultimate() and
+# accepts `context_scale` in its constructor works here. Default is the
+# 784-d MLP used throughout Sprints 3-17.
+ModelFactory = Callable[[float], torch.nn.Module]
+
+
+def default_model_factory(context_scale: float) -> torch.nn.Module:
+    return ContextAwareMLP(context_scale=context_scale)
+
+
+def cnn_model_factory(context_scale: float) -> torch.nn.Module:
+    return ContextAwareCNN(context_scale=context_scale)
 from fractaltrainer.integration.signatures import (
     SignatureFn,
     get_signature_fn,
@@ -55,7 +70,7 @@ class TrainStats:
 
 
 def _probe_signature(
-    model: ContextAwareMLP,
+    model: torch.nn.Module,
     probe: torch.Tensor,
     signature_fn: SignatureFn | None = None,
 ) -> np.ndarray:
@@ -71,7 +86,7 @@ def _probe_signature(
 
 
 def _train_step(
-    model: ContextAwareMLP,
+    model: torch.nn.Module,
     x: torch.Tensor,
     y: torch.Tensor,
     context: torch.Tensor | None,
@@ -119,7 +134,7 @@ def _context_for_batch(
 
 
 def _train_loop(
-    model: ContextAwareMLP,
+    model: torch.nn.Module,
     dataloader: Iterable,
     *,
     n_steps: int,
@@ -169,15 +184,17 @@ def spawn_baseline(
     task: str | None = None,
     metadata_extra: dict | None = None,
     signature_fn: SignatureFn | None = None,
-) -> tuple[ContextAwareMLP, FractalEntry, TrainStats]:
-    """Train a fresh ContextAwareMLP with the context lane disabled.
+    model_factory: ModelFactory | None = None,
+) -> tuple[torch.nn.Module, FractalEntry, TrainStats]:
+    """Train a fresh model (default ContextAwareMLP) with the context lane disabled.
 
     Arm A of the ablation — the no-context control. Returns the model,
     its FractalEntry (signature + metadata), and training stats.
     """
     torch.manual_seed(seed)
     np.random.seed(seed)
-    model = ContextAwareMLP(context_scale=0.0)
+    factory = model_factory or default_model_factory
+    model = factory(0.0)
     stats = _train_loop(
         model, dataloader,
         n_steps=n_steps, lr=lr,
@@ -211,7 +228,8 @@ def spawn_with_context(
     task: str | None = None,
     metadata_extra: dict | None = None,
     signature_fn: SignatureFn | None = None,
-) -> tuple[ContextAwareMLP, FractalEntry, TrainStats]:
+    model_factory: ModelFactory | None = None,
+) -> tuple[torch.nn.Module, FractalEntry, TrainStats]:
     """Train a fresh ContextAwareMLP with the context lane enabled.
 
     Arm B of the ablation. Each training step pulls the aggregated
@@ -223,7 +241,8 @@ def spawn_with_context(
     """
     torch.manual_seed(seed)
     np.random.seed(seed)
-    model = ContextAwareMLP(context_scale=context_scale)
+    factory = model_factory or default_model_factory
+    model = factory(context_scale)
     stats = _train_loop(
         model, dataloader,
         n_steps=n_steps, lr=lr,
@@ -260,7 +279,8 @@ def spawn_random_context(
     task: str | None = None,
     metadata_extra: dict | None = None,
     signature_fn: SignatureFn | None = None,
-) -> tuple[ContextAwareMLP, FractalEntry, TrainStats]:
+    model_factory: ModelFactory | None = None,
+) -> tuple[torch.nn.Module, FractalEntry, TrainStats]:
     """Train with a FRESH random context tensor each step.
 
     Arm C of the ablation — context is random noise, not neighbor
@@ -269,7 +289,8 @@ def spawn_random_context(
     """
     torch.manual_seed(seed)
     np.random.seed(seed)
-    model = ContextAwareMLP(context_scale=context_scale)
+    factory = model_factory or default_model_factory
+    model = factory(context_scale)
     stats = _train_loop(
         model, dataloader,
         n_steps=n_steps, lr=lr,

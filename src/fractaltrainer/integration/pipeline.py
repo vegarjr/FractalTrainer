@@ -155,6 +155,7 @@ class FractalPipeline:
         recluster_policy: ReclusterPolicy | None = None,
         task_label_key: str = "task_labels",
         model_by_entry: Optional[dict[str, torch.nn.Module]] = None,
+        model_factory: Optional[Callable[[float], torch.nn.Module]] = None,
     ):
         self.registry = registry
         self.describer = describer
@@ -165,6 +166,7 @@ class FractalPipeline:
         self.context_scale = float(context_scale)
         self.recluster_policy = recluster_policy or ReclusterPolicy()
         self.task_label_key = task_label_key
+        self.model_factory = model_factory
         # Caller-owned map from entry name → trained model, used when
         # the verdict is match/compose (registry itself only stores
         # signatures). If a spawn creates a new model, the pipeline
@@ -325,6 +327,7 @@ class FractalPipeline:
                     q.train_loader, q.probe,
                     n_steps=spawn_n_steps, lr=spawn_lr, seed=spawn_seed,
                     entry_name=entry_name, task=q.name,
+                    model_factory=self.model_factory,
                     metadata_extra={
                         "task_labels": list(sorted(q.truth_labels)),
                     },
@@ -338,6 +341,7 @@ class FractalPipeline:
                     context_scale=self.context_scale,
                     n_steps=spawn_n_steps, lr=spawn_lr, seed=spawn_seed,
                     entry_name=entry_name, task=q.name,
+                    model_factory=self.model_factory,
                     metadata_extra={
                         "task_labels": list(sorted(q.truth_labels)),
                     },
@@ -348,6 +352,7 @@ class FractalPipeline:
                     context_scale=self.context_scale,
                     n_steps=spawn_n_steps, lr=spawn_lr, seed=spawn_seed,
                     entry_name=entry_name, task=q.name,
+                    model_factory=self.model_factory,
                     metadata_extra={
                         "task_labels": list(sorted(q.truth_labels)),
                     },

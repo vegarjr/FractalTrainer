@@ -125,3 +125,98 @@ def baseline_mlp_forward(model: ContextAwareMLP, x: torch.Tensor) -> torch.Tenso
     h1 = torch.relu(model.fc1(x))
     h2 = torch.relu(model.fc2(h1))
     return model.fc3(h2)
+
+
+class ContextAwareCNN(nn.Module):
+    """Small CNN for 3×32×32 images (CIFAR-10) with the same context-lane
+    contract as ContextAwareMLP.
+
+    Architecture:
+        conv1 (in_channels → 16, 3×3, pad=1) → ReLU → MaxPool2d(2)
+        conv2 (16 → 32, 3×3, pad=1) → ReLU → MaxPool2d(2)
+        flatten → Linear(feat_dim, 64) → + context_lane → ReLU
+        → Linear(64, 32) → ReLU                          # penultimate
+        → Linear(32, n_classes)
+
+    The context lane fuses into the 64-d hidden layer, exactly mirroring
+    ContextAwareMLP's fusion point. Penultimate shape is the same (B, 32)
+    so `gather_context` works unchanged.
+
+    For input (B, in_channels, H, W) with H=W=32, the post-conv feature
+    dim is 32 * (H/4) * (W/4) = 32 * 8 * 8 = 2048.
+    """
+
+    def __init__(
+        self,
+        in_channels: int = 3,
+        input_size: int = 32,
+        context_dim: int = PENULTIMATE_DIM,
+        context_scale: float = 1.0,
+        n_classes: int = N_CLASSES,
+    ):
+        super().__init__()
+        self.in_channels = in_channels
+        self.input_size = input_size
+        self.context_dim = int(context_dim)
+        self.context_scale = float(context_scale)
+
+        self.conv1 = nn.Conv2d(in_channels, 16, kernel_size=3, padding=1)
+        self.conv2 = nn.Conv2d(16, 32, kernel_size=3, padding=1)
+        self.pool = nn.MaxPool2d(2)
+
+        feat_size = input_size // 4  # two poolings of /2
+        self.feat_dim = 32 * feat_size * feat_size
+
+        self.fc1 = nn.Linear(self.feat_dim, HIDDEN_DIM)
+        self.fc2 = nn.Linear(HIDDEN_DIM, PENULTIMATE_DIM)
+        self.fc3 = nn.Linear(PENULTIMATE_DIM, n_classes)
+
+        if self.context_dim > 0:
+            self.ctx_norm = nn.LayerNorm(self.context_dim)
+            self.ctx_proj = nn.Linear(self.context_dim, HIDDEN_DIM)
+        else:
+            self.ctx_norm = None
+            self.ctx_proj = None
+
+    def _features(self, x: torch.Tensor) -> torch.Tensor:
+        if x.ndim == 3:
+            x = x.unsqueeze(0)
+        x = self.pool(torch.relu(self.conv1(x)))
+        x = self.pool(torch.relu(self.conv2(x)))
+        return x.view(x.size(0), -1)
+
+    def forward(
+        self, x: torch.Tensor, context: torch.Tensor | None = None,
+    ) -> torch.Tensor:
+        feat = self._features(x)
+        h0 = self.fc1(feat)
+        if (
+            context is not None
+            and self.ctx_proj is not None
+            and self.context_scale != 0.0
+        ):
+            c = self.ctx_norm(context)
+            h0 = h0 + self.context_scale * self.ctx_proj(c)
+        h1 = torch.relu(h0)
+        h2 = torch.relu(self.fc2(h1))
+        return self.fc3(h2)
+
+    def penultimate(
+        self, x: torch.Tensor, context: torch.Tensor | None = None,
+    ) -> torch.Tensor:
+        """Return the (B, 32) activation before the final Linear.
+
+        Mirror of ContextAwareMLP.penultimate — same contract so
+        gather_context works without type-specific logic.
+        """
+        feat = self._features(x)
+        h0 = self.fc1(feat)
+        if (
+            context is not None
+            and self.ctx_proj is not None
+            and self.context_scale != 0.0
+        ):
+            c = self.ctx_norm(context)
+            h0 = h0 + self.context_scale * self.ctx_proj(c)
+        h1 = torch.relu(h0)
+        return torch.relu(self.fc2(h1))

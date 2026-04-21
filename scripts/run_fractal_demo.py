@@ -42,13 +42,28 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from fractaltrainer.integration import (  # noqa: E402
-    ContextAwareMLP, ContextSpec,
+    ContextAwareCNN, ContextAwareMLP, ContextSpec,
     Describer, FractalPipeline, MockDescriber, OracleDescriber,
     QueryInput, ReclusterPolicy, SampleEfficiencyResult,
     evaluate_expert, gather_context, random_context,
     render_efficiency_table_md, sample_efficiency_curve,
     spawn_baseline, spawn_random_context, spawn_with_context,
 )
+from fractaltrainer.integration.spawn import (  # noqa: E402
+    cnn_model_factory, default_model_factory,
+)
+
+
+def _model_factory_for(arch: str):
+    if arch == "mlp":
+        return default_model_factory
+    if arch == "cnn":
+        return cnn_model_factory
+    raise ValueError(f"unknown arch: {arch!r} (choose 'mlp' or 'cnn')")
+
+
+def _make_untrained_model(arch: str):
+    return _model_factory_for(arch)(0.0)
 from fractaltrainer.registry import FractalEntry, FractalRegistry  # noqa: E402
 
 
@@ -88,8 +103,14 @@ RelabeledMNIST = RelabeledDataset
 
 
 DATASET_SPECS = {
-    "mnist":   {"cls_name": "MNIST",        "mean": 0.1307, "std": 0.3081},
-    "fashion": {"cls_name": "FashionMNIST", "mean": 0.2860, "std": 0.3530},
+    "mnist":   {"cls_name": "MNIST",        "mean": (0.1307,), "std": (0.3081,),
+                "channels": 1, "default_arch": "mlp"},
+    "fashion": {"cls_name": "FashionMNIST", "mean": (0.2860,), "std": (0.3530,),
+                "channels": 1, "default_arch": "mlp"},
+    "cifar10": {"cls_name": "CIFAR10",
+                "mean": (0.4914, 0.4822, 0.4465),
+                "std":  (0.2470, 0.2435, 0.2616),
+                "channels": 3, "default_arch": "cnn"},
 }
 
 
@@ -102,11 +123,16 @@ def _dataset_cls(name: str):
     return getattr(datasets, spec["cls_name"]), spec["mean"], spec["std"]
 
 
-def _transform(mean: float, std: float):
+def _default_arch_for(dataset: str) -> str:
+    spec = DATASET_SPECS.get(dataset.lower())
+    return spec["default_arch"] if spec else "mlp"
+
+
+def _transform(mean, std):
     from torchvision import transforms
     return transforms.Compose([
         transforms.ToTensor(),
-        transforms.Normalize((mean,), (std,)),
+        transforms.Normalize(mean, std),
     ])
 
 
@@ -180,11 +206,12 @@ def _train_seed_expert(
     target: tuple[int, ...], seed: int, n_steps: int,
     train_size: int, batch_size: int, data_dir: str,
     dataset: str = "mnist",
-) -> ContextAwareMLP:
+    arch: str = "mlp",
+) -> torch.nn.Module:
     """Train a seed expert with context_scale=0 (baseline MLP behavior)."""
     torch.manual_seed(seed)
     np.random.seed(seed)
-    model = ContextAwareMLP(context_scale=0.0)
+    model = _make_untrained_model(arch)
     loader = _train_loader(target, train_size, batch_size, data_dir, seed, dataset)
     optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
     step = 0
@@ -206,6 +233,7 @@ def _build_seed_registry(
     probe: torch.Tensor, data_dir: str, seed_steps: int,
     train_size: int, batch_size: int, verbose: bool,
     dataset: str = "mnist",
+    arch: str = "mlp",
 ) -> tuple[FractalRegistry, dict[str, torch.nn.Module]]:
     registry = FractalRegistry()
     models: dict[str, torch.nn.Module] = {}
@@ -219,7 +247,7 @@ def _build_seed_registry(
                 print(f"  [{i}/{total}] training seed expert: {task_name} seed={seed}")
             model = _train_seed_expert(
                 target, seed, seed_steps, train_size, batch_size, data_dir,
-                dataset=dataset,
+                dataset=dataset, arch=arch,
             )
             sig = _probe_signature(model, probe)
             name = f"{task_name}_seed{seed}"
@@ -248,6 +276,7 @@ def _ablation_for_spawn_query(
     spec: ContextSpec, context_scale: float,
     lr: float,
     verbose: bool,
+    arch: str = "mlp",
 ) -> dict[str, SampleEfficiencyResult]:
     """Run three-arm (A=none, B=neighbors, C=random) ablation across budgets × seeds."""
     # Find K nearest signatures to the spawn query's truth
@@ -257,10 +286,11 @@ def _ablation_for_spawn_query(
     # on the spawn task and signature it once. The ablation uses the SAME
     # nearest set for every run — critical for comparability.
     probe = q.probe
+    model_factory = _model_factory_for(arch)
     # Compute "oracle" signature by training one expert with a modest budget
     # once, just to get a representative signature for routing.
     torch.manual_seed(13)
-    oracle = ContextAwareMLP(context_scale=0.0)
+    oracle = _make_untrained_model(arch)
     opt = torch.optim.Adam(oracle.parameters(), lr=0.01)
     it = iter(q.train_loader)
     for _ in range(100):
@@ -305,7 +335,7 @@ def _ablation_for_spawn_query(
         m, _, stats = spawn_baseline(
             q.train_loader, probe, n_steps=budget, lr=lr, seed=seed,
             entry_name=f"spawnA_{q.name}_seed{seed}_N{budget}",
-            task=q.name,
+            task=q.name, model_factory=model_factory,
         )
         return m, stats.final_loss
 
@@ -316,7 +346,7 @@ def _ablation_for_spawn_query(
             spec=spec, context_scale=context_scale,
             n_steps=budget, lr=lr, seed=seed,
             entry_name=f"spawnB_{q.name}_seed{seed}_N{budget}",
-            task=q.name,
+            task=q.name, model_factory=model_factory,
         )
         return m, stats.final_loss
 
@@ -326,7 +356,7 @@ def _ablation_for_spawn_query(
             context_scale=context_scale,
             n_steps=budget, lr=lr, seed=seed,
             entry_name=f"spawnC_{q.name}_seed{seed}_N{budget}",
-            task=q.name,
+            task=q.name, model_factory=model_factory,
         )
         return m, stats.final_loss
 
@@ -471,8 +501,12 @@ def _plot_efficiency(results: dict[str, SampleEfficiencyResult],
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=("smoke", "full"), default="full")
-    parser.add_argument("--dataset", choices=("mnist", "fashion"), default="mnist",
+    parser.add_argument("--dataset", choices=("mnist", "fashion", "cifar10"),
+                        default="mnist",
                         help="torchvision dataset (10-class assumed)")
+    parser.add_argument("--arch", choices=("auto", "mlp", "cnn"), default="auto",
+                        help="model family; 'auto' picks mlp for 1-channel "
+                             "datasets, cnn for cifar10")
     parser.add_argument("--llm", choices=("mock", "local", "cli"), default="mock")
     parser.add_argument("--local-llm-url", default="http://127.0.0.1:8080")
     parser.add_argument("--data-dir", default="results/data")
@@ -515,10 +549,13 @@ def main(argv: list[str] | None = None) -> int:
         args.budgets = [50, 100] if is_smoke else [50, 100, 300, 500, 1000]
     if is_smoke:
         args.seeds = args.seeds[:1]
+    if args.arch == "auto":
+        args.arch = _default_arch_for(args.dataset)
 
     verbose = args.verbose or (not is_smoke)
     print("=" * 72)
-    print(f"  FRACTAL DEMO — mode={args.mode}  llm={args.llm}  K={args.K}  "
+    print(f"  FRACTAL DEMO — mode={args.mode}  dataset={args.dataset}  "
+          f"arch={args.arch}  llm={args.llm}  K={args.K}  "
           f"scale={args.context_scale}")
     print("=" * 72)
 
@@ -539,7 +576,7 @@ def main(argv: list[str] | None = None) -> int:
     registry, models = _build_seed_registry(
         probe, args.data_dir, seed_steps,
         seed_train_size, seed_batch_size, verbose,
-        dataset=args.dataset,
+        dataset=args.dataset, arch=args.arch,
     )
 
     # ── Pipeline ──
@@ -553,6 +590,7 @@ def main(argv: list[str] | None = None) -> int:
         context_spec=context_spec,
         context_scale=args.context_scale,
         model_by_entry=models,
+        model_factory=_model_factory_for(args.arch),
         recluster_policy=ReclusterPolicy(interval_spawns=2, trigger_at_end=True),
     )
 
@@ -577,7 +615,7 @@ def main(argv: list[str] | None = None) -> int:
 
         # Signature the query: train a small oracle model, signature it.
         torch.manual_seed(seed)
-        oracle = ContextAwareMLP(context_scale=0.0)
+        oracle = _make_untrained_model(args.arch)
         opt = torch.optim.Adam(oracle.parameters(), lr=args.lr)
         it = iter(train_ldr)
         for _ in range(100 if not is_smoke else 40):
@@ -645,7 +683,7 @@ def main(argv: list[str] | None = None) -> int:
                 q, registry, models,
                 budgets=args.budgets, seeds=args.seeds,
                 spec=context_spec, context_scale=args.context_scale,
-                lr=args.lr, verbose=verbose,
+                lr=args.lr, verbose=verbose, arch=args.arch,
             )
             ablation_by_query[q_name] = {
                 arm: r.to_dict() for arm, r in ablation_results.items()
