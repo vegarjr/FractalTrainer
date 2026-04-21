@@ -68,7 +68,11 @@ QUERY_TASKS = {
 }
 
 
-class RelabeledMNIST(Dataset):
+class RelabeledDataset(Dataset):
+    """Wraps a 10-class classification dataset, relabeling to binary
+    `int(y in target)`. Task-agnostic — works for any torchvision
+    dataset whose labels are ints in [0, 9]."""
+
     def __init__(self, base, target):
         self.base = base
         self.target = set(int(d) for d in target)
@@ -79,23 +83,52 @@ class RelabeledMNIST(Dataset):
         return x, int(int(y) in self.target)
 
 
-def _mnist_probe(data_dir: str, n: int, seed: int) -> torch.Tensor:
-    from torchvision import datasets, transforms
-    t = transforms.Compose([transforms.ToTensor(),
-                             transforms.Normalize((0.1307,), (0.3081,))])
-    base = datasets.MNIST(data_dir, train=False, download=True, transform=t)
+# Back-compat alias
+RelabeledMNIST = RelabeledDataset
+
+
+DATASET_SPECS = {
+    "mnist":   {"cls_name": "MNIST",        "mean": 0.1307, "std": 0.3081},
+    "fashion": {"cls_name": "FashionMNIST", "mean": 0.2860, "std": 0.3530},
+}
+
+
+def _dataset_cls(name: str):
+    from torchvision import datasets
+    spec = DATASET_SPECS.get(name.lower())
+    if spec is None:
+        raise ValueError(f"unknown dataset: {name!r} "
+                         f"(choose from {list(DATASET_SPECS)})")
+    return getattr(datasets, spec["cls_name"]), spec["mean"], spec["std"]
+
+
+def _transform(mean: float, std: float):
+    from torchvision import transforms
+    return transforms.Compose([
+        transforms.ToTensor(),
+        transforms.Normalize((mean,), (std,)),
+    ])
+
+
+def _probe(data_dir: str, n: int, seed: int,
+            dataset: str = "mnist") -> torch.Tensor:
+    cls, mean, std = _dataset_cls(dataset)
+    base = cls(data_dir, train=False, download=True, transform=_transform(mean, std))
     rng = np.random.RandomState(seed)
     idx = rng.choice(len(base), size=n, replace=False)
     return torch.stack([base[i][0] for i in idx.tolist()], dim=0)
 
 
+# Back-compat alias
+_mnist_probe = _probe
+
+
 def _train_loader(target: tuple[int, ...], n: int, batch_size: int,
-                   data_dir: str, seed: int) -> DataLoader:
-    from torchvision import datasets, transforms
-    t = transforms.Compose([transforms.ToTensor(),
-                             transforms.Normalize((0.1307,), (0.3081,))])
-    base = datasets.MNIST(data_dir, train=True, download=True, transform=t)
-    ds = RelabeledMNIST(base, target)
+                   data_dir: str, seed: int,
+                   dataset: str = "mnist") -> DataLoader:
+    cls, mean, std = _dataset_cls(dataset)
+    base = cls(data_dir, train=True, download=True, transform=_transform(mean, std))
+    ds = RelabeledDataset(base, target)
     rng = np.random.RandomState(seed)
     idx = rng.choice(len(ds), size=n, replace=False)
     return DataLoader(Subset(ds, idx.tolist()),
@@ -103,23 +136,20 @@ def _train_loader(target: tuple[int, ...], n: int, batch_size: int,
 
 
 def _eval_loader(target: tuple[int, ...], n: int, data_dir: str,
-                  seed: int) -> DataLoader:
-    from torchvision import datasets, transforms
-    t = transforms.Compose([transforms.ToTensor(),
-                             transforms.Normalize((0.1307,), (0.3081,))])
-    base = datasets.MNIST(data_dir, train=False, download=True, transform=t)
-    ds = RelabeledMNIST(base, target)
+                  seed: int, dataset: str = "mnist") -> DataLoader:
+    cls, mean, std = _dataset_cls(dataset)
+    base = cls(data_dir, train=False, download=True, transform=_transform(mean, std))
+    ds = RelabeledDataset(base, target)
     rng = np.random.RandomState(seed)
     idx = rng.choice(len(ds), size=n, replace=False)
     return DataLoader(Subset(ds, idx.tolist()), batch_size=64, shuffle=False)
 
 
 def _sample_pairs(target: tuple[int, ...], n_pairs: int,
-                   data_dir: str, seed: int) -> list[tuple[int, int]]:
-    from torchvision import datasets, transforms
-    t = transforms.Compose([transforms.ToTensor(),
-                             transforms.Normalize((0.1307,), (0.3081,))])
-    base = datasets.MNIST(data_dir, train=True, download=True, transform=t)
+                   data_dir: str, seed: int,
+                   dataset: str = "mnist") -> list[tuple[int, int]]:
+    cls, mean, std = _dataset_cls(dataset)
+    base = cls(data_dir, train=True, download=True, transform=_transform(mean, std))
     rng = np.random.RandomState(seed)
     idx = rng.choice(len(base), size=n_pairs, replace=False)
     ts = set(int(x) for x in target)
@@ -145,12 +175,13 @@ def _probe_signature(model: torch.nn.Module, probe: torch.Tensor) -> np.ndarray:
 def _train_seed_expert(
     target: tuple[int, ...], seed: int, n_steps: int,
     train_size: int, batch_size: int, data_dir: str,
+    dataset: str = "mnist",
 ) -> ContextAwareMLP:
     """Train a seed expert with context_scale=0 (baseline MLP behavior)."""
     torch.manual_seed(seed)
     np.random.seed(seed)
     model = ContextAwareMLP(context_scale=0.0)
-    loader = _train_loader(target, train_size, batch_size, data_dir, seed)
+    loader = _train_loader(target, train_size, batch_size, data_dir, seed, dataset)
     optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
     step = 0
     it = iter(loader)
@@ -170,6 +201,7 @@ def _train_seed_expert(
 def _build_seed_registry(
     probe: torch.Tensor, data_dir: str, seed_steps: int,
     train_size: int, batch_size: int, verbose: bool,
+    dataset: str = "mnist",
 ) -> tuple[FractalRegistry, dict[str, torch.nn.Module]]:
     registry = FractalRegistry()
     models: dict[str, torch.nn.Module] = {}
@@ -183,6 +215,7 @@ def _build_seed_registry(
                 print(f"  [{i}/{total}] training seed expert: {task_name} seed={seed}")
             model = _train_seed_expert(
                 target, seed, seed_steps, train_size, batch_size, data_dir,
+                dataset=dataset,
             )
             sig = _probe_signature(model, probe)
             name = f"{task_name}_seed{seed}"
@@ -434,6 +467,8 @@ def _plot_efficiency(results: dict[str, SampleEfficiencyResult],
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=("smoke", "full"), default="full")
+    parser.add_argument("--dataset", choices=("mnist", "fashion"), default="mnist",
+                        help="torchvision dataset (10-class assumed)")
     parser.add_argument("--llm", choices=("mock", "local", "cli"), default="mock")
     parser.add_argument("--local-llm-url", default="http://127.0.0.1:8080")
     parser.add_argument("--data-dir", default="results/data")
@@ -475,8 +510,9 @@ def main(argv: list[str] | None = None) -> int:
     print("=" * 72)
 
     # ── Build probe ──
-    print("\n[1/4] loading MNIST probe batch...")
-    probe = _mnist_probe(args.data_dir, args.n_probe, args.probe_seed)
+    print(f"\n[1/4] loading {args.dataset} probe batch...")
+    probe = _probe(args.data_dir, args.n_probe, args.probe_seed,
+                    dataset=args.dataset)
 
     # ── Build seed registry ──
     print(f"\n[2/4] training {len(SEED_TASKS) * len(SEEDS)} seed experts "
@@ -484,6 +520,7 @@ def main(argv: list[str] | None = None) -> int:
     registry, models = _build_seed_registry(
         probe, args.data_dir, seed_steps,
         args.train_size, args.batch_size, verbose,
+        dataset=args.dataset,
     )
 
     # ── Pipeline ──
@@ -508,11 +545,12 @@ def main(argv: list[str] | None = None) -> int:
 
     for q_name, (task_name, labels, seed) in QUERY_TASKS.items():
         print(f"\n  ── {q_name} — task={task_name} labels={labels} ──")
-        pairs = _sample_pairs(labels, args.n_pairs, args.data_dir, seed)
+        pairs = _sample_pairs(labels, args.n_pairs, args.data_dir, seed,
+                                dataset=args.dataset)
         train_ldr = _train_loader(labels, args.train_size, args.batch_size,
-                                    args.data_dir, seed)
+                                    args.data_dir, seed, dataset=args.dataset)
         eval_ldr = list(_eval_loader(labels, args.n_eval, args.data_dir,
-                                       seed + 1))
+                                       seed + 1, dataset=args.dataset))
         q = QueryInput(
             name=q_name, pairs=pairs, truth_labels=frozenset(labels),
             train_loader=train_ldr, eval_loader=eval_ldr, probe=probe,
