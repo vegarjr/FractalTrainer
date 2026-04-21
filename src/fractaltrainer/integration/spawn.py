@@ -38,6 +38,11 @@ from fractaltrainer.integration.context_mlp import (
     ContextAwareMLP,
     PENULTIMATE_DIM,
 )
+from fractaltrainer.integration.signatures import (
+    SignatureFn,
+    get_signature_fn,
+    softmax_signature,
+)
 from fractaltrainer.registry import FractalEntry
 
 
@@ -49,12 +54,20 @@ class TrainStats:
     elapsed_s: float = 0.0
 
 
-def _probe_signature(model: ContextAwareMLP, probe: torch.Tensor) -> np.ndarray:
-    model.eval()
-    with torch.no_grad():
-        logits = model(probe, context=None)
-        probs = F.softmax(logits, dim=1)
-    return probs.flatten().cpu().numpy()
+def _probe_signature(
+    model: ContextAwareMLP,
+    probe: torch.Tensor,
+    signature_fn: SignatureFn | None = None,
+) -> np.ndarray:
+    """Compute a signature for this model on the probe batch.
+
+    Defaults to the Sprint-3 softmax signature. Pass a different
+    `signature_fn` (e.g. `penultimate_signature`) to change the
+    signature space — caller is responsible for ensuring every
+    entry in a registry uses the same signature_fn for comparability.
+    """
+    fn = signature_fn or softmax_signature
+    return fn(model, probe)
 
 
 def _train_step(
@@ -155,12 +168,12 @@ def spawn_baseline(
     entry_name: str = "spawn_baseline",
     task: str | None = None,
     metadata_extra: dict | None = None,
+    signature_fn: SignatureFn | None = None,
 ) -> tuple[ContextAwareMLP, FractalEntry, TrainStats]:
     """Train a fresh ContextAwareMLP with the context lane disabled.
 
-    This is Arm A of the ablation — the no-context control. Returns
-    the model, its FractalEntry (signature + metadata), and training
-    stats.
+    Arm A of the ablation — the no-context control. Returns the model,
+    its FractalEntry (signature + metadata), and training stats.
     """
     torch.manual_seed(seed)
     np.random.seed(seed)
@@ -172,7 +185,7 @@ def spawn_baseline(
         neighbors=None, neighbor_distances=None, spec=None,
         rng_seed=seed,
     )
-    sig = _probe_signature(model, probe)
+    sig = _probe_signature(model, probe, signature_fn=signature_fn)
     meta = {
         "task": task, "seed": seed, "spawned": True,
         "context_mode": "none", "train_wall_s": stats.elapsed_s,
@@ -197,6 +210,7 @@ def spawn_with_context(
     entry_name: str = "spawn_with_context",
     task: str | None = None,
     metadata_extra: dict | None = None,
+    signature_fn: SignatureFn | None = None,
 ) -> tuple[ContextAwareMLP, FractalEntry, TrainStats]:
     """Train a fresh ContextAwareMLP with the context lane enabled.
 
@@ -219,7 +233,7 @@ def spawn_with_context(
         spec=spec or ContextSpec(),
         rng_seed=seed,
     )
-    sig = _probe_signature(model, probe)
+    sig = _probe_signature(model, probe, signature_fn=signature_fn)
     meta = {
         "task": task, "seed": seed, "spawned": True,
         "context_mode": "neighbors",
@@ -245,6 +259,7 @@ def spawn_random_context(
     entry_name: str = "spawn_random_context",
     task: str | None = None,
     metadata_extra: dict | None = None,
+    signature_fn: SignatureFn | None = None,
 ) -> tuple[ContextAwareMLP, FractalEntry, TrainStats]:
     """Train with a FRESH random context tensor each step.
 
@@ -262,7 +277,7 @@ def spawn_random_context(
         neighbors=None, neighbor_distances=None, spec=None,
         rng_seed=seed,
     )
-    sig = _probe_signature(model, probe)
+    sig = _probe_signature(model, probe, signature_fn=signature_fn)
     meta = {
         "task": task, "seed": seed, "spawned": True,
         "context_mode": "random",

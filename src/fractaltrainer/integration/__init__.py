@@ -20,6 +20,12 @@ from fractaltrainer.integration.recluster import (
     recluster,
     agglomerative_cluster_average_linkage,
 )
+from fractaltrainer.integration.signatures import (
+    SignatureFn,
+    get_signature_fn,
+    penultimate_signature,
+    softmax_signature,
+)
 from fractaltrainer.integration.spawn import (
     TrainStats,
     spawn_baseline,
@@ -45,6 +51,7 @@ __all__ = [
     "ContextSpec", "gather_context", "random_context",
     "DescribeResult", "Describer", "MockDescriber", "OracleDescriber",
     "ClusteringResult", "recluster", "agglomerative_cluster_average_linkage",
+    "SignatureFn", "get_signature_fn", "penultimate_signature", "softmax_signature",
     "TrainStats", "spawn_baseline", "spawn_random_context", "spawn_with_context",
     "FractalPipeline", "PipelineStep", "QueryInput", "ReclusterPolicy",
     "BudgetResult", "SampleEfficiencyResult",
