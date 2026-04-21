@@ -131,8 +131,12 @@ def _train_loader(target: tuple[int, ...], n: int, batch_size: int,
     ds = RelabeledDataset(base, target)
     rng = np.random.RandomState(seed)
     idx = rng.choice(len(ds), size=n, replace=False)
+    # Clamp batch_size so drop_last still yields ≥1 batch on tiny
+    # train_size (data-starved ablations).
+    effective_batch = max(1, min(batch_size, n))
     return DataLoader(Subset(ds, idx.tolist()),
-                       batch_size=batch_size, shuffle=True, drop_last=True)
+                       batch_size=effective_batch, shuffle=True,
+                       drop_last=True)
 
 
 def _eval_loader(target: tuple[int, ...], n: int, data_dir: str,
@@ -481,8 +485,17 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--seeds", type=int, nargs="+", default=[42, 101, 2024])
     parser.add_argument("--seed-steps", type=int, default=None,
                         help="training steps for the 15 seed experts")
-    parser.add_argument("--train-size", type=int, default=5000)
-    parser.add_argument("--batch-size", type=int, default=64)
+    parser.add_argument("--train-size", type=int, default=5000,
+                        help="training samples for Q_spawn + ablation arms")
+    parser.add_argument("--batch-size", type=int, default=64,
+                        help="batch size for Q_spawn + ablation arms")
+    parser.add_argument("--seed-train-size", type=int, default=None,
+                        help="training samples for seed registry; "
+                             "defaults to --train-size. Use a larger value "
+                             "than --train-size for data-starved ablations.")
+    parser.add_argument("--seed-batch-size", type=int, default=None,
+                        help="batch size for seed registry training; "
+                             "defaults to --batch-size.")
     parser.add_argument("--match-threshold", type=float, default=5.0)
     parser.add_argument("--spawn-threshold", type=float, default=7.0)
     parser.add_argument("--n-probe", type=int, default=100)
@@ -515,11 +528,17 @@ def main(argv: list[str] | None = None) -> int:
                     dataset=args.dataset)
 
     # ── Build seed registry ──
+    seed_train_size = (args.seed_train_size
+                       if args.seed_train_size is not None
+                       else args.train_size)
+    seed_batch_size = (args.seed_batch_size
+                       if args.seed_batch_size is not None
+                       else args.batch_size)
     print(f"\n[2/4] training {len(SEED_TASKS) * len(SEEDS)} seed experts "
-          f"(n_steps={seed_steps}, train_size={args.train_size})...")
+          f"(n_steps={seed_steps}, train_size={seed_train_size})...")
     registry, models = _build_seed_registry(
         probe, args.data_dir, seed_steps,
-        args.train_size, args.batch_size, verbose,
+        seed_train_size, seed_batch_size, verbose,
         dataset=args.dataset,
     )
 
