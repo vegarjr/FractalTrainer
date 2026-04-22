@@ -21,9 +21,23 @@ from fractaltrainer.integration.recluster import (
     recluster,
     agglomerative_cluster_average_linkage,
 )
+from fractaltrainer.integration.consolidation import (
+    ConsolidatedDecision,
+    ConsolidatedRouter,
+    DistillStats,
+    teacher_output,
+    train_generalist,
+)
 from fractaltrainer.integration.self_spawn import (
     AutoSpawnPolicy,
     SpawnProposal,
+)
+from fractaltrainer.integration.regression_signatures import (
+    SineRegressor,
+    make_probe_inputs,
+    make_sine_task,
+    regression_probe_signature,
+    train_sine_regressor,
 )
 from fractaltrainer.integration.signatures import (
     SignatureFn,
@@ -57,7 +71,11 @@ __all__ = [
     "DescribeResult", "Describer", "MockDescriber", "OracleDescriber",
     "ClusteringResult", "recluster", "agglomerative_cluster_average_linkage",
     "AutoSpawnPolicy", "SpawnProposal",
+    "ConsolidatedDecision", "ConsolidatedRouter", "DistillStats",
+    "teacher_output", "train_generalist",
     "SignatureFn", "get_signature_fn", "penultimate_signature", "softmax_signature",
+    "SineRegressor", "make_probe_inputs", "make_sine_task",
+    "regression_probe_signature", "train_sine_regressor",
     "TrainStats", "spawn_baseline", "spawn_random_context", "spawn_with_context",
     "FractalPipeline", "PipelineStep", "QueryInput", "ReclusterPolicy",
     "BudgetResult", "SampleEfficiencyResult",
