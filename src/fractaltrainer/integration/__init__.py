@@ -28,6 +28,14 @@ from fractaltrainer.integration.consolidation import (
     teacher_output,
     train_generalist,
 )
+from fractaltrainer.integration.fractal_analysis import (
+    FractalAuditResult,
+    ScaleStabilityResult,
+    audit_label_lattice,
+    audit_signature_cloud,
+    audit_trajectory,
+    classify_verdict,
+)
 from fractaltrainer.integration.self_spawn import (
     AutoSpawnPolicy,
     SpawnProposal,
@@ -73,6 +81,9 @@ __all__ = [
     "AutoSpawnPolicy", "SpawnProposal",
     "ConsolidatedDecision", "ConsolidatedRouter", "DistillStats",
     "teacher_output", "train_generalist",
+    "FractalAuditResult", "ScaleStabilityResult",
+    "audit_label_lattice", "audit_signature_cloud", "audit_trajectory",
+    "classify_verdict",
     "SignatureFn", "get_signature_fn", "penultimate_signature", "softmax_signature",
     "SineRegressor", "make_probe_inputs", "make_sine_task",
     "regression_probe_signature", "train_sine_regressor",
