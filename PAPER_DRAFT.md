@@ -5,30 +5,41 @@ Co-author: Claude Opus 4.7 (1M context, Anthropic).
 
 ## Abstract
 
-We describe FractalTrainer, a routed mixture-of-experts registry that
-treats each trained classifier as an entry in a nearest-neighbor
-lookup over 1000-dimensional softmax-probe signatures. A query whose
-signature is close to an existing entry routes to that expert
-(**match**); a query that sits in a calibrated ambiguity band blends
-the K nearest experts (**compose**); a query far from any entry
-triggers training of a new expert that is registered into the
-repository (**spawn**). We extend the spawn path with *context
-injection*: a newly-spawning expert's first hidden layer is
-additively fused with the inverse-distance-weighted mean of its K
-nearest neighbors' penultimate activations on the query batch. On
-seven controlled ablations across MNIST, Fashion-MNIST, and CIFAR-10
-(MLP and CNN architectures, full-data and data-starved regimes), the
-primitive recovers approximately 15% of the available accuracy gap
-between A (no-context baseline) and the task's full-data ceiling on
-MNIST and CIFAR, with peak lift +5 pp. On Fashion-MNIST the primitive
-contributes nothing — a clean null that we trace to the task's
-feature geometry. We also report a decisive negative: replacing
-softmax signatures with penultimate-activation signatures collapses
-the within-cross-task distance gap, demonstrating that signatures
-must live in an *output-collapse* space rather than a generic latent
-space. Pipeline and primitives are wired end-to-end with an
-LLM-based data describer (Qwen-7B local) validating the
-"perception→routing→growth" story with real-LLM describer noise.
+We describe FractalTrainer, a routed mixture-of-experts registry in
+which each entry is a standalone classifier identified by a 1000-d
+softmax-probe signature vector. A query is routed by three-way
+nearest-neighbor decision: **match** to a single nearest entry,
+**compose** as an inverse-distance-weighted blend of the K nearest,
+or **spawn** a new expert when no existing signature is close
+enough. We introduce *context injection*: on spawn, the new expert's
+first hidden layer is additively fused with the weighted mean of
+its routing-nearest neighbors' penultimate activations on the
+training batch. Across seven controlled ablations (MNIST,
+Fashion-MNIST, CIFAR-10; MLP and CNN; full-data and data-starved
+regimes; 54 `(ablation × budget)` datapoints), context injection
+fits a linear gap rule:
+
+```
+  (B − A) ≈ 0.139 × (ceiling − A),   R² = 0.37,
+          α ≈ 0.15 on MNIST + CIFAR; α ≈ 0.00 on Fashion.
+```
+
+Context injection recovers about 15% of the available accuracy gap
+on datasets where it works, with peak lift +5 pp in a 50-sample
+MNIST regime. On Fashion-MNIST the primitive contributes nothing —
+a clean null that we trace to the task's feature geometry. We also
+report a decisive negative: replacing softmax signatures with
+penultimate-activation signatures collapses the within-task /
+cross-task distance gap, so signatures must live in an *output-
+collapse* space rather than a generic latent space. Two follow-on
+primitives extend the architecture: a hierarchical depth-2 registry
+(task-branches × seed-leaves) that matches flat routing decisions
+on 8/8 test queries at 1.39× lower latency, and an auto-spawn
+policy that observes compose-verdict streams and proposes bridging
+experts. All primitives run end-to-end with an LLM-based data
+describer (local Qwen2.5-Coder-7B) that produces correct routing
+decisions despite partially incorrect describer outputs. Code and
+nine result artifacts are released at vegarjr/FractalTrainer.
 
 ## 1. Motivation
 
@@ -198,12 +209,85 @@ universal latent-space drop-in. This is a cautionary finding against
 
 ## 4. Related work
 
-*[To write: relationship to sparse MoE (Switch Transformer), continual-
-learning replay, model soups, k-NN language models, meta-learning
-retrieval systems. Key positioning: we route post-hoc without a
-learned gate, experts are independent, and the novel primitive is
-context-injection from routing-nearest neighbors into a spawning
-model's training signal.]*
+**Sparse mixture-of-experts.** Shazeer et al. (2017) and the Switch
+Transformer line (Fedus et al., 2021) route inputs to one of N
+expert sub-networks via a learned gating network trained jointly
+end-to-end. Experts are sub-blocks of a single monolithic model and
+cannot be trained independently. Our setting differs on three
+dimensions: (i) experts are standalone classifiers with their own
+optimizers and objectives, trained per-task at registration time;
+(ii) the "gate" is not learned — it is a fixed L2 nearest-neighbor
+search over signature vectors, so adding an expert requires no
+gradient step at the router; (iii) the registry is monotonically
+expandable, with no parameter-sharing constraint between experts.
+The trade-off is capacity density: a 1B-parameter MoE packs more
+tasks per parameter than a 15-expert registry. The payoff is
+operational: experts can be independently audited, swapped, or
+retrained.
+
+**Continual learning and expansion.** A-GEM (Chaudhry et al., 2019),
+iCaRL (Rebuffi et al., 2017), and experience-replay methods all
+address the forgetting problem: a model that learns task T₂ after
+T₁ usually loses T₁'s competence. We side-step forgetting by
+never overwriting: each task gets its own model, registered under
+a stable signature. Progressive Networks (Rusu et al., 2016) also
+add per-task columns, but with lateral weight-sharing between
+columns; our registry is flat and has no weight-sharing. The spawn
+verdict is conceptually close to Progressive Networks' "add a
+column when the new task warrants one"; but where Progressive
+Networks determines warrant manually, our router computes it from
+signature distance.
+
+**Model soups and ensembles.** Model soups (Wortsman et al., 2022)
+average the parameters of multiple independently-trained models
+into one to improve robustness. Our compose verdict is a similar
+idea at inference rather than weight-merge time, gated by signature
+distance. Where a model soup assumes the averaged models agree,
+our compose assumes they disagree in useful ways and that their
+inverse-distance-weighted blend over their softmax outputs
+recovers task-appropriate behavior.
+
+**k-NN language models and retrieval-augmented generation.** kNN-LM
+(Khandelwal et al., 2020) and RETRO (Borgeaud et al., 2022) retrieve
+cached *examples* at inference and mix them with a parametric
+model's prediction. Our registry retrieves cached *experts* instead:
+the "item" stored per entry is a trained classifier, not a
+(context, next-token) pair. The routing structure (nearest-neighbor
+in a signature space) is shared; what is retrieved is not.
+
+**Meta-learning and episodic memory.** Prototypical Networks (Snell
+et al., 2017) and MAML (Finn et al., 2017) operate under the
+assumption that a new task is "close" to a meta-training distribution
+and learn how to adapt quickly. Our registry does not meta-train;
+it simply accumulates experts and treats each new task as independent
+supervised learning, with routing doing the
+"which-past-task-is-this-close-to?" work that meta-learning's inner
+loop tries to compile into initialization. Context injection
+(§2) is the closest analog to episodic memory — a new expert's
+training input is *enriched* with activations from nearby past
+experts, which is functionally similar to retrieving a few support
+examples and concatenating them.
+
+**Signatures as task identifiers.** The signature mechanism —
+softmax output on a fixed probe batch — is related to dataset
+cartography (Swayamdipta et al., 2020) in that it characterizes
+what a model has learned through its outputs on a reference set.
+The key difference is that cartography studies training dynamics
+over a single model, while we use the final softmax as a persistent
+task-identity vector. Our Direction-B negative finding (§3.4) is
+specific to our registry setting and should not be read as a
+comment on representation-learning methods more broadly.
+
+**Novel contribution.** The context-injection primitive (§2) — *a
+newly-spawning expert's first hidden layer is additively fused with
+the inverse-distance-weighted mean of its routing-nearest
+neighbors' penultimate activations on the query batch* — has, to
+our knowledge, no direct precedent. The closest related idea is the
+retrieval-augmented-training literature (Guu et al., 2020), where a
+language model retrieves passages during pretraining; we retrieve
+*classifier representations* during spawn, and we do so from
+experts selected by the same router that handles inference-time
+queries.
 
 ## 5. Discussion and limitations
 
@@ -231,14 +315,27 @@ model's training signal.]*
 ## 6. Conclusion
 
 We present a registry-based mixture-of-experts with three routing
-primitives (match / compose / spawn) and one novel training-time
-extension (context injection). Seven ablations support the primitive
-on MNIST and CIFAR-10 with a quantified gap rule (α ≈ 0.15); one
-decisive negative rules out a latent-space signature variant.
-The pipeline runs end-to-end with a local LLM describer on real
-MNIST data. Context injection is a modest but consistent primitive;
-the architecture is a reproducible framework for expandable expert
-registries.
+primitives (match / compose / spawn), one novel training-time
+extension (context injection), and two follow-on primitives (depth-2
+hierarchical routing and autonomous compose-stream spawn proposals).
+The central empirical finding is that context injection obeys a
+quantified gap rule on the datasets where it works: across 54
+(ablation × budget) datapoints on MNIST + CIFAR-10, context recovers
+approximately 15% of the accuracy gap between the no-context
+baseline and the task's full-data ceiling. A paired negative result
+— latent-space signatures collapse the within-cross task distance
+gap — carves out a principled limit on the router's design space:
+signatures must live in an output-collapse space, not a generic
+latent one.
+
+The architecture is a reproducible framework for expandable expert
+registries. Growth, specialization, composition, routing, and
+context-enrichment — the five primitives the vision called for —
+are each implemented and measured. Remaining scope includes
+non-classification signatures (§5), recursive hierarchical depth
+≥3, and scale beyond N=100 entries. The code and all ablation
+artifacts are released; subsequent work can extend the primitives
+without re-implementing the infrastructure.
 
 ## 7. Reproducibility
 
@@ -254,14 +351,17 @@ per ablation (MNIST/MLP) or ~25 minutes (CIFAR/CNN).
 
 ## Appendix A: Sprint cluster chronology
 
-Sprints 17 main + 6 follow-ups, in order of commit:
+Sprints 17 main + follow-ups, in order of commit:
 
-| Sprint | Commit | Contribution |
+| # | Commit | Contribution |
 |---|---|---|
-| 17 main | 53d95ba | F + C, first end-to-end, C=negative as measured |
-| 17a | da4a24a | Eval-time context fix → C=+5pp cold-start confirmed |
-| 17b | d638f07 | Sample-starved ablation + Direction B negative |
-| 17c | 39daa7a | Fashion-MNIST + Qwen describer end-to-end |
-| 17d | 8123eb8 | Data-starved ablation + "gap rule" proposed |
+| 17 main | 53d95ba | F + C + B; first end-to-end |
+| 17a | da4a24a | Eval-time context fix; C cold-start +5pp confirmed |
+| 17b | d638f07 | Sample-starved ablation + Direction B decisive negative |
+| 17c | 39daa7a | Fashion-MNIST port + Qwen describer end-to-end |
+| 17d | 8123eb8 | Data-starved ablation + gap rule proposed |
 | 17e | 3dff930 | CIFAR-10 binary — gap rule cross-modal validation |
-| 17f | d552bc9 | Quantitative gap rule fit (this paper) |
+| 17f | d552bc9 | Quantitative gap rule fit (α ≈ 0.15) |
+| 17g | 6f4441a | First paper draft |
+| 17h | d0fe7cc | Direction D — AutoSpawnPolicy (self-spawning detector) |
+| 17i | 3dcbfba | Self-spawn redundancy fix + Direction E hierarchical depth-2 |
