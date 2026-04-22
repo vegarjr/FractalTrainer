@@ -1,12 +1,27 @@
 # FractalTrainer
 
-**Fractal-dimension-guided hyperparameter repair loop.**
+This repo contains two evolving layers:
 
-A prototype that watches the geometric shape of a neural network's training trajectory, measures its fractal dimension, and — when the shape drifts outside a target band — uses a Claude LLM to rewrite hyperparameters and retry. Closed-loop, automated, reversible.
+**v1 — Fractal-dimension-guided hyperparameter repair loop.** A prototype
+that watches the geometric shape of a neural network's training
+trajectory, measures its fractal dimension, and — when the shape drifts
+outside a target band — uses a Claude LLM to rewrite hyperparameters
+and retry. This is the layer the "Fractal" in the repo name refers to;
+correlation dimension and box-counting are genuinely applied here.
+
+**v3 — Mixture-of-Specialists Registry (MoSR).** A routed nearest-neighbor
+architecture over independently-trained classifiers with context
+injection at spawn. Described in `PAPER_DRAFT.md`. Originally titled
+"Mixture-of-Fractals" until Sprint 18's audit (Reviews 42–43) measured
+the architecture's structural objects and found them non-fractal in
+Bourke's mathematical sense (signature cloud D = 0.69 but slope variance
+0.53 fails scale-invariance). The paper was renamed; the Python
+package and this repo retain *FractalTrainer* for historical continuity.
 
 ## Status
 
-Alpha — Sprint 1 (observer) in progress. See `/home/vegar/.claude/plans/as-you-might-have-sequential-platypus.md` for the full plan.
+v1 (observer + repair loop) and v3 (MoSR) both ship; see Reviews/ for
+the full cluster. 260+ tests passing.
 
 ## Concept
 

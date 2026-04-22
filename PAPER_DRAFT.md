@@ -1,13 +1,19 @@
-# Mixture-of-Fractals: a routed registry of task-specialist experts with context-injection
+# Mixture-of-Specialists Registry: a routed nearest-neighbor architecture with context injection at spawn
 
-**Draft, 2026-04-22.** Primary author: Vegar Ratdal · vegarjr@users.noreply.github.com
+**Draft, 2026-04-22** (renamed from "Mixture-of-Fractals" following the
+Sprint 18 audit; see `Reviews/42_v3_sprint18_fractal_audit.md` and
+`Reviews/43_v3_sprint18_rename.md`). Primary author: Vegar Ratdal ·
+vegarjr@users.noreply.github.com
 Co-author: Claude Opus 4.7 (1M context, Anthropic).
 
 ## Abstract
 
-We describe FractalTrainer, a routed mixture-of-experts registry in
-which each entry is a standalone classifier identified by a 1000-d
-softmax-probe signature vector. A query is routed by three-way
+We describe a **Mixture-of-Specialists Registry** (MoSR), a routed
+mixture-of-experts architecture in which each entry is a standalone
+classifier identified by a 1000-d softmax-probe signature vector.
+(The repo retains the name *FractalTrainer* for historical
+continuity — see Reviews 42–43 for the audit that motivated the
+paper-level rename.) A query is routed by three-way
 nearest-neighbor decision: **match** to a single nearest entry,
 **compose** as an inverse-distance-weighted blend of the K nearest,
 or **spawn** a new expert when no existing signature is close
