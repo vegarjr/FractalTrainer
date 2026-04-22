@@ -86,6 +86,7 @@ class AutoSpawnPolicy:
         trigger_threshold: int = 5,
         k_neighbors: int = 3,
         max_cluster_radius: float | None = None,
+        suppress_redundant: bool = True,
     ):
         """
         Args:
@@ -98,12 +99,20 @@ class AutoSpawnPolicy:
                 wider than this, the proposal is suppressed (the
                 compose verdicts are not about *one* gap, they're
                 scattered).
+            suppress_redundant: if True (default), suppress proposals
+                whose proposed_task_labels is a subset of the nearest
+                neighbor's task_labels. This avoids duplicating an
+                existing task when the compose cluster lands on a
+                single well-represented task rather than bridging
+                multiple (Review 39 fix).
         """
         self.trigger_threshold = int(trigger_threshold)
         self.k_neighbors = int(k_neighbors)
         self.max_cluster_radius = max_cluster_radius
+        self.suppress_redundant = bool(suppress_redundant)
         self._compose_signatures: list[np.ndarray] = []
         self._proposals_history: list[SpawnProposal] = []
+        self._suppressed_redundant_count = 0
 
     def observe_compose(self, query_signature: np.ndarray) -> None:
         """Record that one compose-verdict query with this signature
@@ -155,6 +164,17 @@ class AutoSpawnPolicy:
             if labels is not None:
                 union_labels |= set(int(x) for x in labels)
 
+        # Suppress if the union is a subset of the nearest neighbor's
+        # labels — means the compose cluster landed on a single
+        # already-covered task, not between tasks (Review 39 fix).
+        if self.suppress_redundant and retrieval.entries:
+            nearest_labels = set(int(x) for x in (
+                retrieval.entries[0].metadata.get(task_label_key) or []
+            ))
+            if nearest_labels and union_labels <= nearest_labels:
+                self._suppressed_redundant_count += 1
+                return None
+
         proposal = SpawnProposal(
             centroid_signature=centroid,
             neighbor_entries=list(retrieval.entries),
@@ -165,6 +185,10 @@ class AutoSpawnPolicy:
         )
         self._proposals_history.append(proposal)
         return proposal
+
+    @property
+    def suppressed_redundant_count(self) -> int:
+        return self._suppressed_redundant_count
 
     def reset(self) -> None:
         """Clear the accumulated compose signatures. Call after a

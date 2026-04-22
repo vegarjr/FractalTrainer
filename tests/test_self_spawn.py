@@ -88,6 +88,7 @@ def test_scattered_cluster_rejected_by_radius():
 def test_tight_cluster_accepted():
     reg = FractalRegistry()
     reg.add(_entry("a", [0, 1], 0.0))
+    reg.add(_entry("b", [4, 5], 1.0))  # add second distinct-task entry
     policy = AutoSpawnPolicy(trigger_threshold=3, max_cluster_radius=0.5)
     # Tightly clustered compose signatures
     policy.observe_compose(_sig(0.4))
@@ -100,6 +101,7 @@ def test_tight_cluster_accepted():
 def test_reset_clears_history_but_keeps_proposals():
     reg = FractalRegistry()
     reg.add(_entry("a", [0, 1], 0.0))
+    reg.add(_entry("b", [4, 5], 1.0))  # distinct task so proposal isn't redundant
     policy = AutoSpawnPolicy(trigger_threshold=2)
     policy.observe_compose(_sig(0.3))
     policy.observe_compose(_sig(0.3))
@@ -143,6 +145,50 @@ def test_empty_registry_yields_none():
     policy.observe_compose(_sig(0.5))
     # Threshold met but registry empty
     assert policy.propose(reg) is None
+
+
+def test_suppresses_redundant_proposal_by_default():
+    """Union ⊆ nearest.task_labels → proposal suppressed."""
+    reg = FractalRegistry()
+    # Three entries of the SAME task — K=3 nearest will all be the
+    # same task, union = that task, so proposal is redundant.
+    reg.add(_entry("subset_A_seed1", [0, 1, 2, 3, 4], 0.0))
+    reg.add(_entry("subset_A_seed2", [0, 1, 2, 3, 4], 0.1))
+    reg.add(_entry("subset_A_seed3", [0, 1, 2, 3, 4], 0.2))
+    policy = AutoSpawnPolicy(trigger_threshold=3)  # default suppress_redundant=True
+    for _ in range(3):
+        policy.observe_compose(_sig(0.05))
+    proposal = policy.propose(reg)
+    assert proposal is None
+    assert policy.suppressed_redundant_count == 1
+
+
+def test_nonredundant_proposal_passes():
+    """When K=3 nearest span multiple tasks, union is novel → proposal fires."""
+    reg = FractalRegistry()
+    reg.add(_entry("low",  [0, 1, 2], 0.0))
+    reg.add(_entry("mid",  [3, 4, 5], 0.1))
+    reg.add(_entry("high", [6, 7, 8], 0.2))
+    policy = AutoSpawnPolicy(trigger_threshold=3)  # default suppress_redundant=True
+    for _ in range(3):
+        policy.observe_compose(_sig(0.1))
+    proposal = policy.propose(reg)
+    assert proposal is not None
+    # Union {0..8} is NOT a subset of any single neighbor's labels
+    assert proposal.proposed_task_labels == frozenset({0, 1, 2, 3, 4, 5, 6, 7, 8})
+
+
+def test_suppress_off_allows_redundant():
+    """suppress_redundant=False lets redundant proposals through."""
+    reg = FractalRegistry()
+    reg.add(_entry("subset_A_seed1", [0, 1, 2, 3, 4], 0.0))
+    reg.add(_entry("subset_A_seed2", [0, 1, 2, 3, 4], 0.1))
+    policy = AutoSpawnPolicy(trigger_threshold=2, suppress_redundant=False)
+    policy.observe_compose(_sig(0.05))
+    policy.observe_compose(_sig(0.05))
+    proposal = policy.propose(reg)
+    assert proposal is not None
+    assert proposal.proposed_task_labels == frozenset({0, 1, 2, 3, 4})
 
 
 def test_proposal_to_dict_is_json_safe():
