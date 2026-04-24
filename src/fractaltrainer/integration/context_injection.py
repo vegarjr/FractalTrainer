@@ -79,10 +79,11 @@ def gather_context(
     """
     spec = spec or ContextSpec()
     probe_t = _as_tensor(probe)
+    out_device = probe_t.device
 
     if len(neighbor_models) == 0:
         batch = probe_t.size(0)
-        return torch.zeros(batch, PENULTIMATE_DIM)
+        return torch.zeros(batch, PENULTIMATE_DIM, device=out_device)
 
     k = min(spec.k, len(neighbor_models))
     models = list(neighbor_models[:k])
@@ -105,7 +106,7 @@ def gather_context(
                 f"expected penultimate of shape (B, {PENULTIMATE_DIM}), "
                 f"got {tuple(p.shape)}"
             )
-        penultimates.append(p.float().cpu())
+        penultimates.append(p.float().to(out_device))
 
     stacked = torch.stack(penultimates, dim=0)  # (K, B, 32)
 
@@ -117,7 +118,7 @@ def gather_context(
         centered = -(d - d.min()) / max(spec.temperature, 1e-9)
         exp = np.exp(centered)
         w = exp / exp.sum()
-        w_t = torch.from_numpy(w).float().view(k, 1, 1)
+        w_t = torch.from_numpy(w).float().view(k, 1, 1).to(out_device)
         return (stacked * w_t).sum(dim=0)
 
     raise ValueError(f"unknown aggregation: {spec.aggregation!r}")
@@ -127,6 +128,7 @@ def random_context(
     batch_size: int,
     seed: int = 0,
     scale: float = 1.0,
+    device: torch.device | str | None = None,
 ) -> torch.Tensor:
     """Generate a random (B, 32) context tensor for the ablation control arm.
 
@@ -137,4 +139,7 @@ def random_context(
     any auxiliary input.
     """
     g = torch.Generator().manual_seed(seed)
-    return torch.randn(batch_size, PENULTIMATE_DIM, generator=g) * scale
+    out = torch.randn(batch_size, PENULTIMATE_DIM, generator=g) * scale
+    if device is not None:
+        out = out.to(device)
+    return out
