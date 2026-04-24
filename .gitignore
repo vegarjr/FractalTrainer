@@ -93,6 +93,10 @@ results/snake_demos.npz
 !results/sprint19d_prototype_smoke.json
 !results/sprint19d_prototype.png
 !results/sprint19d_prototype_smoke.png
+!results/sprint19e_finetune.json
+!results/sprint19e_finetune_smoke.json
+!results/sprint19e_finetune.png
+!results/sprint19e_finetune_smoke.png
 results/growth_spawn_trajectories/
 results/sprint7_v3_trajectories/
 results/sprint8_v3_fashion_trajectories/
