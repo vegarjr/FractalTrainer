@@ -1,0 +1,219 @@
+{
+  "config": {
+    "mode": "FULL",
+    "n_subsets": 250,
+    "seeds_per_subset": 4,
+    "n_steps_per_expert": 200,
+    "registry_size_max": 1000,
+    "n_heldouts": 250,
+    "signature_dim": 1000,
+    "match_threshold": 5.0,
+    "spawn_threshold": 7.0,
+    "device": "cuda",
+    "git_head": "e15633a Sprint 19 review: Colab notebook v2 \u2014 fix calibration, add persistence"
+  },
+  "distance_stats": {
+    "12": {
+      "n_entries": 12,
+      "n_within_pairs": 18,
+      "n_cross_pairs": 48,
+      "within_mean": 3.7763121128082275,
+      "within_std": 0.8249050378799438,
+      "cross_mean": 11.657997131347656,
+      "cross_std": 0.5731427669525146,
+      "gap": 7.881685256958008
+    },
+    "50": {
+      "n_entries": 48,
+      "n_within_pairs": 72,
+      "n_cross_pairs": 1056,
+      "within_mean": 3.701172351837158,
+      "within_std": 0.6379159688949585,
+      "cross_mean": 10.33964729309082,
+      "cross_std": 1.234721064567566,
+      "gap": 6.638474941253662
+    },
+    "100": {
+      "n_entries": 100,
+      "n_within_pairs": 150,
+      "n_cross_pairs": 4800,
+      "within_mean": 3.7201130390167236,
+      "within_std": 0.6345795392990112,
+      "cross_mean": 10.273757934570312,
+      "cross_std": 1.3763638734817505,
+      "gap": 6.553645133972168
+    },
+    "250": {
+      "n_entries": 248,
+      "n_within_pairs": 372,
+      "n_cross_pairs": 30256,
+      "within_mean": 3.640078067779541,
+      "within_std": 0.6518755555152893,
+      "cross_mean": 10.362831115722656,
+      "cross_std": 1.4166840314865112,
+      "gap": 6.722753047943115
+    },
+    "500": {
+      "n_entries": 500,
+      "n_within_pairs": 750,
+      "n_cross_pairs": 124000,
+      "within_mean": 3.64040470123291,
+      "within_std": 0.670600175857544,
+      "cross_mean": 10.34880542755127,
+      "cross_std": 1.4621142148971558,
+      "gap": 6.708400726318359
+    },
+    "1000": {
+      "n_entries": 1000,
+      "n_within_pairs": 1500,
+      "n_cross_pairs": 498000,
+      "within_mean": 3.6699447631835938,
+      "within_std": 0.6625296473503113,
+      "cross_mean": 10.319764137268066,
+      "cross_std": 1.4757367372512817,
+      "gap": 6.649819374084473
+    }
+  },
+  "routing_stats": {
+    "12": {
+      "n_queries": 3,
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "latency_ms_mean": 0.125885009765625,
+      "latency_ms_p95": 0.17309188842773438
+    },
+    "50": {
+      "n_queries": 12,
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "latency_ms_mean": 0.3583828608194987,
+      "latency_ms_p95": 0.4260063171386718
+    },
+    "100": {
+      "n_queries": 25,
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "latency_ms_mean": 0.5223655700683594,
+      "latency_ms_p95": 0.610828399658203
+    },
+    "250": {
+      "n_queries": 62,
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "latency_ms_mean": 1.6147090542700984,
+      "latency_ms_p95": 2.350330352783203
+    },
+    "500": {
+      "n_queries": 125,
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "latency_ms_mean": 2.7355728149414062,
+      "latency_ms_p95": 4.015588760375977
+    },
+    "1000": {
+      "n_queries": 250,
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "latency_ms_mean": 9.976415634155273,
+      "latency_ms_p95": 11.092638969421385
+    }
+  },
+  "verdict_stats": {
+    "12": {
+      "match_t": 5.0,
+      "spawn_t": 7.0,
+      "counts": {
+        "match": 3,
+        "compose": 0,
+        "spawn": 0,
+        "empty": 0
+      },
+      "fractions": {
+        "match": 1.0,
+        "compose": 0.0,
+        "spawn": 0.0,
+        "empty": 0.0
+      }
+    },
+    "50": {
+      "match_t": 5.0,
+      "spawn_t": 7.0,
+      "counts": {
+        "match": 12,
+        "compose": 0,
+        "spawn": 0,
+        "empty": 0
+      },
+      "fractions": {
+        "match": 1.0,
+        "compose": 0.0,
+        "spawn": 0.0,
+        "empty": 0.0
+      }
+    },
+    "100": {
+      "match_t": 5.0,
+      "spawn_t": 7.0,
+      "counts": {
+        "match": 25,
+        "compose": 0,
+        "spawn": 0,
+        "empty": 0
+      },
+      "fractions": {
+        "match": 1.0,
+        "compose": 0.0,
+        "spawn": 0.0,
+        "empty": 0.0
+      }
+    },
+    "250": {
+      "match_t": 5.0,
+      "spawn_t": 7.0,
+      "counts": {
+        "match": 62,
+        "compose": 0,
+        "spawn": 0,
+        "empty": 0
+      },
+      "fractions": {
+        "match": 1.0,
+        "compose": 0.0,
+        "spawn": 0.0,
+        "empty": 0.0
+      }
+    },
+    "500": {
+      "match_t": 5.0,
+      "spawn_t": 7.0,
+      "counts": {
+        "match": 125,
+        "compose": 0,
+        "spawn": 0,
+        "empty": 0
+      },
+      "fractions": {
+        "match": 1.0,
+        "compose": 0.0,
+        "spawn": 0.0,
+        "empty": 0.0
+      }
+    },
+    "1000": {
+      "match_t": 5.0,
+      "spawn_t": 7.0,
+      "counts": {
+        "match": 250,
+        "compose": 0,
+        "spawn": 0,
+        "empty": 0
+      },
+      "fractions": {
+        "match": 1.0,
+        "compose": 0.0,
+        "spawn": 0.0,
+        "empty": 0.0
+      }
+    }
+  }
+}

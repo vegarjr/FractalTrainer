@@ -77,6 +77,10 @@ results/snake_demos.npz
 !results/data_describer.json
 !results/data_describer_n50.json
 !results/data_describer_cli_n50.json
+!results/sprint19_scale_n1000.json
+!results/sprint19_scale_n1000_smoke.json
+!results/sprint19_scale_n1000.png
+!results/sprint19_scale_n1000_smoke.png
 results/growth_spawn_trajectories/
 results/sprint7_v3_trajectories/
 results/sprint8_v3_fashion_trajectories/

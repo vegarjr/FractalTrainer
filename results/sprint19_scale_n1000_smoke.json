@@ -1,0 +1,153 @@
+{
+  "config": {
+    "mode": "SMOKE",
+    "n_subsets": 10,
+    "seeds_per_subset": 4,
+    "n_steps_per_expert": 200,
+    "registry_size_max": 40,
+    "n_heldouts": 10,
+    "signature_dim": 1000,
+    "match_threshold": 5.0,
+    "spawn_threshold": 7.0,
+    "device": "cuda",
+    "git_head": "e15633a Sprint 19 review: Colab notebook v2 \u2014 fix calibration, add persistence"
+  },
+  "distance_stats": {
+    "8": {
+      "n_entries": 8,
+      "n_within_pairs": 12,
+      "n_cross_pairs": 16,
+      "within_mean": 3.4295384883880615,
+      "within_std": 0.5873525142669678,
+      "cross_mean": 8.323686599731445,
+      "cross_std": 0.20515848696231842,
+      "gap": 4.894147872924805
+    },
+    "16": {
+      "n_entries": 16,
+      "n_within_pairs": 24,
+      "n_cross_pairs": 96,
+      "within_mean": 3.7395637035369873,
+      "within_std": 0.7016497254371643,
+      "cross_mean": 11.141732215881348,
+      "cross_std": 1.628993034362793,
+      "gap": 7.402168273925781
+    },
+    "32": {
+      "n_entries": 32,
+      "n_within_pairs": 48,
+      "n_cross_pairs": 448,
+      "within_mean": 3.7124998569488525,
+      "within_std": 0.644185483455658,
+      "cross_mean": 10.368464469909668,
+      "cross_std": 1.526467204093933,
+      "gap": 6.6559648513793945
+    },
+    "40": {
+      "n_entries": 40,
+      "n_within_pairs": 60,
+      "n_cross_pairs": 720,
+      "within_mean": 3.628171443939209,
+      "within_std": 0.6261149048805237,
+      "cross_mean": 10.354475975036621,
+      "cross_std": 1.3705639839172363,
+      "gap": 6.726304531097412
+    }
+  },
+  "routing_stats": {
+    "8": {
+      "n_queries": 2,
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "latency_ms_mean": 0.12135505676269531,
+      "latency_ms_p95": 0.1550436019897461
+    },
+    "16": {
+      "n_queries": 4,
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "latency_ms_mean": 0.10645389556884766,
+      "latency_ms_p95": 0.12972354888916016
+    },
+    "32": {
+      "n_queries": 8,
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "latency_ms_mean": 0.1710057258605957,
+      "latency_ms_p95": 0.19429922103881836
+    },
+    "40": {
+      "n_queries": 10,
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "latency_ms_mean": 0.2213001251220703,
+      "latency_ms_p95": 0.253450870513916
+    }
+  },
+  "verdict_stats": {
+    "8": {
+      "match_t": 5.0,
+      "spawn_t": 7.0,
+      "counts": {
+        "match": 2,
+        "compose": 0,
+        "spawn": 0,
+        "empty": 0
+      },
+      "fractions": {
+        "match": 1.0,
+        "compose": 0.0,
+        "spawn": 0.0,
+        "empty": 0.0
+      }
+    },
+    "16": {
+      "match_t": 5.0,
+      "spawn_t": 7.0,
+      "counts": {
+        "match": 4,
+        "compose": 0,
+        "spawn": 0,
+        "empty": 0
+      },
+      "fractions": {
+        "match": 1.0,
+        "compose": 0.0,
+        "spawn": 0.0,
+        "empty": 0.0
+      }
+    },
+    "32": {
+      "match_t": 5.0,
+      "spawn_t": 7.0,
+      "counts": {
+        "match": 8,
+        "compose": 0,
+        "spawn": 0,
+        "empty": 0
+      },
+      "fractions": {
+        "match": 1.0,
+        "compose": 0.0,
+        "spawn": 0.0,
+        "empty": 0.0
+      }
+    },
+    "40": {
+      "match_t": 5.0,
+      "spawn_t": 7.0,
+      "counts": {
+        "match": 10,
+        "compose": 0,
+        "spawn": 0,
+        "empty": 0
+      },
+      "fractions": {
+        "match": 1.0,
+        "compose": 0.0,
+        "spawn": 0.0,
+        "empty": 0.0
+      }
+    }
+  }
+}
