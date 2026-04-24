@@ -55,14 +55,16 @@ class ContextAwareMLP(nn.Module):
         self,
         context_dim: int = PENULTIMATE_DIM,
         context_scale: float = 1.0,
+        n_classes: int = N_CLASSES,
     ):
         super().__init__()
         self.context_dim = int(context_dim)
         self.context_scale = float(context_scale)
+        self.n_classes = int(n_classes)
 
         self.fc1 = nn.Linear(INPUT_DIM, HIDDEN_DIM)
         self.fc2 = nn.Linear(HIDDEN_DIM, PENULTIMATE_DIM)
-        self.fc3 = nn.Linear(PENULTIMATE_DIM, N_CLASSES)
+        self.fc3 = nn.Linear(PENULTIMATE_DIM, self.n_classes)
 
         if self.context_dim > 0:
             self.ctx_norm = nn.LayerNorm(self.context_dim)
